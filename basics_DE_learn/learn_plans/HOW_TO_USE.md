@@ -1,45 +1,60 @@
 # How to use your interview prep system
 
-## Three files, three jobs
+**Start date:** 2026-05-25 · **Checkbox help:** [TRACKER_GUIDE.md](./TRACKER_GUIDE.md)
+
+---
+
+## File map
 
 | File | Job |
 |------|-----|
-| [README.md](../../README.md) | Repo hub — start here |
-| [learn_plan_v2.md](./learn_plan_v2.md) | **What** to learn — 30-week themes + LeetCode IDs |
-| [RESOURCES.md](./RESOURCES.md) | **Where** to learn — links, ratings, SQL/Spark stack |
-| [learn_tracker.md](./learn_tracker.md) | **Progress** — checkboxes, dates, interviews |
-| [plan_week1.md](./plan_week1.md) | **This week’s days** — concrete daily tasks |
+| [README.md](../../README.md) | Repo hub |
+| [learn_plan_v2.md](./learn_plan_v2.md) | 30-week themes + LeetCode IDs |
+| [RESOURCES.md](./RESOURCES.md) | All links — **video + read** |
+| [learn_tracker.md](./learn_tracker.md) | Phases, calendar, interviews, milestones |
+| [weekly_plan/plan_weekN.md](./weekly_plan/plan_week1.md) | **What** to do each day |
+| [weekly_tracker/tracker_weekN.md](./weekly_tracker/tracker_week1.md) | **What** you finished |
+| [TRACKER_GUIDE.md](./TRACKER_GUIDE.md) | How to tick `- [ ]` → `- [x]` |
 
-## Your weekly rhythm (60 min total on Sunday)
+---
 
-1. Open [learn_tracker.md](./learn_tracker.md) — tick completed items, fill reflection.
-2. Open current `plan_weekN.md` — confirm next week’s focus matches tracker.
-3. If behind on DSA: repeat week (don’t rush). If ahead: add 2 timed mediums.
-4. Optional: ask Cursor to generate `plan_week{N+1}.md` from tracker notes.
+## Daily (5 min at end of session)
 
-## DDIA before the book arrives
+1. Open [tracker_week1.md](./weekly_tracker/tracker_week1.md) in the **editor**.
+2. Change `[ ]` to `[x]` for today’s row (Blocks A, B, C).
+3. Update LeetCode / SQL tables if applicable.
+4. Save.
 
-- Use **O’Reilly Learning** trial for the ebook, or
-- Start **Chapter 3** summaries only as warmup — read the real book when it arrives for depth.
+**Or ask Cursor:** *“Update tracker_week1 for 2026-05-26: done Block A LC 217, Block B SQL #1.”*
 
-## SQL & PySpark — yes, both are in the plan
+Preview mode does **not** toggle checkboxes — you must edit the file.
 
-- **SQL:** LeetCode SQL 50 (primary) → StrataScratch Medium (Weeks 5–8) → DataLemur (extra)
-- **PySpark:** DataTalksClub DE Zoomcamp Spark labs (Weeks 2–4) → Databricks performance videos (Week 16)
+---
 
-Full list: [RESOURCES.md](./RESOURCES.md)
+## Sunday (15 min)
 
-## When to start applying
+1. Reflection in `tracker_weekN.md`.
+2. Week exit boxes in `plan_weekN.md`.
+3. Mark week done in [learn_tracker.md](./learn_tracker.md).
+4. Optional: *“Create plan_week2 and tracker_week2.”*
 
-| Ready signal | Action |
-|--------------|--------|
-| Week 10 phase exit ✅ | Update resume; light networking only |
-| Week 20 phase exit ✅ | Serious applications (Tier B) |
-| 2 clean mocks ✅ | Tier A applications |
+---
 
-## Package expectation
+## Compensation targets
 
-- **25 LPA → 35–42 LPA** is a strong, achievable leap with 6–7 months consistent prep.
-- **42–50+** needs strong mediums + design + right company — stretch, not guaranteed.
+| Band | Expectation |
+|------|-------------|
+| 35–42 LPA | Primary goal — complete Phase 1–2 |
+| 42–50 LPA | Strong Phase 2 + mocks |
+| 50–60+ LPA | Stretch — see [profile.md](./profile.md#stretch-50–60-lpa) |
 
-Fill in **start date** on the tracker today to make the timeline real.
+---
+
+## When to apply
+
+| Signal | Week (from 2026-05-25) | Date (approx) |
+|--------|------------------------|---------------|
+| Phase 1 exit | 10 | ~2 Aug 2026 |
+| Phase 2 exit | 20 | ~5 Oct 2026 |
+| **Applications** | **21** | **~12 Oct 2026** |
+| Google / top band | 24+ | After 2 clean mocks |

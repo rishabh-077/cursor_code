@@ -70,18 +70,32 @@ You have **two** strong stories. Pick **one primary** for 5-min “walk me throu
 
 ---
 
-## Apply timeline (2-month notice)
+## Apply timeline (start **2026-05-25**, 2-month notice)
 
-| Week | Calendar action |
-|------|-----------------|
-| 19 | Resume + LinkedIn updated with Endeavour AI bullet |
-| 20 | Phase 2 exit; RAG repo public (GitHub) |
-| 21 | Apply 5–8 companies (Tier B first) |
-| 22–24 | Mocks + applications (dream list) |
-| 25+ | Active loops; first offers ~Week 27–30 |
-| Offer | Join date = offer acceptance + **2 months** |
+| Week | Date (approx) | Action |
+|------|---------------|--------|
+| 1 | 25 May 2026 | Prep starts — [plan_week1](./weekly_plan/plan_week1.md) |
+| 19 | 28 Sep 2026 | Resume + LinkedIn |
+| 20 | 5 Oct 2026 | Phase 2 exit; RAG repo public |
+| **21** | **12 Oct 2026** | **Applications** |
+| 27–30 | Nov–Dec 2026 | Offers · negotiate |
+| Join | Offer + **2 months** | |
 
-*If you start Week 1 today, “Week 21” ≈ 5 months from now — adjust if you start later.*
+---
+
+## Stretch: 50–60+ LPA
+
+**Honest:** 50–60+ in India for ~3.5 YOE DE is **top band** (Google L4/L5 band, Databricks senior IC, Walmart principal-track). Achievable but not the default outcome of the base plan.
+
+| Lever | What you need |
+|-------|----------------|
+| **DSA** | 80+ LC, 20+ mediums timed; don’t apply Google until mocks are clean |
+| **DE depth** | 4 whiteboard-ready designs + Endeavour AI prod + RAG repo |
+| **Negotiation** | Multiple offers; RSU/ESOP literate |
+| **Timeline** | May need **Week 30+** extension (9–10 months total) if DSA starts from zero |
+| **Tier** | Prioritize Databricks, Google, Walmart GTC high band — not only service companies |
+
+**Realistic ladder:** 35–42 (base plan) → 42–50 (Phase 2 solid) → 50–60+ (stretch + right company + interview peak).
 
 ---
 
@@ -91,4 +105,4 @@ You have **two** strong stories. Pick **one primary** for 5-min “walk me throu
 - [ ] Endeavour pipeline template completed  
 - [ ] Metrics for Gemini project (% mismatch reduction, volume/day)  
 - [ ] RAG repo URL on resume  
-- [ ] Start date written in [learn_tracker.md](./learn_tracker.md)
+- [x] Start date **2026-05-25** in [learn_tracker.md](./learn_tracker.md)

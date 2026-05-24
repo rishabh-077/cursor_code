@@ -1,9 +1,9 @@
 # Master roadmap — 30 weeks (compact)
 
-**You:** 3.5 YOE DE · GCP · Tiger (Lowe’s, Endeavour) · 25 LPA → **35–42 LPA** · 2-month notice · [profile.md](./profile.md)  
-**Daily:** 3–4 h · **Sources:** [RESOURCES.md](./RESOURCES.md) · **How to run:** [HOW_TO_USE.md](./HOW_TO_USE.md) · **Progress:** [learn_tracker.md](./learn_tracker.md)
+**Start:** 2026-05-25 · **You:** 3.5 YOE DE · 25 LPA → **35–42** (primary) → **50–60+** (stretch) · [profile.md](./profile.md)  
+**Daily:** 3–4 h · **Sources (video + read):** [RESOURCES.md](./RESOURCES.md) · **Trackers:** [TRACKER_GUIDE.md](./TRACKER_GUIDE.md) · [learn_tracker.md](./learn_tracker.md)
 
-> Week-by-day tasks live in `plan_weekN.md` (Week 1 ready). Don’t pre-build all 30 weeks — update tracker weekly.
+> **Plans:** [weekly_plan/plan_week1.md](./weekly_plan/plan_week1.md) · **Daily tracking:** [weekly_tracker/tracker_week1.md](./weekly_tracker/tracker_week1.md)
 
 ---
 
@@ -58,7 +58,7 @@
 | **9** | Consolidation | Re-solve 10 hardest | 3 STAR stories | Vector indexes |
 | **10** | Phase 1 exam | 5 timed Easy | Pipeline whiteboard (Endeavour) | RAG failure modes |
 
-**Week 1 daily tasks:** [plan_week1.md](./plan_week1.md)
+**Week 1 (25–31 May 2026):** [plan_week1.md](./weekly_plan/plan_week1.md) · [tracker_week1.md](./weekly_tracker/tracker_week1.md)
 
 **Phase 1 exit:** 35+ LC logged · SQL 50 done · StrataScratch ≥8 · explain BQ partition/cluster + dbt incremental · PySpark lazy vs action · Zoomcamp Spark module done
 
