@@ -4,11 +4,25 @@ Markdown checkboxes only work when you **edit the file**. Preview mode is read-o
 
 ---
 
+## Interactive dashboard (optional)
+
+Run the web UI to tick progress and sync to markdown:
+
+```powershell
+cd basics_DE_learn\dashboard
+pip install -r requirements.txt
+python app.py
+```
+
+Open **http://127.0.0.1:5050** · Details: [dashboard/README.md](../dashboard/README.md)
+
+---
+
 ## Three tracker levels
 
 | Level | File | Update how often |
 |-------|------|------------------|
-| **Daily** | [weekly_tracker/tracker_weekN.md](./weekly_tracker/tracker_weekN.md) | Every study day (5 min) |
+| **Daily** | [weekly_tracker/tracker_weekN.md](./weekly_tracker/tracker_weekN.md) | Every study day (5 min) — or use dashboard |
 | **Weekly** | Same file — Sunday reflection + week exit | Every Sunday (15 min) |
 | **Program** | [learn_tracker.md](./learn_tracker.md) | Sunday + when a week/phase completes |
 

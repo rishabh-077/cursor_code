@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DE Learn · Week 1 Progress</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <div>
+        <p class="eyebrow">Data Engineering · Phase 1</p>
+        <h1>Week 1 Progress</h1>
+        <p class="subtitle">25 May – 31 May 2026 · Target: greater switch</p>
+      </div>
+      <div class="header-actions">
+        <span class="save-status" id="saveStatus">Saved</span>
+        <button type="button" class="btn btn-secondary" id="syncBtn">Sync to Markdown</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="stats" id="statsGrid"></section>
+
+    <nav class="tabs" role="tablist">
+      <button class="tab active" data-tab="overview">Overview</button>
+      <button class="tab" data-tab="days">Daily</button>
+      <button class="tab" data-tab="leetcode">LeetCode</button>
+      <button class="tab" data-tab="sql">SQL 50</button>
+      <button class="tab" data-tab="de">Spark / BQ</button>
+      <button class="tab" data-tab="exit">Exit checklist</button>
+      <button class="tab" data-tab="reflection">Reflection</button>
+    </nav>
+
+    <div class="panels">
+      <section class="panel active" id="panel-overview">
+        <h2>Quick links</h2>
+        <ul class="links">
+          <li><a href="https://leetcode.com/studyplan/top-sql-50/" target="_blank" rel="noopener">SQL 50 study plan</a></li>
+          <li><span>Plan: learn_plans/weekly_plan/plan_week1.md</span></li>
+          <li><span>Tracker: learn_plans/weekly_tracker/tracker_week1.md</span></li>
+        </ul>
+        <h2>Week exit</h2>
+        <div id="overviewExit"></div>
+      </section>
+
+      <section class="panel" id="panel-days">
+        <h2>Day-by-day blocks</h2>
+        <p class="hint">Block A = DSA · Block B = SQL/Spark/BQ · Block C = theory</p>
+        <div id="daysList" class="card-list"></div>
+      </section>
+
+      <section class="panel" id="panel-leetcode">
+        <h2>LeetCode (Python)</h2>
+        <div id="leetcodeList" class="card-list"></div>
+      </section>
+
+      <section class="panel" id="panel-sql">
+        <h2>SQL 50 · Select #1–4</h2>
+        <div id="sqlList" class="card-list"></div>
+      </section>
+
+      <section class="panel" id="panel-de">
+        <h2>PySpark & BigQuery</h2>
+        <div id="deList" class="card-list"></div>
+      </section>
+
+      <section class="panel" id="panel-exit">
+        <h2>Week 1 exit checklist</h2>
+        <div id="exitList" class="check-list"></div>
+      </section>
+
+      <section class="panel" id="panel-reflection">
+        <h2>Weekly reflection</h2>
+        <label class="field">
+          <span>Finished</span>
+          <textarea id="reflFinished" rows="3"></textarea>
+        </label>
+        <label class="field">
+          <span>Blocked</span>
+          <textarea id="reflBlocked" rows="2"></textarea>
+        </label>
+        <label class="field">
+          <span>Next week adjust</span>
+          <textarea id="reflNext" rows="2"></textarea>
+        </label>
+        <label class="field">
+          <span>Energy (1–5)</span>
+          <input type="number" id="reflEnergy" min="0" max="5" />
+        </label>
+      </section>
+    </div>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>

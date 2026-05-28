@@ -16,6 +16,8 @@
 | **Plan** | [weekly_plan/plan_week1.md](./weekly_plan/plan_week1.md) |
 | **Daily tracker** | [weekly_tracker/tracker_week1.md](./weekly_tracker/tracker_week1.md) |
 
+**Week 1 progress (2026-05-25):** LC **4/6** in repo · SQL 50 **4/4** (Select) · Spark Driver/Executor **done** · BQ **0** · Week exit **~60%**
+
 ---
 
 ## Profile snapshot
@@ -65,7 +67,7 @@ Full detail: [profile.md](./profile.md)
 
 | Wk | Dates (approx) | Theme | Done |
 |----|----------------|-------|:----:|
-| 1 | 25–31 May | Big O, hash, SQL50×4, Spark/BQ intro | ⬜ |
+| 1 | 25–31 May | Big O, hash, SQL50×4, Spark/BQ intro | 🟡 In progress |
 | 2 | 1–7 Jun | Arrays, Zoomcamp Spark | ⬜ |
 | 3 | 8–14 Jun | Sliding window, dbt | ⬜ |
 | 4 | 15–21 Jun | Strings, SQL windows | ⬜ |
@@ -76,7 +78,7 @@ Full detail: [profile.md](./profile.md)
 | 9 | 20–26 Jul | Consolidation, STAR | ⬜ |
 | 10 | 27 Jul – 2 Aug | Phase 1 exam | ⬜ |
 
-**Phase 1 exit:** [ ] 35+ LC · [ ] SQL 50 · [ ] StrataScratch ≥8 · [ ] BQ/dbt story · [ ] PySpark lazy vs action
+**Phase 1 exit:** [ ] 35+ LC *(4 logged)* · [ ] SQL 50 *(4/50)* · [ ] StrataScratch ≥8 · [ ] BQ/dbt story · [x] Spark Driver/Executor · [ ] PySpark lazy vs action
 
 ### Phase 2
 
