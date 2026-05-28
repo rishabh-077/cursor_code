@@ -87,7 +87,7 @@
 
 | Type | Resource |
 |------|----------|
-| **Path** | [LeetCode SQL 50](https://leetcode.com/studyplan/top-sql-50/) → **Select** + **Basic Joins** (first 4) |
+| **Path** | [LeetCode SQL 50](https://leetcode.com/studyplan/top-sql-50/) → **Select #1–4** (see [week1_sql50_log.md](../../sql/week1_sql50_log.md)) |
 | **Video (windows preview)** | [freeCodeCamp SQL 4h](https://www.youtube.com/watch?v=HXV3zeQKqGY) — skim joins section if rusty |
 
 ### PySpark — Days Mon 26 & Wed 28
@@ -144,10 +144,13 @@ One paragraph: how RAG relates to your Endeavour Gemini work.
 
 ## Week 1 exit checklist
 
-- [ ] Explain O(1), O(n), O(n²), O(n log n) with examples
-- [ ] 5+ of 6 LeetCode problems in repo with complexity
-- [ ] 4 SQL 50 problems done
-- [ ] Spark lazy vs action + Driver/Executor in own words
+*Synced 2026-05-25 — detail in [tracker_week1.md](../weekly_tracker/tracker_week1.md)*
+
+- [x] Explain O(1), O(n), O(n²), O(n log n) with examples → [big_O_notation.md](../../leetcode/week_1/big_O_notation.md)
+- [ ] 5+ of 6 LeetCode problems in repo with complexity *(4/6: 217, 1, 242, 88 — add **121**)*
+- [x] 4 SQL 50 problems done → [sql/week1_sql50_log.md](../../sql/week1_sql50_log.md)
+- [x] Spark Driver/Executor in own words → [pyspark/week1_notes.md](../../pyspark/week1_notes.md)
+- [ ] Spark lazy vs action in own words *(TODO in same file)*
 - [ ] BQ `SELECT *` anti-pattern explained
 
 ---
