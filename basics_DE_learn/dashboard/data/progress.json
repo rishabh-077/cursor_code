@@ -1,8 +1,11 @@
 {
   "meta": {
     "currentWeek": 1,
-    "lastUpdated": "2026-05-28T23:50:24",
-    "startDate": "2026-05-25"
+    "ddiaArrives": "2026-06-08",
+    "lastUpdated": "2026-05-31T14:09:45",
+    "startDate": "2026-05-25",
+    "timezone": "Asia/Kolkata",
+    "today": "2026-05-31"
   },
   "week1": {
     "days": [
@@ -12,7 +15,7 @@
         "blockC": false,
         "date": "2026-05-25",
         "day": "Sun",
-        "notes": "Big O sheet; SQL 1\u20134; LC 217,1,242,88; Spark driver/executor"
+        "notes": "Big O cheat sheet; SQL50 #1"
       },
       {
         "blockA": true,
@@ -20,7 +23,7 @@
         "blockC": false,
         "date": "2026-05-26",
         "day": "Mon",
-        "notes": "LC 217, Spark notes"
+        "notes": "LC 217; Spark driver/executor"
       },
       {
         "blockA": true,
@@ -28,7 +31,7 @@
         "blockC": false,
         "date": "2026-05-27",
         "day": "Tue",
-        "notes": "LC 1, SQL50"
+        "notes": "LC 1; SQL50 #2\u20133"
       },
       {
         "blockA": true,
@@ -36,23 +39,23 @@
         "blockC": false,
         "date": "2026-05-28",
         "day": "Wed",
-        "notes": "LC 242"
+        "notes": "LC 242; SQL50 #4"
       },
       {
         "blockA": true,
-        "blockB": true,
+        "blockB": false,
         "blockC": false,
         "date": "2026-05-29",
         "day": "Thu",
-        "notes": "LC 88, BQ"
+        "notes": "LC 88 (today IST) \u00b7 BQ still due"
       },
       {
-        "blockA": false,
+        "blockA": true,
         "blockB": false,
         "blockC": false,
         "date": "2026-05-30",
         "day": "Fri",
-        "notes": "LC 121, Spark lazy vs action"
+        "notes": "LC 121 done"
       },
       {
         "blockA": false,
@@ -95,7 +98,7 @@
         "label": "Explain O(1), O(n), O(n\u00b2), O(n log n)"
       },
       {
-        "done": false,
+        "done": true,
         "id": "lc5",
         "label": "5+ of 6 LeetCode problems with complexity notes in repo"
       },
@@ -120,7 +123,7 @@
         "complexityInRepo": true,
         "done": true,
         "id": 217,
-        "noHints": false,
+        "noHints": true,
         "pattern": "Hash set",
         "repoFile": "leetcode/week_1/leetcode_217.py",
         "slug": "contains-duplicate",
@@ -130,7 +133,7 @@
         "complexityInRepo": true,
         "done": true,
         "id": 1,
-        "noHints": false,
+        "noHints": true,
         "pattern": "Hash map",
         "repoFile": "leetcode/week_1/leetcode_1.py",
         "slug": "two-sum",
@@ -157,12 +160,12 @@
         "title": "Merge Sorted Array"
       },
       {
-        "complexityInRepo": false,
-        "done": false,
+        "complexityInRepo": true,
+        "done": true,
         "id": 121,
-        "noHints": false,
+        "noHints": true,
         "pattern": "Array / greedy",
-        "repoFile": "",
+        "repoFile": "leetcode/week_1/leetcode_121.py",
         "slug": "best-time-to-buy-and-sell-stock",
         "title": "Best Time to Buy and Sell Stock"
       }
@@ -170,8 +173,8 @@
     "reflection": {
       "blocked": "",
       "energy": 0,
-      "finished": "SQL 50 Select \u00d74; LC 217, 1, 242, 88 with repo notes; Big O cheat sheet; Spark driver/executor theory.",
-      "nextWeek": "Prioritize LC 121, BQ SELECT * notes, Spark lazy/action paragraph."
+      "finished": "SQL 50 Select x4; LC 217,1,242,88,121 with repo notes; Big O; Spark driver/executor.",
+      "nextWeek": "Week 2: 125,167,3; SQL 5-8; Zoomcamp; Chip Huyen until DDIA 8 Jun."
     },
     "sql50": [
       {
@@ -205,6 +208,190 @@
         "section": "Select \u00b7 GROUP BY",
         "slug": "article-views-i",
         "title": "Article Views I"
+      }
+    ]
+  },
+  "week2": {
+    "days": [
+      {
+        "blockA": true,
+        "blockB": false,
+        "blockC": false,
+        "date": "2026-06-01",
+        "day": "Sun",
+        "notes": "t05 + LC 125 \u00b7 SQL #5"
+      },
+      {
+        "blockA": false,
+        "blockB": false,
+        "blockC": false,
+        "date": "2026-06-02",
+        "day": "Mon",
+        "notes": "167, Zoomcamp"
+      },
+      {
+        "blockA": false,
+        "blockB": false,
+        "blockC": false,
+        "date": "2026-06-03",
+        "day": "Tue",
+        "notes": "SQL #6-7"
+      },
+      {
+        "blockA": false,
+        "blockB": false,
+        "blockC": false,
+        "date": "2026-06-04",
+        "day": "Wed",
+        "notes": "LC 3, SQL #8"
+      },
+      {
+        "blockA": false,
+        "blockB": false,
+        "blockC": false,
+        "date": "2026-06-05",
+        "day": "Thu",
+        "notes": "Re-solve 121"
+      },
+      {
+        "blockA": false,
+        "blockB": false,
+        "blockC": false,
+        "date": "2026-06-06",
+        "day": "Fri",
+        "notes": "Spark lazy"
+      },
+      {
+        "blockA": false,
+        "blockB": false,
+        "blockC": false,
+        "date": "2026-06-07",
+        "day": "Sat",
+        "notes": "Week review"
+      }
+    ],
+    "deTopics": [
+      {
+        "done": false,
+        "id": "zoomcamp",
+        "path": "pyspark/week2_zoomcamp.md",
+        "title": "DE Zoomcamp Spark lab"
+      },
+      {
+        "done": false,
+        "id": "spark-lazy",
+        "path": "pyspark/week1_notes.md",
+        "title": "Lazy vs action (own words)"
+      },
+      {
+        "done": false,
+        "id": "chip-huyen",
+        "path": "theory/ai_engineering_notes.md",
+        "title": "Chip Huyen Ch 3-4"
+      }
+    ],
+    "exitChecklist": [
+      {
+        "done": false,
+        "id": "lc3",
+        "label": "3+ new LC in week_2 with notes"
+      },
+      {
+        "done": false,
+        "id": "sql4",
+        "label": "SQL 50 problems 5-8"
+      },
+      {
+        "done": false,
+        "id": "zoom",
+        "label": "Zoomcamp Spark lab completed"
+      },
+      {
+        "done": false,
+        "id": "spark-lazy",
+        "label": "Spark lazy vs action paragraph"
+      },
+      {
+        "done": false,
+        "id": "chip",
+        "label": "Chip Huyen Ch 3-4 summary"
+      },
+      {
+        "done": false,
+        "id": "dsa-t05",
+        "label": "DSA topics t05 + t06 in study plan"
+      }
+    ],
+    "leetcode": [
+      {
+        "complexityInRepo": false,
+        "done": false,
+        "id": 125,
+        "noHints": false,
+        "pattern": "Two pointers",
+        "repoFile": "",
+        "slug": "valid-palindrome",
+        "title": "Valid Palindrome"
+      },
+      {
+        "complexityInRepo": false,
+        "done": false,
+        "id": 167,
+        "noHints": false,
+        "pattern": "Two pointers",
+        "repoFile": "",
+        "slug": "two-sum-ii-input-array-is-sorted",
+        "title": "Two Sum II"
+      },
+      {
+        "complexityInRepo": false,
+        "done": false,
+        "id": 3,
+        "noHints": false,
+        "pattern": "Sliding window",
+        "repoFile": "",
+        "slug": "longest-substring-without-repeating-characters",
+        "title": "Longest Substring Without Repeating"
+      }
+    ],
+    "reflection": {
+      "blocked": "",
+      "energy": 0,
+      "finished": "",
+      "nextWeek": "DDIA Ch 3 from 8 Jun"
+    },
+    "sql50": [
+      {
+        "done": false,
+        "lc": 1683,
+        "num": 5,
+        "section": "Select",
+        "slug": "invalid-tweets",
+        "title": "Invalid Tweets"
+      },
+      {
+        "done": false,
+        "lc": 1378,
+        "num": 6,
+        "section": "Joins",
+        "slug": "replace-employee-id-with-the-unique-identifier",
+        "title": "Replace Employee ID"
+      },
+      {
+        "done": false,
+        "lc": 1068,
+        "num": 7,
+        "section": "Joins",
+        "slug": "product-sales-analysis-i",
+        "title": "Product Sales Analysis I"
+      },
+      {
+        "done": false,
+        "lc": 1581,
+        "num": 8,
+        "section": "Joins",
+        "slug": "customer-who-visited-but-did-not-make-any-transactions",
+        "title": "Customer Who Visited"
       }
     ]
   }

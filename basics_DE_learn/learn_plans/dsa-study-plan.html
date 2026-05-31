@@ -1,0 +1,1364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Google DSA Plan — Zero to Interview Ready</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --bg: #07080f;
+  --surface: #0e0f1a;
+  --card: #13141f;
+  --border: #1e2030;
+  --accent: #4af0a0;
+  --accent2: #6b7fff;
+  --accent3: #ffb347;
+  --accent4: #ff6b8a;
+  --text: #dde0f0;
+  --muted: #5a5f80;
+  --google: #ea4335;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Syne', sans-serif;
+  min-height: 100vh;
+}
+
+body::before {
+  content:'';
+  position:fixed;
+  inset:0;
+  background:
+    radial-gradient(ellipse 60% 40% at 80% 10%, rgba(107,127,255,0.07) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 30% at 10% 80%, rgba(74,240,160,0.05) 0%, transparent 50%);
+  pointer-events:none;
+  z-index:0;
+}
+
+.wrap {
+  max-width:1080px;
+  margin:0 auto;
+  padding:40px 20px 80px;
+  position:relative;
+  z-index:1;
+}
+
+/* HEADER */
+.hero {
+  margin-bottom:40px;
+}
+.hero-eyebrow {
+  font-family:'IBM Plex Mono', monospace;
+  font-size:11px;
+  letter-spacing:3px;
+  color:var(--accent);
+  text-transform:uppercase;
+  margin-bottom:12px;
+}
+.hero h1 {
+  font-size:clamp(28px,5vw,52px);
+  font-weight:800;
+  line-height:1.05;
+  color:#fff;
+}
+.hero h1 em {
+  font-style:normal;
+  color:var(--google);
+}
+.hero-sub {
+  margin-top:12px;
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.7;
+  max-width:560px;
+}
+
+/* LEGEND */
+.legend {
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+  margin-bottom:32px;
+  padding:16px 20px;
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:10px;
+  font-size:12px;
+}
+.legend-item {
+  display:flex;
+  align-items:center;
+  gap:7px;
+  color:var(--muted);
+}
+.dot {
+  width:10px;height:10px;border-radius:50%;flex-shrink:0;
+}
+.dot-e{background:var(--accent);}
+.dot-m{background:var(--accent3);}
+.dot-h{background:var(--accent4);}
+.dot-t{background:var(--accent2);}
+
+/* PROGRESS */
+.prog-wrap {
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:18px 22px;
+  margin-bottom:36px;
+  display:flex;
+  align-items:center;
+  gap:16px;
+  flex-wrap:wrap;
+}
+.prog-label {
+  font-family:'IBM Plex Mono',monospace;
+  font-size:11px;
+  color:var(--accent);
+  white-space:nowrap;
+}
+.prog-track {
+  flex:1;
+  min-width:100px;
+  height:6px;
+  background:var(--border);
+  border-radius:99px;
+  overflow:hidden;
+}
+.prog-fill {
+  height:100%;
+  background:linear-gradient(90deg,var(--accent),var(--accent2));
+  border-radius:99px;
+  transition:width .5s ease;
+  width:0%;
+}
+.prog-count {
+  font-family:'IBM Plex Mono',monospace;
+  font-size:11px;
+  color:var(--muted);
+  white-space:nowrap;
+}
+
+/* PHASE */
+.phase-block {margin-bottom:44px;}
+.phase-title-row {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:6px;
+  padding-bottom:12px;
+  border-bottom:1px solid var(--border);
+}
+.phase-pill {
+  font-family:'IBM Plex Mono',monospace;
+  font-size:10px;
+  letter-spacing:2px;
+  padding:4px 10px;
+  border-radius:4px;
+  text-transform:uppercase;
+  font-weight:600;
+}
+.ph1{background:rgba(74,240,160,.1);color:var(--accent);border:1px solid rgba(74,240,160,.25);}
+.ph2{background:rgba(107,127,255,.1);color:var(--accent2);border:1px solid rgba(107,127,255,.25);}
+.ph3{background:rgba(255,179,71,.1);color:var(--accent3);border:1px solid rgba(255,179,71,.25);}
+.ph4{background:rgba(255,107,138,.1);color:var(--accent4);border:1px solid rgba(255,107,138,.25);}
+
+.phase-name {font-size:17px;font-weight:700;color:#fff;}
+.phase-weeks {
+  margin-left:auto;
+  font-family:'IBM Plex Mono',monospace;
+  font-size:11px;
+  color:var(--muted);
+}
+.phase-desc {
+  font-size:13px;
+  color:var(--muted);
+  margin-bottom:16px;
+  line-height:1.6;
+}
+
+/* TOPIC CARD */
+.topic-card {
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:10px;
+  margin-bottom:10px;
+  overflow:hidden;
+  transition:border-color .2s;
+}
+.topic-card:hover{border-color:rgba(107,127,255,.3);}
+.topic-card.done{background:#0a0f0d;border-color:rgba(74,240,160,.18);}
+
+.topic-head {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:14px 18px;
+  cursor:pointer;
+  user-select:none;
+}
+.chk {
+  width:20px;height:20px;
+  border-radius:5px;
+  border:2px solid var(--border);
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+  cursor:pointer;
+  transition:all .2s;
+  background:transparent;
+}
+.topic-card.done .chk{background:var(--accent);border-color:var(--accent);}
+.chk svg{opacity:0;transition:opacity .2s;}
+.topic-card.done .chk svg{opacity:1;}
+
+.topic-title{font-size:14px;font-weight:700;color:#fff;flex:1;}
+.topic-card.done .topic-title{color:var(--accent);}
+
+.topic-tags{display:flex;gap:6px;flex-wrap:wrap;}
+.tag {
+  font-family:'IBM Plex Mono',monospace;
+  font-size:9px;
+  padding:2px 7px;
+  border-radius:3px;
+  text-transform:uppercase;
+}
+.tag-ds{background:rgba(107,127,255,.12);color:var(--accent2);}
+.tag-algo{background:rgba(74,240,160,.1);color:var(--accent);}
+.tag-pat{background:rgba(255,179,71,.1);color:var(--accent3);}
+.tag-google{background:rgba(234,67,53,.12);color:#ff8a80;}
+
+.chevron{color:var(--muted);font-size:16px;transition:transform .25s;flex-shrink:0;}
+.topic-card.open .chevron{transform:rotate(180deg);}
+
+/* BODY */
+.topic-body {
+  display:none;
+  padding:0 18px 18px;
+  flex-direction:column;
+  gap:18px;
+  border-top:1px solid var(--border);
+}
+.topic-card.open .topic-body{display:flex;}
+
+.body-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+}
+@media(max-width:600px){.body-grid{grid-template-columns:1fr;}}
+
+.sec-label {
+  font-family:'IBM Plex Mono',monospace;
+  font-size:9px;
+  letter-spacing:2px;
+  color:var(--accent2);
+  text-transform:uppercase;
+  margin-bottom:8px;
+}
+
+/* Theory box */
+.theory-box {
+  background:var(--surface);
+  border-radius:8px;
+  padding:14px;
+  font-size:13px;
+  color:var(--muted);
+  line-height:1.65;
+  border-left:3px solid var(--accent2);
+}
+.theory-box strong{color:var(--text);}
+
+/* Resources */
+.res-list{list-style:none;display:flex;flex-direction:column;gap:7px;}
+.res-list li{
+  display:flex;align-items:flex-start;gap:8px;
+  font-size:12px;color:var(--text);line-height:1.5;
+}
+.res-list li::before{content:'▶';color:var(--accent2);font-size:9px;margin-top:3px;flex-shrink:0;}
+.res-list a{
+  color:var(--accent2);text-decoration:none;
+  border-bottom:1px dashed rgba(107,127,255,.35);
+  transition:color .2s;
+}
+.res-list a:hover{color:#fff;}
+
+/* Questions */
+.q-group-label{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:9px;
+  color:var(--muted);
+  letter-spacing:1px;
+  text-transform:uppercase;
+  margin:10px 0 5px;
+}
+.q-list{list-style:none;display:flex;flex-direction:column;gap:5px;}
+.q-item{
+  display:flex;align-items:center;gap:8px;
+  font-size:12px;color:var(--muted);
+  background:var(--surface);
+  border-radius:6px;
+  padding:7px 10px;
+  border-left:2px solid var(--border);
+  line-height:1.4;
+}
+.ql{font-family:'IBM Plex Mono',monospace;font-size:8px;padding:2px 5px;border-radius:3px;flex-shrink:0;}
+.ql-e{background:rgba(74,240,160,.1);color:var(--accent);}
+.ql-m{background:rgba(255,179,71,.1);color:var(--accent3);}
+.ql-h{background:rgba(255,107,138,.1);color:var(--accent4);}
+.qt{font-size:8px;padding:2px 5px;border-radius:3px;flex-shrink:0;
+  background:rgba(234,67,53,.1);color:#ff8a80;
+  font-family:'IBM Plex Mono',monospace;}
+
+/* Pattern box */
+.pat-box {
+  background:rgba(255,179,71,.05);
+  border:1px solid rgba(255,179,71,.2);
+  border-radius:8px;
+  padding:14px;
+  font-size:13px;
+  color:var(--muted);
+  line-height:1.65;
+}
+.pat-box strong{color:var(--accent3);}
+
+/* Tip */
+.tip-box {
+  background:rgba(74,240,160,.04);
+  border:1px solid rgba(74,240,160,.15);
+  border-radius:8px;
+  padding:12px 16px;
+  font-size:12px;
+  color:var(--muted);
+  line-height:1.65;
+}
+.tip-box strong{color:var(--accent);}
+
+/* Google note */
+.google-box {
+  background:rgba(234,67,53,.06);
+  border:1px solid rgba(234,67,53,.2);
+  border-radius:8px;
+  padding:12px 16px;
+  font-size:12px;
+  color:#ff8a80;
+  line-height:1.65;
+}
+
+/* DE EXTRAS */
+.extras-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:14px;
+  margin-top:10px;
+}
+.extra-card {
+  background:var(--card);
+  border:1px solid rgba(255,179,71,.2);
+  border-radius:10px;
+  padding:18px;
+}
+.extra-card h4{font-size:13px;font-weight:700;color:var(--accent3);margin-bottom:10px;}
+.extra-card ul{list-style:none;display:flex;flex-direction:column;gap:6px;font-size:12px;color:var(--muted);}
+.extra-card ul li::before{content:'· ';color:var(--accent3);}
+
+footer {
+  margin-top:60px;
+  text-align:center;
+  font-family:'IBM Plex Mono',monospace;
+  font-size:11px;
+  color:var(--muted);
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="hero">
+  <div class="hero-eyebrow">// Zero → Google Interview Ready · Data Engineering</div>
+  <h1>DSA Mastery Plan<br/>Benchmark: <em>Google</em></h1>
+  <p class="hero-sub">Built for absolute beginners. Every topic has theory first, then patterns, then graded practice — starting from the very basics all the way to Google-level hard problems.</p>
+</div>
+
+<div class="legend">
+  <div class="legend-item"><div class="dot dot-t"></div> Data Structure</div>
+  <div class="legend-item"><div class="dot dot-t" style="background:var(--accent)"></div> Algorithm</div>
+  <div class="legend-item"><div class="dot dot-t" style="background:var(--accent3)"></div> Pattern</div>
+  <div class="legend-item"><div class="dot dot-e"></div> Easy problem</div>
+  <div class="legend-item"><div class="dot dot-m"></div> Medium problem</div>
+  <div class="legend-item"><div class="dot dot-h"></div> Hard problem</div>
+  <div class="legend-item"><div class="dot dot-h" style="background:var(--google)"></div> Google favourite</div>
+</div>
+
+<div class="prog-wrap">
+  <span class="prog-label">PROGRESS</span>
+  <div class="prog-track"><div class="prog-fill" id="pFill"></div></div>
+  <span class="prog-count" id="pCount">0 / 0 topics</span>
+</div>
+
+<div id="planRoot"></div>
+
+<!-- DE EXTRAS -->
+<div class="phase-block" style="margin-top:52px;">
+  <div class="phase-title-row">
+    <span class="phase-pill ph3">DE Special</span>
+    <span class="phase-name">SQL + Data Engineering Essentials</span>
+    <span class="phase-weeks">Ongoing from Week 1</span>
+  </div>
+  <p class="phase-desc">These are non-negotiable for data engineering roles at Google. Practice SQL every single day alongside DSA — even just 1–2 problems a day compounds fast.</p>
+  <div class="extras-grid">
+    <div class="extra-card">
+      <h4>SQL (Practice Daily)</h4>
+      <ul>
+        <li>Window functions — RANK, ROW_NUMBER, LAG, LEAD</li>
+        <li>CTEs and recursive CTEs</li>
+        <li>Complex JOINs, self-joins, cross joins</li>
+        <li>GROUP BY, HAVING, ROLLUP</li>
+        <li>Subqueries vs CTEs trade-offs</li>
+        <li><strong style="color:var(--accent)">→ DataLemur.com (free, Google questions)</strong></li>
+        <li><strong style="color:var(--accent)">→ StrataScratch.com (free)</strong></li>
+      </ul>
+    </div>
+    <div class="extra-card">
+      <h4>Python for Data</h4>
+      <ul>
+        <li>List / dict / set comprehensions</li>
+        <li>collections.Counter, defaultdict, deque</li>
+        <li>Generators and itertools</li>
+        <li>Sorting with custom key functions</li>
+        <li>File I/O and CSV parsing</li>
+        <li><strong style="color:var(--accent)">→ LeetCode — solve in Python only</strong></li>
+      </ul>
+    </div>
+    <div class="extra-card">
+      <h4>System Design (DE)</h4>
+      <ul>
+        <li>ETL vs ELT pipeline design</li>
+        <li>Star schema vs Snowflake schema</li>
+        <li>Batch processing vs streaming</li>
+        <li>CAP theorem, eventual consistency</li>
+        <li>Partitioning and indexing strategies</li>
+        <li><strong style="color:var(--accent)">→ Karan Pratap Singh's DE guide (GitHub)</strong></li>
+      </ul>
+    </div>
+    <div class="extra-card">
+      <h4>Mock Interviews</h4>
+      <ul>
+        <li>Pramp.com — free peer mock interviews</li>
+        <li>interviewing.io — free practice sessions</li>
+        <li>Time limit: 25 min max per problem</li>
+        <li>Think out loud — Google values communication</li>
+        <li>Start mocks from Week 8 onwards</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<footer>Google benchmark · Beginner to interview-ready · All resources free · You've got this 🚀</footer>
+</div>
+
+<script>
+const DATA = [
+  {
+    phase:1, pill:'ph1', label:'Phase 1 — Absolute Basics',
+    weeks:'Weeks 1–2', color:'var(--accent)',
+    desc:'Before touching any problem, understand what data structures ARE and why they exist. These are the building blocks. Every single topic here has an Easy-only entry point.',
+    topics:[
+      {
+        id:'t01',
+        title:'What is a Data Structure? + Big-O Notation',
+        tags:['ds','algo'],
+        theory:'A data structure is just a way to organize data in memory so you can use it efficiently. An array keeps things in a line. A hash map keeps things in labeled buckets. Big-O is the language we use to say "how fast is this?" — O(1) means instant, O(n) means it slows as data grows. You MUST understand Big-O before solving any problem.',
+        pattern:'No pattern yet — this is pure theory. Spend 2 days here.',
+        resources:[
+          {text:'CS Dojo — Big O Notation for Beginners (YouTube)', url:'https://www.youtube.com/watch?v=D6xkbGLQesk'},
+          {text:'Abdul Bari — Introduction to Algorithms (YouTube)', url:'https://www.youtube.com/watch?v=0IAPZzGSbME'},
+          {text:'Striver — Why study DSA? (YouTube)', url:'https://www.youtube.com/watch?v=rZ41y93P2Qo'}
+        ],
+        google:'Big-O is asked verbally in every Google interview. "What is the time complexity of your solution?" — you must answer instantly.',
+        questions:{
+          easy:[
+            {name:'No LeetCode yet — watch all 3 videos above first', google:false},
+            {name:'Write Big-O for: loop through array of n items', google:false},
+            {name:'Write Big-O for: nested loop through same array', google:false}
+          ], med:[], hard:[]
+        }
+      },
+      {
+        id:'t02',
+        title:'Arrays — The Foundation',
+        tags:['ds'],
+        theory:'An array stores elements in contiguous memory, one after another. Accessing any element by index is O(1) — instant. But inserting in the middle is O(n) because you have to shift everything. This is the most basic data structure and every other structure builds on this concept.',
+        pattern:'No pattern yet. Just get comfortable accessing, iterating, and modifying arrays. In Python this is a list.',
+        resources:[
+          {text:'Striver — Arrays basics full (YouTube)', url:'https://www.youtube.com/playlist?list=PLgUwDviBIf0rENwdL0nEH0uGom9no0nyB'},
+          {text:'Abdul Bari — Arrays (YouTube)', url:'https://www.youtube.com/watch?v=AT14lCXuMKI'},
+          {text:'CS Dojo — Introduction to Arrays (YouTube)', url:'https://www.youtube.com/watch?v=pmN9ExDf3yQ'}
+        ],
+        google:'Arrays are in literally every Google interview. Even "hard" problems usually reduce to clever array manipulation.',
+        questions:{
+          easy:[
+            {name:'Contains Duplicate', google:false},
+            {name:'Find Maximum in Array', google:false},
+            {name:'Reverse an Array (do it manually first)', google:false},
+            {name:'Move Zeroes', google:false},
+            {name:'Remove Duplicates from Sorted Array', google:false},
+            {name:'Merge Sorted Array', google:true},
+            {name:'Plus One', google:false},
+            {name:'Pascal\'s Triangle', google:true}
+          ],
+          med:[
+            {name:'Rotate Array', google:true},
+            {name:'Find All Duplicates in an Array', google:false}
+          ],
+          hard:[]
+        }
+      },
+      {
+        id:'t03',
+        title:'Strings — Characters as Arrays',
+        tags:['ds'],
+        theory:'A string is just an array of characters. Every array technique applies here too. The key difference is string immutability in many languages — in Python, strings can\'t be modified in place, so you often convert to a list, modify, then join back.',
+        pattern:'Frequency counting with a hash map is the #1 string pattern. "Count how many times each character appears." Memorize this.',
+        resources:[
+          {text:'NeetCode — Strings overview (YouTube)', url:'https://www.youtube.com/c/NeetCode'},
+          {text:'Striver — String problems (YouTube)', url:'https://www.youtube.com/playlist?list=PLgUwDviBIf0rENwdL0nEH0uGom9no0nyB'}
+        ],
+        google:'Google loves string manipulation — anagrams, palindromes, and encoding problems appear very frequently.',
+        questions:{
+          easy:[
+            {name:'Valid Palindrome', google:true},
+            {name:'Valid Anagram', google:true},
+            {name:'Reverse String', google:false},
+            {name:'First Unique Character in a String', google:true},
+            {name:'Longest Common Prefix', google:false},
+            {name:'Roman to Integer', google:true},
+            {name:'Count and Say', google:true}
+          ],
+          med:[
+            {name:'Longest Palindromic Substring', google:true},
+            {name:'String to Integer (atoi)', google:true}
+          ],
+          hard:[]
+        }
+      },
+      {
+        id:'t04',
+        title:'Hash Maps & Hash Sets',
+        tags:['ds'],
+        theory:'A hash map stores key-value pairs. When you say dict["apple"] = 5, it instantly stores and retrieves in O(1) time. Internally it uses a "hash function" to convert the key into an index. A hash set is the same idea but only stores keys (no values) — useful for "have I seen this before?" checks.',
+        pattern:'Pattern: Trade space for speed. Whenever a brute force is O(n²), ask "can I use a hashmap to remember things I\'ve already seen?" This cuts it to O(n).',
+        resources:[
+          {text:'CS Dojo — Hash Tables (YouTube)', url:'https://www.youtube.com/watch?v=sfWyugl4JWA'},
+          {text:'Abdul Bari — Hashing (YouTube)', url:'https://www.youtube.com/watch?v=MfhjkfocRR0'},
+          {text:'NeetCode — Arrays & Hashing (YouTube)', url:'https://www.youtube.com/c/NeetCode'}
+        ],
+        google:'Google uses hashmap problems to test if you know the "trade space for speed" principle. Two Sum is the classic example — it\'s deceptively simple but teaches the core idea.',
+        questions:{
+          easy:[
+            {name:'Two Sum', google:true},
+            {name:'Ransom Note', google:true},
+            {name:'Jewels and Stones', google:true},
+            {name:'Isomorphic Strings', google:false},
+            {name:'Word Pattern', google:false}
+          ],
+          med:[
+            {name:'Group Anagrams', google:true},
+            {name:'Top K Frequent Elements', google:true},
+            {name:'Longest Consecutive Sequence', google:true},
+            {name:'Subarray Sum Equals K', google:true}
+          ],
+          hard:[
+            {name:'All O`one Data Structure', google:false}
+          ]
+        }
+      }
+    ]
+  },
+  {
+    phase:1, pill:'ph1', label:'Phase 1 — Core Patterns (Arrays)',
+    weeks:'Weeks 2–3', color:'var(--accent)',
+    desc:'Now that you know arrays and hashmaps, learn the most powerful patterns built on them. These patterns alone solve 40% of Google interview questions.',
+    topics:[
+      {
+        id:'t05',
+        title:'Two Pointers Pattern',
+        tags:['pattern'],
+        theory:'You have one array and two index variables (pointers) that move toward each other or in the same direction. This avoids a nested loop — instead of O(n²), you get O(n). Typically used when the array is sorted or when you need to compare elements from both ends.',
+        pattern:'PATTERN: Use two pointers when: (1) array is sorted and you need pairs, (2) you need to detect a cycle, (3) you need to partition the array in place. Start both pointers, define a condition to move each one.',
+        resources:[
+          {text:'NeetCode — Two Pointers full playlist (YouTube)', url:'https://www.youtube.com/watch?v=jM2dhDPYMQM'},
+          {text:'Striver — Two Pointer technique (YouTube)', url:'https://www.youtube.com/playlist?list=PLgUwDviBIf0rENwdL0nEH0uGom9no0nyB'},
+          {text:'Back To Back SWE — Two pointers (YouTube)', url:'https://www.youtube.com/c/BackToBackSWE'}
+        ],
+        google:'Google uses two pointers heavily for array and string problems. Valid Palindrome and 3Sum are classic Google screens.',
+        questions:{
+          easy:[
+            {name:'Valid Palindrome', google:true},
+            {name:'Squares of a Sorted Array', google:false},
+            {name:'Merge Sorted Array (two pointer version)', google:true}
+          ],
+          med:[
+            {name:'Two Sum II (sorted array)', google:false},
+            {name:'3Sum', google:true},
+            {name:'Container With Most Water', google:true},
+            {name:'Remove Nth Node From End of List', google:true},
+            {name:'Sort Colors (Dutch National Flag)', google:true},
+            {name:'4Sum', google:false}
+          ],
+          hard:[
+            {name:'Trapping Rain Water', google:true}
+          ]
+        }
+      },
+      {
+        id:'t06',
+        title:'Sliding Window Pattern',
+        tags:['pattern'],
+        theory:'A window is a contiguous subarray or substring. The window slides from left to right — you add elements from the right and remove them from the left. This converts a O(n²) brute force into O(n). There are two types: fixed-size window (window size is given) and variable-size window (expand/shrink based on a condition).',
+        pattern:'PATTERN: Use sliding window when the problem says "subarray/substring" + "maximum/minimum/longest/shortest". Template: left=0, loop right from 0 to n. Add right element. While window is invalid → shrink from left. Update answer.',
+        resources:[
+          {text:'NeetCode — Sliding Window (YouTube)', url:'https://www.youtube.com/watch?v=jM2dhDPYMQM'},
+          {text:'Striver — Sliding Window (YouTube)', url:'https://youtu.be/EHCGAZBbB88'},
+          {text:'Aditya Verma — Sliding Window full playlist (YouTube)', url:'https://www.youtube.com/playlist?list=PL_z_8CaSLPWeM8BDJmIYDaoQ5zuwyxnfj'}
+        ],
+        google:'Minimum Window Substring is a Google classic that appears in phone screens. Master this pattern cold.',
+        questions:{
+          easy:[
+            {name:'Maximum Average Subarray I (fixed window)', google:false},
+            {name:'Best Time to Buy and Sell Stock', google:true},
+            {name:'Find All Anagrams in a String — easy version first: just check if one is anagram of other', google:false}
+          ],
+          med:[
+            {name:'Longest Substring Without Repeating Characters', google:true},
+            {name:'Permutation in String', google:true},
+            {name:'Find All Anagrams in a String', google:true},
+            {name:'Longest Repeating Character Replacement', google:true},
+            {name:'Max Consecutive Ones III', google:false},
+            {name:'Fruits Into Baskets', google:false}
+          ],
+          hard:[
+            {name:'Minimum Window Substring', google:true},
+            {name:'Sliding Window Maximum', google:true}
+          ]
+        }
+      },
+      {
+        id:'t07',
+        title:'Prefix Sums Pattern',
+        tags:['pattern'],
+        theory:'A prefix sum array stores the running total: prefix[i] = sum of all elements from index 0 to i. Once built in O(n), you can answer "what is the sum of elements from index L to R?" in O(1) instead of O(n). This is a pure "precompute to answer queries fast" technique.',
+        pattern:'PATTERN: Whenever you see "sum of subarray" or "number of subarrays with sum = k", think prefix sums. Combined with a hashmap, it becomes extremely powerful.',
+        resources:[
+          {text:'NeetCode — Prefix Sum (YouTube)', url:'https://www.youtube.com/c/NeetCode'},
+          {text:'Striver — Prefix Sum (YouTube)', url:'https://www.youtube.com/playlist?list=PLgUwDviBIf0rENwdL0nEH0uGom9no0nyB'}
+        ],
+        google:'Subarray Sum Equals K is a Google staple. The prefix sum + hashmap combination is one of the most elegant patterns.',
+        questions:{
+          easy:[
+            {name:'Running Sum of 1d Array', google:false},
+            {name:'Find Pivot Index', google:true},
+            {name:'Range Sum Query — Immutable', google:false}
+          ],
+          med:[
+            {name:'Subarray Sum Equals K', google:true},
+            {name:'Product of Array Except Self', google:true},
+            {name:'Contiguous Array', google:false},
+            {name:'Number of Ways to Split Array', google:false}
+          ],
+          hard:[]
+        }
+      }
+    ]
+  },
+  {
+    phase:2, pill:'ph2', label:'Phase 2 — Linear Data Structures',
+    weeks:'Weeks 3–5', color:'var(--accent2)',
+    desc:'Stacks, queues, and linked lists. These feel abstract at first but click quickly. Master these before trees — trees are built on these same ideas.',
+    topics:[
+      {
+        id:'t08',
+        title:'Stacks',
+        tags:['ds'],
+        theory:'A stack is Last-In First-Out (LIFO). Think of a stack of plates — you always add and remove from the top. In Python it\'s just a list with .append() to push and .pop() to remove. O(1) for both. Classic use case: matching parentheses, undo/redo, tracking function calls.',
+        pattern:'PATTERN — Monotonic Stack: Keep the stack always sorted (either always increasing or always decreasing). When a new element breaks the order, pop until it doesn\'t. This solves "next greater element" type problems in O(n).',
+        resources:[
+          {text:'Abdul Bari — Stack Data Structure (YouTube)', url:'https://www.youtube.com/watch?v=zwb3GmNAtFk'},
+          {text:'NeetCode — Stack problems (YouTube)', url:'https://www.youtube.com/c/NeetCode'},
+          {text:'Striver — Stack & Queue (YouTube)', url:'https://www.youtube.com/playlist?list=PLgUwDviBIf0rENwdL0nEH0uGom9no0nyB'}
+        ],
+        google:'Valid Parentheses appears in almost every Google phone screen — it\'s a litmus test. Monotonic stack problems are a Google favourite in on-site rounds.',
+        questions:{
+          easy:[
+            {name:'Valid Parentheses', google:true},
+            {name:'Baseball Game', google:true},
+            {name:'Implement Stack using Queues', google:false},
+            {name:'Remove All Adjacent Duplicates In String', google:false}
+          ],
+          med:[
+            {name:'Min Stack', google:true},
+            {name:'Daily Temperatures (monotonic stack)', google:true},
+            {name:'Evaluate Reverse Polish Notation', google:true},
+            {name:'Asteroid Collision', google:true},
+            {name:'Car Fleet', google:false},
+            {name:'Next Greater Element II', google:false}
+          ],
+          hard:[
+            {name:'Largest Rectangle in Histogram', google:true},
+            {name:'Basic Calculator II', google:true}
+          ]
+        }
+      },
+      {
+        id:'t09',
+        title:'Queues & Deques',
+        tags:['ds'],
+        theory:'A queue is First-In First-Out (FIFO). Think of a ticket line — first person in is first served. In Python use collections.deque — it adds/removes from both ends in O(1) unlike a regular list. A deque (double-ended queue) lets you add/remove from both ends efficiently. Critical for BFS which you\'ll use constantly in graph problems.',
+        pattern:'PATTERN: BFS (Breadth First Search) always uses a queue. Level-order tree traversal uses a queue. Sliding window maximum uses a deque. Memorize: queue = BFS.',
+        resources:[
+          {text:'Abdul Bari — Queue (YouTube)', url:'https://www.youtube.com/watch?v=zp6pBNbUB2U'},
+          {text:'CS Dojo — Queue introduction (YouTube)', url:'https://www.youtube.com/watch?v=okr-XE8yTO8'},
+          {text:'NeetCode — Deque and Queue (YouTube)', url:'https://www.youtube.com/c/NeetCode'}
+        ],
+        google:'Google loves BFS problems — Rotting Oranges, Word Ladder, and Shortest Path all use a queue. Master deque from the collections module.',
+        questions:{
+          easy:[
+            {name:'Implement Queue using Stacks', google:false},
+            {name:'Number of Students Unable to Eat Lunch', google:false},
+            {name:'First Unique Character in a String (queue approach)', google:true}
+          ],
+          med:[
+            {name:'Design Circular Queue', google:false},
+            {name:'Rotting Oranges', google:true},
+            {name:'Walls and Gates (BFS intro)', google:true},
+            {name:'Open the Lock', google:false}
+          ],
+          hard:[
+            {name:'Sliding Window Maximum (deque)', google:true}
+          ]
+        }
+      },
+      {
+        id:'t10',
+        title:'Linked Lists',
+        tags:['ds'],
+        theory:'A linked list is a chain of nodes where each node holds a value and a pointer to the next node. Unlike arrays, elements are NOT in contiguous memory. Accessing element at index i is O(n) — you walk the chain. But inserting/deleting at a known position is O(1). You MUST be comfortable drawing these on paper before coding.',
+        pattern:'PATTERN — Fast & Slow Pointers (Floyd\'s): Two pointers move at different speeds — one moves 1 step, other moves 2. When the fast one reaches the end, the slow one is at the middle. If there\'s a cycle, they\'ll meet. This one pattern solves cycle detection, finding middle, and finding start of cycle.',
+        resources:[
+          {text:'Striver — Linked List complete series (YouTube)', url:'https://www.youtube.com/playlist?list=PLgUwDviBIf0rENwdL0nEH0uGom9no0nyB'},
+          {text:'Abdul Bari — Linked List (YouTube)', url:'https://www.youtube.com/watch?v=NobHlGUjV3g'},
+          {text:'NeetCode — Linked List (YouTube)', url:'https://www.youtube.com/c/NeetCode'}
+        ],
+        google:'LRU Cache is a Google favourite — it combines linked list + hashmap and tests design thinking. Expect at least one linked list question in Google on-sites.',
+        questions:{
+          easy:[
+            {name:'Reverse Linked List', google:true},
+            {name:'Merge Two Sorted Lists', google:true},
+            {name:'Linked List Cycle (detect)', google:true},
+            {name:'Palindrome Linked List', google:true},
+            {name:'Middle of the Linked List', google:false},
+            {name:'Remove Duplicates from Sorted List', google:false}
+          ],
+          med:[
+            {name:'Linked List Cycle II (find start)', google:true},
+            {name:'Remove Nth Node From End', google:true},
+            {name:'Reorder List', google:true},
+            {name:'Add Two Numbers', google:true},
+            {name:'Copy List with Random Pointer', google:true},
+            {name:'Swap Nodes in Pairs', google:false}
+          ],
+          hard:[
+            {name:'Reverse Nodes in k-Group', google:true},
+            {name:'LRU Cache', google:true},
+            {name:'Merge K Sorted Lists', google:true}
+          ]
+        }
+      }
+    ]
+  },
+  {
+    phase:2, pill:'ph2', label:'Phase 2 — Trees & Recursion',
+    weeks:'Weeks 5–7', color:'var(--accent2)',
+    desc:'This is where most beginners struggle. The secret: learn recursion deeply FIRST, then trees become easy. Trees are just recursive structures.',
+    topics:[
+      {
+        id:'t11',
+        title:'Recursion — Must Master Before Trees',
+        tags:['algo'],
+        theory:'Recursion is when a function calls itself. Every recursive function has two parts: (1) Base case — when to STOP, and (2) Recursive case — call yourself with a smaller problem. The call stack tracks all the function calls. Draw the call tree for every problem until it clicks. This is not optional — you cannot do trees, graphs, or DP without recursion.',
+        pattern:'PATTERN: Think recursively = "assume my function works for smaller inputs, how do I use that to solve the full problem?" This is the leap that unlocks everything.',
+        resources:[
+          {text:'Abdul Bari — Recursion full series — WATCH ALL (YouTube)', url:'https://www.youtube.com/playlist?list=PLDN4rrl48XKpZkf03iYFl-O29szjTrs_O'},
+          {text:'Striver — Recursion basics (YouTube)', url:'https://www.youtube.com/playlist?list=PLgUwDviBIf0rGEWe64KWas0Nryn7SCRWx'},
+          {text:'CS Dojo — Recursion intro (YouTube)', url:'https://www.youtube.com/watch?v=B0NtAFf4bvU'}
+        ],
+        google:'Google expects you to reason recursively in almost every problem — trees, graphs, divide and conquer, DP. This is the most important foundation.',
+        questions:{
+          easy:[
+            {name:'Fibonacci Number (write recursive + iterative both)', google:false},
+            {name:'Power of Two', google:false},
+            {name:'Reverse String (recursive)', google:false},
+            {name:'Sum of Digits', google:false}
+          ],
+          med:[
+            {name:'Pow(x, n)', google:true},
+            {name:'Generate Parentheses (warm up for backtracking)', google:true}
+          ],
+          hard:[]
+        }
+      },
+      {
+        id:'t12',
+        title:'Binary Trees — Traversals',
+        tags:['ds','algo'],
+        theory:'A binary tree is a node where each node has at most 2 children: left and right. The topmost node is the root. Nodes with no children are leaves. Height of tree = number of levels. A balanced tree has O(log n) height. An unbalanced tree can degrade to O(n) height (like a linked list). Learn all 4 traversals cold — they are used in every tree problem.',
+        pattern:'PATTERN — The 4 Traversals:\n• Inorder (Left→Root→Right): gives sorted output for BST\n• Preorder (Root→Left→Right): used to copy/serialize a tree\n• Postorder (Left→Right→Root): used to delete/compute from leaves up\n• Level-order (BFS with queue): processes level by level',
+        resources:[
+          {text:'Abdul Bari — Binary Trees full (YouTube)', url:'https://www.youtube.com/watch?v=H5JubkIy_p8'},
+          {text:'Striver — Trees series part 1 (YouTube)', url:'https://www.youtube.com/playlist?list=PLgUwDviBIf0rENwdL0nEH0uGom9no0nyB'},
+          {text:'Back To Back SWE — Tree traversals visual (YouTube)', url:'https://www.youtube.com/c/BackToBackSWE'}
+        ],
+        google:'Google asks tree problems in EVERY on-site. Lowest Common Ancestor, Serialize/Deserialize, and Binary Tree Maximum Path Sum are direct Google favourites.',
+        questions:{
+          easy:[
+            {name:'Maximum Depth of Binary Tree', google:true},
+            {name:'Invert Binary Tree', google:true},
+            {name:'Symmetric Tree', google:true},
+            {name:'Path Sum', google:false},
+            {name:'Same Tree', google:true},
+            {name:'Subtree of Another Tree', google:false},
+            {name:'Diameter of Binary Tree', google:true}
+          ],
+          med:[
+            {name:'Binary Tree Level Order Traversal', google:true},
+            {name:'Binary Tree Right Side View', google:true},
+            {name:'Count Good Nodes in Binary Tree', google:false},
+            {name:'Lowest Common Ancestor of BT', google:true},
+            {name:'Binary Tree Zigzag Level Order', google:true},
+            {name:'Path Sum II', google:true},
+            {name:'Construct BT from Preorder and Inorder', google:true},
+            {name:'Serialize and Deserialize BST', google:true}
+          ],
+          hard:[
+            {name:'Binary Tree Maximum Path Sum', google:true},
+            {name:'Serialize and Deserialize Binary Tree', google:true}
+          ]
+        }
+      },
+      {
+        id:'t13',
+        title:'Binary Search Trees (BST)',
+        tags:['ds'],
+        theory:'A BST is a binary tree with one extra rule: for any node, all values in its LEFT subtree are smaller, all values in its RIGHT subtree are larger. This property lets you search in O(log n) — at each node you eliminate half the tree. Inorder traversal of a BST gives elements in sorted order — very useful.',
+        pattern:'PATTERN: Any BST problem can be solved by inorder traversal (gives sorted array) then solving the simpler problem on the sorted array. Validation uses the min-max range approach: pass valid range down the tree.',
+        resources:[
+          {text:'Striver — BST full series (YouTube)', url:'https://www.youtube.com/playlist?list=PLgUwDviBIf0rENwdL0nEH0uGom9no0nyB'},
+          {text:'Abdul Bari — BST operations (YouTube)', url:'https://www.youtube.com/watch?v=pcKY4hjDrxk'},
+          {text:'NeetCode — BST problems (YouTube)', url:'https://www.youtube.com/c/NeetCode'}
+        ],
+        google:'Validate BST and Kth Smallest Element in BST are extremely common at Google. The inorder traversal trick is key.',
+        questions:{
+          easy:[
+            {name:'Search in a Binary Search Tree', google:false},
+            {name:'Minimum Absolute Difference in BST', google:false},
+            {name:'Convert Sorted Array to BST', google:true}
+          ],
+          med:[
+            {name:'Validate Binary Search Tree', google:true},
+            {name:'Kth Smallest Element in a BST', google:true},
+            {name:'Insert into a Binary Search Tree', google:false},
+            {name:'Delete Node in a BST', google:false},
+            {name:'Lowest Common Ancestor of a BST', google:true},
+            {name:'Inorder Successor in BST', google:true}
+          ],
+          hard:[
+            {name:'Count of Smaller Numbers After Self', google:true}
+          ]
+        }
+      }
+    ]
+  },
+  {
+    phase:3, pill:'ph3', label:'Phase 3 — Graphs',
+    weeks:'Weeks 7–9', color:'var(--accent3)',
+    desc:'Graphs are the most important topic for Google DE interviews. Pipelines ARE graphs (DAGs). Master BFS, DFS, and topological sort — these three cover 90% of graph interview problems.',
+    topics:[
+      {
+        id:'t14',
+        title:'Graph Basics + BFS',
+        tags:['ds','algo'],
+        theory:'A graph is a set of nodes (vertices) connected by edges. Unlike trees, graphs can have cycles and multiple paths between nodes. Representation: adjacency list (dict of lists in Python) is almost always what you use in interviews. BFS explores level by level using a queue — finds shortest path in unweighted graphs.',
+        pattern:'PATTERN — BFS template:\n1. Put start node in queue, mark visited\n2. While queue not empty: pop node, process it\n3. Add all unvisited neighbours to queue, mark visited\nKey: always mark visited WHEN you add to queue, not when you pop.',
+        resources:[
+          {text:'Striver — Graph series part 1 BFS DFS (YouTube)', url:'https://www.youtube.com/playlist?list=PLgUwDviBIf0rGEWe64KWas0Nryn7SCRWx'},
+          {text:'Abdul Bari — Graph algorithms (YouTube)', url:'https://www.youtube.com/playlist?list=PLDN4rrl48XKpZkf03iYFl-O29szjTrs_O'},
+          {text:'William Fiset — Graph theory full (YouTube)', url:'https://www.youtube.com/playlist?list=PLDV1Zeh2NRsDGO4--qE8yH72HFL1Km93P'}
+        ],
+        google:'Number of Islands and Rotting Oranges are Google phone screen staples. Word Ladder appears in on-sites.',
+        questions:{
+          easy:[
+            {name:'Find if Path Exists in Graph', google:false},
+            {name:'Flood Fill (BFS on grid)', google:true},
+            {name:'Island Perimeter', google:false}
+          ],
+          med:[
+            {name:'Number of Islands', google:true},
+            {name:'Rotting Oranges', google:true},
+            {name:'Max Area of Island', google:true},
+            {name:'Clone Graph', google:true},
+            {name:'Walls and Gates', google:true},
+            {name:'Pacific Atlantic Water Flow', google:true},
+            {name:'Number of Provinces', google:false}
+          ],
+          hard:[
+            {name:'Word Ladder', google:true},
+            {name:'Shortest Path in Binary Matrix', google:false}
+          ]
+        }
+      },
+      {
+        id:'t15',
+        title:'DFS on Graphs',
+        tags:['algo'],
+        theory:'DFS explores as deep as possible before backtracking. Uses a stack — either the call stack (recursive) or an explicit stack. Great for: detecting cycles, finding connected components, path finding, and topological sort. In grids, DFS is often simpler to write than BFS.',
+        pattern:'PATTERN — DFS template (recursive):\ndef dfs(node, visited):\n  visited.add(node)\n  for neighbour in graph[node]:\n    if neighbour not in visited:\n      dfs(neighbour, visited)\nFor cycle detection: track nodes in current recursion path.',
+        resources:[
+          {text:'Striver — DFS full (YouTube)', url:'https://www.youtube.com/playlist?list=PLgUwDviBIf0rGEWe64KWas0Nryn7SCRWx'},
+          {text:'William Fiset — DFS explained (YouTube)', url:'https://www.youtube.com/playlist?list=PLDV1Zeh2NRsDGO4--qE8yH72HFL1Km93P'},
+          {text:'NeetCode — Graph DFS (YouTube)', url:'https://www.youtube.com/c/NeetCode'}
+        ],
+        google:'Course Schedule and the cycle detection pattern is a direct Google interview question — it maps to dependency graphs which are very relevant for DE.',
+        questions:{
+          easy:[
+            {name:'Same Tree (DFS approach)', google:true},
+            {name:'Path Exists in Graph (DFS)', google:false}
+          ],
+          med:[
+            {name:'Course Schedule (cycle detection)', google:true},
+            {name:'Course Schedule II', google:true},
+            {name:'Number of Connected Components in Graph', google:true},
+            {name:'Surrounded Regions', google:true},
+            {name:'Redundant Connection', google:false}
+          ],
+          hard:[
+            {name:'Critical Connections in a Network', google:true}
+          ]
+        }
+      },
+      {
+        id:'t16',
+        title:'Topological Sort',
+        tags:['algo','pattern'],
+        theory:'Topological sort orders nodes in a Directed Acyclic Graph (DAG) such that for every edge A→B, A comes before B in the order. Only possible on DAGs (no cycles). Two algorithms: Kahn\'s algorithm (BFS-based, counts in-degrees) and DFS-based (post-order). This directly models pipeline dependency resolution.',
+        pattern:'PATTERN — Kahn\'s Algorithm (BFS topological sort):\n1. Count in-degrees of all nodes\n2. Add all nodes with in-degree 0 to queue\n3. Pop from queue, add to result, reduce neighbours\' in-degrees\n4. If neighbour in-degree becomes 0, add to queue\n5. If result length != total nodes → cycle exists',
+        resources:[
+          {text:'Striver — Topological Sort Kahn\'s (YouTube)', url:'https://www.youtube.com/playlist?list=PLgUwDviBIf0rGEWe64KWas0Nryn7SCRWx'},
+          {text:'Abdul Bari — Topological Sort (YouTube)', url:'https://www.youtube.com/watch?v=ddTC4Zovtbc'},
+          {text:'William Fiset — Topological Sort (YouTube)', url:'https://www.youtube.com/playlist?list=PLDV1Zeh2NRsDGO4--qE8yH72HFL1Km93P'}
+        ],
+        google:'This is the most DE-relevant algorithm — Airflow DAGs, Spark dependency graphs, and build systems all use topological sort. Google asks this directly.',
+        questions:{
+          easy:[
+            {name:'Build a graph manually: given edges, draw adjacency list', google:false}
+          ],
+          med:[
+            {name:'Course Schedule (topo sort version)', google:true},
+            {name:'Course Schedule II (return order)', google:true},
+            {name:'Find All Possible Recipes from Given Supplies', google:false},
+            {name:'Minimum Height Trees', google:true},
+            {name:'Alien Dictionary', google:true}
+          ],
+          hard:[
+            {name:'Sequence Reconstruction', google:true},
+            {name:'Course Schedule IV', google:false}
+          ]
+        }
+      },
+      {
+        id:'t17',
+        title:'Union-Find (Disjoint Set Union)',
+        tags:['ds','algo'],
+        theory:'Union-Find efficiently answers: "are these two nodes in the same connected component?" Two operations: Find (which group does X belong to?) and Union (merge two groups). With path compression and union by rank, both operations are nearly O(1) amortized. Very elegant data structure.',
+        pattern:'PATTERN: Use Union-Find when you see "connected components", "number of groups", or "are A and B connected?" and the graph is undirected. Template: parent array + rank array + find() with path compression + union() with rank.',
+        resources:[
+          {text:'Striver — DSU / Union Find (YouTube)', url:'https://www.youtube.com/playlist?list=PLgUwDviBIf0rGEWe64KWas0Nryn7SCRWx'},
+          {text:'William Fiset — Union Find (YouTube)', url:'https://www.youtube.com/watch?v=ibjEGG7ylHk'},
+          {text:'NeetCode — Union Find (YouTube)', url:'https://www.youtube.com/c/NeetCode'}
+        ],
+        google:'Redundant Connection and Number of Islands (Union-Find approach) test both correctness and code efficiency.',
+        questions:{
+          easy:[
+            {name:'Find if Path Exists in Graph (UF approach)', google:false}
+          ],
+          med:[
+            {name:'Number of Provinces (UF approach)', google:false},
+            {name:'Redundant Connection', google:true},
+            {name:'Accounts Merge', google:true},
+            {name:'Most Stones Removed with Same Row or Column', google:false}
+          ],
+          hard:[
+            {name:'Number of Islands II (online queries)', google:true}
+          ]
+        }
+      }
+    ]
+  },
+  {
+    phase:3, pill:'ph3', label:'Phase 3 — Search, Sort & Heaps',
+    weeks:'Weeks 8–10', color:'var(--accent3)',
+    desc:'Binary search and heaps are underrated by beginners. Binary search solves problems beyond sorted arrays. Heaps solve Top-K problems that appear constantly in DE.',
+    topics:[
+      {
+        id:'t18',
+        title:'Binary Search',
+        tags:['algo'],
+        theory:'Binary search works on any sorted collection. At each step you look at the middle element — if it\'s too big, search the left half; too small, search the right half. Each step eliminates half the elements → O(log n). The tricky part is handling the boundary conditions correctly (lo <= hi vs lo < hi, mid+1 vs mid).',
+        pattern:'PATTERN — Binary search on the ANSWER (not just sorted arrays): When a problem asks "find the minimum/maximum X such that condition Y is satisfied", binary search on X directly. Works whenever the condition is monotonic (once true, stays true). Koko Eating Bananas is the textbook example.',
+        resources:[
+          {text:'Striver — Binary Search full series (YouTube)', url:'https://www.youtube.com/playlist?list=PLgUwDviBIf0rENwdL0nEH0uGom9no0nyB'},
+          {text:'NeetCode — Binary Search (YouTube)', url:'https://www.youtube.com/c/NeetCode'},
+          {text:'Errichto — Binary Search masterclass (YouTube)', url:'https://www.youtube.com/watch?v=GU7DpgHINWQ'}
+        ],
+        google:'Google loves binary search on the answer space — Ship Packages, Koko, and Minimize Max Distance are all on-site level questions.',
+        questions:{
+          easy:[
+            {name:'Binary Search (basic)', google:false},
+            {name:'Search Insert Position', google:false},
+            {name:'First Bad Version', google:true},
+            {name:'Guess Number Higher or Lower', google:false},
+            {name:'Sqrt(x) — floor value', google:true}
+          ],
+          med:[
+            {name:'Find Minimum in Rotated Sorted Array', google:true},
+            {name:'Search in Rotated Sorted Array', google:true},
+            {name:'Koko Eating Bananas', google:true},
+            {name:'Capacity to Ship Packages Within D Days', google:true},
+            {name:'Find Peak Element', google:true},
+            {name:'Search a 2D Matrix', google:true},
+            {name:'Time Based Key-Value Store', google:true}
+          ],
+          hard:[
+            {name:'Median of Two Sorted Arrays', google:true},
+            {name:'Split Array Largest Sum', google:true}
+          ]
+        }
+      },
+      {
+        id:'t19',
+        title:'Heaps & Priority Queues',
+        tags:['ds'],
+        theory:'A heap is a binary tree where the parent is always smaller than children (min-heap) or always larger (max-heap). The top element is always the minimum or maximum. In Python, heapq is a min-heap. Push and pop are O(log n). Peek (see min) is O(1). Perfect for "always give me the current minimum/maximum".',
+        pattern:'PATTERN — Top-K: Use a min-heap of size K to maintain the K largest elements. Pattern: push each element, if heap size > K, pop the smallest. At the end, heap contains K largest. For K smallest elements, use a max-heap (negate values in Python).',
+        resources:[
+          {text:'Striver — Heap / Priority Queue full (YouTube)', url:'https://www.youtube.com/playlist?list=PLgUwDviBIf0rENwdL0nEH0uGom9no0nyB'},
+          {text:'NeetCode — Heap problems (YouTube)', url:'https://www.youtube.com/c/NeetCode'},
+          {text:'Abdul Bari — Heaps (YouTube)', url:'https://www.youtube.com/watch?v=HqPJF2L5h9U'}
+        ],
+        google:'Top-K problems appear in every Google interview style — "top K frequent searches", "K closest data centers", "K-way merge". The Two Heaps pattern for Find Median is an on-site classic.',
+        questions:{
+          easy:[
+            {name:'Last Stone Weight', google:false},
+            {name:'Kth Largest Element in a Stream', google:true},
+            {name:'Find Median from Data Stream — easy version: just use sorted list', google:false}
+          ],
+          med:[
+            {name:'Kth Largest Element in an Array', google:true},
+            {name:'Top K Frequent Elements', google:true},
+            {name:'K Closest Points to Origin', google:true},
+            {name:'Task Scheduler', google:true},
+            {name:'Reorganize String', google:true},
+            {name:'K-Way Merge (merge K sorted lists — heap approach)', google:true}
+          ],
+          hard:[
+            {name:'Find Median from Data Stream (two heaps)', google:true},
+            {name:'IPO', google:false},
+            {name:'Trapping Rain Water II', google:true}
+          ]
+        }
+      }
+    ]
+  },
+  {
+    phase:4, pill:'ph4', label:'Phase 4 — Advanced: Backtracking & DP',
+    weeks:'Weeks 10–14', color:'var(--accent4)',
+    desc:'The hardest phase. Backtracking and DP are where Google separates candidates. Spend most time here. DP especially needs daily practice — patterns become clear only after solving many problems.',
+    topics:[
+      {
+        id:'t20',
+        title:'Backtracking',
+        tags:['algo','pattern'],
+        theory:'Backtracking is recursion + undo. You build a solution step by step, and when a step leads to a dead end, you UNDO it (backtrack) and try a different path. Think of solving a maze — you go forward, hit a wall, come back, try another direction. The solution space is a decision tree and backtracking explores it.',
+        pattern:'PATTERN — Universal template:\ndef backtrack(current_choice, remaining):\n  if valid_complete_solution: add to results; return\n  for each option in remaining:\n    make choice\n    backtrack(updated_state)\n    undo choice  ← this is the backtrack step',
+        resources:[
+          {text:'Striver — Backtracking full series (YouTube)', url:'https://www.youtube.com/playlist?list=PLgUwDviBIf0rGEWe64KWas0Nryn7SCRWx'},
+          {text:'Abdul Bari — Backtracking (YouTube)', url:'https://www.youtube.com/watch?v=DKCbsiDBN6c'},
+          {text:'NeetCode — Backtracking (YouTube)', url:'https://www.youtube.com/c/NeetCode'}
+        ],
+        google:'Generate Parentheses, Word Search, and N-Queens have all appeared in Google on-sites. The template is always the same — practice until it\'s automatic.',
+        questions:{
+          easy:[
+            {name:'Letter Case Permutation', google:false},
+            {name:'Binary Watch', google:true}
+          ],
+          med:[
+            {name:'Subsets', google:true},
+            {name:'Subsets II (with duplicates)', google:false},
+            {name:'Permutations', google:true},
+            {name:'Permutations II (with duplicates)', google:false},
+            {name:'Combination Sum', google:true},
+            {name:'Combination Sum II', google:false},
+            {name:'Generate Parentheses', google:true},
+            {name:'Letter Combinations of a Phone Number', google:true},
+            {name:'Word Search', google:true}
+          ],
+          hard:[
+            {name:'N-Queens', google:true},
+            {name:'N-Queens II', google:false},
+            {name:'Sudoku Solver', google:true},
+            {name:'Word Search II (trie + backtracking)', google:true}
+          ]
+        }
+      },
+      {
+        id:'t21',
+        title:'Dynamic Programming — 1D',
+        tags:['algo','pattern'],
+        theory:'DP breaks a problem into overlapping subproblems and stores results so you never recompute. Two approaches: top-down (recursion + memoization — cache results) and bottom-up (tabulation — fill a table iteratively). Always start with the recursive solution, then add memoization, then convert to tabulation.',
+        pattern:'PATTERN — Steps to solve any DP problem:\n1. Define what dp[i] means in English\n2. Find the recurrence relation (how dp[i] relates to previous values)\n3. Define base cases\n4. Fill the table in the right order\nAlways ask: "dp[i] = the answer to my problem for the first i elements"',
+        resources:[
+          {text:'Striver — DP series from scratch (YouTube)', url:'https://www.youtube.com/playlist?list=PLgUwDviBIf0qUlt5H_kiKYaNSqJ81PMMY'},
+          {text:'Abdul Bari — Dynamic Programming (YouTube)', url:'https://www.youtube.com/playlist?list=PLDN4rrl48XKpZkf03iYFl-O29szjTrs_O'},
+          {text:'NeetCode — DP playlist (YouTube)', url:'https://www.youtube.com/c/NeetCode'},
+          {text:'Back to Back SWE — DP visual explanations (YouTube)', url:'https://www.youtube.com/c/BackToBackSWE'}
+        ],
+        google:'Google asks DP in almost every on-site loop. Coin Change, Word Break, and Jump Game are direct Google problems. Spend the most time here.',
+        questions:{
+          easy:[
+            {name:'Climbing Stairs', google:true},
+            {name:'Min Cost Climbing Stairs', google:false},
+            {name:'Fibonacci Number (DP version)', google:false},
+            {name:'House Robber', google:true},
+            {name:'N-th Tribonacci Number', google:false}
+          ],
+          med:[
+            {name:'House Robber II', google:true},
+            {name:'Coin Change', google:true},
+            {name:'Coin Change II', google:true},
+            {name:'Jump Game', google:true},
+            {name:'Jump Game II', google:true},
+            {name:'Word Break', google:true},
+            {name:'Longest Increasing Subsequence', google:true},
+            {name:'Maximum Product Subarray', google:true},
+            {name:'Decode Ways', google:true},
+            {name:'Partition Equal Subset Sum', google:true}
+          ],
+          hard:[
+            {name:'Word Break II', google:true},
+            {name:'Minimum Number of Refueling Stops', google:true}
+          ]
+        }
+      },
+      {
+        id:'t22',
+        title:'Dynamic Programming — 2D',
+        tags:['algo','pattern'],
+        theory:'2D DP uses a 2D table where dp[i][j] usually represents the answer considering the first i elements of one input and first j elements of another. Classic for string comparison problems — LCS, Edit Distance, Interleaving String. The key is defining dp[i][j] precisely in English before writing any code.',
+        pattern:'PATTERN — 2D DP on two strings:\n• dp[i][j] = answer for s1[0..i] and s2[0..j]\n• If s1[i] == s2[j]: dp[i][j] depends on dp[i-1][j-1]\n• Else: dp[i][j] depends on dp[i-1][j], dp[i][j-1], or dp[i-1][j-1]\nFill row by row, left to right.',
+        resources:[
+          {text:'Striver — 2D DP full (YouTube)', url:'https://www.youtube.com/playlist?list=PLgUwDviBIf0qUlt5H_kiKYaNSqJ81PMMY'},
+          {text:'Abdul Bari — LCS and Edit Distance (YouTube)', url:'https://www.youtube.com/playlist?list=PLDN4rrl48XKpZkf03iYFl-O29szjTrs_O'},
+          {text:'NeetCode — 2D DP (YouTube)', url:'https://www.youtube.com/c/NeetCode'}
+        ],
+        google:'Edit Distance is one of the most famous Google interview questions. Unique Paths and Minimum Path Sum appear in Google screens regularly.',
+        questions:{
+          easy:[
+            {name:'Unique Paths', google:true},
+            {name:'Minimum Path Sum', google:true},
+            {name:'Pascal\'s Triangle (2D DP approach)', google:true}
+          ],
+          med:[
+            {name:'Unique Paths II (with obstacles)', google:true},
+            {name:'Longest Common Subsequence', google:true},
+            {name:'Longest Common Substring', google:true},
+            {name:'Delete Operation for Two Strings', google:false},
+            {name:'Target Sum', google:false},
+            {name:'Interleaving String', google:true}
+          ],
+          hard:[
+            {name:'Edit Distance', google:true},
+            {name:'Regular Expression Matching', google:true},
+            {name:'Wildcard Matching', google:true},
+            {name:'Burst Balloons', google:true}
+          ]
+        }
+      },
+      {
+        id:'t23',
+        title:'Tries',
+        tags:['ds'],
+        theory:'A trie (prefix tree) is a tree where each path from root to a node represents a prefix of a word. Children of each node represent the next possible characters. Search, insert, and prefix-check are all O(L) where L is the length of the word — faster than hash maps for prefix operations. Used in autocomplete, spell checkers, and routing tables.',
+        pattern:'PATTERN: Implement a TrieNode class with children dict and is_end flag. Insert: walk character by character, creating nodes as needed. Search: walk, return False if any character missing. StartsWith: same as search but return True even if is_end is False.',
+        resources:[
+          {text:'NeetCode — Trie (YouTube)', url:'https://www.youtube.com/c/NeetCode'},
+          {text:'Striver — Tries (YouTube)', url:'https://www.youtube.com/playlist?list=PLgUwDviBIf0rENwdL0nEH0uGom9no0nyB'},
+          {text:'William Fiset — Trie data structure (YouTube)', url:'https://www.youtube.com/watch?v=AXjmTQ8LEoI'}
+        ],
+        google:'Implement Trie and Design Add and Search Words are direct Google questions. Word Search II combines trie + backtracking for a hard Google on-site problem.',
+        questions:{
+          easy:[
+            {name:'Implement Trie (Prefix Tree) — implement from scratch', google:true}
+          ],
+          med:[
+            {name:'Design Add and Search Words Data Structure', google:true},
+            {name:'Replace Words', google:false},
+            {name:'Map Sum Pairs', google:false},
+            {name:'Longest Word in Dictionary', google:false}
+          ],
+          hard:[
+            {name:'Word Search II (trie + backtracking)', google:true},
+            {name:'Palindrome Pairs', google:true}
+          ]
+        }
+      }
+    ]
+  }
+];
+
+function renderAll(){
+  const root = document.getElementById('planRoot');
+  const saved = getSaved();
+  let total = 0;
+  let html = '';
+
+  DATA.forEach(section => {
+    html += `<div class="phase-block">
+      <div class="phase-title-row">
+        <span class="phase-pill ${section.pill}">${section.label}</span>
+        <span class="phase-name" style="display:none">${section.label}</span>
+        <span class="phase-weeks">${section.weeks}</span>
+      </div>
+      <p class="phase-desc">${section.desc}</p>`;
+
+    section.topics.forEach(t => {
+      total++;
+      const done = saved[t.id] || false;
+      const tagHtml = (t.tags||[]).map(tg => {
+        const cls = tg==='ds'?'tag-ds':tg==='algo'?'tag-algo':tg==='pattern'?'tag-pat':'tag-google';
+        const label = tg==='ds'?'Data Structure':tg==='algo'?'Algorithm':tg==='pattern'?'Pattern':'Google Fav';
+        return `<span class="tag ${cls}">${label}</span>`;
+      }).join('');
+
+      const allQ = [
+        ...((t.questions.easy||[]).map(q=>({...q,level:'e'}))),
+        ...((t.questions.med||[]).map(q=>({...q,level:'m'}))),
+        ...((t.questions.hard||[]).map(q=>({...q,level:'h'})))
+      ];
+
+      const qHtml = allQ.map(q=>`
+        <li class="q-item">
+          <span class="ql ql-${q.level}">${q.level==='e'?'easy':q.level==='m'?'med':'hard'}</span>
+          ${q.google?'<span class="qt">🔴 Google</span>':''}
+          ${q.name}
+        </li>`).join('');
+
+      const resHtml = (t.resources||[]).map(r=>`<li><a href="${r.url}" target="_blank">${r.text}</a></li>`).join('');
+
+      html += `
+      <div class="topic-card ${done?'done':''}" id="${t.id}">
+        <div class="topic-head" onclick="toggleCard('${t.id}')">
+          <div class="chk" onclick="event.stopPropagation();toggleDone('${t.id}')">
+            <svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+              <polyline points="2,6 5,9 10,3" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <span class="topic-title">${t.title}</span>
+          <div class="topic-tags">${tagHtml}</div>
+          <span class="chevron">▾</span>
+        </div>
+        <div class="topic-body">
+          <div class="body-grid">
+            <div>
+              <div class="sec-label">📖 Theory — Understand This First</div>
+              <div class="theory-box">${t.theory}</div>
+            </div>
+            <div>
+              <div class="sec-label">📺 Watch These (Free)</div>
+              <ul class="res-list">${resHtml}</ul>
+            </div>
+          </div>
+          <div>
+            <div class="sec-label">🔁 The Pattern</div>
+            <div class="pat-box"><strong>Pattern: </strong>${t.pattern}</div>
+          </div>
+          <div>
+            <div class="sec-label">💻 Practice Problems — Easy → Hard (LeetCode)</div>
+            <ul class="q-list">${qHtml}</ul>
+          </div>
+          <div class="google-box">🔴 <strong>Google Note:</strong> ${t.google}</div>
+        </div>
+      </div>`;
+    });
+
+    html += '</div>';
+  });
+
+  root.innerHTML = html;
+  window._total = total;
+  updateProgress();
+}
+
+function toggleCard(id){
+  document.getElementById(id).classList.toggle('open');
+}
+
+function toggleDone(id){
+  const card = document.getElementById(id);
+  card.classList.toggle('done');
+  const s = getSaved();
+  s[id] = card.classList.contains('done');
+  localStorage.setItem('dsaPlan2', JSON.stringify(s));
+  updateProgress();
+  syncToServer();
+}
+
+function getSaved(){
+  try{ return JSON.parse(localStorage.getItem('dsaPlan2')||'{}'); }
+  catch(e){ return {}; }
+}
+
+async function syncFromServer(){
+  try{
+    const r = await fetch('/api/dsa-progress');
+    const data = await r.json();
+    const merged = {...getSaved(), ...(data.topics||{})};
+    localStorage.setItem('dsaPlan2', JSON.stringify(merged));
+  }catch(e){}
+}
+
+async function syncToServer(){
+  try{
+    await fetch('/api/dsa-progress', {
+      method:'PUT',
+      headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({topics: getSaved()})
+    });
+  }catch(e){}
+}
+
+function updateProgress(){
+  const s = getSaved();
+  const done = Object.values(s).filter(Boolean).length;
+  const total = window._total||1;
+  const pct = Math.round(done/total*100);
+  document.getElementById('pFill').style.width = pct+'%';
+  document.getElementById('pCount').textContent = `${done} / ${total} topics done (${pct}%)`;
+}
+
+syncFromServer().then(renderAll);
+</script>
+</body>
+</html>

@@ -2,7 +2,7 @@
 
 **Plan:** [plan_week1.md](../weekly_plan/plan_week1.md) · **Program tracker:** [learn_tracker.md](../learn_tracker.md) · **Dashboard:** [dashboard/README.md](../../dashboard/README.md)
 
-**Last synced from dashboard:** 2026-05-28T23:50:24
+**Last synced from dashboard:** 2026-05-31T14:09:45
 
 ---
 
@@ -10,7 +10,7 @@
 
 | Area | Status | Detail |
 |------|--------|--------|
-| **LeetCode (Python)** | 4 / 5 | See LeetCode log below |
+| **LeetCode (Python)** | 5 / 5 | See LeetCode log below |
 | **SQL 50** | 4 / 4 | [sql/week1_sql50_log.md](../../sql/week1_sql50_log.md) |
 | **PySpark** | 1 / 2 topics | [pyspark/week1_notes.md](../../pyspark/week1_notes.md) |
 | **Week exit** | In progress | See checklist below |
@@ -21,12 +21,12 @@
 
 | Date | Day | Block A (DSA) | Block B (DE) | Block C (theory) | Notes |
 |------|-----|:-------------:|:------------:|:----------------:|-------|
-| 2026-05-25 | Sun | [x] | [x] | [ ] | Big O sheet; SQL 1–4; LC 217,1,242,88; Spark driver/executor |
-| 2026-05-26 | Mon | [x] | [x] | [ ] | LC 217, Spark notes |
-| 2026-05-27 | Tue | [x] | [x] | [ ] | LC 1, SQL50 |
-| 2026-05-28 | Wed | [x] | [x] | [ ] | LC 242 |
-| 2026-05-29 | Thu | [x] | [x] | [ ] | LC 88, BQ |
-| 2026-05-30 | Fri | [ ] | [ ] | [ ] | LC 121, Spark lazy vs action |
+| 2026-05-25 | Sun | [x] | [x] | [ ] | Big O cheat sheet; SQL50 #1 |
+| 2026-05-26 | Mon | [x] | [x] | [ ] | LC 217; Spark driver/executor |
+| 2026-05-27 | Tue | [x] | [x] | [ ] | LC 1; SQL50 #2–3 |
+| 2026-05-28 | Wed | [x] | [x] | [ ] | LC 242; SQL50 #4 |
+| 2026-05-29 | Thu | [x] | [ ] | [ ] | LC 88 (today IST) · BQ still due |
+| 2026-05-30 | Fri | [x] | [ ] | [ ] | LC 121 done |
 | 2026-05-31 | Sat | [ ] | [ ] | [ ] | Re-solve hardest + review |
 
 ---
@@ -35,7 +35,7 @@
 
 - [x] 4 SQL 50 problems (Select #1–4)
 - [x] Explain O(1), O(n), O(n²), O(n log n)
-- [ ] 5+ of 6 LeetCode problems with complexity notes in repo
+- [x] 5+ of 6 LeetCode problems with complexity notes in repo
 - [x] Spark Driver/Executor in own words
 - [ ] Spark lazy vs action in own words
 - [ ] BQ: why SELECT * is costly
@@ -46,11 +46,11 @@
 
 | # | Problem | Pattern | Done | No hints | Complexity in repo |
 |---|---------|---------|:----:|:--------:|:------------------:|
-| 217 | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) | Hash set | [x] | [ ] | [x] → [leetcode/week_1/leetcode_217.py](../../leetcode/week_1/leetcode_217.py) |
-| 1 | [Two Sum](https://leetcode.com/problems/two-sum/) | Hash map | [x] | [ ] | [x] → [leetcode/week_1/leetcode_1.py](../../leetcode/week_1/leetcode_1.py) |
+| 217 | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) | Hash set | [x] | [x] | [x] → [leetcode/week_1/leetcode_217.py](../../leetcode/week_1/leetcode_217.py) |
+| 1 | [Two Sum](https://leetcode.com/problems/two-sum/) | Hash map | [x] | [x] | [x] → [leetcode/week_1/leetcode_1.py](../../leetcode/week_1/leetcode_1.py) |
 | 242 | [Valid Anagram](https://leetcode.com/problems/valid-anagram/) | Hash / sort | [x] | [ ] | [x] → [leetcode/week_1/leetcode_242.py](../../leetcode/week_1/leetcode_242.py) |
 | 88 | [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/) | Two pointers | [x] | [ ] | [x] → [leetcode/week_1/leetcode_88.py](../../leetcode/week_1/leetcode_88.py) |
-| 121 | [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | Array / greedy | [ ] | [ ] | [ ] |
+| 121 | [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | Array / greedy | [x] | [x] | [x] → [leetcode/week_1/leetcode_121.py](../../leetcode/week_1/leetcode_121.py) |
 
 ---
 
@@ -79,7 +79,7 @@ Study plan: https://leetcode.com/studyplan/top-sql-50/
 
 ## Weekly reflection (fill Sunday 2026-05-31)
 
-- **Finished:** SQL 50 Select ×4; LC 217, 1, 242, 88 with repo notes; Big O cheat sheet; Spark driver/executor theory.
+- **Finished:** SQL 50 Select x4; LC 217,1,242,88,121 with repo notes; Big O; Spark driver/executor.
 - **Blocked:** _
-- **Next week adjust:** Prioritize LC 121, BQ SELECT * notes, Spark lazy/action paragraph.
+- **Next week adjust:** Week 2: 125,167,3; SQL 5-8; Zoomcamp; Chip Huyen until DDIA 8 Jun.
 - **Energy (1–5):** _fill Sunday_

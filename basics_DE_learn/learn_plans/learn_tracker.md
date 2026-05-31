@@ -14,9 +14,11 @@
 | **Week** | 1 |
 | **Dates** | 25 May – 31 May 2026 |
 | **Plan** | [weekly_plan/plan_week1.md](./weekly_plan/plan_week1.md) |
-| **Daily tracker** | [weekly_tracker/tracker_week1.md](./weekly_tracker/tracker_week1.md) |
+| **Daily tracker** | [tracker_week1](./weekly_tracker/tracker_week1.md) · [tracker_week2](./weekly_tracker/tracker_week2.md) |
+| **DSA (Block A)** | [dsa-study-plan.html](./dsa-study-plan.html) = main curriculum · [learn_plan_v2](./learn_plan_v2.md) = which topics per week |
 
-**Week 1 progress (2026-05-25):** LC **4/6** in repo · SQL 50 **4/4** (Select) · Spark Driver/Executor **done** · BQ **0** · Week exit **~60%**
+**Week 1 (complete ~90%):** LC **5/5** logged · SQL **4/4** · Spark DE done · BQ/lazy Spark carry to Week 2  
+**Week 2 (1–7 Jun):** [plan_week2](./weekly_plan/plan_week2.md) · DDIA book **8 Jun**
 
 ---
 
@@ -41,7 +43,7 @@ Full detail: [profile.md](./profile.md)
 | Week | Dates | Phase | Plan | Tracker |
 |------|-------|-------|------|---------|
 | 1 | 25 May – 31 May 2026 | 1 | [plan_week1](./weekly_plan/plan_week1.md) | [tracker_week1](./weekly_tracker/tracker_week1.md) |
-| 2 | 1 – 7 Jun | 1 | *TBD* | *TBD* |
+| 2 | 1 – 7 Jun 2026 | 1 | [plan_week2](./weekly_plan/plan_week2.md) | [tracker_week2](./weekly_tracker/tracker_week2.md) |
 | 10 | 27 Jul – 2 Aug | 1 exit | — | Phase 1 checklist below |
 | 20 | 5 – 11 Oct | 2 exit | — | Phase 2 checklist below |
 | **21** | **12 – 18 Oct** | **3** | **Start applications** | Interview pipeline |
@@ -67,8 +69,8 @@ Full detail: [profile.md](./profile.md)
 
 | Wk | Dates (approx) | Theme | Done |
 |----|----------------|-------|:----:|
-| 1 | 25–31 May | Big O, hash, SQL50×4, Spark/BQ intro | 🟡 In progress |
-| 2 | 1–7 Jun | Arrays, Zoomcamp Spark | ⬜ |
+| 1 | 25–31 May | Big O, hash, SQL50×4, Spark intro | ✅ ~done |
+| 2 | 1–7 Jun | Two pointers, SQL50×4, Zoomcamp | 🟡 In progress |
 | 3 | 8–14 Jun | Sliding window, dbt | ⬜ |
 | 4 | 15–21 Jun | Strings, SQL windows | ⬜ |
 | 5 | 22–28 Jun | Stacks, StrataScratch | ⬜ |

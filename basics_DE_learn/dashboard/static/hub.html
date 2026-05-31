@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DE Learn Hub</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <style>
+    .hub-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+    .hub-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      text-decoration: none;
+      color: inherit;
+      transition: border-color .2s;
+    }
+    .hub-card:hover { border-color: var(--accent); }
+    .hub-card h2 { font-size: 1.1rem; margin: 0 0 0.5rem; color: #fff; }
+    .hub-card p { font-size: 0.85rem; color: var(--muted); margin: 0; line-height: 1.5; }
+    .hub-card .tag { margin-top: 0.75rem; font-size: 0.75rem; color: var(--accent); font-family: monospace; }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <div>
+        <p class="eyebrow">Data Engineering · Phase 1</p>
+        <h1>Learning Hub</h1>
+        <p class="subtitle">DSA + SQL + Spark + theory · Product company DE switch</p>
+      </div>
+    </div>
+  </header>
+  <main class="main">
+    <div class="hub-grid">
+      <a class="hub-card" href="/week?w=1">
+        <h2>Week 1 tracker</h2>
+        <p>DSA topics t01–t04 · SQL · Spark</p>
+        <div class="tag">Block A = dsa-study-plan.html</div>
+      </a>
+      <a class="hub-card" href="/week?w=2" style="border-color: rgba(61,214,198,0.4)">
+        <h2>Week 2 tracker ← START HERE</h2>
+        <p>Today shows Block A/B/C · DSA t05, t06 · SQL 5–8</p>
+        <div class="tag">Current week (1–7 Jun)</div>
+      </a>
+      <a class="hub-card" href="/dsa">
+        <h2>DSA study plan (main)</h2>
+        <p>Your comprehensive prep — theory → pattern → LC. Study this for Block A.</p>
+        <div class="tag">Primary DSA path · t01→t23</div>
+      </a>
+    </div>
+    <ul class="links" style="margin-top:2rem">
+      <li><a href="../learn_plans/learn_plan_v2.md">Master roadmap (markdown)</a></li>
+      <li><a href="../learn_plans/VERIFIED_VIDEOS.md">Verified video links</a></li>
+      <li><a href="../learn_plans/theory_reading.md">Chip Huyen until DDIA · 8 Jun</a></li>
+    </ul>
+  </main>
+</body>
+</html>

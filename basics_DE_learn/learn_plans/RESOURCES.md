@@ -17,7 +17,9 @@
 | BigQuery | [BQ architecture](https://www.youtube.com/watch?v=NCwbF1xllb4) | [BQ best practices](https://cloud.google.com/bigquery/docs/best-practices-performance) |
 | Vector DB | [Explained (5 min)](https://www.youtube.com/watch?v=klTvEwg3oJ4) | [Pinecone guide](https://www.pinecone.io/learn/vector-database/) |
 | RAG | [IBM RAG](https://www.youtube.com/watch?v=T-D1OfcDW1M) | [GCP RAG](https://cloud.google.com/use-cases/retrieval-augmented-generation) |
-| DDIA Ch 3 | [Kleppmann streams talk](https://www.youtube.com/watch?v=AvsaGRE79r4) | DDIA book / O’Reilly |
+| Theory (until 8 Jun) | — | [Chip Huyen AI Engineering](theory_reading.md) |
+| DDIA Ch 3 (from 8 Jun) | [Kleppmann streams talk](https://www.youtube.com/watch?v=AvsaGRE79r4) | DDIA book / O’Reilly |
+| DSA full plan | — | [dsa-study-plan.html](./dsa-study-plan.html) |
 
 ---
 

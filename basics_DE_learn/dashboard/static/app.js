@@ -1,14 +1,184 @@
+/* Study schedule — mirrors learn_plan_v2 + plan_weekN.md */
+const WEEK_PLAN = {
+  1: {
+    title: "Week 1",
+    range: "25 May – 31 May 2026",
+    dsaTopics: ["t01", "t02", "t03", "t04"],
+    dsaLabels: {
+      t01: "Big-O Notation",
+      t02: "Arrays",
+      t03: "Strings",
+      t04: "Hash Maps & Sets",
+    },
+    blockAHint: "DSA plan → topics t01–t04 (theory + Easy LC each)",
+    sqlRange: "SQL 50 #1–4",
+  },
+  2: {
+    title: "Week 2",
+    range: "1 Jun – 7 Jun 2026",
+    dsaTopics: ["t05", "t06", "t07"],
+    dsaLabels: {
+      t05: "Two Pointers",
+      t06: "Sliding Window",
+      t07: "Prefix Sums (optional)",
+    },
+    blockAHint: "DSA plan → t05 then t06 (theory → pattern → Easy LC)",
+    sqlRange: "SQL 50 #5–8",
+    schedule: {
+      "2026-06-01": { a: "t05 + LC 125", b: "SQL #5", c: "Chip Ch 3" },
+      "2026-06-02": { a: "t05 + LC 167", b: "Zoomcamp", c: "Chip" },
+      "2026-06-03": { a: "t06 + LC 3", b: "SQL #6–7", c: "Embeddings video" },
+      "2026-06-04": { a: "t06 finish", b: "SQL #8", c: "Chip Ch 4" },
+      "2026-06-05": { a: "t07 or review", b: "Zoomcamp", c: "RAG paragraph" },
+      "2026-06-06": { a: "catch-up LC", b: "Spark lazy vs action", c: "review" },
+      "2026-06-07": { a: "tick t05–t06 in /dsa", b: "SQL review", c: "reflection" },
+    },
+  },
+};
+
 let state = null;
+let dsaState = { topics: {} };
+let todayInfo = null;
 let saveTimer = null;
+const weekNum = new URLSearchParams(location.search).get("w") || "2";
+const weekKey = () => `week${weekNum}`;
+const week = () => state[weekKey()] || {};
+const plan = () => WEEK_PLAN[weekNum] || WEEK_PLAN[2];
 
 const $ = (sel) => document.querySelector(sel);
 const statusEl = $("#saveStatus");
 
 async function load() {
-  const res = await fetch("/api/progress");
-  state = await res.json();
+  const [progRes, dsaRes, todayRes] = await Promise.all([
+    fetch("/api/progress"),
+    fetch("/api/dsa-progress"),
+    fetch("/api/today"),
+  ]);
+  state = await progRes.json();
+  dsaState = await dsaRes.json();
+  todayInfo = await todayRes.json();
+
+  if (!state[weekKey()]) {
+    alert(`No data for week ${weekNum} in progress.json`);
+  }
+
+  renderHeader();
+  renderTodayStatus();
+  renderToday();
   render();
   renderStats();
+}
+
+function renderTodayStatus() {
+  const el = $("#todayStatus");
+  if (!el || !todayInfo) return;
+  const { storedToday, actualToday, inSync, timezone, suggestedWeek } = todayInfo;
+  el.textContent = inSync
+    ? `Today: ${storedToday}`
+    : `Stored ${storedToday} · IST ${actualToday}`;
+  el.classList.toggle("out-of-sync", !inSync);
+  el.title = inSync
+    ? `${timezone}`
+    : `Click "Set today" to use ${actualToday} (suggested week ${suggestedWeek})`;
+}
+
+async function setTodayFromServer() {
+  const res = await fetch("/api/set-today", { method: "POST" });
+  const data = await res.json();
+  if (!data.ok) {
+    showToast("Could not set today");
+    return;
+  }
+  state.meta.today = data.today;
+  state.meta.currentWeek = data.currentWeek;
+  todayInfo = {
+    ...todayInfo,
+    storedToday: data.today,
+    actualToday: data.today,
+    inSync: true,
+    currentWeek: data.currentWeek,
+    suggestedWeek: data.currentWeek,
+  };
+  renderTodayStatus();
+  renderHeader();
+  renderToday();
+  renderDays(week().days);
+  showToast(`Today → ${data.today} · Week ${data.currentWeek}`);
+  if (String(data.currentWeek) !== String(weekNum)) {
+    setTimeout(() => {
+      location.href = `/week?w=${data.currentWeek}`;
+    }, 900);
+  }
+}
+
+function renderHeader() {
+  const p = plan();
+  const cw = state.meta?.currentWeek || 2;
+  $("#pageTitle").textContent = `${p.title} · Tracker`;
+  const today = state.meta?.today || "";
+  $("#pageSubtitle").innerHTML =
+    `${p.range}${today ? ` · Today <strong>${today}</strong> IST` : ""} · ` +
+    `<a href="/">Hub</a> · <a href="/dsa">DSA plan (Block A)</a>`;
+
+  $("#weekNav").innerHTML = [1, 2]
+    .map(
+      (w) =>
+        `<a href="/week?w=${w}" class="${w == weekNum ? "active" : ""}">${WEEK_PLAN[w].title}${w == cw ? " ← current" : ""}</a>`
+    )
+    .join("");
+
+  $("#dsaTopicList").textContent = p.dsaTopics.join(", ");
+  $("#planWeekLink").innerHTML = `<a href="/week?w=${weekNum}">plan_week${weekNum}.md</a> (Daily tab)`;
+  $("#sqlPanelTitle").textContent = `SQL 50 · ${p.sqlRange}`;
+  $("#lcPanelTitle").textContent = `LeetCode · ${p.title}`;
+  document.title = `DE Learn · ${p.title}`;
+}
+
+function renderToday() {
+  const today = state.meta?.today;
+  const p = plan();
+  const sched = p.schedule?.[today];
+
+  if (!today) {
+    $("#todayBox").innerHTML = "";
+    return;
+  }
+
+  const banner =
+    todayInfo && !todayInfo.inSync
+      ? `<div class="today-banner">
+          <span>Dashboard date is <strong>${todayInfo.storedToday}</strong> but IST is <strong>${todayInfo.actualToday}</strong>.</span>
+          <button type="button" class="btn btn-secondary" id="setTodayBannerBtn">Set today (IST)</button>
+        </div>`
+      : "";
+
+  if (sched) {
+    $("#todayBox").innerHTML = `${banner}
+      <h2>Today · ${today} (${getDayName(today)})</h2>
+      <div class="today-grid">
+        <div><strong>Block A · 90 min</strong>${sched.a}<br/><a href="/dsa">Open DSA plan</a></div>
+        <div><strong>Block B · 90 min</strong>${sched.b}</div>
+        <div><strong>Block C · 30 min</strong>${sched.c}</div>
+      </div>
+      <p class="hint" style="margin-top:0.75rem;margin-bottom:0">After each block, tick the <strong>Daily</strong> tab for ${today}.</p>`;
+  } else {
+    $("#todayBox").innerHTML = `${banner}
+      <h2>Today · ${today}</h2>
+      <p style="margin:0;font-size:0.9rem;color:var(--muted)">
+        Block A: <a href="/dsa">DSA plan</a> → ${p.dsaTopics.join(", ")}.
+        Open <strong>Daily</strong> tab for this week's day list.
+      </p>`;
+  }
+
+  $("#setTodayBannerBtn")?.addEventListener("click", setTodayFromServer);
+}
+
+function getDayName(iso) {
+  try {
+    return new Date(iso + "T12:00:00").toLocaleDateString("en-IN", { weekday: "long" });
+  } catch {
+    return "";
+  }
 }
 
 async function save() {
@@ -27,6 +197,18 @@ async function save() {
   } catch {
     statusEl.textContent = "Save failed";
     statusEl.className = "save-status error";
+  }
+}
+
+async function saveDsaTopics() {
+  try {
+    await fetch("/api/dsa-progress", {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(dsaState),
+    });
+  } catch {
+    /* ignore */
   }
 }
 
@@ -57,11 +239,18 @@ function showToast(msg) {
 }
 
 async function renderStats() {
-  const res = await fetch("/api/stats");
+  const res = await fetch(`/api/stats?week=${weekNum}`);
   const s = await res.json();
   const pct = (d, t) => (t ? Math.round((d / t) * 100) : 0);
+  const p = plan();
+  const dsaDone = p.dsaTopics.filter((id) => dsaState.topics[id]).length;
 
   $("#statsGrid").innerHTML = `
+    <div class="stat-card">
+      <div class="label">DSA topics</div>
+      <div class="value">${dsaDone}/${p.dsaTopics.length}</div>
+      <div class="bar"><div class="bar-fill" style="width:${pct(dsaDone, p.dsaTopics.length)}%"></div></div>
+    </div>
     <div class="stat-card">
       <div class="label">LeetCode</div>
       <div class="value">${s.leetcode.done}/${s.leetcode.total}</div>
@@ -73,11 +262,6 @@ async function renderStats() {
       <div class="bar"><div class="bar-fill" style="width:${pct(s.sql50.done, s.sql50.total)}%"></div></div>
     </div>
     <div class="stat-card">
-      <div class="label">Exit checklist</div>
-      <div class="value">${s.exit.done}/${s.exit.total}</div>
-      <div class="bar"><div class="bar-fill" style="width:${pct(s.exit.done, s.exit.total)}%"></div></div>
-    </div>
-    <div class="stat-card">
       <div class="label">Daily blocks</div>
       <div class="value">${s.blocks.done}/${s.blocks.total}</div>
       <div class="bar"><div class="bar-fill" style="width:${pct(s.blocks.done, s.blocks.total)}%"></div></div>
@@ -86,7 +270,8 @@ async function renderStats() {
 }
 
 function render() {
-  const w = state.week1;
+  const w = week();
+  renderDsaTopics();
   renderDays(w.days);
   renderLeetcode(w.leetcode);
   renderSql(w.sql50);
@@ -96,40 +281,86 @@ function render() {
   renderReflection(w.reflection);
 }
 
+function renderDsaTopics() {
+  const p = plan();
+  $("#dsaTopicsList").innerHTML = p.dsaTopics
+    .map((id) => {
+      const done = dsaState.topics[id];
+      const label = p.dsaLabels[id] || id;
+      return `
+      <div class="card ${done ? "done" : ""}" data-dsa-id="${id}">
+        <input type="checkbox" ${done ? "checked" : ""} />
+        <div class="card-body">
+          <div class="card-title"><a href="/dsa">${id} · ${label}</a></div>
+          <div class="card-meta">Complete theory + pattern + Easy problems in DSA plan</div>
+        </div>
+      </div>`;
+    })
+    .join("");
+
+  $("#dsaTopicsList").querySelectorAll("[data-dsa-id]").forEach((el) => {
+    const id = el.dataset.dsaId;
+    el.querySelector("input").addEventListener("change", (e) => {
+      dsaState.topics[id] = e.target.checked;
+      saveDsaTopics();
+      renderDsaTopics();
+      renderStats();
+      syncDsaExitChecklist();
+      scheduleSave();
+    });
+  });
+}
+
+function syncDsaExitChecklist() {
+  const w = week();
+  const p = plan();
+  const allDone = p.dsaTopics.every((id) => dsaState.topics[id]);
+  const item = w.exitChecklist?.find((e) => e.id === "dsa-t05" || e.id === "dsa-week");
+  if (item && weekNum === "2") item.done = dsaState.topics.t05 && dsaState.topics.t06;
+}
+
 function renderDays(days) {
+  const today = state.meta?.today;
+  const sched = plan().schedule || {};
+
   $("#daysList").innerHTML = days
-    .map(
-      (d, i) => `
-    <div class="card ${d.blockA && d.blockB && d.blockC ? "done" : ""}" data-day="${i}">
+    .map((d, i) => {
+      const s = sched[d.date];
+      const isToday = d.date === today;
+      const taskLines = s
+        ? `<div class="day-task-line">A: ${s.a} · B: ${s.b} · C: ${s.c}</div>`
+        : `<div class="day-task-line">${escapeHtml(d.notes || "")}</div>`;
+      return `
+    <div class="card ${d.blockA && d.blockB && d.blockC ? "done" : ""} ${isToday ? "today-highlight" : ""}" data-day="${i}">
       <div class="card-body">
-        <div class="card-title">${d.date} · ${d.day}</div>
+        <div class="card-title">${d.date} · ${d.day}${isToday ? " · TODAY" : ""}</div>
+        ${taskLines}
         <div class="day-blocks">
           <label><input type="checkbox" data-field="blockA" ${d.blockA ? "checked" : ""} /> A · DSA</label>
           <label><input type="checkbox" data-field="blockB" ${d.blockB ? "checked" : ""} /> B · DE</label>
           <label><input type="checkbox" data-field="blockC" ${d.blockC ? "checked" : ""} /> C · Theory</label>
         </div>
-        <textarea class="day-notes" data-field="notes" rows="1">${escapeHtml(d.notes || "")}</textarea>
       </div>
-    </div>`
-    )
+    </div>`;
+    })
     .join("");
 
   $("#daysList").querySelectorAll("[data-day]").forEach((el) => {
     const i = +el.dataset.day;
-    el.querySelectorAll("input, textarea").forEach((inp) => {
+    el.querySelectorAll("input").forEach((inp) => {
       inp.addEventListener("change", () => {
         const field = inp.dataset.field;
-        if (field === "notes") state.week1.days[i].notes = inp.value;
-        else state.week1.days[i][field] = inp.checked;
+        week().days[i][field] = inp.checked;
         scheduleSave();
         renderStats();
+        renderDays(week().days);
       });
     });
   });
 }
 
 function renderLeetcode(items) {
-  $("#leetcodeList").innerHTML = items
+  $("#leetcodeList").innerHTML = (items || [])
     .map(
       (p, i) => `
     <div class="card ${p.done ? "done" : ""}" data-lc="${i}">
@@ -152,7 +383,7 @@ function renderLeetcode(items) {
 }
 
 function renderSql(items) {
-  $("#sqlList").innerHTML = items
+  $("#sqlList").innerHTML = (items || [])
     .map(
       (s, i) => `
     <div class="card ${s.done ? "done" : ""}" data-sql="${i}">
@@ -170,7 +401,7 @@ function renderSql(items) {
   $("#sqlList").querySelectorAll("[data-sql]").forEach((el) => {
     const i = +el.dataset.sql;
     el.querySelector("input").addEventListener("change", (e) => {
-      state.week1.sql50[i].done = e.target.checked;
+      week().sql50[i].done = e.target.checked;
       scheduleSave();
       render();
     });
@@ -178,7 +409,7 @@ function renderSql(items) {
 }
 
 function renderDe(items) {
-  $("#deList").innerHTML = items
+  $("#deList").innerHTML = (items || [])
     .map(
       (t, i) => `
     <div class="card ${t.done ? "done" : ""}" data-de="${i}">
@@ -194,27 +425,15 @@ function renderDe(items) {
   $("#deList").querySelectorAll("[data-de]").forEach((el) => {
     const i = +el.dataset.de;
     el.querySelector("input").addEventListener("change", (e) => {
-      state.week1.deTopics[i].done = e.target.checked;
-      syncExitFromDe();
+      week().deTopics[i].done = e.target.checked;
       scheduleSave();
       render();
     });
   });
 }
 
-function syncExitFromDe() {
-  const de = state.week1.deTopics;
-  const exit = state.week1.exitChecklist;
-  const map = { "spark-de": "spark-de", "spark-lazy": "spark-lazy", "bq": "bq-select" };
-  de.forEach((t) => {
-    const exitId = map[t.id];
-    const item = exit.find((e) => e.id === exitId);
-    if (item) item.done = t.done;
-  });
-}
-
 function renderExit(items) {
-  $("#exitList").innerHTML = items
+  $("#exitList").innerHTML = (items || [])
     .map(
       (e, i) => `
     <div class="card ${e.done ? "done" : ""}" data-exit="${i}">
@@ -227,7 +446,7 @@ function renderExit(items) {
   $("#exitList").querySelectorAll("[data-exit]").forEach((el) => {
     const i = +el.dataset.exit;
     el.querySelector("input").addEventListener("change", (ev) => {
-      state.week1.exitChecklist[i].done = ev.target.checked;
+      week().exitChecklist[i].done = ev.target.checked;
       scheduleSave();
       render();
     });
@@ -235,14 +454,18 @@ function renderExit(items) {
 }
 
 function renderOverviewExit(items) {
-  $("#overviewExit").innerHTML = items
-    .map((e) => `<div class="card ${e.done ? "done" : ""}" style="margin-bottom:0.4rem">
+  $("#overviewExit").innerHTML = (items || [])
+    .map(
+      (e) =>
+        `<div class="card ${e.done ? "done" : ""}" style="margin-bottom:0.4rem">
       <span style="margin-right:0.5rem">${e.done ? "✓" : "○"}</span>${e.label}
-    </div>`)
+    </div>`
+    )
     .join("");
 }
 
 function renderReflection(r) {
+  if (!r) return;
   $("#reflFinished").value = r.finished || "";
   $("#reflBlocked").value = r.blocked || "";
   $("#reflNext").value = r.nextWeek || "";
@@ -250,16 +473,16 @@ function renderReflection(r) {
 }
 
 function bindSubchecks(container, key) {
-  document.querySelector(container).querySelectorAll(`[data-lc]`).forEach((el) => {
+  const root = document.querySelector(container);
+  if (!root) return;
+  root.querySelectorAll("[data-lc]").forEach((el) => {
     const i = +el.dataset.lc;
     el.querySelectorAll("input").forEach((inp) => {
       inp.addEventListener("change", () => {
-        state.week1[key][i][inp.dataset.field] = inp.checked;
+        week()[key][i][inp.dataset.field] = inp.checked;
         if (key === "leetcode" && inp.dataset.field === "done") {
-          const lc5 = state.week1.exitChecklist.find((e) => e.id === "lc5");
-          if (lc5) {
-            lc5.done = state.week1.leetcode.filter((p) => p.done).length >= 5;
-          }
+          const lc3 = week().exitChecklist?.find((e) => e.id === "lc3");
+          if (lc3) lc3.done = week().leetcode.filter((p) => p.done).length >= 3;
         }
         scheduleSave();
         render();
@@ -269,7 +492,7 @@ function bindSubchecks(container, key) {
 }
 
 function escapeHtml(s) {
-  return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 }
 
 document.querySelectorAll(".tab").forEach((tab) => {
@@ -282,20 +505,25 @@ document.querySelectorAll(".tab").forEach((tab) => {
 });
 
 ["reflFinished", "reflBlocked", "reflNext", "reflEnergy"].forEach((id) => {
-  $(`#${id}`).addEventListener("input", () => {
-    state.week1.reflection.finished = $("#reflFinished").value;
-    state.week1.reflection.blocked = $("#reflBlocked").value;
-    state.week1.reflection.nextWeek = $("#reflNext").value;
-    state.week1.reflection.energy = +$("#reflEnergy").value || 0;
+  const el = $(`#${id}`);
+  if (!el) return;
+  el.addEventListener("input", () => {
+    week().reflection.finished = $("#reflFinished").value;
+    week().reflection.blocked = $("#reflBlocked").value;
+    week().reflection.nextWeek = $("#reflNext").value;
+    week().reflection.energy = +$("#reflEnergy").value || 0;
     scheduleSave();
   });
 });
 
+$("#setTodayBtn")?.addEventListener("click", setTodayFromServer);
+
 $("#syncBtn").addEventListener("click", async () => {
   await save();
-  const res = await fetch("/api/sync-markdown", { method: "POST" });
+  await saveDsaTopics();
+  const res = await fetch(`/api/sync-markdown?week=${weekNum}`, { method: "POST" });
   const data = await res.json();
-  if (data.ok) showToast(`Synced → ${data.path}`);
+  if (data.ok) showToast(`Synced tracker_week${weekNum}.md`);
 });
 
 load();

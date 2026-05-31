@@ -1,15 +1,32 @@
 # Week 1 · 25 May – 31 May 2026
 
-**Phase 1 — Foundations**  
-**Tracker:** [tracker_week1.md](../weekly_tracker/tracker_week1.md) · **Program:** [learn_tracker.md](../learn_tracker.md) · **Resources:** [RESOURCES.md](../RESOURCES.md) · **Hub:** [README.md](../../../README.md)
+**Calendar:** [learn_plan_v2.md](../learn_plan_v2.md) (Week 1 row)
 
-## Daily split (~3.5 h)
+---
 
-| Block | Time | This week |
-|-------|------|-----------|
-| A | 90 min | Big O, hash maps, LeetCode |
-| B | 90 min | SQL 50 (×2), PySpark arch (×2), BQ (×1) |
-| C | 30 min | DDIA Ch 3, vector DB / AI intro |
+## Block A (90 min) — [dsa-study-plan.html](../dsa-study-plan.html)
+
+**This week’s topics only:** **t01** Big-O · **t02** Arrays · **t03** Strings · **t04** Hash maps
+
+Study **in that order** in the HTML plan (theory → video → pattern → Easy problems).
+
+| Topic | You already did (repo) | Also do from DSA plan |
+|-------|------------------------|------------------------|
+| **t01** | [big_O_notation.md](../../leetcode/week_1/big_O_notation.md) | Big-O drills in HTML |
+| **t02** | 217, 88, 121 | Other Easy array problems in t02 |
+| **t03** | 242 | Valid Palindrome, etc. in t03 |
+| **t04** | 1, 217 | Other hash Easy in t04 |
+
+Tick **t01–t04** in Dashboard → `/dsa` when each topic is done.
+
+## Blocks B + C (~2 h)
+
+| Block | This week |
+|-------|-----------|
+| B | SQL50 #1–4 · Spark driver/executor · BQ (carry if open) |
+| C | Chip Huyen Ch1–2 · vector DB video |
+
+**Tracker:** [tracker_week1.md](../weekly_tracker/tracker_week1.md)
 
 ---
 
@@ -17,19 +34,19 @@
 
 | Date | A — DSA | B — DE | C — Theory |
 |------|---------|--------|------------|
-| **Sun 25** | Big O video + cheat sheet | SQL50 #1 | DDIA Ch 3 start |
-| **Mon 26** | LC **217** | Spark driver/executor | DDIA |
+| **Sun 25** | Big O video + cheat sheet | SQL50 #1 | Chip Huyen Ch 1–2 |
+| **Mon 26** | LC **217** | Spark driver/executor | Chip Huyen |
 | **Tue 27** | LC **1** | SQL50 #2–3 | Vector DB video |
-| **Wed 28** | LC **242** | SQL50 #4 | DDIA |
+| **Wed 28** | LC **242** | SQL50 #4 | Chip Huyen |
 | **Thu 29** | LC **88** | BQ Capacitor + `SELECT *` | RAG intro video |
-| **Fri 30** | LC **121** | Spark lazy vs action notes | DDIA |
+| **Fri 30** | LC **121** | Spark lazy vs action notes | Chip Huyen |
 | **Sat 31** | Re-solve hardest LC | Review SQL + Spark | Week review |
 
 ---
 
-## 1. Python DSA (Block A)
+## Block A — day detail (same topics as HTML plan)
 
-### Day 1 — Big O (Sun 25)
+### Day 1 — topic **t01** Big-O (Sun 25)
 
 | Type | Resource |
 |------|----------|
@@ -37,35 +54,35 @@
 | **Read** | [big_O_notation.md](../../leetcode/big_O_notation.md) |
 | **Practice** | Explain O(1), O(n), O(n²) with one example each (say aloud) |
 
-### Day 2 — LC 217 (Mon 26)
+### Day 2 — topic **t02** Arrays + LC 217 (Mon 26)
 
 | Type | Resource |
 |------|----------|
 | **Video** | [NeetCode — Contains Duplicate](https://www.youtube.com/watch?v=3OamzN90kPg) |
 | **Practice** | [LeetCode 217](https://leetcode.com/problems/contains-duplicate/) → save in [leetcode_217.py](../../leetcode/leetcode_217.py) + time/space |
 
-### Day 3 — LC 1 (Tue 27)
+### Day 3 — topic **t04** Hash + LC 1 (Tue 27)
 
 | Type | Resource |
 |------|----------|
 | **Video** | [NeetCode — Two Sum](https://www.youtube.com/watch?v=KLlXCFG5TnA) |
 | **Practice** | [LeetCode 1](https://leetcode.com/problems/two-sum/) (hash map) |
 
-### Day 4 — LC 242 (Wed 28)
+### Day 4 — topic **t03** Strings + LC 242 (Wed 28)
 
 | Type | Resource |
 |------|----------|
 | **Video** | [NeetCode — Valid Anagram](https://www.youtube.com/watch?v=9UtInBqnCgA) |
 | **Practice** | [LeetCode 242](https://leetcode.com/problems/valid-anagram/) |
 
-### Day 5 — LC 88 (Thu 29)
+### Day 5 — topic **t02** + LC 88 (Thu 29)
 
 | Type | Resource |
 |------|----------|
 | **Video** | [NeetCode — Merge Sorted Array](https://www.youtube.com/watch?v=0ui1em1F9oc) |
 | **Practice** | [LeetCode 88](https://leetcode.com/problems/merge-sorted-array/) |
 
-### Day 6 — LC 121 (Fri 30)
+### Day 6 — topic **t02** + LC 121 (Fri 30)
 
 | Type | Resource |
 |------|----------|
@@ -108,16 +125,16 @@
 
 ---
 
-## 3. Cloud & AI (Block C)
-
-### Days Sun–Wed — DDIA Ch 3
+## 3. Theory (Block C) — Chip Huyen until DDIA arrives **8 Jun 2026**
 
 | Type | Resource |
 |------|----------|
-| **Read** | DDIA Ch 3 (*Storage and Retrieval*) — book or [O’Reilly DDIA](https://learning.oreilly.com/library/view/designing-data-intensive/9781491903063/) |
-| **Video (supplement)** | [Martin Kleppmann — Kafka/streams talk](https://www.youtube.com/watch?v=AvsaGRE79r4) (storage context) |
+| **Read** | *AI Engineering* (Chip Huyen) Ch 1–2 — see [theory_reading.md](../theory_reading.md) |
+| **Notes** | [theory/ai_engineering_notes.md](../../theory/ai_engineering_notes.md) |
 
-3 bullets per section: problem solved · one term · link to your BQ work.
+3 bullets per chapter: one term · Endeavour/Gemini link · one interview sentence.
+
+*DDIA Ch 3 starts **Monday 8 Jun** — see [plan_week2.md](./plan_week2.md) / Week 3.*
 
 ### Day Tue 27 — Vector DBs
 
@@ -147,7 +164,7 @@ One paragraph: how RAG relates to your Endeavour Gemini work.
 *Synced 2026-05-25 — detail in [tracker_week1.md](../weekly_tracker/tracker_week1.md)*
 
 - [x] Explain O(1), O(n), O(n²), O(n log n) with examples → [big_O_notation.md](../../leetcode/week_1/big_O_notation.md)
-- [ ] 5+ of 6 LeetCode problems in repo with complexity *(4/6: 217, 1, 242, 88 — add **121**)*
+- [x] 5+ of 6 LeetCode problems in repo with complexity → [leetcode_121.py](../../leetcode/week_1/leetcode_121.py) added
 - [x] 4 SQL 50 problems done → [sql/week1_sql50_log.md](../../sql/week1_sql50_log.md)
 - [x] Spark Driver/Executor in own words → [pyspark/week1_notes.md](../../pyspark/week1_notes.md)
 - [ ] Spark lazy vs action in own words *(TODO in same file)*

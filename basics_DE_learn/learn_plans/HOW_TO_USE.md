@@ -1,6 +1,30 @@
 # How to use your interview prep system
 
-**Start date:** 2026-05-25 · **Checkbox help:** [TRACKER_GUIDE.md](./TRACKER_GUIDE.md)
+**Start date:** 2026-05-25
+
+---
+
+## One sentence
+
+**Block A (90 min):** follow [dsa-study-plan.html](./dsa-study-plan.html) topic by topic.  
+**Blocks B + C:** follow this week’s [plan_weekN.md](./weekly_plan/plan_week1.md).  
+**Calendar:** [learn_plan_v2.md](./learn_plan_v2.md) says which DSA topics belong to which week.
+
+---
+
+## Which week / which day? (read this first)
+
+| Question | Where to look |
+|----------|----------------|
+| **Which calendar week am I in?** | [learn_plan_v2.md](./learn_plan_v2.md) — row for Week 1, 2, … |
+| **What DSA topics this week?** | Same row (e.g. Week 2 = **t05, t06**) + dashboard **Today & DSA** tab |
+| **What do I do today (A/B/C)?** | Dashboard **http://127.0.0.1:5050/week?w=2** — blue **Today** box at top (Week 2 only has day-by-day schedule there). Backup: [plan_week2.md](./weekly_plan/plan_week2.md) |
+| **Theory / patterns / LC list for Block A** | [dsa-study-plan.html](./dsa-study-plan.html) or hub link **/dsa** |
+| **Did I finish things?** | Dashboard tabs + [tracker_weekN.md](./weekly_tracker/tracker_week2.md) |
+
+**You are on Week 2 (1–7 Jun 2026).** Default dashboard link: `/week?w=2`. Week 1 is review/catch-up only.
+
+**Update “today” in the dashboard:** click **Set today (IST)** on `/week?w=N` (updates `progress.json` and `currentWeek` from your start date). Manual edit: `dashboard/data/progress.json` → `meta.today`.
 
 ---
 
@@ -8,53 +32,46 @@
 
 | File | Job |
 |------|-----|
-| [README.md](../../README.md) | Repo hub |
-| [learn_plan_v2.md](./learn_plan_v2.md) | 30-week themes + LeetCode IDs |
-| [RESOURCES.md](./RESOURCES.md) | All links — **video + read** |
-| [learn_tracker.md](./learn_tracker.md) | Phases, calendar, interviews, milestones |
-| [weekly_plan/plan_weekN.md](./weekly_plan/plan_week1.md) | **What** to do each day |
-| [weekly_tracker/tracker_weekN.md](./weekly_tracker/tracker_week1.md) | **What** you finished |
-| [TRACKER_GUIDE.md](./TRACKER_GUIDE.md) | How to tick `- [ ]` → `- [x]` |
+| **[dsa-study-plan.html](./dsa-study-plan.html)** | **Main DSA prep** — theory, patterns, problems (t01–t23) |
+| **[learn_plan_v2.md](./learn_plan_v2.md)** | 30-week calendar: DSA topics + SQL + Spark + theory per week |
+| [plan_weekN.md](./weekly_plan/plan_week1.md) | Today’s tasks for this calendar week |
+| [tracker_weekN.md](./weekly_tracker/tracker_week1.md) | What you finished |
+| [Dashboard](../dashboard/README.md) | Tick boxes: `/dsa` + `/week?w=1` |
+| [learn_tracker.md](./learn_tracker.md) | Phases, apply date, interviews |
+
+You do **not** need a second DSA list — the HTML plan *is* the DSA path.
 
 ---
 
-## Daily (5 min at end of session)
+## Daily (Block A — 90 min)
 
-1. Open [tracker_week1.md](./weekly_tracker/tracker_week1.md) in the **editor**.
-2. Change `[ ]` to `[x]` for today’s row (Blocks A, B, C).
-3. Update LeetCode / SQL tables if applicable.
-4. Save.
+1. Open [learn_plan_v2.md](./learn_plan_v2.md) → find **this calendar week** → note topics (e.g. Week 2 = t05, t06).
+2. Open [dsa-study-plan.html](./dsa-study-plan.html) → expand those topics only.
+3. Per topic: **Theory** → **Watch** → **Pattern** → **Easy LC** (then Medium if time).
+4. Save solutions under `leetcode/week_N/`.
+5. Tick topic in dashboard **/dsa** when done.
 
-**Or ask Cursor:** *“Update tracker_week1 for 2026-05-26: done Block A LC 217, Block B SQL #1.”*
+---
 
-Preview mode does **not** toggle checkboxes — you must edit the file.
+## Daily (Blocks B + C — 2 h)
+
+1. Open [plan_weekN.md](./weekly_plan/plan_week1.md) for SQL / Spark / Chip Huyen / DDIA tasks.
+2. Tick in [tracker_weekN.md](./weekly_tracker/tracker_week1.md) or dashboard `/week?w=N`.
 
 ---
 
 ## Sunday (15 min)
 
-1. Reflection in `tracker_weekN.md`.
-2. Week exit boxes in `plan_weekN.md`.
-3. Mark week done in [learn_tracker.md](./learn_tracker.md).
-4. Optional: *“Create plan_week2 and tracker_week2.”*
-
----
-
-## Compensation targets
-
-| Band | Expectation |
-|------|-------------|
-| 35–42 LPA | Primary goal — complete Phase 1–2 |
-| 42–50 LPA | Strong Phase 2 + mocks |
-| 50–60+ LPA | Stretch — see [profile.md](./profile.md#stretch-50–60-lpa) |
+1. All **this week’s DSA topics** ticked in `/dsa`?
+2. Reflection in `tracker_weekN.md`.
+3. [learn_tracker.md](./learn_tracker.md) — week done?
 
 ---
 
 ## When to apply
 
-| Signal | Week (from 2026-05-25) | Date (approx) |
-|--------|------------------------|---------------|
-| Phase 1 exit | 10 | ~2 Aug 2026 |
-| Phase 2 exit | 20 | ~5 Oct 2026 |
-| **Applications** | **21** | **~12 Oct 2026** |
-| Google / top band | 24+ | After 2 clean mocks |
+| Milestone | Week (from 25 May 2026) |
+|-----------|-------------------------|
+| Phase 1 exit (t01–t16 + SQL 50) | ~10 |
+| Phase 2 exit (t01–t23 + RAG) | ~20 |
+| **Applications** | **21** (~12 Oct 2026) |
