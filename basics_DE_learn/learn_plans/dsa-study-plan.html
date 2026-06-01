@@ -218,6 +218,17 @@ body::before {
 
 .topic-title{font-size:14px;font-weight:700;color:#fff;flex:1;}
 .topic-card.done .topic-title{color:var(--accent);}
+.pace-badge {
+  font-family:'IBM Plex Mono',monospace;
+  font-size:10px;
+  color:var(--accent3);
+  background:rgba(255,179,71,.08);
+  border:1px solid rgba(255,179,71,.25);
+  padding:2px 8px;
+  border-radius:4px;
+  margin-left:8px;
+  white-space:nowrap;
+}
 
 .topic-tags{display:flex;gap:6px;flex-wrap:wrap;}
 .tag {
@@ -287,6 +298,49 @@ body::before {
 }
 .res-list a:hover{color:#fff;}
 
+.lc-search-wrap {
+  margin: 20px 0 16px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 16px;
+}
+.lc-search-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.lc-search {
+  flex: 1;
+  min-width: 220px;
+  max-width: 420px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text);
+  font-size: 14px;
+}
+.lc-search:focus { outline: none; border-color: var(--accent2); }
+.lc-search-hint { font-size: 11px; color: var(--muted); width: 100%; }
+.lc-num {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: rgba(74, 240, 160, 0.1);
+  border: 1px solid rgba(74, 240, 160, 0.25);
+  flex-shrink: 0;
+}
+.lc-num:hover { background: rgba(74, 240, 160, 0.2); }
+.q-item.q-hidden { display: none !important; }
+.topic-card.lc-filter-hide { display: none !important; }
+
 /* Questions */
 .q-group-label{
   font-family:'IBM Plex Mono',monospace;
@@ -298,7 +352,7 @@ body::before {
 }
 .q-list{list-style:none;display:flex;flex-direction:column;gap:5px;}
 .q-item{
-  display:flex;align-items:center;gap:8px;
+  display:flex;align-items:center;gap:8px;flex-wrap:wrap;
   font-size:12px;color:var(--muted);
   background:var(--surface);
   border-radius:6px;
@@ -382,6 +436,7 @@ footer {
   <div class="hero-eyebrow">// Zero → Google Interview Ready · Data Engineering</div>
   <h1>DSA Mastery Plan<br/>Benchmark: <em>Google</em></h1>
   <p class="hero-sub">Built for absolute beginners. Every topic has theory first, then patterns, then graded practice — starting from the very basics all the way to Google-level hard problems.</p>
+  <p class="hero-sub" style="margin-top:12px;color:var(--accent3);font-size:13px;">⏱ <strong>One topic per calendar week</strong> at 90 min/day — see <a href="DSA_PACING.md" style="color:var(--accent)">DSA_PACING.md</a>. Badges show <em>Wk N · days</em> per topic.</p>
 </div>
 
 <div class="legend">
@@ -392,6 +447,12 @@ footer {
   <div class="legend-item"><div class="dot dot-m"></div> Medium problem</div>
   <div class="legend-item"><div class="dot dot-h"></div> Hard problem</div>
   <div class="legend-item"><div class="dot dot-h" style="background:var(--google)"></div> Google favourite</div>
+</div>
+
+<div class="lc-search-wrap">
+  <label for="lcSearch" class="lc-search-label">Search problems</label>
+  <input type="search" id="lcSearch" class="lc-search" placeholder="Type #217, 125, or problem name…" autocomplete="off" />
+  <span class="lc-search-hint">Numbers link to LeetCode · clear box to show all</span>
 </div>
 
 <div class="prog-wrap">
@@ -461,11 +522,12 @@ footer {
 <footer>Google benchmark · Beginner to interview-ready · All resources free · You've got this 🚀</footer>
 </div>
 
+<script src="lc-numbers.js" onerror="this.onerror=null;this.src='/lc-numbers.js'"></script>
 <script>
 const DATA = [
   {
     phase:1, pill:'ph1', label:'Phase 1 — Absolute Basics',
-    weeks:'Weeks 1–2', color:'var(--accent)',
+    weeks:'Cal weeks 1–4 (one topic at a time)', color:'var(--accent)',
     desc:'Before touching any problem, understand what data structures ARE and why they exist. These are the building blocks. Every single topic here has an Easy-only entry point.',
     topics:[
       {
@@ -476,13 +538,12 @@ const DATA = [
         pattern:'No pattern yet — this is pure theory. Spend 2 days here.',
         resources:[
           {text:'CS Dojo — Big O Notation for Beginners (YouTube)', url:'https://www.youtube.com/watch?v=D6xkbGLQesk'},
-          {text:'Abdul Bari — Introduction to Algorithms (YouTube)', url:'https://www.youtube.com/watch?v=0IAPZzGSbME'},
-          {text:'Striver — Why study DSA? (YouTube)', url:'https://www.youtube.com/watch?v=rZ41y93P2Qo'}
+          {text:'Abdul Bari — Introduction to Algorithms (YouTube)', url:'https://www.youtube.com/watch?v=0IAPZzGSbME'}
         ],
         google:'Big-O is asked verbally in every Google interview. "What is the time complexity of your solution?" — you must answer instantly.',
         questions:{
           easy:[
-            {name:'No LeetCode yet — watch all 3 videos above first', google:false},
+            {name:'No LeetCode yet — watch all 2 videos above first', google:false},
             {name:'Write Big-O for: loop through array of n items', google:false},
             {name:'Write Big-O for: nested loop through same array', google:false}
           ], med:[], hard:[]
@@ -581,7 +642,7 @@ const DATA = [
   },
   {
     phase:1, pill:'ph1', label:'Phase 1 — Core Patterns (Arrays)',
-    weeks:'Weeks 2–3', color:'var(--accent)',
+    weeks:'Cal weeks 5–7', color:'var(--accent)',
     desc:'Now that you know arrays and hashmaps, learn the most powerful patterns built on them. These patterns alone solve 40% of Google interview questions.',
     topics:[
       {
@@ -677,7 +738,7 @@ const DATA = [
   },
   {
     phase:2, pill:'ph2', label:'Phase 2 — Linear Data Structures',
-    weeks:'Weeks 3–5', color:'var(--accent2)',
+    weeks:'Cal weeks 8–10', color:'var(--accent2)',
     desc:'Stacks, queues, and linked lists. These feel abstract at first but click quickly. Master these before trees — trees are built on these same ideas.',
     topics:[
       {
@@ -782,7 +843,7 @@ const DATA = [
   },
   {
     phase:2, pill:'ph2', label:'Phase 2 — Trees & Recursion',
-    weeks:'Weeks 5–7', color:'var(--accent2)',
+    weeks:'Cal weeks 11–13', color:'var(--accent2)',
     desc:'This is where most beginners struggle. The secret: learn recursion deeply FIRST, then trees become easy. Trees are just recursive structures.',
     topics:[
       {
@@ -884,7 +945,7 @@ const DATA = [
   },
   {
     phase:3, pill:'ph3', label:'Phase 3 — Graphs',
-    weeks:'Weeks 7–9', color:'var(--accent3)',
+    weeks:'Cal weeks 14–17', color:'var(--accent3)',
     desc:'Graphs are the most important topic for Google DE interviews. Pipelines ARE graphs (DAGs). Master BFS, DFS, and topological sort — these three cover 90% of graph interview problems.',
     topics:[
       {
@@ -1009,7 +1070,7 @@ const DATA = [
   },
   {
     phase:3, pill:'ph3', label:'Phase 3 — Search, Sort & Heaps',
-    weeks:'Weeks 8–10', color:'var(--accent3)',
+    weeks:'Cal weeks 18–20', color:'var(--accent3)',
     desc:'Binary search and heaps are underrated by beginners. Binary search solves problems beyond sorted arrays. Heaps solve Top-K problems that appear constantly in DE.',
     topics:[
       {
@@ -1084,7 +1145,7 @@ const DATA = [
   },
   {
     phase:4, pill:'ph4', label:'Phase 4 — Advanced: Backtracking & DP',
-    weeks:'Weeks 10–14', color:'var(--accent4)',
+    weeks:'Cal weeks 21–24', color:'var(--accent4)',
     desc:'The hardest phase. Backtracking and DP are where Google separates candidates. Spend most time here. DP especially needs daily practice — patterns become clear only after solving many problems.',
     topics:[
       {
@@ -1228,6 +1289,33 @@ const DATA = [
   }
 ];
 
+/** Realistic calendar weeks — see learn_plans/DSA_PACING.md */
+const PACE = {
+  t01:{week:1,days:'3–4 days'},
+  t02:{week:'1–2',days:'7–10 days'},
+  t03:{week:3,days:'7 days'},
+  t04:{week:4,days:'7–10 days'},
+  t05:{week:5,days:'7 days'},
+  t06:{week:6,days:'7–10 days'},
+  t07:{week:7,days:'4–5 days'},
+  t08:{week:8,days:'7 days'},
+  t09:{week:9,days:'5–7 days'},
+  t10:{week:'9–10',days:'10 days'},
+  t11:{week:11,days:'7 days'},
+  t12:{week:12,days:'7–10 days'},
+  t13:{week:13,days:'7 days'},
+  t14:{week:14,days:'7 days'},
+  t15:{week:15,days:'7 days'},
+  t16:{week:16,days:'5–7 days'},
+  t17:{week:17,days:'5–7 days'},
+  t18:{week:18,days:'7 days'},
+  t19:{week:19,days:'7 days'},
+  t20:{week:20,days:'7 days'},
+  t21:{week:'21–22',days:'14 days'},
+  t22:{week:23,days:'7–10 days'},
+  t23:{week:24,days:'5–7 days'}
+};
+
 function renderAll(){
   const root = document.getElementById('planRoot');
   const saved = getSaved();
@@ -1258,14 +1346,21 @@ function renderAll(){
         ...((t.questions.hard||[]).map(q=>({...q,level:'h'})))
       ];
 
-      const qHtml = allQ.map(q=>`
-        <li class="q-item">
+      const qHtml = allQ.map(q=>{
+        const meta = resolveLc(q);
+        const lcAttr = meta ? ` data-lc-id="${meta.id}" data-lc-slug="${meta.slug}"` : '';
+        const lcLabel = formatLcLabel(q);
+        return `
+        <li class="q-item"${lcAttr}>
           <span class="ql ql-${q.level}">${q.level==='e'?'easy':q.level==='m'?'med':'hard'}</span>
           ${q.google?'<span class="qt">🔴 Google</span>':''}
-          ${q.name}
-        </li>`).join('');
+          ${lcLabel}<span class="q-name">${q.name}</span>
+        </li>`;
+      }).join('');
 
       const resHtml = (t.resources||[]).map(r=>`<li><a href="${r.url}" target="_blank">${r.text}</a></li>`).join('');
+      const p = PACE[t.id];
+      const paceHtml = p ? `<span class="pace-badge" title="See DSA_PACING.md">Wk ${p.week} · ${p.days}</span>` : '';
 
       html += `
       <div class="topic-card ${done?'done':''}" id="${t.id}">
@@ -1276,6 +1371,7 @@ function renderAll(){
             </svg>
           </div>
           <span class="topic-title">${t.title}</span>
+          ${paceHtml}
           <div class="topic-tags">${tagHtml}</div>
           <span class="chevron">▾</span>
         </div>
@@ -1309,6 +1405,30 @@ function renderAll(){
   root.innerHTML = html;
   window._total = total;
   updateProgress();
+  setupLcSearch();
+}
+
+function setupLcSearch(){
+  const input = document.getElementById('lcSearch');
+  if (!input) return;
+  input.addEventListener('input', () => {
+    const raw = input.value.trim().toLowerCase();
+    const numQuery = raw.replace(/^#/, '').match(/^\d+$/) ? raw.replace(/^#/, '') : null;
+    document.querySelectorAll('.q-item').forEach(li => {
+      const id = li.dataset.lcId || '';
+      const name = (li.querySelector('.q-name')?.textContent || '').toLowerCase();
+      const slug = (li.dataset.lcSlug || '').replace(/-/g, ' ');
+      let show = !raw;
+      if (!show && numQuery) show = id === numQuery || id.startsWith(numQuery);
+      if (!show && raw) show = name.includes(raw) || slug.includes(raw) || ('#' + id) === raw || id === raw.replace(/^#/, '');
+      li.classList.toggle('q-hidden', !show);
+    });
+    document.querySelectorAll('.topic-card').forEach(card => {
+      const visible = card.querySelectorAll('.q-item:not(.q-hidden)').length;
+      card.classList.toggle('lc-filter-hide', !!raw && visible === 0);
+      if (raw && visible > 0) card.classList.add('open');
+    });
+  });
 }
 
 function toggleCard(id){

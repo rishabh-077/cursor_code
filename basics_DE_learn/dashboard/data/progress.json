@@ -1,11 +1,12 @@
 {
   "meta": {
-    "currentWeek": 1,
+    "currentWeek": 2,
     "ddiaArrives": "2026-06-08",
-    "lastUpdated": "2026-05-31T14:09:45",
+    "lastUpdated": "2026-06-01T21:50:44",
     "startDate": "2026-05-25",
     "timezone": "Asia/Kolkata",
-    "today": "2026-05-31"
+    "today": "2026-06-01",
+    "weekStartsOn": "Monday"
   },
   "week1": {
     "days": [
@@ -14,7 +15,7 @@
         "blockB": true,
         "blockC": false,
         "date": "2026-05-25",
-        "day": "Sun",
+        "day": "Mon",
         "notes": "Big O cheat sheet; SQL50 #1"
       },
       {
@@ -22,7 +23,7 @@
         "blockB": true,
         "blockC": false,
         "date": "2026-05-26",
-        "day": "Mon",
+        "day": "Tue",
         "notes": "LC 217; Spark driver/executor"
       },
       {
@@ -30,7 +31,7 @@
         "blockB": true,
         "blockC": false,
         "date": "2026-05-27",
-        "day": "Tue",
+        "day": "Wed",
         "notes": "LC 1; SQL50 #2\u20133"
       },
       {
@@ -38,7 +39,7 @@
         "blockB": true,
         "blockC": false,
         "date": "2026-05-28",
-        "day": "Wed",
+        "day": "Thu",
         "notes": "LC 242; SQL50 #4"
       },
       {
@@ -46,7 +47,7 @@
         "blockB": false,
         "blockC": false,
         "date": "2026-05-29",
-        "day": "Thu",
+        "day": "Fri",
         "notes": "LC 88 (today IST) \u00b7 BQ still due"
       },
       {
@@ -54,7 +55,7 @@
         "blockB": false,
         "blockC": false,
         "date": "2026-05-30",
-        "day": "Fri",
+        "day": "Sat",
         "notes": "LC 121 done"
       },
       {
@@ -62,7 +63,7 @@
         "blockB": false,
         "blockC": false,
         "date": "2026-05-31",
-        "day": "Sat",
+        "day": "Sun",
         "notes": "Re-solve hardest + review"
       }
     ],
@@ -218,47 +219,47 @@
         "blockB": false,
         "blockC": false,
         "date": "2026-06-01",
-        "day": "Sun",
-        "notes": "t05 + LC 125 \u00b7 SQL #5"
+        "day": "Mon",
+        "notes": "t02 review \u00b7 SQL #5"
       },
       {
         "blockA": false,
         "blockB": false,
         "blockC": false,
         "date": "2026-06-02",
-        "day": "Mon",
-        "notes": "167, Zoomcamp"
+        "day": "Tue",
+        "notes": "t02, Zoomcamp"
       },
       {
         "blockA": false,
         "blockB": false,
         "blockC": false,
         "date": "2026-06-03",
-        "day": "Tue",
-        "notes": "SQL #6-7"
+        "day": "Wed",
+        "notes": "t03, SQL #6-7"
       },
       {
         "blockA": false,
         "blockB": false,
         "blockC": false,
         "date": "2026-06-04",
-        "day": "Wed",
-        "notes": "LC 3, SQL #8"
+        "day": "Thu",
+        "notes": "Valid Palindrome, SQL #8"
       },
       {
         "blockA": false,
         "blockB": false,
         "blockC": false,
         "date": "2026-06-05",
-        "day": "Thu",
-        "notes": "Re-solve 121"
+        "day": "Fri",
+        "notes": "t03 catch-up"
       },
       {
         "blockA": false,
         "blockB": false,
         "blockC": false,
         "date": "2026-06-06",
-        "day": "Fri",
+        "day": "Sat",
         "notes": "Spark lazy"
       },
       {
@@ -266,7 +267,7 @@
         "blockB": false,
         "blockC": false,
         "date": "2026-06-07",
-        "day": "Sat",
+        "day": "Sun",
         "notes": "Week review"
       }
     ],
@@ -318,40 +319,55 @@
       },
       {
         "done": false,
-        "id": "dsa-t05",
-        "label": "DSA topics t05 + t06 in study plan"
+        "id": "dsa-t02",
+        "label": "DSA topic t02 Arrays done in study plan"
+      },
+      {
+        "done": false,
+        "id": "dsa-t03",
+        "label": "DSA topic t03 Strings started (2+ Easy)"
       }
     ],
     "leetcode": [
       {
         "complexityInRepo": false,
         "done": false,
+        "id": 283,
+        "noHints": false,
+        "pattern": "Arrays t02",
+        "repoFile": "",
+        "slug": "move-zeroes",
+        "title": "Move Zeroes"
+      },
+      {
+        "complexityInRepo": false,
+        "done": false,
+        "id": 26,
+        "noHints": false,
+        "pattern": "Arrays t02",
+        "repoFile": "",
+        "slug": "remove-duplicates-from-sorted-array",
+        "title": "Remove Duplicates from Sorted Array"
+      },
+      {
+        "complexityInRepo": false,
+        "done": false,
         "id": 125,
         "noHints": false,
-        "pattern": "Two pointers",
+        "pattern": "Strings t03",
         "repoFile": "",
         "slug": "valid-palindrome",
         "title": "Valid Palindrome"
       },
       {
-        "complexityInRepo": false,
-        "done": false,
-        "id": 167,
-        "noHints": false,
-        "pattern": "Two pointers",
-        "repoFile": "",
-        "slug": "two-sum-ii-input-array-is-sorted",
-        "title": "Two Sum II"
-      },
-      {
-        "complexityInRepo": false,
-        "done": false,
-        "id": 3,
-        "noHints": false,
-        "pattern": "Sliding window",
-        "repoFile": "",
-        "slug": "longest-substring-without-repeating-characters",
-        "title": "Longest Substring Without Repeating"
+        "complexityInRepo": true,
+        "done": true,
+        "id": 242,
+        "noHints": true,
+        "pattern": "Strings t03",
+        "repoFile": "leetcode/week_1/leetcode_242.py",
+        "slug": "valid-anagram",
+        "title": "Valid Anagram (review)"
       }
     ],
     "reflection": {

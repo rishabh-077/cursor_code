@@ -1,38 +1,62 @@
 /* Study schedule — mirrors learn_plan_v2 + plan_weekN.md */
+/* Realistic DSA pacing — one topic focus per calendar week (see DSA_PACING.md) */
 const WEEK_PLAN = {
   1: {
     title: "Week 1",
-    range: "25 May – 31 May 2026",
-    dsaTopics: ["t01", "t02", "t03", "t04"],
-    dsaLabels: {
-      t01: "Big-O Notation",
-      t02: "Arrays",
-      t03: "Strings",
-      t04: "Hash Maps & Sets",
-    },
-    blockAHint: "DSA plan → topics t01–t04 (theory + Easy LC each)",
+    range: "Mon 25 May – Sun 31 May 2026",
+    dsaTopics: ["t01", "t02"],
+    dsaLabels: { t01: "Big-O (finish)", t02: "Arrays (start)" },
+    blockAHint: "t01 full week start · t02 theory only — not t03/t04 yet",
     sqlRange: "SQL 50 #1–4",
   },
   2: {
     title: "Week 2",
-    range: "1 Jun – 7 Jun 2026",
-    dsaTopics: ["t05", "t06", "t07"],
-    dsaLabels: {
-      t05: "Two Pointers",
-      t06: "Sliding Window",
-      t07: "Prefix Sums (optional)",
-    },
-    blockAHint: "DSA plan → t05 then t06 (theory → pattern → Easy LC)",
+    range: "Mon 1 Jun – Sun 7 Jun 2026",
+    dsaTopics: ["t02", "t03"],
+    dsaLabels: { t02: "Arrays (finish)", t03: "Strings (start)" },
+    blockAHint: "Finish t02 Easy · start t03 — two pointers = Week 5",
     sqlRange: "SQL 50 #5–8",
     schedule: {
-      "2026-06-01": { a: "t05 + LC 125", b: "SQL #5", c: "Chip Ch 3" },
-      "2026-06-02": { a: "t05 + LC 167", b: "Zoomcamp", c: "Chip" },
-      "2026-06-03": { a: "t06 + LC 3", b: "SQL #6–7", c: "Embeddings video" },
-      "2026-06-04": { a: "t06 finish", b: "SQL #8", c: "Chip Ch 4" },
-      "2026-06-05": { a: "t07 or review", b: "Zoomcamp", c: "RAG paragraph" },
-      "2026-06-06": { a: "catch-up LC", b: "Spark lazy vs action", c: "review" },
-      "2026-06-07": { a: "tick t05–t06 in /dsa", b: "SQL review", c: "reflection" },
+      "2026-06-01": { a: "t02 review + Move Zeroes", b: "SQL #5", c: "Chip Ch 3" },
+      "2026-06-02": { a: "t02 Remove Dup / Plus One", b: "Zoomcamp", c: "Chip" },
+      "2026-06-03": { a: "t03 theory + 242 review", b: "SQL #6–7", c: "Embeddings" },
+      "2026-06-04": { a: "t03 Valid Palindrome", b: "SQL #8", c: "Chip Ch 4" },
+      "2026-06-05": { a: "t03 Easy catch-up", b: "Zoomcamp", c: "RAG note" },
+      "2026-06-06": { a: "t02/t03 re-solve", b: "Spark lazy", c: "review" },
+      "2026-06-07": { a: "tick t02 in /dsa", b: "SQL review", c: "reflection" },
     },
+  },
+  3: {
+    title: "Week 3",
+    range: "8–14 Jun 2026",
+    dsaTopics: ["t03", "t04"],
+    dsaLabels: { t03: "Strings (finish)", t04: "Hash maps (start)" },
+    blockAHint: "Finish t03 · start t04 — full hash week = Week 4",
+    sqlRange: "SQL 50 #9–12",
+  },
+  4: {
+    title: "Week 4",
+    range: "15–21 Jun 2026",
+    dsaTopics: ["t04"],
+    dsaLabels: { t04: "Hash maps (full week)" },
+    blockAHint: "t04 only — 4+ Easy, 1–2 Medium if ready",
+    sqlRange: "SQL 50 #13–16",
+  },
+  5: {
+    title: "Week 5",
+    range: "22–28 Jun 2026",
+    dsaTopics: ["t05"],
+    dsaLabels: { t05: "Two pointers" },
+    blockAHint: "First week for two pointers · LC 125, 167",
+    sqlRange: "SQL 50 #17–20",
+  },
+  6: {
+    title: "Week 6",
+    range: "29 Jun – 5 Jul 2026",
+    dsaTopics: ["t06"],
+    dsaLabels: { t06: "Sliding window" },
+    blockAHint: "Full week — LC 3 when pattern clicks",
+    sqlRange: "SQL 50 #21–25",
   },
 };
 
@@ -120,10 +144,10 @@ function renderHeader() {
     `${p.range}${today ? ` · Today <strong>${today}</strong> IST` : ""} · ` +
     `<a href="/">Hub</a> · <a href="/dsa">DSA plan (Block A)</a>`;
 
-  $("#weekNav").innerHTML = [1, 2]
+  $("#weekNav").innerHTML = Object.keys(WEEK_PLAN)
     .map(
       (w) =>
-        `<a href="/week?w=${w}" class="${w == weekNum ? "active" : ""}">${WEEK_PLAN[w].title}${w == cw ? " ← current" : ""}</a>`
+        `<a href="/week?w=${w}" class="${w == weekNum ? "active" : ""}">${WEEK_PLAN[w].title}${w == cw ? " ← cal" : ""}</a>`
     )
     .join("");
 
@@ -315,8 +339,12 @@ function syncDsaExitChecklist() {
   const w = week();
   const p = plan();
   const allDone = p.dsaTopics.every((id) => dsaState.topics[id]);
-  const item = w.exitChecklist?.find((e) => e.id === "dsa-t05" || e.id === "dsa-week");
-  if (item && weekNum === "2") item.done = dsaState.topics.t05 && dsaState.topics.t06;
+  if (weekNum === "2") {
+    const t02 = w.exitChecklist?.find((e) => e.id === "dsa-t02");
+    const t03 = w.exitChecklist?.find((e) => e.id === "dsa-t03");
+    if (t02) t02.done = !!dsaState.topics.t02;
+    if (t03) t03.done = !!dsaState.topics.t03;
+  }
 }
 
 function renderDays(days) {

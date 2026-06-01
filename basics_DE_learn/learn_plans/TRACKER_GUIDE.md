@@ -82,4 +82,4 @@ Cursor will edit `- [ ]` → `- [x]` and tables for you. You review and save.
 | 21 (apply) | ~12 Oct 2026 | Phase 3 | [learn_tracker](./learn_tracker.md) pipeline |
 | 30 (end) | ~23 Dec 2026 | Negotiation | |
 
-*Calendar assumes 7-day weeks from start; slip a week = shift dates — update this table on Sunday.*
+*Calendar weeks run **Monday → Sunday** from start date 2026-05-25 (Monday). Slip a week = shift dates — update on **Sunday** (week close).*

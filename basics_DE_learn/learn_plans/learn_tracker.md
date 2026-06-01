@@ -1,6 +1,6 @@
 # Program tracker (consolidated)
 
-**Start date:** 2026-05-25 · **Target apply:** ~Week 21 (**12 Oct 2026**) · **Program end:** ~Week 30 (**21 Dec 2026**)  
+**Start date:** 2026-05-25 (**Monday**) · Weeks **Mon → Sun** · **Target apply:** ~Week 28 (realistic DSA) · **Program end:** ~Week 30  
 **Master plan:** [learn_plan_v2.md](./learn_plan_v2.md) · **Profile:** [profile.md](./profile.md) · **How to update checkboxes:** [TRACKER_GUIDE.md](./TRACKER_GUIDE.md)
 
 > **Daily / weekly detail** lives in [weekly_tracker/](./weekly_tracker/) — not here. This file = phases, milestones, interviews, STAR.
@@ -12,13 +12,14 @@
 | | |
 |---|---|
 | **Week** | 1 |
-| **Dates** | 25 May – 31 May 2026 |
+| **Dates** | Mon 25 May – Sun 31 May 2026 |
 | **Plan** | [weekly_plan/plan_week1.md](./weekly_plan/plan_week1.md) |
 | **Daily tracker** | [tracker_week1](./weekly_tracker/tracker_week1.md) · [tracker_week2](./weekly_tracker/tracker_week2.md) |
 | **DSA (Block A)** | [dsa-study-plan.html](./dsa-study-plan.html) = main curriculum · [learn_plan_v2](./learn_plan_v2.md) = which topics per week |
 
 **Week 1 (complete ~90%):** LC **5/5** logged · SQL **4/4** · Spark DE done · BQ/lazy Spark carry to Week 2  
-**Week 2 (1–7 Jun):** [plan_week2](./weekly_plan/plan_week2.md) · DDIA book **8 Jun**
+**Week 2 (1–7 Jun):** DSA **t02/t03** (not t05–t07) · [plan_week2](./weekly_plan/plan_week2.md) · DDIA **8 Jun**  
+**Pacing:** [DSA_PACING.md](./DSA_PACING.md) — Phase 1 DSA exit ~**week 16**, apply ~**week 28** (realistic)
 
 ---
 
@@ -42,8 +43,8 @@ Full detail: [profile.md](./profile.md)
 
 | Week | Dates | Phase | Plan | Tracker |
 |------|-------|-------|------|---------|
-| 1 | 25 May – 31 May 2026 | 1 | [plan_week1](./weekly_plan/plan_week1.md) | [tracker_week1](./weekly_tracker/tracker_week1.md) |
-| 2 | 1 – 7 Jun 2026 | 1 | [plan_week2](./weekly_plan/plan_week2.md) | [tracker_week2](./weekly_tracker/tracker_week2.md) |
+| 1 | Mon 25 May – Sun 31 May 2026 | 1 | [plan_week1](./weekly_plan/plan_week1.md) | [tracker_week1](./weekly_tracker/tracker_week1.md) |
+| 2 | Mon 1 – Sun 7 Jun 2026 | 1 | [plan_week2](./weekly_plan/plan_week2.md) | [tracker_week2](./weekly_tracker/tracker_week2.md) |
 | 10 | 27 Jul – 2 Aug | 1 exit | — | Phase 1 checklist below |
 | 20 | 5 – 11 Oct | 2 exit | — | Phase 2 checklist below |
 | **21** | **12 – 18 Oct** | **3** | **Start applications** | Interview pipeline |

@@ -1,6 +1,6 @@
 # Master roadmap — 30 weeks
 
-**Start:** 2026-05-25 · **Profile:** [profile.md](./profile.md) · **Daily:** 3–4 h
+**Start:** 2026-05-25 (**Monday**) · **Weeks:** Mon → Sun · **Profile:** [profile.md](./profile.md) · **Daily:** 3–4 h
 
 ---
 
@@ -10,20 +10,20 @@ You have **one DSA curriculum** and **one calendar** that wraps it with SQL, Spa
 
 | What | File | Your job |
 |------|------|----------|
-| **DSA (Block A) — THE main prep** | [dsa-study-plan.html](./dsa-study-plan.html) | Study **topic by topic in order** (t01 → t23): theory → video → pattern → practice |
-| **This week’s tasks** | [plan_week1.md](./weekly_plan/plan_week1.md), [plan_week2.md](./weekly_plan/plan_week2.md), … | Which **topics** + which **SQL/Spark/theory** this calendar week |
+| **DSA (Block A) — THE main prep** | [dsa-study-plan.html](./dsa-study-plan.html) | **One topic at a time** — see [DSA_PACING.md](./DSA_PACING.md) |
+| **This week’s tasks** | [plan_weekN.md](./weekly_plan/plan_week1.md) | Block A topic + SQL/Spark/theory |
 | **Mark progress** | [Dashboard](../dashboard/README.md) → `/dsa` + `/week?w=N` | Tick topics + weekly items |
-| **30-week calendar** | This file (below) | Which DSA topics fit in each **calendar week** alongside DE |
+| **30-week calendar** | This file (below) | DE/SQL/theory by calendar week · DSA by pacing table |
 
-**You do not follow two DSA plans.** The old roadmap listed random LeetCode IDs per week. That is replaced by the **comprehensive DSA plan** you added. Block A = only that plan.
+**Pacing change:** t01–t04 in one week or t05–t07 in one week is **not** realistic at 90 min/day. Use **[DSA_PACING.md](./DSA_PACING.md)** — roughly **one DSA topic per calendar week** (t02 and t10 span two weeks).
 
 ### Block A flow (every study day, 90 min)
 
 1. Open [dsa-study-plan.html](./dsa-study-plan.html) (or http://127.0.0.1:5050/dsa).
-2. Find **this week’s topics** in the table below (e.g. Week 2 = **t05**, **t06**).
-3. For each topic: read **Theory** → watch **Resources** → learn **Pattern** → solve **Easy problems first** (then Medium if time).
-4. Save code in `leetcode/week_N/` · tick topic when done.
-5. Ignore other problems in that topic until a later week unless marked optional.
+2. Check **this week’s ONE topic** in the table below (e.g. calendar Week 2 = finish **t02**, not t05).
+3. For that topic: **Theory** → **Watch** → **Pattern** → **Easy problems** (counts in pacing doc).
+4. Save code in `leetcode/week_N/` · tick topic in `/dsa` when truly done.
+5. **DE track (SQL/Spark) continues on calendar week** even if DSA is slower — see “Two parallel tracks” in [DSA_PACING.md](./DSA_PACING.md).
 
 ---
 
@@ -31,8 +31,8 @@ You have **one DSA curriculum** and **one calendar** that wraps it with SQL, Spa
 
 | Block | Time | Focus |
 |-------|------|--------|
-| **A** | 90 min | **[dsa-study-plan.html](./dsa-study-plan.html)** — topics scheduled below |
-| **B** | 90 min | SQL 50 · PySpark · BQ/dbt (per week) |
+| **A** | 90 min | **[dsa-study-plan.html](./dsa-study-plan.html)** — **one topic** from pacing table |
+| **B** | 90 min | SQL 50 · PySpark · BQ/dbt (per calendar week) |
 | **C** | 30–45 min | Chip Huyen *AI Engineering* (until **8 Jun 2026**) → then DDIA |
 | Buffer | 15 min | [learn_tracker.md](./learn_tracker.md) |
 
@@ -42,81 +42,87 @@ You have **one DSA curriculum** and **one calendar** that wraps it with SQL, Spa
 
 Same order as [dsa-study-plan.html](./dsa-study-plan.html):
 
-| DSA phase | Topics | Content |
-|-----------|--------|---------|
-| **1 — Absolute basics** | t01–t04 | Big-O, arrays, strings, hash maps |
-| **1 — Core patterns** | t05–t07 | Two pointers, sliding window, prefix sums |
-| **2 — Linear structures** | t08–t10 | Stacks, queues, linked lists |
-| **2 — Trees** | t11–t13 | Recursion, traversals, BST |
-| **3 — Graphs** | t14–t17 | BFS, DFS, topo sort, union-find |
-| **3 — Heaps / intervals** | t18–t20 | Heaps, intervals, greedy |
-| **4 — Advanced** | t21–t23 | DP, backtracking, tries |
+| DSA phase | Topics | Realistic span |
+|-----------|--------|----------------|
+| **1 — Absolute basics** | t01–t04 | Weeks **1–4** |
+| **1 — Core patterns** | t05–t07 | Weeks **5–7** |
+| **2 — Linear structures** | t08–t10 | Weeks **8–10** |
+| **2 — Trees** | t11–t13 | Weeks **11–13** |
+| **3 — Graphs** | t14–t17 | Weeks **14–17** |
+| **3 — Heaps / intervals** | t18–t20 | Weeks **18–20** |
+| **4 — Advanced** | t21–t23 | Weeks **21–24** |
 
-Full problem lists and videos live **only** in the HTML file — not duplicated here.
-
----
-
-## PHASE 1 — Calendar weeks 1–10 (DSA + DE together)
-
-**Block A = topics column.** Do those topics in the HTML plan. **Block B/C** = same as before.
-
-| Cal wk | Dates | DSA topics (do in HTML) | Block B (DE) | Block C (theory) |
-|--------|-------|-------------------------|--------------|------------------|
-| **1** | 25–31 May | **t01** Big-O · **t02** Arrays · **t03** Strings · **t04** Hash | SQL50 #1–4 · Spark driver | Chip Huyen Ch1–2 |
-| **2** | 1–7 Jun | **t05** Two pointers · **t06** Sliding window · **t07** Prefix (if time) | SQL50 #5–8 · Zoomcamp | Chip Huyen Ch3–4 |
-| **3** | 8–14 Jun | **t07** finish · **t08** Stacks | SQL50 #9–12 · dbt | **DDIA Ch3** (book arrives) |
-| **4** | 15–21 Jun | **t09** Queues · **t10** Linked lists (start) | SQL50 #13–16 · BQ | RAG overview |
-| **5** | 22–28 Jun | **t10** finish · **t11** Recursion | SQL50 #17–20 | — |
-| **6** | 29 Jun – 5 Jul | **t12** Tree traversals | SQL50 #21–25 | DDIA |
-| **7** | 6–12 Jul | **t13** BST | Finish SQL 50 | — |
-| **8** | 13–19 Jul | **t14** Graphs BFS | StrataScratch | Chunking |
-| **9** | 20–26 Jul | **t15–t16** DFS · Topo sort | STAR stories | Review |
-| **10** | 27 Jul – 2 Aug | Review **t01–t16** · timed LC | Pipeline whiteboard | Phase 1 exam |
-
-**Week 1 plan:** [plan_week1](./weekly_plan/plan_week1.md) · **Week 2:** [plan_week2](./weekly_plan/plan_week2.md) · **Trackers:** [weekly_tracker/](./weekly_tracker/)
-
-**Phase 1 exit:** All topics **t01–t16** ticked in DSA plan · SQL 50 done · Zoomcamp · 35+ LC saved · PySpark story · STAR ready
+Full problem lists and videos live **only** in the HTML file.
 
 ---
 
-## PHASE 2 — Weeks 11–20 (DSA continues t17–t23 + systems)
+## PHASE 1 — Calendar (DE + DSA)
+
+**DSA column = one primary topic.** SQL/Spark columns follow **calendar week** (may run ahead of DSA — OK).
+
+| Cal wk | Dates | **DSA (Block A)** | Block B (DE) | Block C (theory) |
+|--------|-------|-------------------|--------------|------------------|
+| **1** | Mon 25 – Sun 31 May | **t01** Big-O · start **t02** Arrays | SQL50 #1–4 · Spark driver | Chip Ch1–2 |
+| **2** | Mon 1 – Sun 7 Jun | **t02** Arrays finish · start **t03** Strings | SQL50 #5–8 · Zoomcamp | Chip Ch3–4 |
+| **3** | 8–14 Jun | **t03** Strings finish | SQL50 #9–12 · dbt | **DDIA Ch3** (book arrives) |
+| **4** | 15–21 Jun | **t04** Hash maps | SQL50 #13–16 · BQ | RAG overview |
+| **5** | 22–28 Jun | **t05** Two pointers | SQL50 #17–20 | Chip / DDIA |
+| **6** | 29 Jun – 5 Jul | **t06** Sliding window | SQL50 #21–25 | DDIA |
+| **7** | 6–12 Jul | **t07** Prefix sums | Finish SQL 50 | — |
+| **8** | 13–19 Jul | **t08** Stacks | StrataScratch | Chunking |
+| **9** | 20–26 Jul | **t09** Queues · **t10** LL start | STAR stories | Review |
+| **10** | 27 Jul – 2 Aug | **t10** Linked lists finish | Pipeline whiteboard | — |
+| **11** | 3–9 Aug | **t11** Recursion | Mock LC easy | DDIA |
+| **12** | 10–16 Aug | **t12** Tree traversals | — | — |
+| **13** | 17–23 Aug | **t13** BST | — | — |
+| **14** | 24–30 Aug | **t14** Graphs BFS | — | — |
+| **15** | 31 Aug – 6 Sep | **t15** DFS | — | — |
+| **16** | 7–13 Sep | **t16** Topo sort · review t01–t16 | Phase 1 DSA exam | Phase 1 exit |
+
+**Week plans:** [plan_week1](./weekly_plan/plan_week1.md) · [plan_week2](./weekly_plan/plan_week2.md) · [plan_week3](./weekly_plan/plan_week3.md) · …
+
+**Phase 1 exit (revised):** **t01–t16** in DSA plan · SQL 50 done · Zoomcamp · 35+ LC saved · PySpark story · STAR ready (~**mid Sep 2026** for DSA portion)
+
+---
+
+## PHASE 2 — Weeks 17–26 (DSA t17–t23 + systems)
 
 | Cal wk | DSA topics (HTML) | DE / streaming | AI |
 |--------|-------------------|----------------|-----|
-| **11** | **t17** Union-find · **t18** Heaps start | Kafka / Pub/Sub | — |
-| **12** | **t18** finish · **t19** Intervals | Event time · DDIA Ch 11 | — |
-| **13** | **t20** Greedy | DDIA Ch 5–6 | — |
-| **14** | **t21** DP intro | Late data · **RAG MVP** | [rag_side_project](../projects/rag_side_project.md) |
-| **15** | **t21** DP | Composer / DAG story | — |
-| **16** | **t22** Backtracking | Spark tuning | — |
-| **17** | **t23** Tries | Batch system design doc | Enterprise RAG |
-| **18** | Review weak DSA topics | Streaming design doc | — |
-| **19** | Mixed Medium timed | CDC / lakehouse | RAG polish |
-| **20** | Phase 2 DSA exam | 2 design docs | AI pitch |
+| **17** | **t17** Union-find | Kafka / Pub/Sub | — |
+| **18** | **t18** Binary search | Event time · DDIA Ch 11 | — |
+| **19** | **t19** Heaps | Late data | — |
+| **20** | **t20** Greedy | — | — |
+| **21–22** | **t21** DP (2 weeks) | **RAG MVP** | [rag_side_project](../projects/rag_side_project.md) |
+| **23** | **t22** Backtracking | Spark tuning | — |
+| **24** | **t23** Tries | Batch system design doc | Enterprise RAG |
+| **25** | Review weak DSA topics | Streaming design doc | — |
+| **26** | Phase 2 DSA exam | 2 design docs | AI pitch |
 
 **Phase 2 exit:** **t01–t23** complete · 60+ LC · streaming whiteboard · public RAG repo
 
 ---
 
-## PHASE 3 — Weeks 21–30 (interviews)
+## PHASE 3 — Applications (shift ~6 weeks later if you follow realistic DSA)
 
 | Wk | Focus |
 |----|--------|
-| **21** | Resume · **start applications** |
-| **22** | 8 STAR stories |
-| **23–24** | Coding + DE design mocks |
-| **25–28** | Applications + live interviews |
-| **29–30** | Gap sprint · negotiate |
+| **27** | Resume polish |
+| **28** | **Start applications** (was week 21 on old aggressive timeline) |
+| **29–30** | Mocks · interviews · negotiate |
+
+*Original “apply week 21” (~Oct 2026) assumed faster DSA. With realistic pacing, target **apply ~late Nov 2026** unless you add extra daily time. Update [learn_tracker.md](./learn_tracker.md) when you commit.*
 
 ---
 
-## Goals & apply date
+## Goals
 
 | When | Target |
 |------|--------|
-| Month 0–4 | Follow DSA plan + SQL 50 + pipeline stories |
-| Month 5–7 | **35–42 LPA** |
-| **Apply** | **Week 21+** (~12 Oct 2026) |
+| Month 0–6 | DSA t01–t16 + SQL 50 + pipeline stories |
+| Month 7–9 | t17–t23 + RAG |
+| **Apply** | **~Week 28** (realistic DSA) or earlier if you study 5+ h/day |
+| Month 5–7 pay | **35–42 LPA** |
 
 ---
 
@@ -124,10 +130,11 @@ Full problem lists and videos live **only** in the HTML file — not duplicated 
 
 | File | Role |
 |------|------|
+| [DSA_PACING.md](./DSA_PACING.md) | Days per topic · two-track model |
 | [RESOURCES.md](./RESOURCES.md) | Verified video links |
 | [theory_reading.md](./theory_reading.md) | Chip Huyen until 8 Jun, then DDIA |
 | [HOW_TO_USE.md](./HOW_TO_USE.md) | Daily / Sunday routine |
-| [learn_tracker.md](./learn_tracker.md) | Phases · milestones · interviews |
+| [learn_tracker.md](./learn_tracker.md) | Phases · milestones |
 | [VERIFIED_VIDEOS.md](./VERIFIED_VIDEOS.md) | Link checks |
 
-**Old note:** [dsa_week_map.md](./dsa_week_map.md) is retired — schedule lives in **this file** + [dsa-study-plan.html](./dsa-study-plan.html).
+**Old note:** [dsa_week_map.md](./dsa_week_map.md) is retired — use **DSA_PACING.md** + this file.

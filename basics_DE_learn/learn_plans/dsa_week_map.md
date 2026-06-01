@@ -1,10 +1,9 @@
-# Moved into main plan
+# Retired — use DSA pacing instead
 
-The DSA schedule is no longer a separate map.
+The old “4 topics per week” map is removed.
 
-**Use these two files only:**
-
-1. **[learn_plan_v2.md](./learn_plan_v2.md)** — which DSA topics (t01–t23) belong to each **calendar week**
-2. **[dsa-study-plan.html](./dsa-study-plan.html)** — theory, videos, patterns, and **all** practice problems
-
-Block A every day = open the HTML plan → complete this week’s topics from the table in `learn_plan_v2.md`.
+| Use this | For |
+|----------|-----|
+| **[DSA_PACING.md](./DSA_PACING.md)** | Days per topic · realistic calendar weeks |
+| **[learn_plan_v2.md](./learn_plan_v2.md)** | Full 30-week calendar (DSA + DE) |
+| **[dsa-study-plan.html](./dsa-study-plan.html)** | Theory · problems · **Wk N** badge on each topic |

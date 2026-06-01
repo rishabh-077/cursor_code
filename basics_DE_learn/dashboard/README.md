@@ -13,7 +13,7 @@ cd basics_DE_learn\dashboard
 |-----|------|
 | http://127.0.0.1:5050 | **Hub** — pick Week 1, Week 2, or DSA plan |
 | http://127.0.0.1:5050/week?w=1 | Week 1 tracker |
-| http://127.0.0.1:5050/week?w=2 | **Week 2 tracker (start here)** — Today box + t05/t06 |
+| http://127.0.0.1:5050/week?w=2 | **Week 2** — Today box + DSA **t02/t03** (see [DSA_PACING.md](../learn_plans/DSA_PACING.md)) |
 | http://127.0.0.1:5050/dsa | **DSA mastery plan** (theory + patterns + LC list) |
 
 ## Data files
@@ -23,7 +23,7 @@ cd basics_DE_learn\dashboard
 | `data/progress.json` | Week 1 & 2 blocks, LC, SQL, exit checklist |
 | `data/dsa_progress.json` | DSA topic IDs (t01, t02, …) synced with `/dsa` UI |
 
-**Set today (IST):** Header button on `/week` — sets `meta.today` and recalculates `currentWeek` from `startDate` (25 May 2026). If the calendar week changed, you are redirected to the right `?w=N`.
+**Set today (IST):** Header button on `/week` — sets `meta.today` and recalculates `currentWeek` from `startDate` (**Mon 25 May 2026**). Weeks run **Monday → Sunday**. If the calendar week changed, you are redirected to the right `?w=N`.
 
 **Sync to Markdown:** Week 1 → `tracker_week1.md` via button on `/week?w=1`.
 

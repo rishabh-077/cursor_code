@@ -1,6 +1,6 @@
 # How to use your interview prep system
 
-**Start date:** 2026-05-25
+**Start date:** 2026-05-25 (**Monday**) — each study week is **Mon → Sun**
 
 ---
 
@@ -17,7 +17,7 @@
 | Question | Where to look |
 |----------|----------------|
 | **Which calendar week am I in?** | [learn_plan_v2.md](./learn_plan_v2.md) — row for Week 1, 2, … |
-| **What DSA topics this week?** | Same row (e.g. Week 2 = **t05, t06**) + dashboard **Today & DSA** tab |
+| **What DSA topics this week?** | [DSA_PACING.md](./DSA_PACING.md) — **one topic focus** (e.g. cal Week 2 = **t02 finish, t03 start**, not t05) |
 | **What do I do today (A/B/C)?** | Dashboard **http://127.0.0.1:5050/week?w=2** — blue **Today** box at top (Week 2 only has day-by-day schedule there). Backup: [plan_week2.md](./weekly_plan/plan_week2.md) |
 | **Theory / patterns / LC list for Block A** | [dsa-study-plan.html](./dsa-study-plan.html) or hub link **/dsa** |
 | **Did I finish things?** | Dashboard tabs + [tracker_weekN.md](./weekly_tracker/tracker_week2.md) |
@@ -45,7 +45,7 @@ You do **not** need a second DSA list — the HTML plan *is* the DSA path.
 
 ## Daily (Block A — 90 min)
 
-1. Open [learn_plan_v2.md](./learn_plan_v2.md) → find **this calendar week** → note topics (e.g. Week 2 = t05, t06).
+1. Open [DSA_PACING.md](./DSA_PACING.md) → find **this calendar week’s DSA topic** (e.g. Week 2 = **t02/t03**, not four topics at once).
 2. Open [dsa-study-plan.html](./dsa-study-plan.html) → expand those topics only.
 3. Per topic: **Theory** → **Watch** → **Pattern** → **Easy LC** (then Medium if time).
 4. Save solutions under `leetcode/week_N/`.

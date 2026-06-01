@@ -2,7 +2,7 @@
 
 **Plan:** [plan_week1.md](../weekly_plan/plan_week1.md) · **Program tracker:** [learn_tracker.md](../learn_tracker.md) · **Dashboard:** [dashboard/README.md](../../dashboard/README.md)
 
-**Last synced from dashboard:** 2026-05-31T14:09:45
+**Last synced from dashboard:** 2026-05-31T23:10:23
 
 ---
 
@@ -21,13 +21,13 @@
 
 | Date | Day | Block A (DSA) | Block B (DE) | Block C (theory) | Notes |
 |------|-----|:-------------:|:------------:|:----------------:|-------|
-| 2026-05-25 | Sun | [x] | [x] | [ ] | Big O cheat sheet; SQL50 #1 |
-| 2026-05-26 | Mon | [x] | [x] | [ ] | LC 217; Spark driver/executor |
-| 2026-05-27 | Tue | [x] | [x] | [ ] | LC 1; SQL50 #2–3 |
-| 2026-05-28 | Wed | [x] | [x] | [ ] | LC 242; SQL50 #4 |
-| 2026-05-29 | Thu | [x] | [ ] | [ ] | LC 88 (today IST) · BQ still due |
-| 2026-05-30 | Fri | [x] | [ ] | [ ] | LC 121 done |
-| 2026-05-31 | Sat | [ ] | [ ] | [ ] | Re-solve hardest + review |
+| 2026-05-25 | Mon | [x] | [x] | [ ] | Big O cheat sheet; SQL50 #1 |
+| 2026-05-26 | Tue | [x] | [x] | [ ] | LC 217; Spark driver/executor |
+| 2026-05-27 | Wed | [x] | [x] | [ ] | LC 1; SQL50 #2–3 |
+| 2026-05-28 | Thu | [x] | [x] | [ ] | LC 242; SQL50 #4 |
+| 2026-05-29 | Fri | [x] | [ ] | [ ] | LC 88 (today IST) · BQ still due |
+| 2026-05-30 | Sat | [x] | [ ] | [ ] | LC 121 done |
+| 2026-05-31 | Sun | [ ] | [ ] | [ ] | Re-solve hardest + review |
 
 ---
 

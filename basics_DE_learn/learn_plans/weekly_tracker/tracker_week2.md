@@ -1,4 +1,4 @@
-# Week 2 tracker · 1 Jun – 7 Jun 2026
+# Week 2 tracker · Mon 1 Jun – Sun 7 Jun 2026
 
 **Plan:** [plan_week2.md](../weekly_plan/plan_week2.md) · **Program:** [learn_tracker.md](../learn_tracker.md) · **DSA UI:** [dsa-study-plan.html](../dsa-study-plan.html) · **Dashboard:** [dashboard/README.md](../../dashboard/README.md)
 
@@ -10,7 +10,8 @@
 
 | Area | Target | Status |
 |------|--------|--------|
-| **LeetCode** | 125, 167, 3 (+ review) | 0 / 3 new |
+| **DSA** | t02 finish · t03 start | [DSA_PACING.md](../DSA_PACING.md) |
+| **LeetCode** | Move Zeroes, Remove Dup, Valid Palindrome (+ 242 review) | 1 / 4 |
 | **SQL 50** | #5–8 | 0 / 4 |
 | **Zoomcamp Spark** | 1 lab | Not started |
 | **Theory** | Chip Huyen Ch 3–4 | In progress |
@@ -22,13 +23,13 @@
 
 | Date | Day | Block A | Block B | Block C | Notes |
 |------|-----|:-------:|:-------:|:-------:|-------|
-| 2026-06-01 | Sun | [ ] | [ ] | [ ] | 125, SQL #5 |
-| 2026-06-02 | Mon | [ ] | [ ] | [ ] | 167, Zoomcamp |
-| 2026-06-03 | Tue | [ ] | [ ] | [ ] | SQL #6–7 |
-| 2026-06-04 | Wed | [ ] | [ ] | [ ] | LC 3, SQL #8 |
-| 2026-06-05 | Thu | [ ] | [ ] | [ ] | Re-solve 121 |
-| 2026-06-06 | Fri | [ ] | [ ] | [ ] | Spark lazy |
-| 2026-06-07 | Sat | [ ] | [ ] | [ ] | Week review |
+| 2026-06-01 | Mon | [ ] | [ ] | [ ] | t02 review, SQL #5 |
+| 2026-06-02 | Tue | [ ] | [ ] | [ ] | t02, Zoomcamp |
+| 2026-06-03 | Wed | [ ] | [ ] | [ ] | t03, SQL #6–7 |
+| 2026-06-04 | Thu | [ ] | [ ] | [ ] | Valid Palindrome, SQL #8 |
+| 2026-06-05 | Fri | [ ] | [ ] | [ ] | t03 catch-up |
+| 2026-06-06 | Sat | [ ] | [ ] | [ ] | Spark lazy |
+| 2026-06-07 | Sun | [ ] | [ ] | [ ] | Week review |
 
 ---
 

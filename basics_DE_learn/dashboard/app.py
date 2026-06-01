@@ -68,7 +68,7 @@ def today_in_tz(data: dict | None = None) -> date:
 
 
 def calendar_week_for(data: dict, on: date | None = None) -> int:
-    """Week number from meta.startDate (Week 1 = start day through +6 days)."""
+    """Week number from meta.startDate (Week 1 = Mon start day through +6 days, Sun)."""
     start_s = data.get("meta", {}).get("startDate")
     if not start_s:
         return int(data.get("meta", {}).get("currentWeek", 1))
@@ -90,6 +90,11 @@ def week_tracker():
 @app.route("/dsa")
 def dsa_plan():
     return send_from_directory(PLANS_DIR, "dsa-study-plan.html")
+
+
+@app.route("/lc-numbers.js")
+def dsa_lc_numbers():
+    return send_from_directory(PLANS_DIR, "lc-numbers.js")
 
 
 @app.route("/<path:path>")
