@@ -2,10 +2,10 @@
   "meta": {
     "currentWeek": 2,
     "ddiaArrives": "2026-06-08",
-    "lastUpdated": "2026-06-01T21:50:44",
+    "lastUpdated": "2026-06-03T00:13:09",
     "startDate": "2026-05-25",
     "timezone": "Asia/Kolkata",
-    "today": "2026-06-01",
+    "today": "2026-06-02",
     "weekStartsOn": "Monday"
   },
   "week1": {
@@ -216,14 +216,14 @@
     "days": [
       {
         "blockA": true,
-        "blockB": false,
+        "blockB": true,
         "blockC": false,
         "date": "2026-06-01",
         "day": "Mon",
         "notes": "t02 review \u00b7 SQL #5"
       },
       {
-        "blockA": false,
+        "blockA": true,
         "blockB": false,
         "blockC": false,
         "date": "2026-06-02",
@@ -293,7 +293,7 @@
     ],
     "exitChecklist": [
       {
-        "done": false,
+        "done": true,
         "id": "lc3",
         "label": "3+ new LC in week_2 with notes"
       },
@@ -330,8 +330,8 @@
     ],
     "leetcode": [
       {
-        "complexityInRepo": false,
-        "done": false,
+        "complexityInRepo": true,
+        "done": true,
         "id": 283,
         "noHints": false,
         "pattern": "Arrays t02",
@@ -340,8 +340,8 @@
         "title": "Move Zeroes"
       },
       {
-        "complexityInRepo": false,
-        "done": false,
+        "complexityInRepo": true,
+        "done": true,
         "id": 26,
         "noHints": false,
         "pattern": "Arrays t02",
@@ -378,7 +378,7 @@
     },
     "sql50": [
       {
-        "done": false,
+        "done": true,
         "lc": 1683,
         "num": 5,
         "section": "Select",
@@ -386,7 +386,7 @@
         "title": "Invalid Tweets"
       },
       {
-        "done": false,
+        "done": true,
         "lc": 1378,
         "num": 6,
         "section": "Joins",
