@@ -1,10 +1,11 @@
 """
-DE Learn Progress Dashboard — week tracker + DSA study plan.
+DE Learn Progress Dashboard — portal + week tracker + DSA study plan.
 
 Run:  python app.py
-Open:  http://127.0.0.1:5050        — hub
-       http://127.0.0.1:5050/week   — weekly tracker
-       http://127.0.0.1:5050/dsa    — full DSA plan (like dsa-study-plan.html)
+Open:  http://127.0.0.1:5050/portal  — daily portal (primary)
+       http://127.0.0.1:5050          — hub
+       http://127.0.0.1:5050/week     — legacy weekly tracker
+       http://127.0.0.1:5050/dsa      — full DSA plan
 """
 
 from __future__ import annotations
@@ -16,13 +17,16 @@ from zoneinfo import ZoneInfo
 
 from flask import Flask, jsonify, request, send_from_directory
 
-from markdown_sync import sync_tracker
+from markdown_sync import sync_all, sync_tracker
 
 APP_DIR = Path(__file__).resolve().parent
 ROOT = APP_DIR.parent
 DATA_DIR = APP_DIR / "data"
 PROGRESS_FILE = DATA_DIR / "progress.json"
 DSA_PROGRESS_FILE = DATA_DIR / "dsa_progress.json"
+LC_LOG_FILE = DATA_DIR / "lc_log.json"
+DSA_MASTERY_FILE = DATA_DIR / "dsa_mastery.json"
+WEEK_PLANS_DIR = DATA_DIR / "week_plans"
 STATIC_DIR = APP_DIR / "static"
 PLANS_DIR = ROOT / "learn_plans"
 
@@ -58,6 +62,28 @@ def save_dsa_progress(data: dict) -> None:
         json.dump(data, f, indent=2)
 
 
+def load_json_file(path: Path, default: dict | None = None) -> dict:
+    if path.exists():
+        with path.open(encoding="utf-8") as f:
+            return json.load(f)
+    return default or {}
+
+
+def save_json_file(path: Path, data: dict) -> None:
+    DATA_DIR.mkdir(parents=True, exist_ok=True)
+    with path.open("w", encoding="utf-8") as f:
+        json.dump(data, f, indent=2)
+
+
+def sync_dsa_progress_from_mastery(mastery: dict) -> None:
+    """Keep dsa_progress.json topic booleans aligned with mastery complete flags."""
+    dsa = load_dsa_progress()
+    topics = dsa.setdefault("topics", {})
+    for tid, t in mastery.get("topics", {}).items():
+        topics[tid] = bool(t.get("complete"))
+    save_dsa_progress(dsa)
+
+
 def tz_name(data: dict) -> str:
     return data.get("meta", {}).get("timezone", "Asia/Kolkata")
 
@@ -80,6 +106,11 @@ def calendar_week_for(data: dict, on: date | None = None) -> int:
 @app.route("/")
 def hub():
     return send_from_directory(STATIC_DIR, "hub.html")
+
+
+@app.route("/portal")
+def portal():
+    return send_from_directory(STATIC_DIR, "portal.html")
 
 
 @app.route("/week")
@@ -159,12 +190,9 @@ def post_set_today():
 def post_sync_markdown():
     week = request.args.get("week", "1")
     data = load_progress()
-    if week == "1":
-        path = sync_tracker(data)
-    else:
-        path = ROOT / "learn_plans" / "weekly_tracker" / f"tracker_week{week}.md"
-        path = path  # week2+ sync: manual or extend markdown_sync later
-    return jsonify({"ok": True, "path": str(path.relative_to(ROOT)), "week": week})
+    paths = sync_all(data)
+    rel = [str(p.relative_to(ROOT)) for p in paths]
+    return jsonify({"ok": True, "paths": rel, "week": week})
 
 
 @app.get("/api/stats")
@@ -212,7 +240,42 @@ def put_dsa_progress():
     return jsonify({"ok": True})
 
 
+@app.get("/api/lc-log")
+def get_lc_log():
+    return jsonify(load_json_file(LC_LOG_FILE, {"problems": []}))
+
+
+@app.put("/api/lc-log")
+def put_lc_log():
+    data = request.get_json(force=True)
+    save_json_file(LC_LOG_FILE, data)
+    return jsonify({"ok": True})
+
+
+@app.get("/api/dsa-mastery")
+def get_dsa_mastery():
+    return jsonify(load_json_file(DSA_MASTERY_FILE, {"topics": {}}))
+
+
+@app.put("/api/dsa-mastery")
+def put_dsa_mastery():
+    data = request.get_json(force=True)
+    data["lastUpdated"] = datetime.now().isoformat(timespec="seconds")
+    save_json_file(DSA_MASTERY_FILE, data)
+    sync_dsa_progress_from_mastery(data)
+    return jsonify({"ok": True})
+
+
+@app.get("/api/week-plan/<int:week>")
+def get_week_plan(week: int):
+    path = WEEK_PLANS_DIR / f"{week}.json"
+    if not path.is_file():
+        return jsonify({"error": "not found", "week": week}), 404
+    return jsonify(load_json_file(path))
+
+
 if __name__ == "__main__":
+    print("Daily portal:      http://127.0.0.1:5050/portal")
     print("DE Learn Hub:      http://127.0.0.1:5050")
     print("Week tracker:      http://127.0.0.1:5050/week")
     print("DSA study plan:    http://127.0.0.1:5050/dsa")

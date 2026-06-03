@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>DE Learn Hub</title>
-  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/portal.css" />
   <style>
     .hub-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin-top: 1.5rem; }
     .hub-card {
@@ -14,46 +14,53 @@
       padding: 1.25rem;
       text-decoration: none;
       color: inherit;
-      transition: border-color .2s;
+      transition: border-color .2s, box-shadow .2s;
     }
-    .hub-card:hover { border-color: var(--accent); }
-    .hub-card h2 { font-size: 1.1rem; margin: 0 0 0.5rem; color: #fff; }
+    .hub-card:hover { border-color: var(--accent); box-shadow: 0 2px 8px rgba(13,148,136,.12); }
+    .hub-card h2 { font-size: 1.1rem; margin: 0 0 0.5rem; }
     .hub-card p { font-size: 0.85rem; color: var(--muted); margin: 0; line-height: 1.5; }
     .hub-card .tag { margin-top: 0.75rem; font-size: 0.75rem; color: var(--accent); font-family: monospace; }
+    .hub-card.primary { border-color: var(--accent); background: linear-gradient(135deg, #f0fdfa 0%, #fff 100%); }
   </style>
 </head>
 <body>
   <header class="header">
     <div class="header-inner">
       <div>
-        <p class="eyebrow">Data Engineering · Phase 1</p>
+        <p class="eyebrow">Phase 1 · DSA primary</p>
         <h1>Learning Hub</h1>
-        <p class="subtitle">DSA + SQL + Spark + theory · Product company DE switch</p>
+        <p class="subtitle">Flask portal syncs checkboxes → JSON → markdown → git</p>
       </div>
     </div>
   </header>
   <main class="main">
     <div class="hub-grid">
-      <a class="hub-card" href="/week?w=1">
-        <h2>Week 1 tracker</h2>
-        <p>DSA topics t01–t04 · SQL · Spark</p>
-        <div class="tag">Block A = dsa-study-plan.html</div>
+      <a class="hub-card primary" href="/portal">
+        <h2>Daily portal ← START HERE</h2>
+        <p>Today’s tasks, LC log, mastery gates, reflection draft. Light UI.</p>
+        <div class="tag">/portal · Sync to Markdown</div>
       </a>
-      <a class="hub-card" href="/week?w=2" style="border-color: rgba(61,214,198,0.4)">
-        <h2>Week 2 tracker ← START HERE</h2>
-        <p>DSA t02/t03 this week · SQL 5–8 · realistic pace</p>
-        <div class="tag">Current week (1–7 Jun)</div>
+      <a class="hub-card" href="/portal?w=1">
+        <h2>Week 1 (archive)</h2>
+        <p>May 25–31 plan — full week schedule in portal + legacy Block A/B/C.</p>
+        <div class="tag">/portal?w=1</div>
+      </a>
+      <a class="hub-card" href="/week?w=2">
+        <h2>Legacy week 2 tracker</h2>
+        <p>Block A/B/C checkboxes — still works; use portal for phased plan.</p>
+        <div class="tag">/week?w=2</div>
       </a>
       <a class="hub-card" href="/dsa">
-        <h2>DSA study plan (main)</h2>
-        <p>Your comprehensive prep — theory → pattern → LC. Study this for Block A.</p>
-        <div class="tag">Primary DSA path · t01→t23</div>
+        <h2>DSA study plan</h2>
+        <p>Theory → pattern → LC. One topic per week pacing.</p>
+        <div class="tag">/dsa · t01→t23</div>
       </a>
     </div>
-    <ul class="links" style="margin-top:2rem">
-      <li><a href="../learn_plans/learn_plan_v2.md">Master roadmap (markdown)</a></li>
-      <li><a href="../learn_plans/VERIFIED_VIDEOS.md">Verified video links</a></li>
-      <li><a href="../learn_plans/theory_reading.md">Chip Huyen until DDIA · 8 Jun</a></li>
+    <ul class="nav-links">
+      <li><a href="../../MASTER_PLAN.md">MASTER_PLAN.md (source of truth)</a></li>
+      <li><a href="../../weekly_plans/week_02.md">week_02.md</a></li>
+      <li><a href="../../trackers/lc_log.md">lc_log.md</a></li>
+      <li><a href="../learn_plans/DSA_PACING.md">DSA_PACING.md</a></li>
     </ul>
   </main>
 </body>

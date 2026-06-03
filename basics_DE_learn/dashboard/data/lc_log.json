@@ -1,0 +1,147 @@
+{
+  "problems": [
+    {
+      "date": "2026-05-26",
+      "difficulty": "Easy",
+      "done": true,
+      "id": 217,
+      "noHints": true,
+      "repo": "leetcode/week_1/leetcode_217.py",
+      "title": "Contains Duplicate",
+      "topic": "t04/hash",
+      "week": 1
+    },
+    {
+      "date": "2026-05-27",
+      "difficulty": "Easy",
+      "done": true,
+      "id": 1,
+      "noHints": true,
+      "repo": "leetcode/week_1/leetcode_1.py",
+      "title": "Two Sum",
+      "topic": "t04/hash",
+      "week": 1
+    },
+    {
+      "date": "2026-05-28",
+      "difficulty": "Easy",
+      "done": true,
+      "id": 242,
+      "noHints": false,
+      "repo": "leetcode/week_1/leetcode_242.py",
+      "title": "Valid Anagram",
+      "topic": "t03/strings",
+      "week": 1
+    },
+    {
+      "date": "2026-05-29",
+      "difficulty": "Easy",
+      "done": true,
+      "id": 88,
+      "noHints": false,
+      "repo": "leetcode/week_1/leetcode_88.py",
+      "title": "Merge Sorted Array",
+      "topic": "t02/arrays",
+      "week": 1
+    },
+    {
+      "date": "2026-05-30",
+      "difficulty": "Easy",
+      "done": true,
+      "id": 121,
+      "noHints": true,
+      "repo": "leetcode/week_1/leetcode_121.py",
+      "title": "Best Time to Buy and Sell Stock",
+      "topic": "t02/arrays",
+      "week": 1
+    },
+    {
+      "date": "2026-06-01",
+      "difficulty": "Easy",
+      "done": true,
+      "id": 485,
+      "noHints": true,
+      "repo": "leetcode/week_2/leetcode_485.py",
+      "title": "Max Consecutive Ones",
+      "topic": "t02/arrays",
+      "week": 2
+    },
+    {
+      "date": "2026-06-02",
+      "difficulty": "Easy",
+      "done": true,
+      "id": 283,
+      "noHints": false,
+      "repo": "leetcode/week_2/leetcode_283.py",
+      "title": "Move Zeroes",
+      "topic": "t02/arrays",
+      "week": 2
+    },
+    {
+      "date": "2026-06-02",
+      "difficulty": "Easy",
+      "done": true,
+      "id": 26,
+      "noHints": false,
+      "repo": "leetcode/week_2/leetcode_26.py",
+      "title": "Remove Duplicates from Sorted Array",
+      "topic": "t02/arrays",
+      "week": 2
+    },
+    {
+      "date": "2026-06-03",
+      "difficulty": "Easy",
+      "done": true,
+      "id": 66,
+      "noHints": false,
+      "repo": "leetcode/week_2/leetcode_66.py",
+      "title": "Plus One",
+      "topic": "t02/arrays",
+      "week": 2
+    },
+    {
+      "date": "2026-06-03",
+      "difficulty": "Easy",
+      "done": true,
+      "id": 118,
+      "noHints": false,
+      "repo": "leetcode/week_2/leetcode_118.py",
+      "title": "Pascal's Triangle",
+      "topic": "t02/arrays",
+      "week": 2
+    },
+    {
+      "date": "2026-06-03",
+      "difficulty": "Easy",
+      "done": true,
+      "id": 125,
+      "noHints": true,
+      "repo": "leetcode/week_2/leetcode_125.py",
+      "title": "Valid Palindrome",
+      "topic": "t03/strings",
+      "week": 2
+    },
+    {
+      "date": "2026-06-03",
+      "difficulty": "Easy",
+      "done": true,
+      "id": 1137,
+      "noHints": false,
+      "repo": "",
+      "title": "No LeetCode yet \u2014 watch all 2 videos above first",
+      "topic": "t01",
+      "week": 0
+    },
+    {
+      "date": "2026-06-03",
+      "difficulty": "Medium",
+      "done": false,
+      "id": 189,
+      "noHints": false,
+      "repo": "",
+      "title": "Rotate Array",
+      "topic": "t02",
+      "week": 0
+    }
+  ]
+}

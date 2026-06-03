@@ -1,0 +1,53 @@
+{
+  "week": 1,
+  "phase": 1,
+  "legacy": true,
+  "range": "Mon 25 May – Sun 31 May 2026",
+  "dsaTopic": "t01",
+  "dsaTitle": "Big-O (finish) + start t02 Arrays",
+  "masteryGoal": "t01 complete · start t02 · full exit list in legacy /week?w=1 tracker",
+  "days": {
+    "2026-05-25": {
+      "day": "Mon",
+      "primary": "t01 Big-O — NeetCode video + big_O_notation.md · explain O(1), O(n), O(n²) aloud",
+      "secondary": "SQL 50 #1 · Chip Huyen Ch 1–2 (theory — optional parallel)",
+      "sql": true
+    },
+    "2026-05-26": {
+      "day": "Tue",
+      "primary": "LC #217 Contains Duplicate — save leetcode/week_1/leetcode_217.py with complexity",
+      "secondary": "Spark driver vs executor · Chip Huyen notes",
+      "sql": false
+    },
+    "2026-05-27": {
+      "day": "Wed",
+      "primary": "LC #1 Two Sum — leetcode/week_1/leetcode_1.py",
+      "secondary": "SQL 50 #2–3 · Vector DB intro video",
+      "sql": true
+    },
+    "2026-05-28": {
+      "day": "Thu",
+      "primary": "LC #242 Valid Anagram — leetcode/week_1/leetcode_242.py",
+      "secondary": "SQL 50 #4 · Chip Huyen",
+      "sql": true
+    },
+    "2026-05-29": {
+      "day": "Fri",
+      "primary": "LC #88 Merge Sorted Array — leetcode/week_1/leetcode_88.py",
+      "secondary": "BQ architecture + SELECT * takeaway · RAG intro video",
+      "sql": false
+    },
+    "2026-05-30": {
+      "day": "Sat",
+      "primary": "LC #121 Best Time to Buy and Sell Stock — leetcode/week_1/leetcode_121.py",
+      "secondary": "Spark lazy vs action notes in pyspark/week1_notes.md",
+      "sql": false
+    },
+    "2026-05-31": {
+      "day": "Sun",
+      "primary": "Re-solve hardest LC this week without notes · tick tracker exit checklist",
+      "secondary": "Review SQL + Spark · week reflection",
+      "sql": false
+    }
+  }
+}

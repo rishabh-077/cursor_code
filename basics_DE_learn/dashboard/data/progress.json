@@ -2,11 +2,82 @@
   "meta": {
     "currentWeek": 2,
     "ddiaArrives": "2026-06-08",
-    "lastUpdated": "2026-06-03T00:13:09",
+    "lastUpdated": "2026-06-04T00:37:28",
+    "phase": 1,
+    "program": "phased-v1",
     "startDate": "2026-05-25",
     "timezone": "Asia/Kolkata",
-    "today": "2026-06-02",
+    "today": "2026-06-04",
     "weekStartsOn": "Monday"
+  },
+  "portal": {
+    "dailyLog": {
+      "2026-06-03": ""
+    },
+    "dailyTasks": {
+      "2026-05-25": [
+        true,
+        true
+      ],
+      "2026-05-26": [
+        true,
+        true
+      ],
+      "2026-05-27": [
+        true,
+        true
+      ],
+      "2026-05-28": [
+        true,
+        true
+      ],
+      "2026-05-29": [
+        true,
+        true
+      ],
+      "2026-05-30": [
+        true,
+        false
+      ],
+      "2026-05-31": [
+        true,
+        false
+      ],
+      "2026-06-01": [
+        true,
+        false
+      ],
+      "2026-06-02": [
+        true,
+        true
+      ],
+      "2026-06-03": [
+        true,
+        false
+      ],
+      "2026-06-04": [
+        false,
+        true
+      ],
+      "2026-06-05": [
+        false,
+        false
+      ],
+      "2026-06-06": [
+        false,
+        false
+      ],
+      "2026-06-07": [
+        false,
+        false
+      ]
+    },
+    "reflectionDraft": {
+      "blocked": "",
+      "energy": 3,
+      "finished": "",
+      "nextWeek": ""
+    }
   },
   "week1": {
     "days": [
@@ -44,23 +115,23 @@
       },
       {
         "blockA": true,
-        "blockB": false,
+        "blockB": true,
         "blockC": false,
         "date": "2026-05-29",
         "day": "Fri",
-        "notes": "LC 88 (today IST) \u00b7 BQ still due"
+        "notes": "LC 88"
       },
       {
         "blockA": true,
-        "blockB": false,
+        "blockB": true,
         "blockC": false,
         "date": "2026-05-30",
         "day": "Sat",
         "notes": "LC 121 done"
       },
       {
-        "blockA": false,
-        "blockB": false,
+        "blockA": true,
+        "blockB": true,
         "blockC": false,
         "date": "2026-05-31",
         "day": "Sun",
@@ -75,13 +146,13 @@
         "title": "Driver vs Executor"
       },
       {
-        "done": false,
+        "done": true,
         "id": "spark-lazy",
         "path": "pyspark/week1_notes.md",
         "title": "Lazy vs action (own words)"
       },
       {
-        "done": false,
+        "done": true,
         "id": "bq",
         "path": "",
         "title": "BQ Capacitor + SELECT *"
@@ -109,12 +180,12 @@
         "label": "Spark Driver/Executor in own words"
       },
       {
-        "done": false,
+        "done": true,
         "id": "spark-lazy",
         "label": "Spark lazy vs action in own words"
       },
       {
-        "done": false,
+        "done": true,
         "id": "bq-select",
         "label": "BQ: why SELECT * is costly"
       }
@@ -172,10 +243,10 @@
       }
     ],
     "reflection": {
-      "blocked": "",
+      "blocked": "Block C (Chip Huyen / theory videos) \u2014 continuing in parallel",
       "energy": 0,
-      "finished": "SQL 50 Select x4; LC 217,1,242,88,121 with repo notes; Big O; Spark driver/executor.",
-      "nextWeek": "Week 2: 125,167,3; SQL 5-8; Zoomcamp; Chip Huyen until DDIA 8 Jun."
+      "finished": "Week 1 exit done: SQL 50 #1-4; LC 217,1,242,88,121 with repo notes; Big O; Spark driver/executor, lazy vs action, BQ SELECT*.",
+      "nextWeek": "Week 2: t02/t03 arrays+strings; SQL 5-8; Zoomcamp; Chip/DDIA theory parallel."
     },
     "sql50": [
       {
@@ -231,8 +302,8 @@
         "notes": "t02, Zoomcamp"
       },
       {
-        "blockA": false,
-        "blockB": false,
+        "blockA": true,
+        "blockB": true,
         "blockC": false,
         "date": "2026-06-03",
         "day": "Wed",
@@ -240,7 +311,7 @@
       },
       {
         "blockA": false,
-        "blockB": false,
+        "blockB": true,
         "blockC": false,
         "date": "2026-06-04",
         "day": "Thu",
@@ -298,7 +369,7 @@
         "label": "3+ new LC in week_2 with notes"
       },
       {
-        "done": false,
+        "done": true,
         "id": "sql4",
         "label": "SQL 50 problems 5-8"
       },
@@ -332,10 +403,20 @@
       {
         "complexityInRepo": true,
         "done": true,
-        "id": 283,
+        "id": 485,
         "noHints": false,
         "pattern": "Arrays t02",
-        "repoFile": "",
+        "repoFile": "leetcode/week_2/leetcode_485.py",
+        "slug": "max-consecutive-ones",
+        "title": "Max Consecutive Ones"
+      },
+      {
+        "complexityInRepo": true,
+        "done": true,
+        "id": 283,
+        "noHints": true,
+        "pattern": "Arrays t02",
+        "repoFile": "leetcode/week_2/leetcode_283.py",
         "slug": "move-zeroes",
         "title": "Move Zeroes"
       },
@@ -345,17 +426,37 @@
         "id": 26,
         "noHints": false,
         "pattern": "Arrays t02",
-        "repoFile": "",
+        "repoFile": "leetcode/week_2/leetcode_26.py",
         "slug": "remove-duplicates-from-sorted-array",
         "title": "Remove Duplicates from Sorted Array"
       },
       {
+        "complexityInRepo": true,
+        "done": true,
+        "id": 66,
+        "noHints": false,
+        "pattern": "Arrays t02",
+        "repoFile": "leetcode/week_2/leetcode_66.py",
+        "slug": "plus-one",
+        "title": "Plus One"
+      },
+      {
         "complexityInRepo": false,
-        "done": false,
+        "done": true,
+        "id": 118,
+        "noHints": false,
+        "pattern": "Arrays t02",
+        "repoFile": "leetcode/week_2/leetcode_118.py",
+        "slug": "pascals-triangle",
+        "title": "Pascal's Triangle"
+      },
+      {
+        "complexityInRepo": false,
+        "done": true,
         "id": 125,
         "noHints": false,
         "pattern": "Strings t03",
-        "repoFile": "",
+        "repoFile": "leetcode/week_2/leetcode_125.py",
         "slug": "valid-palindrome",
         "title": "Valid Palindrome"
       },
@@ -371,10 +472,10 @@
       }
     ],
     "reflection": {
-      "blocked": "",
+      "blocked": "Block C theory \u2014 parallel with Week 2",
       "energy": 0,
-      "finished": "",
-      "nextWeek": "DDIA Ch 3 from 8 Jun"
+      "finished": "In progress: t02 LC 485,283,26,66 in week_2/; SQL #5-6; Mon-Tue blocks A done.",
+      "nextWeek": "Finish t03 (125), SQL #7-8, Zoomcamp; DDIA Ch 3 from 8 Jun"
     },
     "sql50": [
       {
@@ -394,7 +495,7 @@
         "title": "Replace Employee ID"
       },
       {
-        "done": false,
+        "done": true,
         "lc": 1068,
         "num": 7,
         "section": "Joins",
@@ -402,7 +503,7 @@
         "title": "Product Sales Analysis I"
       },
       {
-        "done": false,
+        "done": true,
         "lc": 1581,
         "num": 8,
         "section": "Joins",
