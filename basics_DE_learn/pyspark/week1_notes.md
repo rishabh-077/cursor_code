@@ -23,7 +23,7 @@
 
 ---
 
-## Lazy transformation vs eager action (TODO — Week 1 Fri)
+## Lazy transformation vs eager action (done — synced from dashboard)
 
 Fill in **your own words** after [Spark cluster overview](https://spark.apache.org/docs/latest/cluster-overview.html):
 

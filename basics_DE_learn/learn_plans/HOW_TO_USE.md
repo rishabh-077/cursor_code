@@ -4,11 +4,13 @@
 
 ---
 
-## One sentence
+## One sentence (phased plan — May 2026)
 
-**Block A (90 min):** follow [dsa-study-plan.html](./dsa-study-plan.html) topic by topic.  
-**Blocks B + C:** follow this week’s [plan_weekN.md](./weekly_plan/plan_week1.md).  
-**Calendar:** [learn_plan_v2.md](./learn_plan_v2.md) says which DSA topics belong to which week.
+**Daily:** [http://127.0.0.1:5050/portal](../dashboard/README.md) — today’s PRIMARY/SECONDARY tasks, LC log, mastery gates → **Sync to Markdown** → git.  
+**Rules:** [MASTER_PLAN.md](../MASTER_PLAN.md) · **This week:** [weekly_plans/week_02.md](../weekly_plans/week_02.md).  
+**DSA curriculum:** [dsa-study-plan.html](./dsa-study-plan.html) (one topic/week per [DSA_PACING.md](./DSA_PACING.md)).
+
+Legacy Block A/B/C tracker still at `/week?w=N`.
 
 ---
 

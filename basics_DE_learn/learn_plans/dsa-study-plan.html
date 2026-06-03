@@ -7,17 +7,19 @@
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet"/>
 <style>
 :root {
-  --bg: #07080f;
-  --surface: #0e0f1a;
-  --card: #13141f;
-  --border: #1e2030;
-  --accent: #4af0a0;
-  --accent2: #6b7fff;
-  --accent3: #ffb347;
-  --accent4: #ff6b8a;
-  --text: #dde0f0;
-  --muted: #5a5f80;
+  --bg: #f4f6fa;
+  --surface: #ffffff;
+  --card: #ffffff;
+  --border: #d4dce8;
+  --accent: #0d9488;
+  --accent2: #4f46e5;
+  --accent3: #c2410c;
+  --accent4: #be123c;
+  --text: #1e293b;
+  --muted: #64748b;
+  --heading: #0f172a;
   --google: #ea4335;
+  --done: #15803d;
 }
 
 *{margin:0;padding:0;box-sizing:border-box;}
@@ -26,6 +28,7 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family: 'Syne', sans-serif;
+  font-size: 16px;
   min-height: 100vh;
 }
 
@@ -34,8 +37,8 @@ body::before {
   position:fixed;
   inset:0;
   background:
-    radial-gradient(ellipse 60% 40% at 80% 10%, rgba(107,127,255,0.07) 0%, transparent 60%),
-    radial-gradient(ellipse 40% 30% at 10% 80%, rgba(74,240,160,0.05) 0%, transparent 50%);
+    radial-gradient(ellipse 60% 40% at 80% 10%, rgba(79,70,229,0.06) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 30% at 10% 80%, rgba(13,148,136,0.05) 0%, transparent 50%);
   pointer-events:none;
   z-index:0;
 }
@@ -61,10 +64,10 @@ body::before {
   margin-bottom:12px;
 }
 .hero h1 {
-  font-size:clamp(28px,5vw,52px);
+  font-size:clamp(32px,5vw,56px);
   font-weight:800;
   line-height:1.05;
-  color:#fff;
+  color:var(--heading);
 }
 .hero h1 em {
   font-style:normal;
@@ -73,10 +76,21 @@ body::before {
 .hero-sub {
   margin-top:12px;
   color:var(--muted);
-  font-size:14px;
+  font-size:16px;
   line-height:1.7;
-  max-width:560px;
+  max-width:640px;
 }
+.sync-banner {
+  margin-top: 14px;
+  padding: 10px 14px;
+  background: #ecfdf5;
+  border: 1px solid #99f6e4;
+  border-radius: 8px;
+  font-size: 14px;
+  color: var(--text);
+  max-width: 640px;
+}
+.sync-banner a { color: var(--accent); }
 
 /* LEGEND */
 .legend {
@@ -163,12 +177,12 @@ body::before {
   text-transform:uppercase;
   font-weight:600;
 }
-.ph1{background:rgba(74,240,160,.1);color:var(--accent);border:1px solid rgba(74,240,160,.25);}
-.ph2{background:rgba(107,127,255,.1);color:var(--accent2);border:1px solid rgba(107,127,255,.25);}
-.ph3{background:rgba(255,179,71,.1);color:var(--accent3);border:1px solid rgba(255,179,71,.25);}
-.ph4{background:rgba(255,107,138,.1);color:var(--accent4);border:1px solid rgba(255,107,138,.25);}
+.ph1{background:#ecfdf5;color:var(--accent);border:1px solid #99f6e4;}
+.ph2{background:#eef2ff;color:var(--accent2);border:1px solid #c7d2fe;}
+.ph3{background:#fff7ed;color:var(--accent3);border:1px solid #fed7aa;}
+.ph4{background:#fff1f2;color:var(--accent4);border:1px solid #fecdd3;}
 
-.phase-name {font-size:17px;font-weight:700;color:#fff;}
+.phase-name {font-size:19px;font-weight:700;color:var(--heading);}
 .phase-weeks {
   margin-left:auto;
   font-family:'IBM Plex Mono',monospace;
@@ -176,10 +190,10 @@ body::before {
   color:var(--muted);
 }
 .phase-desc {
-  font-size:13px;
+  font-size:15px;
   color:var(--muted);
   margin-bottom:16px;
-  line-height:1.6;
+  line-height:1.65;
 }
 
 /* TOPIC CARD */
@@ -191,8 +205,8 @@ body::before {
   overflow:hidden;
   transition:border-color .2s;
 }
-.topic-card:hover{border-color:rgba(107,127,255,.3);}
-.topic-card.done{background:#0a0f0d;border-color:rgba(74,240,160,.18);}
+.topic-card:hover{border-color:#a5b4fc; box-shadow: 0 2px 8px rgba(15,23,42,.06);}
+.topic-card.done{background:#f0fdf4;border-color:#86efac;}
 
 .topic-head {
   display:flex;
@@ -216,8 +230,8 @@ body::before {
 .chk svg{opacity:0;transition:opacity .2s;}
 .topic-card.done .chk svg{opacity:1;}
 
-.topic-title{font-size:14px;font-weight:700;color:#fff;flex:1;}
-.topic-card.done .topic-title{color:var(--accent);}
+.topic-title{font-size:17px;font-weight:700;color:var(--heading);flex:1;}
+.topic-card.done .topic-title{color:var(--done);}
 .pace-badge {
   font-family:'IBM Plex Mono',monospace;
   font-size:10px;
@@ -276,11 +290,12 @@ body::before {
 .theory-box {
   background:var(--surface);
   border-radius:8px;
-  padding:14px;
-  font-size:13px;
+  padding:16px;
+  font-size:15px;
   color:var(--muted);
-  line-height:1.65;
+  line-height:1.7;
   border-left:3px solid var(--accent2);
+  box-shadow: 0 1px 2px rgba(15,23,42,.04);
 }
 .theory-box strong{color:var(--text);}
 
@@ -288,7 +303,7 @@ body::before {
 .res-list{list-style:none;display:flex;flex-direction:column;gap:7px;}
 .res-list li{
   display:flex;align-items:flex-start;gap:8px;
-  font-size:12px;color:var(--text);line-height:1.5;
+  font-size:14px;color:var(--text);line-height:1.55;
 }
 .res-list li::before{content:'▶';color:var(--accent2);font-size:9px;margin-top:3px;flex-shrink:0;}
 .res-list a{
@@ -296,7 +311,7 @@ body::before {
   border-bottom:1px dashed rgba(107,127,255,.35);
   transition:color .2s;
 }
-.res-list a:hover{color:#fff;}
+.res-list a:hover{color:var(--accent2);}
 
 .lc-search-wrap {
   margin: 20px 0 16px;
@@ -333,11 +348,11 @@ body::before {
   text-decoration: none;
   padding: 2px 6px;
   border-radius: 4px;
-  background: rgba(74, 240, 160, 0.1);
-  border: 1px solid rgba(74, 240, 160, 0.25);
+  background: #ecfdf5;
+  border: 1px solid #99f6e4;
   flex-shrink: 0;
 }
-.lc-num:hover { background: rgba(74, 240, 160, 0.2); }
+.lc-num:hover { background: #d1fae5; }
 .q-item.q-hidden { display: none !important; }
 .topic-card.lc-filter-hide { display: none !important; }
 
@@ -351,15 +366,30 @@ body::before {
   margin:10px 0 5px;
 }
 .q-list{list-style:none;display:flex;flex-direction:column;gap:5px;}
-.q-item{
-  display:flex;align-items:center;gap:8px;flex-wrap:wrap;
-  font-size:12px;color:var(--muted);
-  background:var(--surface);
-  border-radius:6px;
-  padding:7px 10px;
-  border-left:2px solid var(--border);
-  line-height:1.4;
+.q-chk {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  accent-color: var(--accent);
+  cursor: pointer;
 }
+.q-item{
+  display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+  font-size:15px;color:var(--text);
+  background:var(--surface);
+  border-radius:8px;
+  padding:10px 12px;
+  border:1px solid var(--border);
+  border-left:3px solid var(--border);
+  line-height:1.45;
+  transition: background .15s, border-color .15s;
+}
+.q-item.done {
+  background: #f0fdf4;
+  border-left-color: var(--done);
+}
+.q-item.done .q-name { color: var(--muted); text-decoration: line-through; text-decoration-color: #94a3b8; }
+.q-item.no-lc .q-chk-placeholder { width: 20px; flex-shrink: 0; }
 .ql{font-family:'IBM Plex Mono',monospace;font-size:8px;padding:2px 5px;border-radius:3px;flex-shrink:0;}
 .ql-e{background:rgba(74,240,160,.1);color:var(--accent);}
 .ql-m{background:rgba(255,179,71,.1);color:var(--accent3);}
@@ -370,13 +400,13 @@ body::before {
 
 /* Pattern box */
 .pat-box {
-  background:rgba(255,179,71,.05);
-  border:1px solid rgba(255,179,71,.2);
+  background:#fff7ed;
+  border:1px solid #fed7aa;
   border-radius:8px;
-  padding:14px;
-  font-size:13px;
+  padding:16px;
+  font-size:15px;
   color:var(--muted);
-  line-height:1.65;
+  line-height:1.7;
 }
 .pat-box strong{color:var(--accent3);}
 
@@ -394,12 +424,12 @@ body::before {
 
 /* Google note */
 .google-box {
-  background:rgba(234,67,53,.06);
-  border:1px solid rgba(234,67,53,.2);
+  background:#fef2f2;
+  border:1px solid #fecaca;
   border-radius:8px;
-  padding:12px 16px;
-  font-size:12px;
-  color:#ff8a80;
+  padding:14px 16px;
+  font-size:14px;
+  color:#b91c1c;
   line-height:1.65;
 }
 
@@ -436,7 +466,8 @@ footer {
   <div class="hero-eyebrow">// Zero → Google Interview Ready · Data Engineering</div>
   <h1>DSA Mastery Plan<br/>Benchmark: <em>Google</em></h1>
   <p class="hero-sub">Built for absolute beginners. Every topic has theory first, then patterns, then graded practice — starting from the very basics all the way to Google-level hard problems.</p>
-  <p class="hero-sub" style="margin-top:12px;color:var(--accent3);font-size:13px;">⏱ <strong>One topic per calendar week</strong> at 90 min/day — see <a href="DSA_PACING.md" style="color:var(--accent)">DSA_PACING.md</a>. Badges show <em>Wk N · days</em> per topic.</p>
+  <p class="hero-sub" style="margin-top:12px;color:var(--accent3);font-size:15px;">⏱ <strong>One topic per calendar week</strong> at 90 min/day — see <a href="DSA_PACING.md" style="color:var(--accent)">DSA_PACING.md</a>. Badges show <em>Wk N · days</em> per topic.</p>
+  <p class="sync-banner">☑ Topic checkbox → <code>dsa_progress.json</code> · Problem checkbox → <code>lc_log.json</code> (when Flask is running). Mastery gates (theory / no-hints / medium) → <a href="/portal">portal</a>.</p>
 </div>
 
 <div class="legend">
@@ -1316,6 +1347,64 @@ const PACE = {
   t23:{week:24,days:'5–7 days'}
 };
 
+let lcLogCache = { problems: [] };
+
+function escAttr(s) {
+  return String(s).replace(/\\/g,'\\\\').replace(/'/g,"\\'").replace(/"/g,'&quot;');
+}
+
+function isProblemDone(id) {
+  const p = lcLogCache.problems.find(x => x.id === Number(id));
+  return !!(p && p.done);
+}
+
+async function loadLcLog() {
+  try {
+    const r = await fetch('/api/lc-log');
+    if (r.ok) lcLogCache = await r.json();
+  } catch (e) {
+    try { lcLogCache = JSON.parse(localStorage.getItem('dsaLcLog') || '{"problems":[]}'); }
+    catch (e2) { lcLogCache = { problems: [] }; }
+  }
+}
+
+async function saveLcLog() {
+  localStorage.setItem('dsaLcLog', JSON.stringify(lcLogCache));
+  try {
+    await fetch('/api/lc-log', {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(lcLogCache)
+    });
+  } catch (e) {}
+}
+
+async function toggleProblem(id, name, level, topicId, inputEl) {
+  const numId = Number(id);
+  let p = lcLogCache.problems.find(x => x.id === numId);
+  const checked = inputEl.checked;
+  if (!p) {
+    const diff = level === 'e' ? 'Easy' : level === 'm' ? 'Medium' : 'Hard';
+    p = {
+      id: numId,
+      title: name,
+      topic: topicId || '',
+      week: 0,
+      difficulty: diff,
+      done: checked,
+      noHints: false,
+      repo: '',
+      date: new Date().toISOString().slice(0, 10)
+    };
+    lcLogCache.problems.push(p);
+  } else {
+    p.done = checked;
+  }
+  const li = inputEl.closest('.q-item');
+  if (li) li.classList.toggle('done', checked);
+  await saveLcLog();
+}
+
 function renderAll(){
   const root = document.getElementById('planRoot');
   const saved = getSaved();
@@ -1350,8 +1439,14 @@ function renderAll(){
         const meta = resolveLc(q);
         const lcAttr = meta ? ` data-lc-id="${meta.id}" data-lc-slug="${meta.slug}"` : '';
         const lcLabel = formatLcLabel(q);
+        const done = meta && isProblemDone(meta.id);
+        const chk = meta
+          ? `<input type="checkbox" class="q-chk" ${done?'checked':''} aria-label="Done ${q.name}"
+              onclick="event.stopPropagation();toggleProblem(${meta.id},'${escAttr(q.name)}','${q.level}','${t.id}',this)" />`
+          : `<span class="q-chk-placeholder" title="No LeetCode # mapped"></span>`;
         return `
-        <li class="q-item"${lcAttr}>
+        <li class="q-item ${done?'done':''}${meta?'':' no-lc'}"${lcAttr}>
+          ${chk}
           <span class="ql ql-${q.level}">${q.level==='e'?'easy':q.level==='m'?'med':'hard'}</span>
           ${q.google?'<span class="qt">🔴 Google</span>':''}
           ${lcLabel}<span class="q-name">${q.name}</span>
@@ -1478,7 +1573,7 @@ function updateProgress(){
   document.getElementById('pCount').textContent = `${done} / ${total} topics done (${pct}%)`;
 }
 
-syncFromServer().then(renderAll);
+Promise.all([syncFromServer(), loadLcLog()]).then(renderAll);
 </script>
 </body>
 </html>

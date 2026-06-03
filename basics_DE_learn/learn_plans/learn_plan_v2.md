@@ -1,6 +1,9 @@
 # Master roadmap — 30 weeks
 
-**Start:** 2026-05-25 (**Monday**) · **Weeks:** Mon → Sun · **Profile:** [profile.md](./profile.md) · **Daily:** 3–4 h
+> **Active plan:** [MASTER_PLAN.md](../MASTER_PLAN.md) + [weekly_plans/](../weekly_plans/) + portal `/portal`.  
+> This file is the **historical 30-week calendar** — keep for reference; do not stack 3 subjects/day in Phase 1.
+
+**Start:** 2026-05-25 (**Monday**) · **Weeks:** Mon → Sun · **Profile:** [profile.md](./profile.md) · **Daily:** 2–3 h
 
 ---
 

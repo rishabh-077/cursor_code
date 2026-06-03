@@ -11,15 +11,15 @@
 
 | | |
 |---|---|
-| **Week** | 1 |
-| **Dates** | Mon 25 May – Sun 31 May 2026 |
-| **Plan** | [weekly_plan/plan_week1.md](./weekly_plan/plan_week1.md) |
+| **Week** | **2** (today 2026-06-03) |
+| **Dates** | Mon 1 – Sun 7 Jun 2026 |
+| **Plan** | [weekly_plan/plan_week2.md](./weekly_plan/plan_week2.md) |
 | **Daily tracker** | [tracker_week1](./weekly_tracker/tracker_week1.md) · [tracker_week2](./weekly_tracker/tracker_week2.md) |
-| **DSA (Block A)** | [dsa-study-plan.html](./dsa-study-plan.html) = main curriculum · [learn_plan_v2](./learn_plan_v2.md) = which topics per week |
+| **DSA (Block A)** | [dsa-study-plan.html](./dsa-study-plan.html) · [DSA_PACING.md](./DSA_PACING.md) |
 
-**Week 1 (complete ~90%):** LC **5/5** logged · SQL **4/4** · Spark DE done · BQ/lazy Spark carry to Week 2  
-**Week 2 (1–7 Jun):** DSA **t02/t03** (not t05–t07) · [plan_week2](./weekly_plan/plan_week2.md) · DDIA **8 Jun**  
-**Pacing:** [DSA_PACING.md](./DSA_PACING.md) — Phase 1 DSA exit ~**week 16**, apply ~**week 28** (realistic)
+**Week 1:** **Done** (A+B + exit checklist) · **Block C (theory)** still open — you’re continuing Chip Huyen / videos in parallel  
+**Week 2 in progress:** LC **485, 283, 26, 66** in `week_2/` · SQL **#5–6** done · **#7–8** · t03 / 125 next  
+**Pacing:** Phase 1 DSA exit ~**week 16**, apply ~**week 28** (realistic)
 
 ---
 
@@ -70,8 +70,8 @@ Full detail: [profile.md](./profile.md)
 
 | Wk | Dates (approx) | Theme | Done |
 |----|----------------|-------|:----:|
-| 1 | 25–31 May | Big O, hash, SQL50×4, Spark intro | ✅ ~done |
-| 2 | 1–7 Jun | Two pointers, SQL50×4, Zoomcamp | 🟡 In progress |
+| 1 | 25–31 May | Big O, hash, SQL50×4, Spark, BQ | ✅ Done (theory Block C parallel) |
+| 2 | 1–7 Jun | t02/t03 arrays+strings, SQL50×4 | 🟡 In progress |
 | 3 | 8–14 Jun | Sliding window, dbt | ⬜ |
 | 4 | 15–21 Jun | Strings, SQL windows | ⬜ |
 | 5 | 22–28 Jun | Stacks, StrataScratch | ⬜ |
