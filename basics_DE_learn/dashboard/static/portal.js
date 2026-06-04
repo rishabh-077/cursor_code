@@ -156,7 +156,8 @@ function renderWeekPlan() {
   const logWrap = document.getElementById("daily-log-wrap");
   logWrap.style.display = todayInViewWeek ? "block" : "none";
   if (todayInViewWeek) {
-    document.getElementById("daily-log").value = ps.dailyLog[key] || "";
+    const logs = ps.archivedDailyLog || {};
+    document.getElementById("daily-log").value = ps.dailyLog[key] || logs[key] || "";
   }
 }
 
@@ -311,13 +312,15 @@ document.getElementById("btn-sync").addEventListener("click", async () => {
   const clearLogs = document.getElementById("chk-clear-logs").checked ? "1" : "0";
   const r = await api(`/api/sync-markdown?week=${week}&clear_logs=${clearLogs}`, { method: "POST" });
   let msg = `Synced: ${r.paths.join(", ")}`;
+  progress = await api("/api/progress");
+  const key = todayKey();
   if (r.clearedLogDates?.length) {
-    msg += ` · cleared logs: ${r.clearedLogDates.join(", ")}`;
-    progress = await api("/api/progress");
-    const key = todayKey();
-    if (document.getElementById("daily-log")) {
-      document.getElementById("daily-log").value = progress.portal?.dailyLog?.[key] || "";
-    }
+    msg += ` · cleared live log: ${r.clearedLogDates.join(", ")} (archived + markdown kept)`;
+  }
+  if (document.getElementById("daily-log")) {
+    const ps = progress.portal || {};
+    const arch = ps.archivedDailyLog || {};
+    document.getElementById("daily-log").value = ps.dailyLog?.[key] || arch[key] || "";
   }
   document.getElementById("sync-msg").textContent = msg;
   toast("Markdown synced — ready to git commit");

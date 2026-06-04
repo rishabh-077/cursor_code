@@ -332,6 +332,62 @@ def _task_flags(portal: dict[str, Any], date: str) -> tuple[bool, bool]:
     return primary, secondary
 
 
+def _daily_log_text(portal: dict[str, Any], date: str) -> str:
+    """Live log wins; else archived (survives clear-after-sync)."""
+    live = (portal.get("dailyLog", {}).get(date) or "").strip()
+    if live:
+        return live
+    archived = (portal.get("archivedDailyLog", {}).get(date) or "").strip()
+    return archived
+
+
+def merge_portal_daily_logs_to_archive(portal: dict[str, Any]) -> list[str]:
+    """Copy non-empty dailyLog entries into archivedDailyLog before sync/clear."""
+    archived = portal.setdefault("archivedDailyLog", {})
+    merged: list[str] = []
+    for date, text in portal.get("dailyLog", {}).items():
+        body = str(text).strip()
+        if body:
+            archived[date] = body
+            merged.append(date)
+    return merged
+
+
+def _parse_portal_week_logs_from_md(md_path: Path) -> dict[str, str]:
+    """Read Daily log column from an existing portal_week_NN.md (manual edits preserved)."""
+    if not md_path.is_file():
+        return {}
+    logs: dict[str, str] = {}
+    for line in md_path.read_text(encoding="utf-8").splitlines():
+        if not line.startswith("| 20"):
+            continue
+        parts = [p.strip() for p in line.split("|")]
+        # | Date | Day | Primary | Secondary | Daily log |
+        if len(parts) < 7:
+            continue
+        date_key = parts[1]
+        if len(date_key) != 10 or date_key[4] != "-":
+            continue
+        log = parts[5].strip()
+        if log and log != "_":
+            logs[date_key] = log
+    return logs
+
+
+def preserve_portal_logs_from_markdown(progress: dict[str, Any], week_num: int) -> int:
+    """Seed archivedDailyLog from tracker markdown when JSON has no log for that date."""
+    portal = progress.get("portal", {})
+    md_path = TRACKERS_DIR / f"portal_week_{week_num:02d}.md"
+    existing = _parse_portal_week_logs_from_md(md_path)
+    archived = portal.setdefault("archivedDailyLog", {})
+    added = 0
+    for date, log in existing.items():
+        if not _daily_log_text(portal, date):
+            archived[date] = log
+            added += 1
+    return added
+
+
 def render_portal_week(
     week_num: int,
     progress: dict[str, Any],
@@ -347,7 +403,7 @@ def render_portal_week(
     for date in dates:
         d = days[date]
         primary_done, secondary_done = _task_flags(portal, date)
-        log = (portal.get("dailyLog", {}).get(date) or "").strip() or "_"
+        log = _daily_log_text(portal, date) or "_"
         log = log.replace("|", "\\|").replace("\n", " ")
         sec = d.get("secondary", "none")
         sec_cell = (
@@ -385,7 +441,7 @@ def render_portal_week(
 - **Next week adjust:** {refl.get('nextWeek') or '_'}
 - **Energy (1–5):** {energy}
 
-*After sync with "clear daily logs", entries above are archived here; live log keys removed from JSON.*
+*Daily log: `dailyLog` + `archivedDailyLog` in JSON; sync also preserves text already in this file. "Clear daily logs" removes only **today's** live log in the portal (archived + this table stay).*
 """
 
 
@@ -393,6 +449,7 @@ def sync_portal_week(progress: dict[str, Any], week_num: int) -> Path | None:
     plan_path = WEEK_PLANS_DIR / f"{week_num}.json"
     if not plan_path.is_file():
         return None
+    preserve_portal_logs_from_markdown(progress, week_num)
     plan = _load_json(plan_path)
     updated = progress.get("meta", {}).get("lastUpdated", datetime.now().isoformat(timespec="seconds"))
     TRACKERS_DIR.mkdir(parents=True, exist_ok=True)
@@ -419,25 +476,41 @@ def apply_portal_reflection_to_week(progress: dict[str, Any], week_num: int) -> 
     return True
 
 
-def clear_portal_daily_logs(progress: dict[str, Any], week_num: int | None = None) -> list[str]:
-    """Remove dailyLog keys for dates in week_plans (one week or all)."""
+def clear_portal_daily_logs(
+    progress: dict[str, Any],
+    week_num: int | None = None,
+    only_date: str | None = None,
+) -> list[str]:
+    """Remove live dailyLog keys (archivedDailyLog is kept).
+
+    When only_date is set (portal sync with clear checkbox), clear that day only
+    if it belongs to week_num's plan. Otherwise legacy: all dates in matching plans.
+    """
     portal = progress.setdefault("portal", {})
     logs = portal.setdefault("dailyLog", {})
     dates_to_clear: set[str] = set()
-    if not WEEK_PLANS_DIR.is_dir():
-        return []
-    for plan_file in WEEK_PLANS_DIR.glob("*.json"):
-        try:
-            n = int(plan_file.stem)
-        except ValueError:
-            continue
-        if week_num is not None and n != week_num:
-            continue
-        plan = _load_json(plan_file)
-        dates_to_clear.update(plan.get("days", {}).keys())
+    if only_date:
+        if week_num is not None:
+            plan_path = WEEK_PLANS_DIR / f"{week_num}.json"
+            if plan_path.is_file():
+                plan = _load_json(plan_path)
+                if only_date in plan.get("days", {}):
+                    dates_to_clear.add(only_date)
+        else:
+            dates_to_clear.add(only_date)
+    elif WEEK_PLANS_DIR.is_dir():
+        for plan_file in WEEK_PLANS_DIR.glob("*.json"):
+            try:
+                n = int(plan_file.stem)
+            except ValueError:
+                continue
+            if week_num is not None and n != week_num:
+                continue
+            plan = _load_json(plan_file)
+            dates_to_clear.update(plan.get("days", {}).keys())
     cleared = []
     for date in sorted(dates_to_clear):
-        if date in logs and str(logs[date]).strip():
+        if date in logs:
             cleared.append(date)
             del logs[date]
     return cleared

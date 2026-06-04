@@ -16,7 +16,7 @@ from zoneinfo import ZoneInfo
 
 from flask import Flask, jsonify, redirect, request, send_from_directory
 
-from markdown_sync import clear_portal_daily_logs, sync_all
+from markdown_sync import clear_portal_daily_logs, merge_portal_daily_logs_to_archive, sync_all
 
 APP_DIR = Path(__file__).resolve().parent
 ROOT = APP_DIR.parent
@@ -195,12 +195,16 @@ def post_sync_markdown():
     )
     clear_logs = request.args.get("clear_logs", "1") != "0"
 
+    portal = data.setdefault("portal", {})
+    merge_portal_daily_logs_to_archive(portal)
     paths = sync_all(data)
     cleared_dates: list[str] = []
     if clear_logs:
-        cleared_dates = clear_portal_daily_logs(data, week_num=week_num)
-    if cleared_dates:
-        save_progress(data)
+        today = data.get("meta", {}).get("today")
+        cleared_dates = clear_portal_daily_logs(
+            data, week_num=week_num, only_date=today
+        )
+    save_progress(data)
 
     rel = [str(p.relative_to(ROOT)) for p in paths]
     return jsonify({

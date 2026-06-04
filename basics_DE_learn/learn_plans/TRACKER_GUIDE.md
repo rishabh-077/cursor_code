@@ -1,13 +1,14 @@
-# Tracker guide (portal only)
+# Tracker guide (portal-first)
 
-**Daily:** http://127.0.0.1:5050/portal → tick tasks, log, LC, mastery → **Sync to Markdown**.
+**Daily tasks + sync:** [CONTEXT.md](../CONTEXT.md) §7 · Portal: http://127.0.0.1:5050/portal
 
-| Synced file | Source |
-|-------------|--------|
-| `trackers/portal_week_NN.md` | `progress.json` → `portal.dailyTasks`, `portal.dailyLog`, reflection |
-| `trackers/lc_log.md` | `lc_log.json` |
-| `trackers/phase_checklist.md` | `dsa_mastery.json` |
+| What | Where |
+|------|--------|
+| **Today’s tasks** | Portal checkboxes → `progress.json` → **Sync** → `trackers/portal_week_NN.md` |
+| **Daily log history** | `archivedDailyLog` in JSON + `portal_week_NN.md`. Sync **imports** logs already in the markdown file. Clear checkbox = empty **today only** in portal textarea; past days stay in markdown. |
+| **LC progress** | Portal LC table → `lc_log.json` → `trackers/lc_log.md` |
+| **DSA mastery** | Portal t01–t07 → `dsa_mastery.json` → `trackers/phase_checklist.md` |
+| **Chip / DDIA chapters** | [theory/ai_engineering_notes.md](../theory/ai_engineering_notes.md) — manual `[x]` per chapter |
+| **Phase exit gates** | [learn_tracker.md](./learn_tracker.md) |
 
-**Commit:** `dashboard/data/progress.json`, `lc_log.json`, `dsa_mastery.json`, + synced `trackers/`.
-
-Old Block A/B/C UI archived: `learn_plans/_archive/weekly_tracker/` · data: `dashboard/data/_archive/progress_weeks_legacy.json`
+Legacy Block A/B/C trackers: [\_archive/TRACKER_GUIDE.md](./_archive/TRACKER_GUIDE.md)

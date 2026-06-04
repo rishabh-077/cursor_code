@@ -74,7 +74,7 @@ You have **two** strong stories. Pick **one primary** for 5-min “walk me throu
 
 | Week | Date (approx) | Action |
 |------|---------------|--------|
-| 1 | 25 May 2026 | Prep starts — [plan_week1](./weekly_plan/plan_week1.md) |
+| 1 | 25 May 2026 | Prep starts — [week_01](../weekly_plans/week_01.md) |
 | 19 | 28 Sep 2026 | Resume + LinkedIn |
 | 20 | 5 Oct 2026 | Phase 2 exit; RAG repo public |
 | **21** | **12 Oct 2026** | **Applications** |

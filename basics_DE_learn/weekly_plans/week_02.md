@@ -2,7 +2,8 @@
 
 **Phase:** 1 · **DSA topic:** t02 Arrays (finish) · t03 Strings (start)  
 **Mastery goal:** t02 — Easy without hints + **1 Medium attempted** before advancing t03 fully next week  
-**Master plan:** [MASTER_PLAN.md](../MASTER_PLAN.md) · **Portal:** http://127.0.0.1:5050/portal
+**Master plan:** [MASTER_PLAN.md](../MASTER_PLAN.md) · **Portal:** http://127.0.0.1:5050/portal  
+**SQL note:** DE menu is SQL #5–8; this week does **#5** (Tue) + **#6–7** (Thu) — **#8** carries to Week 3 if needed.
 
 ---
 
@@ -34,7 +35,7 @@
 
 **PRIMARY (2 hrs):** **#125** Valid Palindrome — re-solve **without hints**. Video (if needed): [NeetCode two pointers](https://www.youtube.com/watch?v=jM2dhDPYMQM).
 
-**SECONDARY (30 min):** SQL 50 **#7** [Product Sales Analysis I](https://leetcode.com/problems/product-sales-analysis-i/)
+**SECONDARY (30 min):** SQL 50 **#6** [Customers Who Never Order](https://leetcode.com/problems/customers-who-never-order/) · **#7** [Product Sales Analysis I](https://leetcode.com/problems/product-sales-analysis-i/) if time
 
 ---
 
@@ -50,7 +51,7 @@
 
 **PRIMARY (2 hrs):** Re-solve **#485** and **#26** without hints. Finish any missing complexity notes in repo.
 
-**SECONDARY:** none
+**SECONDARY (optional, pick ONE — ~30 min):** **Chip Ch 1–2 catch-up** (you have not finished these — do **not** jump to Ch 3–4 yet) **OR** Zoomcamp module 1 **OR** skip if DSA catch-up needed. Track done in [ai_engineering_notes.md](../theory/ai_engineering_notes.md).
 
 ---
 

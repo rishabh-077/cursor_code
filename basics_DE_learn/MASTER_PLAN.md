@@ -3,7 +3,7 @@
 **Profile:** [learn_plans/profile.md](learn_plans/profile.md) · **Start:** 2026-05-25 (Monday) · **Apply target:** ~Week 28 · **Daily time:** 2–3 h  
 **Agents:** read [CONTEXT.md](CONTEXT.md) first (repo map, sync rules, how to add new weeks).
 
-This file does **not** change every week. Weekly tasks live in `weekly_plans/week_NN.md`. Daily UI: Flask portal → http://127.0.0.1:5050/portal
+This file does **not** change every week. Weekly tasks live in `weekly_plans/week_NN.md`. **DE / theory / system design / data modeling by calendar week:** [DE_CURRICULUM.md](DE_CURRICULUM.md) · **Video URLs:** [learn_plans/RESOURCES.md](learn_plans/RESOURCES.md). Daily UI: Flask portal → http://127.0.0.1:5050/portal
 
 ---
 
@@ -73,18 +73,22 @@ This file does **not** change every week. Weekly tasks live in `weekly_plans/wee
 | [dashboard/data/progress.json](dashboard/data/progress.json) | **Only** `meta` + `portal` (no per-week legacy blocks) |
 | [learn_plans/_archive/](learn_plans/_archive/) | Old plans, tracker_weekN, Block A/B/C UI |
 | [learn_plans/DSA_PACING.md](learn_plans/DSA_PACING.md) | `learn_plan_v2.md` parallel DE columns (historical) |
+| [DE_CURRICULUM.md](DE_CURRICULUM.md) | Week-by-week DE / theory / SD map (use with RESOURCES) |
 | [learn_plans/RESOURCES.md](learn_plans/RESOURCES.md) | StrataScratch / Zoomcamp in Phase 1 daily |
 | [trackers/lc_log.md](trackers/lc_log.md) | — |
 | Flask dashboard + **Sync to Markdown** | — |
 
 ---
 
-## Your progress snapshot (2026-06-03)
+## Your progress snapshot (2026-06-05)
 
 | Item | Status |
 |------|--------|
 | **Phase** | 1 · Calendar week 2 |
 | **DSA** | t01 ✅ · t02 in progress (283 no hints; 485/26/66/118/125 used hints — re-solve needed) |
-| **LC logged** | ~10 problems |
+| **LC logged** | see `lc_log.json` / CONTEXT §10 |
 | **SQL 50** | 8/50 |
-| **Week 1** | Done except Block C theory (parallel OK) |
+| **Chip** | Ch 1–2 not done — Sat optional = catch-up (see `ai_engineering_notes.md`) |
+| **Week 1** | Done except parallel theory (Chip) |
+
+*Detail:* [CONTEXT.md](CONTEXT.md) §10 · [learn_tracker.md](learn_plans/learn_tracker.md)

@@ -1,6 +1,6 @@
 # PySpark — Week 1 notes
 
-**Plan:** [plan_week1.md](../learn_plans/weekly_plan/plan_week1.md) · **Tracker:** [tracker_week1.md](../learn_plans/weekly_tracker/tracker_week1.md)
+**Plan:** [week_01.md](../weekly_plans/week_01.md) · **Tracker:** [portal_week_01.md](../trackers/portal_week_01.md)
 
 ---
 

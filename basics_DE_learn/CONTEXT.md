@@ -2,7 +2,7 @@
 
 **Read this file first** before scanning the whole tree. Update this file when the system changes (see §9).
 
-**Human:** [MASTER_PLAN.md](MASTER_PLAN.md) · [HOW_TO_USE.md](learn_plans/HOW_TO_USE.md) · Portal: http://127.0.0.1:5050/portal
+**Human:** [MASTER_PLAN.md](MASTER_PLAN.md) · [DE_CURRICULUM.md](DE_CURRICULUM.md) (DE / theory / SD week map) · [HOW_TO_USE.md](learn_plans/HOW_TO_USE.md) · Portal: http://127.0.0.1:5050/portal
 
 ---
 
@@ -26,6 +26,7 @@ DE interview prep for **~3.5 YOE**, target **35–50+ LPA**, apply ~**calendar w
 basics_DE_learn/
 ├── CONTEXT.md                 ← THIS FILE (agent bootstrap)
 ├── MASTER_PLAN.md             ← Rules & phases (rarely changes)
+├── DE_CURRICULUM.md           ← DE / SQL / theory / SD by calendar week (detail map)
 ├── weekly_plans/
 │   ├── week_01.md             ← Human-readable week plan
 │   └── week_02.md
@@ -55,13 +56,18 @@ basics_DE_learn/
 │   ├── dsa-study-plan.html    ← /dsa — full LC curriculum
 │   ├── lc-numbers.js          ← LC id ↔ name for HTML plan
 │   ├── DSA_PACING.md          ← One DSA topic per calendar week
+│   ├── RESOURCES.md           ← All video & doc URLs
+│   ├── theory_reading.md      ← Chip → DDIA schedule (points to DE_CURRICULUM)
 │   ├── profile.md
+│   ├── learn_tracker.md       ← Phase exit gates + parallel backlog (Block C)
 │   ├── HOW_TO_USE.md
+│   ├── TRACKER_GUIDE.md       ← Portal sync + theory marking (not legacy archive)
+│   ├── weekly_plan/README.md  ← Deprecated → use weekly_plans/
 │   └── _archive/              ← Old learn_plan_v2, tracker_weekN, plan_week3–6
 ├── leetcode/week_N/leetcode_*.py
 ├── python/dsa_theory/         ← arrays.md, strings.md, …
-├── sql/weekN_sql50_log.md
-├── pyspark/, theory/, behavioral/, projects/
+├── sql/week1_sql50_log.md, week2_sql50_log.md, …
+├── pyspark/, theory/ai_engineering_notes.md, behavioral/, projects/
 ```
 
 **Do not use as daily driver:** `learn_plans/_archive/`, `/week` (redirects to portal), `dashboard/static/_archive/`.
@@ -95,6 +101,38 @@ basics_DE_learn/
 
 ---
 
+## 3b. Planning layers — what to do today (human + agent)
+
+**Do not treat [DE_CURRICULUM.md](DE_CURRICULUM.md) as the daily schedule.** Full prose: DE_CURRICULUM §“How to read this” + §“Portal vs DE_CURRICULUM”.
+
+| Layer | File | Role |
+|-------|------|------|
+| **Rules** | [MASTER_PLAN.md](MASTER_PLAN.md) | Phase 1: one primary/day; SQL Tue/Thu 30 min only (wk 1–8); no 3 subjects same evening |
+| **Daily** | Portal + `week_plans/N.json` + `weekly_plans/week_0N.md` | **Source of truth for today** — checkboxes |
+| **Week menu** | [DE_CURRICULUM.md](DE_CURRICULUM.md) | Calendar-week **bucket** (Chip, Zoomcamp, DDIA…) — optional unless copied into portal |
+| **Long gates** | [learn_plans/learn_tracker.md](learn_plans/learn_tracker.md) | Phase 1 **exit** (~wk 16): SQL 50, Zoomcamp, Spark lazy, Chip notes — not “must finish in week 2” |
+
+### If it is in portal vs only in DE_CURRICULUM
+
+| Portal field | You must |
+|--------------|----------|
+| **PRIMARY** | Do it (DSA in Phase 1 wk 1–8) |
+| **SECONDARY** | Do it that day (SQL Tue/Thu, or **optional** Sat DE/theory — pick one or skip if DSA behind) |
+| **Only in DE_CURRICULUM row** | **Parallel backlog** — not forgotten; defer OK while DSA weak |
+
+**Phase 1 daily (wk 1–8):** Mon/Wed/Fri/Sat = DSA primary · Tue/Thu = DSA + SQL secondary · Sun = reflection ~15 min · DE/theory = **Sat optional secondary** in `N.json` when generating the week (max one of Chip / Zoomcamp / video). **Chip:** next unchecked ch in `theory/ai_engineering_notes.md` — never assign Ch 3–4 if Ch 1–2 are still open.
+
+### Skipped Chip / Zoomcamp / theory
+
+1. Does **not** fail the calendar week if portal DSA/SQL done.  
+2. Stays on **learn_tracker** Phase 1 exit checklist + user `reflectionDraft.blocked` / `nextWeek`.  
+3. **Week N+1:** agent reads reflection + backlog + DE_CURRICULUM row → add **one** optional Sat secondary **or** defer to week 9+ (MASTER_PLAN late Phase 1).  
+4. **DSA mastery** overrides DE backlog (carry t02 before advancing t03).
+
+**Week 2 example:** Portal = LC + SQL; Sat optional = **Chip Ch 1–2 catch-up** (not Ch 3–4 until notes show Ch 1–2 done) or Zoomcamp — see `ai_engineering_notes.md` chapter log.
+
+---
+
 ## 4. `progress.json` schema (slim)
 
 ```json
@@ -115,7 +153,10 @@ basics_DE_learn/
       "YYYY-MM-DD": [primaryDone, secondaryDone]
     },
     "dailyLog": {
-      "YYYY-MM-DD": "free text"
+      "YYYY-MM-DD": "free text (live; cleared after sync if checkbox on)"
+    },
+    "archivedDailyLog": {
+      "YYYY-MM-DD": "persisted log text for markdown after clear"
     },
     "reflectionDraft": {
       "finished": "",
@@ -181,7 +222,7 @@ basics_DE_learn/
 }
 ```
 
-**Planning rules:** Follow [MASTER_PLAN.md](MASTER_PLAN.md) + [DSA_PACING.md](learn_plans/DSA_PACING.md). Phase 1 wk 1–8: DSA primary; SQL **Tue/Thu only** (30 min). One DSA topic focus per week; carry prior topic if not mastered.
+**Planning rules:** Follow [MASTER_PLAN.md](MASTER_PLAN.md) + [DSA_PACING.md](learn_plans/DSA_PACING.md) + [DE_CURRICULUM.md](DE_CURRICULUM.md) (row for calendar week N: SQL, DE parallel, Chip/DDIA, videos). Phase 1 wk 1–8: DSA primary; SQL **Tue/Thu only** (30 min). DE/theory from DE_CURRICULUM = **parallel/Sat optional secondary** in `week_plans/N.json` (pick one), not a third equal weeknight block. **Carry-forward:** if user skipped Chip/Zoomcamp, read `learn_tracker.md` Phase 1 exit + portal `reflectionDraft.blocked` / `nextWeek` and attach **one** optional secondary on Sat or defer to week 9+. One DSA topic focus per week; carry prior topic if not mastered.
 
 ---
 
@@ -195,7 +236,7 @@ basics_DE_learn/
 | `trackers/lc_log.md` | `lc_log.json` |
 | `trackers/phase_checklist.md` | `dsa_mastery.json` + SQL count from legacy if any |
 
-**Clear daily logs (checkbox, default on):** After sync, deletes `portal.dailyLog` keys for dates in **that week's** `week_plans/N.json` only. **Markdown keeps the text.** `dailyTasks` stay in JSON.
+**Clear daily logs (checkbox, default on):** Before sync, non-empty logs copy to `portal.archivedDailyLog`. Sync **reads existing** `portal_week_NN.md` into archive if JSON is empty (manual edits kept). After sync, clears **only `meta.today`** live log in portal — not the whole week. Markdown = live + archived. **Do not edit tracker md for long-term storage without syncing once** — or edits are imported on next sync. `dailyTasks` stay in JSON.
 
 **Does NOT sync:** `progress.json` → nothing imports back from markdown.
 
@@ -224,8 +265,9 @@ Update **in the same PR/session** when you:
 - Add week 3+ (update §10 snapshot)
 - Archive or move major folders
 - Change phased rules in `MASTER_PLAN.md`
+- Change DE/theory/SD week mapping → update [DE_CURRICULUM.md](DE_CURRICULUM.md) + [learn_plans/theory_reading.md](learn_plans/theory_reading.md) if book schedule shifts
 
-**Do not** duplicate full week plans here — link to `weekly_plans/week_0N.md`.
+**Do not** duplicate full week plans here — link to `weekly_plans/week_0N.md` and `DE_CURRICULUM.md` for DE/theory rows.
 
 **§10 snapshot** — bump `lastContextUpdate` date and 3–5 bullets on progress.
 
@@ -235,7 +277,7 @@ Update **in the same PR/session** when you:
 
 | Field | Value |
 |-------|--------|
-| **lastContextUpdate** | 2026-06-04 |
+| **lastContextUpdate** | 2026-06-05 (repo audit: docs + learn_tracker aligned) |
 | **Calendar week** | 2 (Mon 1 Jun – Sun 7 Jun 2026) |
 | **meta.today** | 2026-06-04 |
 | **DSA focus** | t02 finish · t03 start |
@@ -244,19 +286,24 @@ Update **in the same PR/session** when you:
 | **t02 mastery** | Not complete (need no-hint Easy + medium) |
 | **SQL 50** | 8/50 |
 | **Known weak spot** | 485, 26, 66, 118, 125 used hints; 283 clean |
+| **Theory spine** | Chip Ch 1–4 (wk 1–2) · DDIA from wk 3 (`ddiaArrives` 2026-06-08) — see [DE_CURRICULUM.md](DE_CURRICULUM.md) |
+| **Parallel backlog** | Chip **Ch 1–2 not read** (do catch-up before Ch 3–4) · Week 2 Sat = Ch 1–2 in `2.json` — gates in [learn_tracker.md](learn_plans/learn_tracker.md) |
 
 ---
 
 ## 11. User prompt template (new week)
 
 ```text
-Generate Week N plan (hybrid). Read CONTEXT.md + MASTER_PLAN.md first.
+Generate Week N plan (hybrid). Read CONTEXT.md §3b + MASTER_PLAN.md + DE_CURRICULUM.md (week N row) first.
 
 - Calendar week N dates: …
-- Reflection from portal: …
+- Reflection from portal (finished / blocked / nextWeek): …
+- Parallel backlog from learn_tracker Phase 1 exit (Chip, Zoomcamp, Spark lazy, …): …
 - LC hint audit: …
-- t02 mastered? Y/N · SQL count: …
-- Blocked days: …
+- Prior topic mastered? Y/N · SQL count: …
+
+Portal rules: Phase 1 wk 1–8 — DSA primary Mon–Sat except Tue/Thu +30 min SQL;
+Sat optional secondary = pick ONE from DE_CURRICULUM week menu or carry-forward backlog.
 
 Deliver: weekly_plans/week_0N.md, dashboard/data/week_plans/N.json,
 portal.html week dropdown, update CONTEXT.md §10.
@@ -273,6 +320,7 @@ python app.py
 
 | URL | Role |
 |-----|------|
+| `/` | Hub (links to portal + /dsa) |
 | `/portal` | Daily hub |
 | `/portal?w=N` | View week N plan |
 | `/dsa` | DSA study plan |

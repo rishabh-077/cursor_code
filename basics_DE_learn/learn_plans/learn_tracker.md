@@ -11,7 +11,7 @@
 
 | | |
 |---|---|
-| **Week** | **2** (today 2026-06-03) |
+| **Week** | **2** (update `meta.today` in portal) |
 | **Dates** | Mon 1 – Sun 7 Jun 2026 |
 | **Plan** | [weekly_plans/week_02.md](../weekly_plans/week_02.md) |
 | **Daily tracker** | [portal_week_01](../trackers/portal_week_01.md) · [portal_week_02](../trackers/portal_week_02.md) |
@@ -45,10 +45,10 @@ Full detail: [profile.md](./profile.md)
 |------|-------|-------|------|---------|
 | 1 | Mon 25 May – Sun 31 May 2026 | 1 | [week_01](../weekly_plans/week_01.md) | [portal_week_01](../trackers/portal_week_01.md) |
 | 2 | Mon 1 – Sun 7 Jun 2026 | 1 | [week_02](../weekly_plans/week_02.md) | [portal_week_02](../trackers/portal_week_02.md) |
-| 10 | 27 Jul – 2 Aug | 1 exit | — | Phase 1 checklist below |
-| 20 | 5 – 11 Oct | 2 exit | — | Phase 2 checklist below |
-| **21** | **12 – 18 Oct** | **3** | **Start applications** | Interview pipeline |
-| 30 | 21 – 27 Dec | 3 | Negotiate | — |
+| 16 | 7 – 13 Sep 2026 | 1 exit | — | Phase 1 checklist below |
+| 24 | 2 – 8 Nov 2026 | 2 exit | — | Phase 2 checklist below |
+| **28** | **30 Nov – 6 Dec 2026** | **3** | **Start applications** | Interview pipeline |
+| 30 | 14 – 20 Dec 2026 | 3 | Negotiate | — |
 
 *Shift rows if you slip — update on Sunday.*
 
@@ -58,9 +58,9 @@ Full detail: [profile.md](./profile.md)
 
 | Phase | Weeks | Status | Target end |
 |-------|-------|--------|------------|
-| 1 — Foundations | 1–10 | 🟡 In progress | ~2 Aug 2026 |
-| 2 — Systems + AI | 11–20 | ⬜ | ~11 Oct 2026 |
-| 3 — Interviews | 21–30 | ⬜ | ~27 Dec 2026 |
+| 1 — DSA foundation | 1–16 | 🟡 In progress | ~mid Sep 2026 |
+| 2 — DE depth + DSA maintenance | 17–24 | ⬜ | ~early Nov 2026 |
+| 3 — Interviews | 25–30 | ⬜ | ~mid Dec 2026 |
 
 ---
 
@@ -72,22 +72,28 @@ Full detail: [profile.md](./profile.md)
 |----|----------------|-------|:----:|
 | 1 | 25–31 May | Big O, hash, SQL50×4, Spark, BQ | ✅ Done (theory Block C parallel) |
 | 2 | 1–7 Jun | t02/t03 arrays+strings, SQL50×4 | 🟡 In progress |
-| 3 | 8–14 Jun | Sliding window, dbt | ⬜ |
-| 4 | 15–21 Jun | Strings, SQL windows | ⬜ |
-| 5 | 22–28 Jun | Stacks, StrataScratch | ⬜ |
-| 6 | 29 Jun – 5 Jul | Binary search, DDIA 1–2 | ⬜ |
-| 7 | 6–12 Jul | Linked lists, SQL50 done | ⬜ |
-| 8 | 13–19 Jul | Trees, Cloud Run | ⬜ |
-| 9 | 20–26 Jul | Consolidation, STAR | ⬜ |
-| 10 | 27 Jul – 2 Aug | Phase 1 exam | ⬜ |
+| 3 | 8–14 Jun | **t03** Strings · SQL #9–12 · DDIA Ch 3 | ⬜ |
+| 4 | 15–21 Jun | **t04** Hash · SQL #13–16 | ⬜ |
+| 5 | 22–28 Jun | **t05** Two pointers · SQL #17–20 | ⬜ |
+| 6 | 29 Jun – 5 Jul | **t06** Sliding window · SQL #21–25 | ⬜ |
+| 7 | 6–12 Jul | **t07** Prefix sums · **finish SQL 50** | ⬜ |
+| 8 | 13–19 Jul | **t08** Stacks · StrataScratch | ⬜ |
+| 9 | 20–26 Jul | **t09** Queues · STAR draft | ⬜ |
+| 10 | 27 Jul – 2 Aug | **t10** Linked lists | ⬜ |
+| 11 | 3–9 Aug | **t11** Recursion | ⬜ |
+| 12 | 10–16 Aug | **t12** Tree traversals | ⬜ |
+| 13 | 17–23 Aug | **t13** BST | ⬜ |
+| 14 | 24–30 Aug | **t14** Graphs BFS | ⬜ |
+| 15 | 31 Aug – 6 Sep | **t15** DFS | ⬜ |
+| 16 | 7–13 Sep | **t16** Topo · Phase 1 DSA review | ⬜ |
 
-**Phase 1 exit:** [ ] 35+ LC *(4 logged)* · [ ] SQL 50 *(4/50)* · [ ] StrataScratch ≥8 · [ ] BQ/dbt story · [x] Spark Driver/Executor · [ ] PySpark lazy vs action
+**Phase 1 exit:** [ ] 35+ LC *(see lc_log)* · [ ] SQL 50 *(8/50)* · [ ] StrataScratch ≥8 · [ ] Zoomcamp · [ ] Chip Ch 1–4 notes · [ ] DDIA Ch 3 started · [x] Spark Driver/Executor · [ ] PySpark lazy vs action
 
 ### Phase 2
 
 | Wk | Theme | Done |
 |----|-------|:----:|
-| 11–20 | Streaming, DDIA, RAG project, system design | ⬜ |
+| 17–24 | Spark, Kafka, modeling, CDC, designs, **RAG MVP (21–22)** | ⬜ |
 
 **Phase 2 exit:** [ ] 60+ LC · [ ] Streaming whiteboard · [ ] 2 design docs · [ ] RAG repo public
 
@@ -95,7 +101,7 @@ Full detail: [profile.md](./profile.md)
 
 | Wk | Focus | Done |
 |----|--------|:----:|
-| 21–30 | Resume, mocks, apply, negotiate | ⬜ |
+| 25–30 | Mocks, **apply ~wk 28**, negotiate | ⬜ |
 
 ---
 
@@ -105,9 +111,9 @@ Full detail: [profile.md](./profile.md)
 |-----------|-------------|---------------|:----:|
 | Prep started | 1 | 25 May 2026 | ✅ |
 | SQL 50 complete | 7 | ~12 Jul | ⬜ |
-| RAG side project MVP | 14 | ~31 Aug | ⬜ |
-| Phase 2 complete | 20 | ~11 Oct | ⬜ |
-| Applications live | 21 | ~12 Oct | ⬜ |
+| RAG side project MVP | 21–22 | ~late Oct | ⬜ |
+| Phase 2 complete | 24 | ~early Nov | ⬜ |
+| Applications live | **28** | ~early Dec | ⬜ |
 | First offer | 27+ | Nov–Dec | ⬜ |
 | **35–42 LPA** | Negotiation | | ⬜ |
 | **42–50 LPA** | Negotiation | | ⬜ |
@@ -125,7 +131,7 @@ Full detail: [profile.md](./profile.md)
 
 ---
 
-## Interview pipeline (Week 21+)
+## Interview pipeline (Week 28+)
 
 | Company | Applied | OA | Technical | Offer | Target band |
 |---------|:-------:|:--:|:---------:|:-----:|-------------|
@@ -144,6 +150,6 @@ Full detail: [profile.md](./profile.md)
 
 Paste after each week:
 
-> Update learn_tracker and tracker_weekN: start 2026-05-25. Week 1 done: [list]. Week 2 blocked on: [list].
+> Update learn_tracker + CONTEXT §10: Week N done/blocked. Chip backlog: [chapters]. SQL count: X/50.
 
-Cursor edits checkboxes and tables; you save and commit.
+Cursor edits checkboxes; sync portal → `trackers/portal_week_NN.md`; commit.
