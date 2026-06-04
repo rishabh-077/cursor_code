@@ -12,7 +12,7 @@
       <div>
         <p class="eyebrow">Phase 1 · DSA primary</p>
         <h1>Daily portal</h1>
-        <p class="subtitle">Checkboxes → <code>progress.json</code> + trackers · Sync to markdown for git</p>
+        <p class="subtitle"><code>progress.json</code> (meta + portal only) → Sync → <code>trackers/</code></p>
       </div>
       <div class="header-actions">
         <label class="btn" style="display:flex;align-items:center;gap:0.35rem">
@@ -23,6 +23,10 @@
           </select>
         </label>
         <button type="button" class="btn" id="btn-set-today">Set today (IST)</button>
+        <label class="btn" style="display:flex;align-items:center;gap:0.35rem;font-weight:normal">
+          <input type="checkbox" id="chk-clear-logs" checked />
+          Clear daily logs after sync
+        </label>
         <button type="button" class="btn btn-primary" id="btn-sync">Sync to Markdown</button>
       </div>
     </div>
@@ -81,11 +85,10 @@
 
     <nav class="nav-links">
       <a href="/">Hub</a>
-      <a href="/week?w=1">Legacy week 1 tracker</a>
-      <a href="/week?w=2">Legacy week 2 tracker</a>
       <a href="/dsa">DSA study plan</a>
       <a href="../../MASTER_PLAN.md">MASTER_PLAN.md</a>
       <a href="../../weekly_plans/week_02.md">week_02.md</a>
+      <a href="../../trackers/portal_week_02.md">portal_week_02.md</a>
     </nav>
   </main>
 

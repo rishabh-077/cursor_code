@@ -12,16 +12,16 @@
 |-------------|--------|---------|:----:|
 | DSA topics t01–t16 | 16 topics mastered | 1 | [ ] |
 | LC problems logged | 35+ | 13 | [ ] |
-| SQL 50 | 30+ / 50 | 8 / 50 | [ ] |
+| SQL 50 | 30+ / 50 | 0 / 50 | [ ] |
 | Explain patterns aloud | array, hash, graph basics | — | [ ] |
 
 ### DSA topic mastery (portal syncs here)
 
 | Topic | Theory | Easy no hints | Medium tried | Complete |
 |-------|:------:|:-------------:|:------------:|:--------:|
-| Big-O | [x] | [x] | [ ] | [x] |
-| Arrays | [ ] | [ ] | [ ] | [ ] |
-| Strings | [ ] | [ ] | [ ] | [ ] |
+| Big-O | [x] | [x] | [x] | [x] |
+| Arrays | [x] | [ ] | [ ] | [ ] |
+| Strings | [x] | [ ] | [ ] | [ ] |
 | Hash | [ ] | [ ] | [ ] | [ ] |
 | Two pointers | [ ] | [ ] | [ ] | [ ] |
 | Sliding window | [ ] | [ ] | [ ] | [ ] |

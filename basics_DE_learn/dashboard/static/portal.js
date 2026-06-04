@@ -123,8 +123,8 @@ function renderWeekPlan() {
 
   hint.style.display = "block";
   hint.innerHTML = viewingArchive
-    ? `Archive — calendar is on <strong>Week ${currentWk}</strong>. Legacy Block A/B/C: <a href="/week?w=${viewingWeek}">/week?w=${viewingWeek}</a>`
-    : `Full week below — <strong>today</strong> highlighted. Legacy tracker: <a href="/week?w=${viewingWeek}">/week?w=${viewingWeek}</a>`;
+    ? `Archive — calendar is on <strong>Week ${currentWk}</strong>. Synced log: <a href="../../trackers/portal_week_${String(viewingWeek).padStart(2, '0')}.md">portal_week_${String(viewingWeek).padStart(2, '0')}.md</a>`
+    : `Full week below — <strong>today</strong> highlighted. Sync writes <code>trackers/portal_week_NN.md</code>.`;
 
   const dates = Object.keys(weekPlan?.days || {}).sort();
   if (!dates.length) {
@@ -307,8 +307,19 @@ document.getElementById("week-select").addEventListener("change", async (e) => {
 });
 
 document.getElementById("btn-sync").addEventListener("click", async () => {
-  const r = await api("/api/sync-markdown", { method: "POST" });
-  document.getElementById("sync-msg").textContent = `Synced: ${r.paths.join(", ")}`;
+  const week = progress.meta?.currentWeek || 2;
+  const clearLogs = document.getElementById("chk-clear-logs").checked ? "1" : "0";
+  const r = await api(`/api/sync-markdown?week=${week}&clear_logs=${clearLogs}`, { method: "POST" });
+  let msg = `Synced: ${r.paths.join(", ")}`;
+  if (r.clearedLogDates?.length) {
+    msg += ` · cleared logs: ${r.clearedLogDates.join(", ")}`;
+    progress = await api("/api/progress");
+    const key = todayKey();
+    if (document.getElementById("daily-log")) {
+      document.getElementById("daily-log").value = progress.portal?.dailyLog?.[key] || "";
+    }
+  }
+  document.getElementById("sync-msg").textContent = msg;
   toast("Markdown synced — ready to git commit");
 });
 

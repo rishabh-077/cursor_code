@@ -173,6 +173,7 @@ def sync_tracker(progress: dict[str, Any], week_num: int = 1) -> Path:
 
 
 TRACKERS_DIR = ROOT / "trackers"
+WEEK_PLANS_DIR = ROOT / "dashboard" / "data" / "week_plans"
 LC_LOG_JSON = ROOT / "dashboard" / "data" / "lc_log.json"
 DSA_MASTERY_JSON = ROOT / "dashboard" / "data" / "dsa_mastery.json"
 
@@ -324,11 +325,136 @@ def sync_phase_checklist(
     return path
 
 
+def _task_flags(portal: dict[str, Any], date: str) -> tuple[bool, bool]:
+    tasks = portal.get("dailyTasks", {}).get(date, [False, False])
+    primary = bool(tasks[0]) if len(tasks) > 0 else False
+    secondary = bool(tasks[1]) if len(tasks) > 1 else False
+    return primary, secondary
+
+
+def render_portal_week(
+    week_num: int,
+    progress: dict[str, Any],
+    plan: dict[str, Any],
+    last_updated: str,
+) -> str:
+    portal = progress.get("portal", {})
+    days = plan.get("days", {})
+    dates = sorted(days.keys())
+    refl = portal.get("reflectionDraft", {})
+
+    rows = []
+    for date in dates:
+        d = days[date]
+        primary_done, secondary_done = _task_flags(portal, date)
+        log = (portal.get("dailyLog", {}).get(date) or "").strip() or "_"
+        log = log.replace("|", "\\|").replace("\n", " ")
+        sec = d.get("secondary", "none")
+        sec_cell = (
+            f"[{_cb(secondary_done)}] {sec}"
+            if sec and sec != "none"
+            else "—"
+        )
+        rows.append(
+            f"| {date} | {d.get('day', '')} | [{_cb(primary_done)}] | {sec_cell} | {log} |"
+        )
+
+    energy = refl.get("energy") or "_"
+    if isinstance(energy, int) and energy > 0:
+        energy = str(energy)
+
+    return f"""# Portal log — Week {week_num} ({plan.get('range', '')})
+
+**Synced from** `dashboard/data/progress.json` → `portal.dailyTasks` + `portal.dailyLog`  
+**Plan:** [week_{week_num:02d}.md](../weekly_plans/week_{week_num:02d}.md) · **Last synced:** {last_updated}
+
+---
+
+## Daily tasks + log
+
+| Date | Day | Primary done | Secondary | Daily log |
+|------|-----|:------------:|-----------|-----------|
+{chr(10).join(rows)}
+
+---
+
+## Reflection draft (portal)
+
+- **Finished:** {refl.get('finished') or '_'}
+- **Blocked:** {refl.get('blocked') or '_'}
+- **Next week adjust:** {refl.get('nextWeek') or '_'}
+- **Energy (1–5):** {energy}
+
+*After sync with "clear daily logs", entries above are archived here; live log keys removed from JSON.*
+"""
+
+
+def sync_portal_week(progress: dict[str, Any], week_num: int) -> Path | None:
+    plan_path = WEEK_PLANS_DIR / f"{week_num}.json"
+    if not plan_path.is_file():
+        return None
+    plan = _load_json(plan_path)
+    updated = progress.get("meta", {}).get("lastUpdated", datetime.now().isoformat(timespec="seconds"))
+    TRACKERS_DIR.mkdir(parents=True, exist_ok=True)
+    path = TRACKERS_DIR / f"portal_week_{week_num:02d}.md"
+    path.write_text(render_portal_week(week_num, progress, plan, updated), encoding="utf-8")
+    return path
+
+
+def apply_portal_reflection_to_week(progress: dict[str, Any], week_num: int) -> bool:
+    """Copy portal.reflectionDraft into weekN.reflection for legacy tracker sync."""
+    portal = progress.get("portal", {})
+    draft = portal.get("reflectionDraft", {})
+    week_key = f"week{week_num}"
+    if week_key not in progress:
+        return False
+    if not any(str(draft.get(k, "")).strip() for k in ("finished", "blocked", "nextWeek")):
+        return False
+    progress[week_key]["reflection"] = {
+        "finished": draft.get("finished", ""),
+        "blocked": draft.get("blocked", ""),
+        "nextWeek": draft.get("nextWeek", ""),
+        "energy": draft.get("energy", 0) or 3,
+    }
+    return True
+
+
+def clear_portal_daily_logs(progress: dict[str, Any], week_num: int | None = None) -> list[str]:
+    """Remove dailyLog keys for dates in week_plans (one week or all)."""
+    portal = progress.setdefault("portal", {})
+    logs = portal.setdefault("dailyLog", {})
+    dates_to_clear: set[str] = set()
+    if not WEEK_PLANS_DIR.is_dir():
+        return []
+    for plan_file in WEEK_PLANS_DIR.glob("*.json"):
+        try:
+            n = int(plan_file.stem)
+        except ValueError:
+            continue
+        if week_num is not None and n != week_num:
+            continue
+        plan = _load_json(plan_file)
+        dates_to_clear.update(plan.get("days", {}).keys())
+    cleared = []
+    for date in sorted(dates_to_clear):
+        if date in logs and str(logs[date]).strip():
+            cleared.append(date)
+            del logs[date]
+    return cleared
+
+
 def sync_all(progress: dict[str, Any]) -> list[Path]:
+    """Portal + LC + mastery only (legacy tracker_weekN removed)."""
     paths: list[Path] = []
-    for n in (1, 2):
-        if f"week{n}" in progress:
-            paths.append(sync_tracker(progress, n))
+    if WEEK_PLANS_DIR.is_dir():
+        for plan_file in sorted(WEEK_PLANS_DIR.glob("*.json")):
+            try:
+                week_num = int(plan_file.stem)
+            except ValueError:
+                continue
+            p = sync_portal_week(progress, week_num)
+            if p:
+                paths.append(p)
     paths.append(sync_lc_log())
     paths.append(sync_phase_checklist(progress=progress))
     return paths

@@ -1,9 +1,9 @@
 # Program tracker (consolidated)
 
 **Start date:** 2026-05-25 (**Monday**) · Weeks **Mon → Sun** · **Target apply:** ~Week 28 (realistic DSA) · **Program end:** ~Week 30  
-**Master plan:** [learn_plan_v2.md](./learn_plan_v2.md) · **Profile:** [profile.md](./profile.md) · **How to update checkboxes:** [TRACKER_GUIDE.md](./TRACKER_GUIDE.md)
+**Master plan:** [MASTER_PLAN.md](../MASTER_PLAN.md) · **Profile:** [profile.md](./profile.md) · **Portal sync:** [TRACKER_GUIDE.md](./TRACKER_GUIDE.md)
 
-> **Daily / weekly detail** lives in [weekly_tracker/](./weekly_tracker/) — not here. This file = phases, milestones, interviews, STAR.
+> **Daily / weekly detail** lives in [trackers/portal_week_NN.md](../trackers/) — not here. This file = phases, milestones, interviews, STAR.
 
 ---
 
@@ -13,8 +13,8 @@
 |---|---|
 | **Week** | **2** (today 2026-06-03) |
 | **Dates** | Mon 1 – Sun 7 Jun 2026 |
-| **Plan** | [weekly_plan/plan_week2.md](./weekly_plan/plan_week2.md) |
-| **Daily tracker** | [tracker_week1](./weekly_tracker/tracker_week1.md) · [tracker_week2](./weekly_tracker/tracker_week2.md) |
+| **Plan** | [weekly_plans/week_02.md](../weekly_plans/week_02.md) |
+| **Daily tracker** | [portal_week_01](../trackers/portal_week_01.md) · [portal_week_02](../trackers/portal_week_02.md) |
 | **DSA (Block A)** | [dsa-study-plan.html](./dsa-study-plan.html) · [DSA_PACING.md](./DSA_PACING.md) |
 
 **Week 1:** **Done** (A+B + exit checklist) · **Block C (theory)** still open — you’re continuing Chip Huyen / videos in parallel  
@@ -43,8 +43,8 @@ Full detail: [profile.md](./profile.md)
 
 | Week | Dates | Phase | Plan | Tracker |
 |------|-------|-------|------|---------|
-| 1 | Mon 25 May – Sun 31 May 2026 | 1 | [plan_week1](./weekly_plan/plan_week1.md) | [tracker_week1](./weekly_tracker/tracker_week1.md) |
-| 2 | Mon 1 – Sun 7 Jun 2026 | 1 | [plan_week2](./weekly_plan/plan_week2.md) | [tracker_week2](./weekly_tracker/tracker_week2.md) |
+| 1 | Mon 25 May – Sun 31 May 2026 | 1 | [week_01](../weekly_plans/week_01.md) | [portal_week_01](../trackers/portal_week_01.md) |
+| 2 | Mon 1 – Sun 7 Jun 2026 | 1 | [week_02](../weekly_plans/week_02.md) | [portal_week_02](../trackers/portal_week_02.md) |
 | 10 | 27 Jul – 2 Aug | 1 exit | — | Phase 1 checklist below |
 | 20 | 5 – 11 Oct | 2 exit | — | Phase 2 checklist below |
 | **21** | **12 – 18 Oct** | **3** | **Start applications** | Interview pipeline |

@@ -1,6 +1,6 @@
 # Week 2 · Mon 1 Jun – Sun 7 Jun 2026
 
-**Calendar:** [learn_plan_v2.md](../learn_plan_v2.md) · **DSA pace:** [DSA_PACING.md](../DSA_PACING.md)
+**Calendar:** [weekly_plans/week_02.md](../../weekly_plans/week_02.md) · **DSA pace:** [DSA_PACING.md](../DSA_PACING.md)
 
 ---
 

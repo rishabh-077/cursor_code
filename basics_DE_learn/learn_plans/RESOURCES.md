@@ -2,7 +2,7 @@
 
 **Rule:** Watch video for intuition → read docs/book for depth → practice (LeetCode / labs).
 
-**Plan mapping:** [learn_plan_v2.md](./learn_plan_v2.md) · **Week 1 tasks:** [weekly_plan/plan_week1.md](./weekly_plan/plan_week1.md)
+**Plan mapping:** [MASTER_PLAN.md](../MASTER_PLAN.md) · **Week tasks:** [weekly_plans/](../weekly_plans/)
 
 ---
 

@@ -1,41 +1,35 @@
-# DE Learn Progress Dashboard
+# DE Learn Dashboard
 
-Interactive hub: **weekly tracker** (like checkboxes in markdown) + **full DSA study plan** (like [dsa-study-plan.html](../learn_plans/dsa-study-plan.html)).
+**Repo guide for agents:** [../CONTEXT.md](../CONTEXT.md)
 
-## Quick start
+**Primary:** http://127.0.0.1:5050/portal
 
-```powershell
-cd basics_DE_learn\dashboard
-.\start_dashboard.bat
+## `progress.json` (slim)
+
+Only:
+
+```json
+{
+  "meta": { "today", "currentWeek", "startDate", ... },
+  "portal": { "dailyTasks", "dailyLog", "reflectionDraft" }
+}
 ```
 
-| URL | What |
-|-----|------|
-| http://127.0.0.1:5050 | **Hub** — pick Week 1, Week 2, or DSA plan |
-| http://127.0.0.1:5050/week?w=1 | Week 1 tracker |
-| http://127.0.0.1:5050/week?w=2 | **Week 2** — Today box + DSA **t02/t03** (see [DSA_PACING.md](../learn_plans/DSA_PACING.md)) |
-| http://127.0.0.1:5050/dsa | **DSA mastery plan** (theory + patterns + LC list) |
+Legacy `week1` / `week2` blocks removed → archived in `data/_archive/progress_weeks_legacy.json`.
 
-## Data files
+## Sync to Markdown
 
-| File | Purpose |
-|------|---------|
-| `data/progress.json` | Week 1 & 2 blocks, LC, SQL, exit checklist |
-| `data/dsa_progress.json` | DSA topic IDs (t01, t02, …) synced with `/dsa` UI |
+| Output | Source |
+|--------|--------|
+| `trackers/portal_week_01.md`, `portal_week_02.md` | Portal tasks + logs |
+| `trackers/lc_log.md` | `lc_log.json` |
+| `trackers/phase_checklist.md` | `dsa_mastery.json` |
 
-**Set today (IST):** Header button on `/week` — sets `meta.today` and recalculates `currentWeek` from `startDate` (**Mon 25 May 2026**). Weeks run **Monday → Sunday**. If the calendar week changed, you are redirected to the right `?w=N`.
+`/week` redirects to `/portal`.
 
-**Sync to Markdown:** Week 1 → `tracker_week1.md` via button on `/week?w=1`.
+## Other JSON
 
-## Verify videos before adding to plans
-
-```powershell
-python scripts/verify_videos.py
-```
-
-See [VERIFIED_VIDEOS.md](../learn_plans/VERIFIED_VIDEOS.md).
-
-## Theory schedule
-
-- **Until 8 Jun 2026:** Chip Huyen *AI Engineering* ([theory_reading.md](../learn_plans/theory_reading.md))
-- **From 8 Jun:** DDIA Ch 3+
+- `lc_log.json` — LeetCode done / no-hints
+- `dsa_mastery.json` — topic gates
+- `dsa_progress.json` — `/dsa` UI
+- `week_plans/N.json` — portal schedule (not in progress.json)

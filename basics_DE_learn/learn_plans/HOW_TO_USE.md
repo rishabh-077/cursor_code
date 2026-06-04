@@ -1,5 +1,7 @@
 # How to use your interview prep system
 
+**Maintainers / Cursor:** [CONTEXT.md](../CONTEXT.md) — full repo map and rules for new weeks.
+
 **Start date:** 2026-05-25 (**Monday**) — each study week is **Mon → Sun**
 
 ---
@@ -10,7 +12,7 @@
 **Rules:** [MASTER_PLAN.md](../MASTER_PLAN.md) · **This week:** [weekly_plans/week_02.md](../weekly_plans/week_02.md).  
 **DSA curriculum:** [dsa-study-plan.html](./dsa-study-plan.html) (one topic/week per [DSA_PACING.md](./DSA_PACING.md)).
 
-Legacy Block A/B/C tracker still at `/week?w=N`.
+`/week` redirects to `/portal` (legacy tracker removed).
 
 ---
 
@@ -18,15 +20,13 @@ Legacy Block A/B/C tracker still at `/week?w=N`.
 
 | Question | Where to look |
 |----------|----------------|
-| **Which calendar week am I in?** | [learn_plan_v2.md](./learn_plan_v2.md) — row for Week 1, 2, … |
+| **Which calendar week am I in?** | Portal status bar · [MASTER_PLAN.md](../MASTER_PLAN.md) |
 | **What DSA topics this week?** | [DSA_PACING.md](./DSA_PACING.md) — **one topic focus** (e.g. cal Week 2 = **t02 finish, t03 start**, not t05) |
-| **What do I do today (A/B/C)?** | Dashboard **http://127.0.0.1:5050/week?w=2** — blue **Today** box at top (Week 2 only has day-by-day schedule there). Backup: [plan_week2.md](./weekly_plan/plan_week2.md) |
-| **Theory / patterns / LC list for Block A** | [dsa-study-plan.html](./dsa-study-plan.html) or hub link **/dsa** |
-| **Did I finish things?** | Dashboard tabs + [tracker_weekN.md](./weekly_tracker/tracker_week2.md) |
+| **What do I do today?** | **http://127.0.0.1:5050/portal** — full week + **TODAY** · [weekly_plans/week_02.md](../weekly_plans/week_02.md) |
+| **Theory / patterns / LC list** | [dsa-study-plan.html](./dsa-study-plan.html) or **/dsa** |
+| **Did I finish things?** | Portal → **Sync** → [trackers/portal_week_02.md](../trackers/portal_week_02.md) |
 
-**You are on Week 2 (1–7 Jun 2026).** Default dashboard link: `/week?w=2`. Week 1 is review/catch-up only.
-
-**Update “today” in the dashboard:** click **Set today (IST)** on `/week?w=N` (updates `progress.json` and `currentWeek` from your start date). Manual edit: `dashboard/data/progress.json` → `meta.today`.
+**Update “today”:** **Set today (IST)** on portal → `progress.json` → `meta.today`.
 
 ---
 
@@ -35,10 +35,11 @@ Legacy Block A/B/C tracker still at `/week?w=N`.
 | File | Job |
 |------|-----|
 | **[dsa-study-plan.html](./dsa-study-plan.html)** | **Main DSA prep** — theory, patterns, problems (t01–t23) |
-| **[learn_plan_v2.md](./learn_plan_v2.md)** | 30-week calendar: DSA topics + SQL + Spark + theory per week |
-| [plan_weekN.md](./weekly_plan/plan_week1.md) | Today’s tasks for this calendar week |
-| [tracker_weekN.md](./weekly_tracker/tracker_week1.md) | What you finished |
-| [Dashboard](../dashboard/README.md) | Tick boxes: `/dsa` + `/week?w=1` |
+| **[MASTER_PLAN.md](../MASTER_PLAN.md)** | Phased prep (single source of truth) |
+| **[trackers/portal_week_NN.md](../trackers/)** | Portal daily tasks + logs (after Sync) |
+| [weekly_plans/week_NN.md](../weekly_plans/) | Human-readable week plan |
+| [trackers/lc_log.md](../trackers/lc_log.md) | All LC progress |
+| [Dashboard](../dashboard/README.md) | `/portal` + `/dsa` |
 | [learn_tracker.md](./learn_tracker.md) | Phases, apply date, interviews |
 
 You do **not** need a second DSA list — the HTML plan *is* the DSA path.

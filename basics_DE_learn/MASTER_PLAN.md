@@ -1,6 +1,7 @@
 # Master plan — DE interview prep (single source of truth)
 
-**Profile:** [learn_plans/profile.md](learn_plans/profile.md) · **Start:** 2026-05-25 (Monday) · **Apply target:** ~Week 28 · **Daily time:** 2–3 h
+**Profile:** [learn_plans/profile.md](learn_plans/profile.md) · **Start:** 2026-05-25 (Monday) · **Apply target:** ~Week 28 · **Daily time:** 2–3 h  
+**Agents:** read [CONTEXT.md](CONTEXT.md) first (repo map, sync rules, how to add new weeks).
 
 This file does **not** change every week. Weekly tasks live in `weekly_plans/week_NN.md`. Daily UI: Flask portal → http://127.0.0.1:5050/portal
 
@@ -66,7 +67,11 @@ This file does **not** change every week. Weekly tasks live in `weekly_plans/wee
 
 | Keep | Do not use as daily driver |
 |------|---------------------------|
-| [learn_plans/dsa-study-plan.html](learn_plans/dsa-study-plan.html) | Old 3-block same-day schedule in archived plans |
+| [trackers/portal_week_NN.md](trackers/) | Portal daily tasks + logs (synced from JSON) |
+| [trackers/lc_log.md](trackers/lc_log.md) | All LC progress |
+| [trackers/phase_checklist.md](trackers/phase_checklist.md) | DSA mastery gates |
+| [dashboard/data/progress.json](dashboard/data/progress.json) | **Only** `meta` + `portal` (no per-week legacy blocks) |
+| [learn_plans/_archive/](learn_plans/_archive/) | Old plans, tracker_weekN, Block A/B/C UI |
 | [learn_plans/DSA_PACING.md](learn_plans/DSA_PACING.md) | `learn_plan_v2.md` parallel DE columns (historical) |
 | [learn_plans/RESOURCES.md](learn_plans/RESOURCES.md) | StrataScratch / Zoomcamp in Phase 1 daily |
 | [trackers/lc_log.md](trackers/lc_log.md) | — |

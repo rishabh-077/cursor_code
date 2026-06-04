@@ -1,6 +1,6 @@
 # Week 1 · Mon 25 May – Sun 31 May 2026
 
-**Calendar:** [learn_plan_v2.md](../learn_plan_v2.md) (Week 1 row)
+**Calendar:** [MASTER_PLAN.md](../../MASTER_PLAN.md) · Week 1 archive
 
 ---
 

@@ -1,10 +1,9 @@
 """
-DE Learn Progress Dashboard — portal + week tracker + DSA study plan.
+DE Learn Progress Dashboard — portal + DSA study plan.
 
 Run:  python app.py
 Open:  http://127.0.0.1:5050/portal  — daily portal (primary)
        http://127.0.0.1:5050          — hub
-       http://127.0.0.1:5050/week     — legacy weekly tracker
        http://127.0.0.1:5050/dsa      — full DSA plan
 """
 
@@ -15,9 +14,9 @@ from datetime import date, datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
-from flask import Flask, jsonify, request, send_from_directory
+from flask import Flask, jsonify, redirect, request, send_from_directory
 
-from markdown_sync import sync_all, sync_tracker
+from markdown_sync import clear_portal_daily_logs, sync_all
 
 APP_DIR = Path(__file__).resolve().parent
 ROOT = APP_DIR.parent
@@ -114,8 +113,10 @@ def portal():
 
 
 @app.route("/week")
-def week_tracker():
-    return send_from_directory(STATIC_DIR, "index.html")
+@app.route("/week/")
+def week_tracker_redirect():
+    w = request.args.get("w", "")
+    return redirect(f"/portal?w={w}" if w else "/portal")
 
 
 @app.route("/dsa")
@@ -188,41 +189,42 @@ def post_set_today():
 
 @app.post("/api/sync-markdown")
 def post_sync_markdown():
-    week = request.args.get("week", "1")
     data = load_progress()
+    week_num = int(
+        request.args.get("week", data.get("meta", {}).get("currentWeek", 1))
+    )
+    clear_logs = request.args.get("clear_logs", "1") != "0"
+
     paths = sync_all(data)
+    cleared_dates: list[str] = []
+    if clear_logs:
+        cleared_dates = clear_portal_daily_logs(data, week_num=week_num)
+    if cleared_dates:
+        save_progress(data)
+
     rel = [str(p.relative_to(ROOT)) for p in paths]
-    return jsonify({"ok": True, "paths": rel, "week": week})
+    return jsonify({
+        "ok": True,
+        "paths": rel,
+        "week": week_num,
+        "clearedLogDates": cleared_dates,
+    })
 
 
 @app.get("/api/stats")
 def get_stats():
-    week = request.args.get("week", "1")
     data = load_progress()
-    w = data.get(f"week{week}", {})
-    lc = w.get("leetcode", [])
-    sql = w.get("sql50", [])
-    exit_items = w.get("exitChecklist", [])
-    days = w.get("days", [])
-
-    lc_done = sum(1 for x in lc if x.get("done"))
-    sql_done = sum(1 for x in sql if x.get("done"))
-    exit_done = sum(1 for x in exit_items if x.get("done"))
-    blocks_done = sum(
-        sum([d.get("blockA"), d.get("blockB"), d.get("blockC")])
-        for d in days
-    )
-    blocks_total = len(days) * 3 if days else 1
+    lc = load_json_file(LC_LOG_FILE, {"problems": []})
+    lc_done = sum(1 for x in lc.get("problems", []) if x.get("done"))
+    portal = data.get("portal", {})
+    task_days = len(portal.get("dailyTasks", {}))
 
     dsa = load_dsa_progress()
     dsa_done = sum(1 for v in dsa.get("topics", {}).values() if v)
 
     return jsonify({
-        "week": week,
-        "leetcode": {"done": lc_done, "total": len(lc)},
-        "sql50": {"done": sql_done, "total": len(sql)},
-        "exit": {"done": exit_done, "total": len(exit_items)},
-        "blocks": {"done": blocks_done, "total": blocks_total},
+        "leetcode": {"done": lc_done, "total": len(lc.get("problems", []))},
+        "portalTaskDays": task_days,
         "dsaTopics": {"done": dsa_done, "total": 23},
         "lastUpdated": data.get("meta", {}).get("lastUpdated"),
     })
@@ -277,6 +279,5 @@ def get_week_plan(week: int):
 if __name__ == "__main__":
     print("Daily portal:      http://127.0.0.1:5050/portal")
     print("DE Learn Hub:      http://127.0.0.1:5050")
-    print("Week tracker:      http://127.0.0.1:5050/week")
     print("DSA study plan:    http://127.0.0.1:5050/dsa")
     app.run(host="127.0.0.1", port=5050, debug=True)

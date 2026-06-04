@@ -38,7 +38,7 @@
 
 | Track | What moves weekly | File |
 |-------|-------------------|------|
-| **DE** | SQL 50, Spark, Zoomcamp, Chip/DDIA | [learn_plan_v2.md](./learn_plan_v2.md) DE columns |
+| **DE** | SQL 50, Spark, Zoomcamp, Chip/DDIA | [MASTER_PLAN.md](../MASTER_PLAN.md) Phase 2+ |
 | **DSA** | **One topic focus** from table above | This file + [dsa-study-plan.html](./dsa-study-plan.html) |
 
 SQL can stay on **calendar Week 2 = SQL #5–8** even while DSA is still on **t02/t03**. That is normal — do not rush four DSA topics to “catch up.”
@@ -56,7 +56,7 @@ You may have code for 217, 1, 242, 88, 121 before finishing **theory** for t02�
 
 ## Where this is reflected
 
-- [learn_plan_v2.md](./learn_plan_v2.md) — DSA column (one topic per week)
-- [plan_weekN.md](./weekly_plan/) — daily Block A
+- [MASTER_PLAN.md](../MASTER_PLAN.md) — phased prep (DSA primary in Phase 1)
+- [weekly_plans/week_NN.md](../weekly_plans/) — daily tasks (portal)
 - [dsa-study-plan.html](./dsa-study-plan.html) — badge on each topic
-- Dashboard `/week?w=N` — `WEEK_PLAN` in `app.js`
+- Portal `/portal?w=N` — `week_plans/N.json`

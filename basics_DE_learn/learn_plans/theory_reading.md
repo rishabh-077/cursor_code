@@ -2,7 +2,7 @@
 
 **Until DDIA arrives (~8 Jun 2026):** [Chip Huyen — *AI Engineering*](https://www.oreilly.com/library/view/ai-engineering/9781098166298/) (you have this).
 
-**From 8 Jun 2026 (Mon):** [DDIA](https://learning.oreilly.com/library/view/designing-data-intensive/9781491903063/) — start **Ch 3** (*Storage and Retrieval*), then continue per [learn_plan_v2.md](./learn_plan_v2.md).
+**From 8 Jun 2026 (Mon):** [DDIA](https://learning.oreilly.com/library/view/designing-data-intensive/9781491903063/) — start **Ch 3** (*Storage and Retrieval*), then continue per [MASTER_PLAN.md](../MASTER_PLAN.md).
 
 ---
 
@@ -25,4 +25,4 @@
 | 3 | Ch 3 complete | 8–14 Jun |
 | 6 | Ch 1–2 | 29 Jun – 5 Jul |
 
-Full map: [learn_plan_v2.md](./learn_plan_v2.md).
+Full map: [MASTER_PLAN.md](../MASTER_PLAN.md).

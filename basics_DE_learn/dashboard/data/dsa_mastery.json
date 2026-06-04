@@ -1,23 +1,23 @@
 {
-  "lastUpdated": "2026-06-04T00:42:15",
+  "lastUpdated": "2026-06-04T22:38:54",
   "topics": {
     "t01": {
       "complete": true,
       "easyNoHints": true,
-      "mediumAttempted": false,
+      "mediumAttempted": true,
       "theory": true
     },
     "t02": {
       "complete": false,
       "easyNoHints": false,
       "mediumAttempted": false,
-      "theory": false
+      "theory": true
     },
     "t03": {
       "complete": false,
       "easyNoHints": false,
       "mediumAttempted": false,
-      "theory": false
+      "theory": true
     },
     "t04": {
       "complete": false,

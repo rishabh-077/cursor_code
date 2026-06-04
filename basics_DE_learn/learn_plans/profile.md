@@ -1,6 +1,6 @@
 # Your interview profile (personalized)
 
-**Last updated:** from your answers · **Master plan:** [learn_plan_v2.md](./learn_plan_v2.md) · **Resources:** [RESOURCES.md](./RESOURCES.md) · **Hub:** [README.md](../../README.md)
+**Last updated:** from your answers · **Master plan:** [MASTER_PLAN.md](../MASTER_PLAN.md) · **Resources:** [RESOURCES.md](./RESOURCES.md) · **Hub:** [README.md](../../README.md)
 
 ---
 
