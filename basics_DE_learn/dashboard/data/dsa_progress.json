@@ -1,7 +1,7 @@
 {
   "topics": {
     "t01": true,
-    "t02": false,
+    "t02": true,
     "t03": false,
     "t04": false,
     "t05": false,
@@ -24,5 +24,5 @@
     "t22": false,
     "t23": false
   },
-  "lastUpdated": "2026-06-04T22:38:54"
+  "lastUpdated": "2026-06-05T22:57:12"
 }

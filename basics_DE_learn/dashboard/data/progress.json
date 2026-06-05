@@ -2,7 +2,7 @@
   "meta": {
     "currentWeek": 2,
     "ddiaArrives": "2026-06-08",
-    "lastUpdated": "2026-06-05T01:36:28",
+    "lastUpdated": "2026-06-05T23:01:50",
     "phase": 1,
     "program": "phased-v1",
     "startDate": "2026-05-25",
@@ -13,7 +13,7 @@
   "portal": {
     "archivedDailyLog": {
       "2026-06-04": "Filling out details for past 3 days and today since this week plan, this week was productive, solved multiple leetcode questions can be referred from week 2 file, list includes till today as: 26, 66, 118, 125, 283, 485. As of for today I leaned the theory for Array and String in DSA and made notes in dsa_theory folder in python, now will try to solve the leetcode 125 optimized way without using hint",
-      "2026-06-05": "Thanks"
+      "2026-06-05": "Today I solved leetcode #189, and #27 and also from sql solved #197, I learned in sql that we can join on datediff or date add condition, made notes on it, watched a video on theory for 2 pointers pattern, and also resolved leetcode #125 with optimized approach"
     },
     "dailyLog": {
       "2026-06-03": ""
@@ -60,11 +60,11 @@
         false
       ],
       "2026-06-04": [
-        false,
+        true,
         true
       ],
       "2026-06-05": [
-        false,
+        true,
         false
       ],
       "2026-06-06": [

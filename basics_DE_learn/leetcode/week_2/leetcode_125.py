@@ -55,7 +55,8 @@ class Solution:
     # Time: O(n)   Space: O(n)
 
 
-# --- Same logic, explicit loop to build filtered string (your original style) ---
+# --- Same logic, explicit loop to build filtered string (your original style) 
+# not good, O(n2)due to use of += which is O(n) for each iteration ---
 class SolutionExplicitFilter:
     def isPalindrome(self, s: str) -> bool:
         s = s.lower()

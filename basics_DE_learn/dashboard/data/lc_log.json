@@ -124,7 +124,7 @@
     {
       "date": "2026-06-03",
       "difficulty": "Easy",
-      "done": true,
+      "done": false,
       "id": 1137,
       "noHints": false,
       "repo": "",
@@ -135,7 +135,7 @@
     {
       "date": "2026-06-03",
       "difficulty": "Medium",
-      "done": false,
+      "done": true,
       "id": 189,
       "noHints": false,
       "repo": "",
