@@ -71,6 +71,19 @@ class Solution:
     # Time: O(n) — single scan
     # Space: O(1) — only base and i
 
+class SolutionWithoutHint:
+    def removeDuplicates(self, nums: List[int]) -> int:
+        base = 1
+        i = 1
+        while i < len(nums):
+            if nums[i] != nums[i-1]:
+                nums[base] = nums[i]
+                base += 1
+            i += 1
+        return base
+    # Time: O(n) — single scan
+    # Space: O(1) — only base and i
+
 
 if __name__ == "__main__":
     def check(nums, expected_k, expected_prefix):

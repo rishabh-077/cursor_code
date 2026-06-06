@@ -75,6 +75,21 @@ class Solution:
     # Time: O(n) — i visits each index once
     # Space: O(1) — only base and i
 
+class SolutionWithoutHint:
+    def moveZeroes(self, nums: List[int]) -> None:
+        """
+        Do not return anything, modify nums in-place instead.
+        """
+        base = 0
+        i = 0
+        while i < len(nums):
+            if nums[i] != 0:
+                nums[i], nums[base] = nums[base], nums[i]
+                base += 1
+            i += 1
+    # Time: O(n) — i visits each index once
+    # Space: O(1) — only base and i
+
 
 if __name__ == "__main__":
     def check(inp, expected):
