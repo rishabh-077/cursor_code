@@ -29,10 +29,12 @@ basics_DE_learn/
 ├── DE_CURRICULUM.md           ← DE / SQL / theory / SD by calendar week (detail map)
 ├── weekly_plans/
 │   ├── week_01.md             ← Human-readable week plan
-│   └── week_02.md
+│   ├── week_02.md
+│   └── week_03.md
 ├── trackers/                  ← Git-facing sync output
 │   ├── portal_week_01.md      ← Portal tasks + daily logs + reflection
 │   ├── portal_week_02.md
+│   ├── portal_week_03.md      ← (after sync)
 │   ├── lc_log.md              ← All LC problems
 │   └── phase_checklist.md     ← DSA mastery t01–t16+
 ├── dashboard/
@@ -46,7 +48,8 @@ basics_DE_learn/
 │   │   ├── dsa_progress.json  ← /dsa UI topic ticks
 │   │   ├── week_plans/
 │   │   │   ├── 1.json         ← Portal schedule (machine)
-│   │   │   └── 2.json
+│   │   │   ├── 2.json
+│   │   │   └── 3.json
 │   │   └── _archive/
 │   │       └── progress_weeks_legacy.json  ← old week1/week2 blocks
 │   └── static/
@@ -277,30 +280,53 @@ Update **in the same PR/session** when you:
 
 | Field | Value |
 |-------|--------|
-| **lastContextUpdate** | 2026-06-05 (repo audit: docs + learn_tracker aligned) |
-| **Calendar week** | 2 (Mon 1 Jun – Sun 7 Jun 2026) |
-| **meta.today** | 2026-06-04 |
-| **DSA focus** | t02 finish · t03 start |
-| **Portal weeks in UI** | 1, 2 (`week_plans/1.json`, `2.json`) |
-| **LC logged** | 11 in `lc_log.json` |
-| **t02 mastery** | Not complete (need no-hint Easy + medium) |
-| **SQL 50** | 8/50 |
-| **Known weak spot** | 485, 26, 66, 118, 125 used hints; 283 clean |
-| **Theory spine** | Chip Ch 1–4 (wk 1–2) · DDIA from wk 3 (`ddiaArrives` 2026-06-08) — see [DE_CURRICULUM.md](DE_CURRICULUM.md) |
-| **Parallel backlog** | Chip **Ch 1–2 not read** (do catch-up before Ch 3–4) · Week 2 Sat = Ch 1–2 in `2.json` — gates in [learn_tracker.md](learn_plans/learn_tracker.md) |
+| **lastContextUpdate** | 2026-06-08 (Week 3 plan generated — hybrid from wk 2 reflection) |
+| **Calendar week** | 3 (Mon 8 Jun – Sun 14 Jun 2026) |
+| **meta.today** | 2026-06-08 (set in portal when you open wk 3) |
+| **DSA focus** | **t03 Strings** (primary) · t02 light maintenance only |
+| **Portal weeks in UI** | 1, 2, 3 (`week_plans/1.json` … `3.json`) |
+| **LC logged** | 13 in `lc_log.json` · 8 no-hints |
+| **t02 mastery** | ✅ Complete (`dsa_mastery.json`) — 189 Medium attempted |
+| **t03 mastery** | In progress — 125 no hints; **242 re-solve** is wk 3 gate |
+| **SQL 50** | ~7/50 (#1–6 + #9 #197 early) · wk 3 target #7–8 catch-up + #10–12 → 12/50 |
+| **Hint re-solve queue** | 242, 88, 66, 118 · 189 optimize (triple reverse notes done) |
+| **Theory spine** | Chip **Ch 1 started** (finish before Ch 2) · DDIA Ch 3 when book arrives (`ddiaArrives` 2026-06-08) |
+| **Parallel backlog** | Chip Ch 1 finish · Zoomcamp mod 1 (docker/terraform, ~half) · PySpark lazy (notes in `pyspark/`) · DDIA blocked until delivery |
+| **Week 3 plan** | [weekly_plans/week_03.md](weekly_plans/week_03.md) · Sat optional = ONE of Chip / Zoomcamp / DDIA |
 
 ---
 
 ## 11. User prompt template (new week)
 
 ```text
-Generate Week N plan (hybrid). Read CONTEXT.md §3b + MASTER_PLAN.md + DE_CURRICULUM.md (week N row) first.
+Generate Week N plan (hybrid). Read CONTEXT.md §3b + MASTER_PLAN.md + DE_CURRICULUM.md (week N row) first + portal_week(N-1).md + everything in trackers folder.
 
 - Calendar week N dates: …
 - Reflection from portal (finished / blocked / nextWeek): …
 - Parallel backlog from learn_tracker Phase 1 exit (Chip, Zoomcamp, Spark lazy, …): …
 - LC hint audit: …
 - Prior topic mastered? Y/N · SQL count: …
+
+Portal rules: Phase 1 wk 1–8 — DSA primary Mon–Sat except Tue/Thu +30 min SQL;
+Sat optional secondary = pick ONE from DE_CURRICULUM week menu or carry-forward backlog.
+
+Deliver: weekly_plans/week_0N.md, dashboard/data/week_plans/N.json,
+portal.html week dropdown, update CONTEXT.md §10.
+```
+
+```
+##
+Sample
+Generate Week 3 plan (hybrid). Read CONTEXT.md §3b + MASTER_PLAN.md + DE_CURRICULUM.md (week 3 row) first + portal_week02.md and everything in trackers folder.
+
+- Calendar week 3 dates:2026-06-08
+- Reflection from portal (finished / blocked / nextWeek):Finished: I was able to finish all the SQL and leetcode related tasks for this week, this week was a great progress and also started with chapter 1 or AI engineering but not completed yet and also started watching half video of module 1 for zoomcamp for data engineering where the docker and kubernetes part is module 1
+Blocked: yes, just the DDIA book in not arrived yet I will update once it is received
+Next week adjust: _
+Energy (1–5): 3
+- Parallel backlog from learn_tracker Phase 1 exit (Chip, Zoomcamp, Spark lazy, …): Yes, nothing completed only started
+- LC hint audit: go through the trackers
+- Prior topic mastered? Y/N · SQL count: not mastered but yet comfortable now, slowly consistent practice will help gain confidence in future, can we adjusted parallelly with other topics
 
 Portal rules: Phase 1 wk 1–8 — DSA primary Mon–Sat except Tue/Thu +30 min SQL;
 Sat optional secondary = pick ONE from DE_CURRICULUM week menu or carry-forward backlog.

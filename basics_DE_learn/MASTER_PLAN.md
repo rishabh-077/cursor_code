@@ -80,15 +80,16 @@ This file does **not** change every week. Weekly tasks live in `weekly_plans/wee
 
 ---
 
-## Your progress snapshot (2026-06-05)
+## Your progress snapshot (2026-06-08)
 
 | Item | Status |
 |------|--------|
-| **Phase** | 1 · Calendar week 2 |
-| **DSA** | t01 ✅ · t02 in progress (283 no hints; 485/26/66/118/125 used hints — re-solve needed) |
-| **LC logged** | see `lc_log.json` / CONTEXT §10 |
-| **SQL 50** | 8/50 |
-| **Chip** | Ch 1–2 not done — Sat optional = catch-up (see `ai_engineering_notes.md`) |
-| **Week 1** | Done except parallel theory (Chip) |
+| **Phase** | 1 · Calendar week 3 |
+| **DSA** | t01 ✅ · t02 ✅ · **t03 Strings** (wk 3 primary) |
+| **LC logged** | 13 · 8 no-hints — see `lc_log.json` / CONTEXT §10 |
+| **SQL 50** | ~7/50 · wk 3 = #7–8 catch-up + #10–12 |
+| **Chip** | Ch 1 started — finish before Ch 2 (Sat optional wk 3) |
+| **Zoomcamp** | Module 1 ~half (docker/terraform) — Sat optional carry-forward |
+| **DDIA** | Book not arrived — Ch 3 when delivered |
 
-*Detail:* [CONTEXT.md](CONTEXT.md) §10 · [learn_tracker.md](learn_plans/learn_tracker.md)
+*Detail:* [CONTEXT.md](CONTEXT.md) §10 · [weekly_plans/week_03.md](weekly_plans/week_03.md) · [learn_tracker.md](learn_plans/learn_tracker.md)

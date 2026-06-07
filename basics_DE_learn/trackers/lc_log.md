@@ -16,6 +16,6 @@
 | 118 | [Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/) | t02/arrays | 2 | E | [x] | [ ] | leetcode/week_2/leetcode_118.py |
 | 125 | [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | t03/strings | 2 | E | [x] | [x] | leetcode/week_2/leetcode_125.py |
 | 1137 | [No LeetCode yet — watch all 2 videos above first](https://leetcode.com/problems/no-leetcode-yet-—-watch-all-2-videos-above-first/) | t01 | 0 | E | [ ] | [ ] |  |
-| 189 | [Rotate Array](https://leetcode.com/problems/rotate-array/) | t02 | 0 | M | [x] | [ ] |  |
+| 189 | [Rotate Array](https://leetcode.com/problems/rotate-array/) | t02 | 0 | M | [x] | [x] |  |
 
-**Count:** 13 logged · **No-hints count:** 7
+**Count:** 13 logged · **No-hints count:** 8
