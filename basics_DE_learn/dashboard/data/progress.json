@@ -1,13 +1,13 @@
 {
   "meta": {
-    "currentWeek": 2,
+    "currentWeek": 3,
     "ddiaArrives": "2026-06-08",
-    "lastUpdated": "2026-06-07T23:47:47",
+    "lastUpdated": "2026-06-09T23:51:09",
     "phase": 1,
     "program": "phased-v1",
     "startDate": "2026-05-25",
     "timezone": "Asia/Kolkata",
-    "today": "2026-06-07",
+    "today": "2026-06-09",
     "weekStartsOn": "Monday"
   },
   "portal": {
@@ -15,7 +15,9 @@
       "2026-06-04": "Filling out details for past 3 days and today since this week plan, this week was productive, solved multiple leetcode questions can be referred from week 2 file, list includes till today as: 26, 66, 118, 125, 283, 485. As of for today I leaned the theory for Array and String in DSA and made notes in dsa_theory folder in python, now will try to solve the leetcode 125 optimized way without using hint",
       "2026-06-05": "Today I solved leetcode #189, and #27 and also from sql solved #197, I learned in sql that we can join on datediff or date add condition, made notes on it, watched a video on theory for 2 pointers pattern, and also resolved leetcode #125 with optimized approach",
       "2026-06-06": "I resolved the leetcode #283 and #26 without hints, and started a bit from 1st module of zoomcamp currently in the 1st module i.e.,  docker-terraform module",
-      "2026-06-07": "Today I resolved leetcode #189 without hint but used brute force, also I have started the reading of AI engineering chapter 1 and read till from Large language models to foundational models, and will continue with the reading and will dd notes later in the repo."
+      "2026-06-07": "Today I resolved leetcode #189 without hint but used brute force, also I have started the reading of AI engineering chapter 1 and read till from Large language models to foundational models, and will continue with the reading and will dd notes later in the repo.",
+      "2026-06-08": "Today I solved leetcode #242 and #66 without hint, seems I need to once visit the theory for hash table, sets and maps",
+      "2026-06-09": "Today I solved all the required leetcode#344 and #387 for strings without hints, and also solve sql problem #averag etime for process per machine"
     },
     "dailyLog": {
       "2026-06-03": "",
@@ -77,13 +79,41 @@
       "2026-06-07": [
         true,
         false
+      ],
+      "2026-06-08": [
+        true,
+        false
+      ],
+      "2026-06-09": [
+        true,
+        true
+      ],
+      "2026-06-10": [
+        false,
+        false
+      ],
+      "2026-06-11": [
+        false,
+        false
+      ],
+      "2026-06-12": [
+        false,
+        false
+      ],
+      "2026-06-13": [
+        false,
+        false
+      ],
+      "2026-06-14": [
+        false,
+        false
       ]
     },
     "reflectionDraft": {
-      "finished": "",
       "blocked": "",
-      "nextWeek": "",
-      "energy": 3
+      "energy": 3,
+      "finished": "",
+      "nextWeek": ""
     }
   }
 }

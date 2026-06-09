@@ -1,7 +1,7 @@
 # Portal log — Week 3 (Mon 8 Jun – Sun 14 Jun 2026)
 
 **Synced from** `dashboard/data/progress.json` → `portal.dailyTasks` + `portal.dailyLog`  
-**Plan:** [week_03.md](../weekly_plans/week_03.md) · **Last synced:** 2026-06-08T12:00:00
+**Plan:** [week_03.md](../weekly_plans/week_03.md) · **Last synced:** 2026-06-09T23:51:04
 
 ---
 
@@ -9,8 +9,8 @@
 
 | Date | Day | Primary done | Secondary | Daily log |
 |------|-----|:------------:|-----------|-----------|
-| 2026-06-08 | Mon | [ ] | — | _ |
-| 2026-06-09 | Tue | [ ] | [ ] 30 min SQL 50: catch-up #7 Product Sales Analysis I · #8 Customer Who Visited if open · #10 Average Time of Process per Machine (#9 #197 already done) | _ |
+| 2026-06-08 | Mon | [x] | — | Today I solved leetcode #242 and #66 without hint, seems I need to once visit the theory for hash table, sets and maps |
+| 2026-06-09 | Tue | [x] | [x] 30 min SQL 50: catch-up #7 Product Sales Analysis I · #8 Customer Who Visited if open · #10 Average Time of Process per Machine (#9 #197 already done) | Today I solved all the required leetcode#344 and #387 for strings without hints, and also solve sql problem #averag etime for process per machine |
 | 2026-06-10 | Wed | [ ] | — | _ |
 | 2026-06-11 | Thu | [ ] | [ ] 30 min SQL 50 #11 Employee Bonus · #12 Students and Examinations | _ |
 | 2026-06-12 | Fri | [ ] | — | _ |

@@ -27,7 +27,7 @@
       "difficulty": "Easy",
       "done": true,
       "id": 242,
-      "noHints": false,
+      "noHints": true,
       "repo": "leetcode/week_1/leetcode_242.py",
       "title": "Valid Anagram",
       "topic": "t03/strings",
@@ -93,7 +93,7 @@
       "difficulty": "Easy",
       "done": true,
       "id": 66,
-      "noHints": false,
+      "noHints": true,
       "repo": "leetcode/week_2/leetcode_66.py",
       "title": "Plus One",
       "topic": "t02/arrays",
@@ -141,6 +141,28 @@
       "repo": "",
       "title": "Rotate Array",
       "topic": "t02",
+      "week": 0
+    },
+    {
+      "date": "2026-06-09",
+      "difficulty": "Easy",
+      "done": true,
+      "id": 344,
+      "noHints": true,
+      "repo": "",
+      "title": "Reverse String",
+      "topic": "t03",
+      "week": 0
+    },
+    {
+      "date": "2026-06-09",
+      "difficulty": "Easy",
+      "done": true,
+      "id": 387,
+      "noHints": true,
+      "repo": "",
+      "title": "First Unique Character in a String",
+      "topic": "t03",
       "week": 0
     }
   ]
