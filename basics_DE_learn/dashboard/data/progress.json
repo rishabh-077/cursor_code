@@ -2,12 +2,12 @@
   "meta": {
     "currentWeek": 3,
     "ddiaArrives": "2026-06-08",
-    "lastUpdated": "2026-06-09T23:51:09",
+    "lastUpdated": "2026-06-10T22:09:25",
     "phase": 1,
     "program": "phased-v1",
     "startDate": "2026-05-25",
     "timezone": "Asia/Kolkata",
-    "today": "2026-06-09",
+    "today": "2026-06-10",
     "weekStartsOn": "Monday"
   },
   "portal": {
@@ -17,7 +17,8 @@
       "2026-06-06": "I resolved the leetcode #283 and #26 without hints, and started a bit from 1st module of zoomcamp currently in the 1st module i.e.,  docker-terraform module",
       "2026-06-07": "Today I resolved leetcode #189 without hint but used brute force, also I have started the reading of AI engineering chapter 1 and read till from Large language models to foundational models, and will continue with the reading and will dd notes later in the repo.",
       "2026-06-08": "Today I solved leetcode #242 and #66 without hint, seems I need to once visit the theory for hash table, sets and maps",
-      "2026-06-09": "Today I solved all the required leetcode#344 and #387 for strings without hints, and also solve sql problem #averag etime for process per machine"
+      "2026-06-09": "Today I solved all the required leetcode#344 and #387 for strings without hints, and also solve sql problem #averag etime for process per machine",
+      "2026-06-10": "Was able to solve the leetcode #13 without hint but the #14 I used solution, I got the idea to solves, but was not able to think through the code"
     },
     "dailyLog": {
       "2026-06-03": "",
@@ -89,7 +90,7 @@
         true
       ],
       "2026-06-10": [
-        false,
+        true,
         false
       ],
       "2026-06-11": [

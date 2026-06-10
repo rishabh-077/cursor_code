@@ -19,5 +19,7 @@
 | 189 | [Rotate Array](https://leetcode.com/problems/rotate-array/) | t02 | 0 | M | [x] | [x] |  |
 | 344 | [Reverse String](https://leetcode.com/problems/reverse-string/) | t03 | 0 | E | [x] | [x] |  |
 | 387 | [First Unique Character in a String](https://leetcode.com/problems/first-unique-character-in-a-string/) | t03 | 0 | E | [x] | [x] |  |
+| 14 | [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/) | t03 | 0 | E | [x] | [ ] |  |
+| 13 | [Roman to Integer](https://leetcode.com/problems/roman-to-integer/) | t03 | 0 | E | [x] | [x] |  |
 
-**Count:** 15 logged · **No-hints count:** 12
+**Count:** 17 logged · **No-hints count:** 13

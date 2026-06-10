@@ -164,6 +164,28 @@
       "title": "First Unique Character in a String",
       "topic": "t03",
       "week": 0
+    },
+    {
+      "date": "2026-06-10",
+      "difficulty": "Easy",
+      "done": true,
+      "id": 14,
+      "noHints": false,
+      "repo": "",
+      "title": "Longest Common Prefix",
+      "topic": "t03",
+      "week": 0
+    },
+    {
+      "date": "2026-06-10",
+      "difficulty": "Easy",
+      "done": true,
+      "id": 13,
+      "noHints": true,
+      "repo": "",
+      "title": "Roman to Integer",
+      "topic": "t03",
+      "week": 0
     }
   ]
 }
