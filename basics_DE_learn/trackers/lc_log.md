@@ -21,5 +21,7 @@
 | 387 | [First Unique Character in a String](https://leetcode.com/problems/first-unique-character-in-a-string/) | t03 | 0 | E | [x] | [x] |  |
 | 14 | [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/) | t03 | 0 | E | [x] | [ ] |  |
 | 13 | [Roman to Integer](https://leetcode.com/problems/roman-to-integer/) | t03 | 0 | E | [x] | [x] |  |
+| 38 | [Count and Say](https://leetcode.com/problems/count-and-say/) | t03 | 0 | E | [x] | [ ] |  |
+| 5 | [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/) | t03 | 0 | M | [x] | [ ] |  |
 
-**Count:** 17 logged · **No-hints count:** 13
+**Count:** 19 logged · **No-hints count:** 13

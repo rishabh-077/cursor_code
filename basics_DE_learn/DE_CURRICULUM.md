@@ -245,4 +245,4 @@ When generating `weekly_plans/week_0N.md` + `week_plans/N.json`:
 | SQL logs | [sql/](sql/) |
 | Archived 30-wk calendar | [learn_plans/_archive/learn_plan_v2.md](learn_plans/_archive/learn_plan_v2.md) |
 
-*Last curriculum update: 2026-06-08*
+*Last curriculum update: 2026-06-15*

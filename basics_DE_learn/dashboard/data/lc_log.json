@@ -186,6 +186,28 @@
       "title": "Roman to Integer",
       "topic": "t03",
       "week": 0
+    },
+    {
+      "date": "2026-06-12",
+      "difficulty": "Easy",
+      "done": true,
+      "id": 38,
+      "noHints": false,
+      "repo": "",
+      "title": "Count and Say",
+      "topic": "t03",
+      "week": 0
+    },
+    {
+      "id": 5,
+      "title": "Longest Palindromic Substring",
+      "topic": "t03",
+      "week": 0,
+      "difficulty": "Medium",
+      "done": true,
+      "noHints": false,
+      "repo": "",
+      "date": "2026-06-14"
     }
   ]
 }

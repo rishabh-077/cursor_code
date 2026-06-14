@@ -1,0 +1,52 @@
+{
+  "week": 4,
+  "phase": 1,
+  "range": "Mon 15 Jun – Sun 21 Jun 2026",
+  "dsaTopic": "t04",
+  "dsaTitle": "Hash maps (primary) + t03 light re-solves",
+  "masteryGoal": "t04: theory + 4+ Easy no hints (217, 1 count) + 1 Medium attempted (#49); re-solve #14, #38",
+  "days": {
+    "2026-06-15": {
+      "day": "Mon",
+      "primary": "t04 theory — hash map/set (CS Dojo or NeetCode). LC #383 Ransom Note without hints — leetcode/week_4/leetcode_383.py. Optional 15 min: #14 Longest Common Prefix re-solve",
+      "secondary": "none",
+      "sql": false
+    },
+    "2026-06-16": {
+      "day": "Tue",
+      "primary": "LC #771 Jewels and Stones + #205 Isomorphic Strings — notes in week_4/",
+      "secondary": "30 min SQL 50 #13 Managers with at Least 5 Direct Reports · #14 Confirmation Rate",
+      "sql": true
+    },
+    "2026-06-17": {
+      "day": "Wed",
+      "primary": "LC #290 Word Pattern. Re-solve #38 Count and Say WITHOUT hints (wk 3 carry)",
+      "secondary": "none",
+      "sql": false
+    },
+    "2026-06-18": {
+      "day": "Thu",
+      "primary": "t04 Medium attempt (25 min, no code peek): #49 Group Anagrams",
+      "secondary": "30 min SQL 50 #15 Not Boring Movies · #16 Average Selling Price",
+      "sql": true
+    },
+    "2026-06-19": {
+      "day": "Fri",
+      "primary": "LC #347 Top K Frequent Elements (if #49 stuck) OR re-solve #49 no hints. Optional: #88 / #118 15 min",
+      "secondary": "none",
+      "sql": false
+    },
+    "2026-06-20": {
+      "day": "Sat",
+      "primary": "t04 review — re-solve weakest hash Easy without hints; tick t04 mastery in portal if gates met",
+      "secondary": "OPTIONAL (pick one ~30 min): Chip Ch 1 (ai_engineering_notes) OR Zoomcamp module 1 OR DDIA Ch 3 review OR BQ partitioning skim — skip if DSA behind",
+      "sql": false
+    },
+    "2026-06-21": {
+      "day": "Sun",
+      "primary": "15 min reflection — t04 mastery? SQL ~16/50? theory backlog?",
+      "secondary": "none",
+      "sql": false
+    }
+  }
+}

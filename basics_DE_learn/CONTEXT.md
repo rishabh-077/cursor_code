@@ -30,11 +30,13 @@ basics_DE_learn/
 ├── weekly_plans/
 │   ├── week_01.md             ← Human-readable week plan
 │   ├── week_02.md
-│   └── week_03.md
+│   ├── week_03.md
+│   └── week_04.md
 ├── trackers/                  ← Git-facing sync output
 │   ├── portal_week_01.md      ← Portal tasks + daily logs + reflection
 │   ├── portal_week_02.md
-│   ├── portal_week_03.md      ← (after sync)
+│   ├── portal_week_03.md
+│   ├── portal_week_04.md      ← (after sync)
 │   ├── lc_log.md              ← All LC problems
 │   └── phase_checklist.md     ← DSA mastery t01–t16+
 ├── dashboard/
@@ -49,7 +51,8 @@ basics_DE_learn/
 │   │   ├── week_plans/
 │   │   │   ├── 1.json         ← Portal schedule (machine)
 │   │   │   ├── 2.json
-│   │   │   └── 3.json
+│   │   │   ├── 3.json
+│   │   │   └── 4.json
 │   │   └── _archive/
 │   │       └── progress_weeks_legacy.json  ← old week1/week2 blocks
 │   └── static/
@@ -280,19 +283,19 @@ Update **in the same PR/session** when you:
 
 | Field | Value |
 |-------|--------|
-| **lastContextUpdate** | 2026-06-08 (Week 3 plan generated — hybrid from wk 2 reflection) |
-| **Calendar week** | 3 (Mon 8 Jun – Sun 14 Jun 2026) |
-| **meta.today** | 2026-06-08 (set in portal when you open wk 3) |
-| **DSA focus** | **t03 Strings** (primary) · t02 light maintenance only |
-| **Portal weeks in UI** | 1, 2, 3 (`week_plans/1.json` … `3.json`) |
-| **LC logged** | 13 in `lc_log.json` · 8 no-hints |
-| **t02 mastery** | ✅ Complete (`dsa_mastery.json`) — 189 Medium attempted |
-| **t03 mastery** | In progress — 125 no hints; **242 re-solve** is wk 3 gate |
-| **SQL 50** | ~7/50 (#1–6 + #9 #197 early) · wk 3 target #7–8 catch-up + #10–12 → 12/50 |
-| **Hint re-solve queue** | 242, 88, 66, 118 · 189 optimize (triple reverse notes done) |
-| **Theory spine** | Chip **Ch 1 started** (finish before Ch 2) · DDIA Ch 3 when book arrives (`ddiaArrives` 2026-06-08) |
-| **Parallel backlog** | Chip Ch 1 finish · Zoomcamp mod 1 (docker/terraform, ~half) · PySpark lazy (notes in `pyspark/`) · DDIA blocked until delivery |
-| **Week 3 plan** | [weekly_plans/week_03.md](weekly_plans/week_03.md) · Sat optional = ONE of Chip / Zoomcamp / DDIA |
+| **lastContextUpdate** | 2026-06-15 (Week 4 plan generated — hybrid from wk 3 reflection) |
+| **Calendar week** | 4 (Mon 15 Jun – Sun 21 Jun 2026) |
+| **meta.today** | 2026-06-15 (set in portal when you open wk 4) |
+| **DSA focus** | **t04 Hash maps** (primary) · t03 light re-solves (#14, #38) |
+| **Portal weeks in UI** | 1, 2, 3, 4 (`week_plans/1.json` … `4.json`) |
+| **LC logged** | 19 in `lc_log.json` · 13 no-hints |
+| **t03 mastery** | ✅ Complete — #5 medium attempted (with hints; optional re-try) |
+| **t04 mastery** | In progress — **217, 1** head start; need theory + 383/771/205 + #49 medium |
+| **SQL 50** | ~12/50 (#1–12) · wk 4 target #13–16 → **16/50** |
+| **Hint re-solve queue** | **#14**, **#38** (priority) · 88, 118 optional · #5 optional |
+| **Theory spine** | **Nothing done wk 3** — Chip Ch 1 still first · DDIA Ch 3 review (wk 4 menu) |
+| **Parallel backlog** | Chip Ch 1 · Zoomcamp mod 1 · PySpark lazy · DDIA Ch 3 — Sat optional ONE |
+| **Week 4 plan** | [weekly_plans/week_04.md](weekly_plans/week_04.md) · DE menu: BQ partitioning · RAG read |
 
 ---
 

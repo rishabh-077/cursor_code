@@ -80,16 +80,15 @@ This file does **not** change every week. Weekly tasks live in `weekly_plans/wee
 
 ---
 
-## Your progress snapshot (2026-06-08)
+## Your progress snapshot (2026-06-15)
 
 | Item | Status |
 |------|--------|
-| **Phase** | 1 · Calendar week 3 |
-| **DSA** | t01 ✅ · t02 ✅ · **t03 Strings** (wk 3 primary) |
-| **LC logged** | 13 · 8 no-hints — see `lc_log.json` / CONTEXT §10 |
-| **SQL 50** | ~7/50 · wk 3 = #7–8 catch-up + #10–12 |
-| **Chip** | Ch 1 started — finish before Ch 2 (Sat optional wk 3) |
-| **Zoomcamp** | Module 1 ~half (docker/terraform) — Sat optional carry-forward |
-| **DDIA** | Book not arrived — Ch 3 when delivered |
+| **Phase** | 1 · Calendar week 4 |
+| **DSA** | t01–t03 ✅ · **t04 Hash** (wk 4 primary) |
+| **LC logged** | 19 · 13 no-hints — see `lc_log.json` / CONTEXT §10 |
+| **SQL 50** | ~12/50 · wk 4 = #13–16 (Sorting & Grouping) |
+| **Theory** | **Skipped wk 3** — Chip Ch 1 · Zoomcamp · DDIA still on backlog |
+| **Hint carry** | #14, #38 re-solve this week (light) |
 
-*Detail:* [CONTEXT.md](CONTEXT.md) §10 · [weekly_plans/week_03.md](weekly_plans/week_03.md) · [learn_tracker.md](learn_plans/learn_tracker.md)
+*Detail:* [CONTEXT.md](CONTEXT.md) §10 · [weekly_plans/week_04.md](weekly_plans/week_04.md) · [learn_tracker.md](learn_plans/learn_tracker.md)
