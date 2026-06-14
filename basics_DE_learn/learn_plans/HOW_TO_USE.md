@@ -1,6 +1,33 @@
 # How to use your interview prep system
 
-**Start date:** 2026-05-25 · **Checkbox help:** [TRACKER_GUIDE.md](./TRACKER_GUIDE.md)
+**Maintainers / Cursor:** [CONTEXT.md](../CONTEXT.md) — full repo map and rules for new weeks.
+
+**Start date:** 2026-05-25 (**Monday**) — each study week is **Mon → Sun**
+
+---
+
+## One sentence (phased plan — May 2026)
+
+**Daily:** [http://127.0.0.1:5050/portal](../dashboard/README.md) — today’s PRIMARY/SECONDARY tasks, LC log, DSA mastery → **Sync to Markdown** → git.  
+**Rules:** [MASTER_PLAN.md](../MASTER_PLAN.md) · **DE/theory menu:** [DE_CURRICULUM.md](../DE_CURRICULUM.md) · **This week:** [weekly_plans/](../weekly_plans/) (current: [week_02.md](../weekly_plans/week_02.md)).  
+**DSA curriculum:** [dsa-study-plan.html](./dsa-study-plan.html) (one topic/week per [DSA_PACING.md](./DSA_PACING.md)).
+
+`/week` redirects to `/portal` (no separate tracker UI).
+
+---
+
+## Which week / which day?
+
+| Question | Where to look |
+|----------|----------------|
+| **Which calendar week am I in?** | Portal status bar · `progress.json` → `meta.currentWeek` |
+| **What DSA topic this week?** | [DSA_PACING.md](./DSA_PACING.md) — one focus (e.g. Week 2 = t02 finish, t03 start) |
+| **What do I do today?** | **Portal** — PRIMARY + SECONDARY for today · [weekly_plans/week_0N.md](../weekly_plans/) |
+| **Chip / Zoomcamp / DDIA (optional)?** | [DE_CURRICULUM.md](../DE_CURRICULUM.md) week menu · [ai_engineering_notes.md](../theory/ai_engineering_notes.md) for Chip `[x]` |
+| **DSA patterns / LC list** | [dsa-study-plan.html](./dsa-study-plan.html) or **/dsa** |
+| **Did I finish portal tasks?** | Sync → [trackers/portal_week_NN.md](../trackers/) |
+
+**Update “today”:** **Set today (IST)** on portal.
 
 ---
 
@@ -8,53 +35,42 @@
 
 | File | Job |
 |------|-----|
-| [README.md](../../README.md) | Repo hub |
-| [learn_plan_v2.md](./learn_plan_v2.md) | 30-week themes + LeetCode IDs |
-| [RESOURCES.md](./RESOURCES.md) | All links — **video + read** |
-| [learn_tracker.md](./learn_tracker.md) | Phases, calendar, interviews, milestones |
-| [weekly_plan/plan_weekN.md](./weekly_plan/plan_week1.md) | **What** to do each day |
-| [weekly_tracker/tracker_weekN.md](./weekly_tracker/tracker_week1.md) | **What** you finished |
-| [TRACKER_GUIDE.md](./TRACKER_GUIDE.md) | How to tick `- [ ]` → `- [x]` |
+| **[dsa-study-plan.html](./dsa-study-plan.html)** | DSA prep — theory, patterns, problems (t01–t23) |
+| **[MASTER_PLAN.md](../MASTER_PLAN.md)** | Phased rules (single source of truth) |
+| **[DE_CURRICULUM.md](../DE_CURRICULUM.md)** | DE/theory/SD by calendar week (menu, not daily stack) |
+| **[trackers/portal_week_NN.md](../trackers/)** | Synced portal tasks + daily logs |
+| [weekly_plans/week_NN.md](../weekly_plans/) | Human-readable week plan |
+| [trackers/lc_log.md](../trackers/lc_log.md) | All LC progress |
+| [learn_tracker.md](./learn_tracker.md) | Phase exit gates, apply date, interviews |
+| [TRACKER_GUIDE.md](./TRACKER_GUIDE.md) | Portal sync + where theory is marked |
 
 ---
 
-## Daily (5 min at end of session)
+## Daily — Phase 1 weeks 1–8 (DSA primary)
 
-1. Open [tracker_week1.md](./weekly_tracker/tracker_week1.md) in the **editor**.
-2. Change `[ ]` to `[x]` for today’s row (Blocks A, B, C).
-3. Update LeetCode / SQL tables if applicable.
-4. Save.
-
-**Or ask Cursor:** *“Update tracker_week1 for 2026-05-26: done Block A LC 217, Block B SQL #1.”*
-
-Preview mode does **not** toggle checkboxes — you must edit the file.
+1. Open **portal** → do **PRIMARY** (~2–2.5 h DSA).
+2. **Tue/Thu only:** **SECONDARY** = 30 min SQL 50 (if listed).
+3. **Sat (optional):** one **SECONDARY** line if present (Chip catch-up, Zoomcamp, or skip if DSA behind).
+4. Save LC to `leetcode/week_N/` · tick LC + mastery in portal.
+5. **Chip chapters:** mark `[x]` in [ai_engineering_notes.md](../theory/ai_engineering_notes.md) when done (not per-chapter portal boxes).
 
 ---
 
-## Sunday (15 min)
+## Sunday (~15 min)
 
-1. Reflection in `tracker_weekN.md`.
-2. Week exit boxes in `plan_weekN.md`.
-3. Mark week done in [learn_tracker.md](./learn_tracker.md).
-4. Optional: *“Create plan_week2 and tracker_week2.”*
-
----
-
-## Compensation targets
-
-| Band | Expectation |
-|------|-------------|
-| 35–42 LPA | Primary goal — complete Phase 1–2 |
-| 42–50 LPA | Strong Phase 2 + mocks |
-| 50–60+ LPA | Stretch — see [profile.md](./profile.md#stretch-50–60-lpa) |
+1. Portal **reflection** (finished / blocked / next week).
+2. **Sync to Markdown** → `trackers/portal_week_NN.md`.
+3. Tick phase items in [learn_tracker.md](./learn_tracker.md) if a gate cleared.
+4. Ask Cursor to generate next week per [CONTEXT.md](../CONTEXT.md) §11.
 
 ---
 
 ## When to apply
 
-| Signal | Week (from 2026-05-25) | Date (approx) |
-|--------|------------------------|---------------|
-| Phase 1 exit | 10 | ~2 Aug 2026 |
-| Phase 2 exit | 20 | ~5 Oct 2026 |
-| **Applications** | **21** | **~12 Oct 2026** |
-| Google / top band | 24+ | After 2 clean mocks |
+| Milestone | Week (from 25 May 2026) |
+|-----------|-------------------------|
+| Phase 1 DSA exit (t01–t16 + SQL 50) | **~16** |
+| Phase 2 exit (t01–t23 + RAG + designs) | **~24** |
+| **Applications** | **~28** |
+
+See [MASTER_PLAN.md](../MASTER_PLAN.md) and [learn_tracker.md](./learn_tracker.md).

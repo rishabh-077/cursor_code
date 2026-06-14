@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DE Learn Hub</title>
+  <link rel="stylesheet" href="/portal.css" />
+  <style>
+    .hub-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+    .hub-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      text-decoration: none;
+      color: inherit;
+      transition: border-color .2s, box-shadow .2s;
+    }
+    .hub-card:hover { border-color: var(--accent); box-shadow: 0 2px 8px rgba(13,148,136,.12); }
+    .hub-card h2 { font-size: 1.1rem; margin: 0 0 0.5rem; }
+    .hub-card p { font-size: 0.85rem; color: var(--muted); margin: 0; line-height: 1.5; }
+    .hub-card .tag { margin-top: 0.75rem; font-size: 0.75rem; color: var(--accent); font-family: monospace; }
+    .hub-card.primary { border-color: var(--accent); background: linear-gradient(135deg, #f0fdfa 0%, #fff 100%); }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <div>
+        <p class="eyebrow">Phase 1 · DSA primary</p>
+        <h1>Learning Hub</h1>
+        <p class="subtitle">Portal → JSON → Sync → trackers/ · commit to git</p>
+      </div>
+    </div>
+  </header>
+  <main class="main">
+    <div class="hub-grid">
+      <a class="hub-card primary" href="/portal">
+        <h2>Daily portal ← START HERE</h2>
+        <p>Week plan, task checkboxes, daily log, LC log, mastery, reflection.</p>
+        <div class="tag">/portal</div>
+      </a>
+      <a class="hub-card" href="/portal?w=1">
+        <h2>Week 1 (archive view)</h2>
+        <p>May 25–31 schedule + synced portal_week_01.md</p>
+        <div class="tag">/portal?w=1</div>
+      </a>
+      <a class="hub-card" href="/dsa">
+        <h2>DSA study plan</h2>
+        <p>Theory → patterns → LC. Problem checkboxes → lc_log.json</p>
+        <div class="tag">/dsa</div>
+      </a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="../../MASTER_PLAN.md">MASTER_PLAN.md</a></li>
+      <li><a href="../../weekly_plans/week_02.md">weekly_plans/week_02.md</a></li>
+      <li><a href="../../trackers/portal_week_02.md">trackers/portal_week_02.md</a></li>
+      <li><a href="../../trackers/lc_log.md">trackers/lc_log.md</a></li>
+    </ul>
+  </main>
+</body>
+</html>

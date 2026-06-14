@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>DE Learn · Week 1 Progress</title>
+  <title>DE Learn · Week Progress</title>
   <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
@@ -11,10 +11,13 @@
     <div class="header-inner">
       <div>
         <p class="eyebrow">Data Engineering · Phase 1</p>
-        <h1>Week 1 Progress</h1>
-        <p class="subtitle">25 May – 31 May 2026 · Target: greater switch</p>
+        <h1 id="pageTitle">Week Progress</h1>
+        <p class="subtitle" id="pageSubtitle"></p>
+        <nav class="week-nav" id="weekNav"></nav>
       </div>
       <div class="header-actions">
+        <span class="today-status" id="todayStatus" title="Stored date vs actual (IST)"></span>
+        <button type="button" class="btn btn-secondary" id="setTodayBtn" title="Set meta.today to current date in Asia/Kolkata">Set today (IST)</button>
         <span class="save-status" id="saveStatus">Saved</span>
         <button type="button" class="btn btn-secondary" id="syncBtn">Sync to Markdown</button>
       </div>
@@ -22,53 +25,57 @@
   </header>
 
   <main class="main">
+    <section class="today-box" id="todayBox"></section>
     <section class="stats" id="statsGrid"></section>
 
     <nav class="tabs" role="tablist">
-      <button class="tab active" data-tab="overview">Overview</button>
+      <button class="tab active" data-tab="overview">Today & DSA</button>
       <button class="tab" data-tab="days">Daily</button>
       <button class="tab" data-tab="leetcode">LeetCode</button>
       <button class="tab" data-tab="sql">SQL 50</button>
-      <button class="tab" data-tab="de">Spark / BQ</button>
+      <button class="tab" data-tab="de">Spark / Theory</button>
       <button class="tab" data-tab="exit">Exit checklist</button>
       <button class="tab" data-tab="reflection">Reflection</button>
     </nav>
 
     <div class="panels">
       <section class="panel active" id="panel-overview">
-        <h2>Quick links</h2>
-        <ul class="links">
-          <li><a href="https://leetcode.com/studyplan/top-sql-50/" target="_blank" rel="noopener">SQL 50 study plan</a></li>
-          <li><span>Plan: learn_plans/weekly_plan/plan_week1.md</span></li>
-          <li><span>Tracker: learn_plans/weekly_tracker/tracker_week1.md</span></li>
-        </ul>
+        <h2>How to study (3 steps)</h2>
+        <ol class="steps-list">
+          <li><strong>Block A (90 min):</strong> Open <a href="/dsa" target="_blank">DSA study plan</a> → do <span id="dsaTopicList"></span> (theory → video → pattern → LC).</li>
+          <li><strong>Block B (90 min):</strong> Follow <span id="planWeekLink"></span> for SQL / Spark today.</li>
+          <li><strong>Block C (30 min):</strong> Chip Huyen until 8 Jun, then DDIA.</li>
+        </ol>
+        <h2>DSA topics this week</h2>
+        <p class="hint">Tick when topic is fully done in the <a href="/dsa">DSA plan</a>.</p>
+        <div id="dsaTopicsList" class="card-list"></div>
         <h2>Week exit</h2>
         <div id="overviewExit"></div>
       </section>
 
       <section class="panel" id="panel-days">
-        <h2>Day-by-day blocks</h2>
-        <p class="hint">Block A = DSA · Block B = SQL/Spark/BQ · Block C = theory</p>
+        <h2>Day-by-day</h2>
+        <p class="hint">Check A/B/C when done. Notes = what to study (from plan_weekN.md).</p>
         <div id="daysList" class="card-list"></div>
       </section>
 
       <section class="panel" id="panel-leetcode">
-        <h2>LeetCode (Python)</h2>
+        <h2 id="lcPanelTitle">LeetCode</h2>
         <div id="leetcodeList" class="card-list"></div>
       </section>
 
       <section class="panel" id="panel-sql">
-        <h2>SQL 50 · Select #1–4</h2>
+        <h2 id="sqlPanelTitle">SQL 50</h2>
         <div id="sqlList" class="card-list"></div>
       </section>
 
       <section class="panel" id="panel-de">
-        <h2>PySpark & BigQuery</h2>
+        <h2>Spark & theory (Block B/C)</h2>
         <div id="deList" class="card-list"></div>
       </section>
 
       <section class="panel" id="panel-exit">
-        <h2>Week 1 exit checklist</h2>
+        <h2>Week exit checklist</h2>
         <div id="exitList" class="check-list"></div>
       </section>
 

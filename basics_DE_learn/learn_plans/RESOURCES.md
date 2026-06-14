@@ -2,7 +2,7 @@
 
 **Rule:** Watch video for intuition → read docs/book for depth → practice (LeetCode / labs).
 
-**Plan mapping:** [learn_plan_v2.md](./learn_plan_v2.md) · **Week 1 tasks:** [weekly_plan/plan_week1.md](./weekly_plan/plan_week1.md)
+**Plan mapping:** [MASTER_PLAN.md](../MASTER_PLAN.md) · **DE / theory / SD by week:** [DE_CURRICULUM.md](../DE_CURRICULUM.md) · **Week tasks:** [weekly_plans/](../weekly_plans/)
 
 ---
 
@@ -10,14 +10,16 @@
 
 | Topic | Video | Read |
 |-------|-------|------|
-| Big O | [NeetCode](https://www.youtube.com/watch?v=BgLTDT03QtU) | [big_O_notation.md](../leetcode/big_O_notation.md) |
-| LC 217 / 1 / 242 / 88 / 121 | [NeetCode channel](https://www.youtube.com/@neetcode) | LeetCode links in [plan_week1](./weekly_plan/plan_week1.md) |
+| Big O | [NeetCode](https://www.youtube.com/watch?v=BgLTDT03QtU) | [big_O_notation.md](../leetcode/week_1/big_O_notation.md) |
+| LC 217 / 1 / 242 / 88 / 121 | [NeetCode channel](https://www.youtube.com/@neetcode) | [week_01.md](../weekly_plans/week_01.md) · archive [plan_week1](./_archive/weekly_plan/plan_week1.md) |
 | SQL joins | [freeCodeCamp SQL](https://www.youtube.com/watch?v=HXV3zeQKqGY) (joins section) | [SQL 50](https://leetcode.com/studyplan/top-sql-50/) |
 | Spark architecture | [How Spark works (Databricks)](https://www.youtube.com/watch?v=znBa13W5ocA) | [Cluster overview](https://spark.apache.org/docs/latest/cluster-overview.html) |
 | BigQuery | [BQ architecture](https://www.youtube.com/watch?v=NCwbF1xllb4) | [BQ best practices](https://cloud.google.com/bigquery/docs/best-practices-performance) |
 | Vector DB | [Explained (5 min)](https://www.youtube.com/watch?v=klTvEwg3oJ4) | [Pinecone guide](https://www.pinecone.io/learn/vector-database/) |
 | RAG | [IBM RAG](https://www.youtube.com/watch?v=T-D1OfcDW1M) | [GCP RAG](https://cloud.google.com/use-cases/retrieval-augmented-generation) |
-| DDIA Ch 3 | [Kleppmann streams talk](https://www.youtube.com/watch?v=AvsaGRE79r4) | DDIA book / O’Reilly |
+| Theory (until 8 Jun) | [Chip Huyen talk](https://www.youtube.com/watch?v=9Km1-U0u1LQ) | [theory_reading.md](./theory_reading.md) · [DE_CURRICULUM.md](../DE_CURRICULUM.md) |
+| DDIA Ch 3 (from 8 Jun) | [Kleppmann streams talk](https://www.youtube.com/watch?v=AvsaGRE79r4) | DDIA book / O’Reilly |
+| DSA full plan | — | [dsa-study-plan.html](./dsa-study-plan.html) |
 
 ---
 
@@ -26,7 +28,7 @@
 | Topic | Video | Read / practice | Weeks |
 |-------|-------|-----------------|-------|
 | Patterns + LC | [NeetCode YouTube](https://www.youtube.com/@neetcode) | [NeetCode 150](https://neetcode.io/practice) | 1–20 |
-| Big O | [NeetCode Big O](https://www.youtube.com/watch?v=BgLTDT03QtU) | [big_O_notation.md](../leetcode/big_O_notation.md) | 1 |
+| Big O | [NeetCode Big O](https://www.youtube.com/watch?v=BgLTDT03QtU) | [big_O_notation.md](../leetcode/week_1/big_O_notation.md) | 1 |
 | Interview set | — | [LC Top Interview 150](https://leetcode.com/studyplan/top-interview-150/) | 15+ |
 | Python OOP | [Corey Schafer](https://www.youtube.com/playlist?list=PL-osiE80TeTsqIkl9taNte_P9D5gAEsOB) | `python/*.py` in repo | 1–2 |
 

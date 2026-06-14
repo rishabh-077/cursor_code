@@ -1,211 +1,123 @@
 {
   "meta": {
-    "currentWeek": 1,
-    "lastUpdated": "2026-05-28T23:50:24",
-    "startDate": "2026-05-25"
+    "currentWeek": 3,
+    "ddiaArrives": "2026-06-08",
+    "lastUpdated": "2026-06-14T17:52:07",
+    "phase": 1,
+    "program": "phased-v1",
+    "startDate": "2026-05-25",
+    "timezone": "Asia/Kolkata",
+    "today": "2026-06-14",
+    "weekStartsOn": "Monday"
   },
-  "week1": {
-    "days": [
-      {
-        "blockA": true,
-        "blockB": true,
-        "blockC": false,
-        "date": "2026-05-25",
-        "day": "Sun",
-        "notes": "Big O sheet; SQL 1\u20134; LC 217,1,242,88; Spark driver/executor"
-      },
-      {
-        "blockA": true,
-        "blockB": true,
-        "blockC": false,
-        "date": "2026-05-26",
-        "day": "Mon",
-        "notes": "LC 217, Spark notes"
-      },
-      {
-        "blockA": true,
-        "blockB": true,
-        "blockC": false,
-        "date": "2026-05-27",
-        "day": "Tue",
-        "notes": "LC 1, SQL50"
-      },
-      {
-        "blockA": true,
-        "blockB": true,
-        "blockC": false,
-        "date": "2026-05-28",
-        "day": "Wed",
-        "notes": "LC 242"
-      },
-      {
-        "blockA": true,
-        "blockB": true,
-        "blockC": false,
-        "date": "2026-05-29",
-        "day": "Thu",
-        "notes": "LC 88, BQ"
-      },
-      {
-        "blockA": false,
-        "blockB": false,
-        "blockC": false,
-        "date": "2026-05-30",
-        "day": "Fri",
-        "notes": "LC 121, Spark lazy vs action"
-      },
-      {
-        "blockA": false,
-        "blockB": false,
-        "blockC": false,
-        "date": "2026-05-31",
-        "day": "Sat",
-        "notes": "Re-solve hardest + review"
-      }
-    ],
-    "deTopics": [
-      {
-        "done": true,
-        "id": "spark-de",
-        "path": "pyspark/week1_notes.md",
-        "title": "Driver vs Executor"
-      },
-      {
-        "done": false,
-        "id": "spark-lazy",
-        "path": "pyspark/week1_notes.md",
-        "title": "Lazy vs action (own words)"
-      },
-      {
-        "done": false,
-        "id": "bq",
-        "path": "",
-        "title": "BQ Capacitor + SELECT *"
-      }
-    ],
-    "exitChecklist": [
-      {
-        "done": true,
-        "id": "sql4",
-        "label": "4 SQL 50 problems (Select #1\u20134)"
-      },
-      {
-        "done": true,
-        "id": "bigo",
-        "label": "Explain O(1), O(n), O(n\u00b2), O(n log n)"
-      },
-      {
-        "done": false,
-        "id": "lc5",
-        "label": "5+ of 6 LeetCode problems with complexity notes in repo"
-      },
-      {
-        "done": true,
-        "id": "spark-de",
-        "label": "Spark Driver/Executor in own words"
-      },
-      {
-        "done": false,
-        "id": "spark-lazy",
-        "label": "Spark lazy vs action in own words"
-      },
-      {
-        "done": false,
-        "id": "bq-select",
-        "label": "BQ: why SELECT * is costly"
-      }
-    ],
-    "leetcode": [
-      {
-        "complexityInRepo": true,
-        "done": true,
-        "id": 217,
-        "noHints": false,
-        "pattern": "Hash set",
-        "repoFile": "leetcode/week_1/leetcode_217.py",
-        "slug": "contains-duplicate",
-        "title": "Contains Duplicate"
-      },
-      {
-        "complexityInRepo": true,
-        "done": true,
-        "id": 1,
-        "noHints": false,
-        "pattern": "Hash map",
-        "repoFile": "leetcode/week_1/leetcode_1.py",
-        "slug": "two-sum",
-        "title": "Two Sum"
-      },
-      {
-        "complexityInRepo": true,
-        "done": true,
-        "id": 242,
-        "noHints": false,
-        "pattern": "Hash / sort",
-        "repoFile": "leetcode/week_1/leetcode_242.py",
-        "slug": "valid-anagram",
-        "title": "Valid Anagram"
-      },
-      {
-        "complexityInRepo": true,
-        "done": true,
-        "id": 88,
-        "noHints": false,
-        "pattern": "Two pointers",
-        "repoFile": "leetcode/week_1/leetcode_88.py",
-        "slug": "merge-sorted-array",
-        "title": "Merge Sorted Array"
-      },
-      {
-        "complexityInRepo": false,
-        "done": false,
-        "id": 121,
-        "noHints": false,
-        "pattern": "Array / greedy",
-        "repoFile": "",
-        "slug": "best-time-to-buy-and-sell-stock",
-        "title": "Best Time to Buy and Sell Stock"
-      }
-    ],
-    "reflection": {
-      "blocked": "",
-      "energy": 0,
-      "finished": "SQL 50 Select \u00d74; LC 217, 1, 242, 88 with repo notes; Big O cheat sheet; Spark driver/executor theory.",
-      "nextWeek": "Prioritize LC 121, BQ SELECT * notes, Spark lazy/action paragraph."
+  "portal": {
+    "archivedDailyLog": {
+      "2026-06-04": "Filling out details for past 3 days and today since this week plan, this week was productive, solved multiple leetcode questions can be referred from week 2 file, list includes till today as: 26, 66, 118, 125, 283, 485. As of for today I leaned the theory for Array and String in DSA and made notes in dsa_theory folder in python, now will try to solve the leetcode 125 optimized way without using hint",
+      "2026-06-05": "Today I solved leetcode #189, and #27 and also from sql solved #197, I learned in sql that we can join on datediff or date add condition, made notes on it, watched a video on theory for 2 pointers pattern, and also resolved leetcode #125 with optimized approach",
+      "2026-06-06": "I resolved the leetcode #283 and #26 without hints, and started a bit from 1st module of zoomcamp currently in the 1st module i.e.,  docker-terraform module",
+      "2026-06-07": "Today I resolved leetcode #189 without hint but used brute force, also I have started the reading of AI engineering chapter 1 and read till from Large language models to foundational models, and will continue with the reading and will dd notes later in the repo.",
+      "2026-06-08": "Today I solved leetcode #242 and #66 without hint, seems I need to once visit the theory for hash table, sets and maps",
+      "2026-06-09": "Today I solved all the required leetcode#344 and #387 for strings without hints, and also solve sql problem #averag etime for process per machine",
+      "2026-06-10": "Was able to solve the leetcode #13 without hint but the #14 I used solution, I got the idea to solves, but was not able to think through the code",
+      "2026-06-11": "Solves he SQL but need to revisit the leetcode #38 will be doing it next day i.e., tomorrow",
+      "2026-06-14": "Solved the medium leetcode #5 by watching the solution on youtube"
     },
-    "sql50": [
-      {
-        "done": true,
-        "lc": 1757,
-        "num": 1,
-        "section": "Select",
-        "slug": "recyclable-and-low-fat-products",
-        "title": "Recyclable and Low Fat Products"
-      },
-      {
-        "done": true,
-        "lc": 584,
-        "num": 2,
-        "section": "Select \u00b7 NULL",
-        "slug": "find-customer-referee",
-        "title": "Find Customer Referee"
-      },
-      {
-        "done": true,
-        "lc": 595,
-        "num": 3,
-        "section": "Select",
-        "slug": "big-countries",
-        "title": "Big Countries"
-      },
-      {
-        "done": true,
-        "lc": 1148,
-        "num": 4,
-        "section": "Select \u00b7 GROUP BY",
-        "slug": "article-views-i",
-        "title": "Article Views I"
-      }
-    ]
+    "dailyLog": {
+      "2026-06-03": "",
+      "2026-06-06": "I resolved the leetcode #283 and #26 without hints, and started a bit from 1st module of zoomcamp currently in the 1st module i.e.,  docker-terraform module",
+      "2026-06-11": "Solves he SQL but need to revisit the leetcode #38 will be doing it next day i.e., tomorrow"
+    },
+    "dailyTasks": {
+      "2026-05-25": [
+        true,
+        true
+      ],
+      "2026-05-26": [
+        true,
+        true
+      ],
+      "2026-05-27": [
+        true,
+        true
+      ],
+      "2026-05-28": [
+        true,
+        true
+      ],
+      "2026-05-29": [
+        true,
+        true
+      ],
+      "2026-05-30": [
+        true,
+        false
+      ],
+      "2026-05-31": [
+        true,
+        true
+      ],
+      "2026-06-01": [
+        true,
+        false
+      ],
+      "2026-06-02": [
+        true,
+        true
+      ],
+      "2026-06-03": [
+        true,
+        false
+      ],
+      "2026-06-04": [
+        true,
+        true
+      ],
+      "2026-06-05": [
+        true,
+        false
+      ],
+      "2026-06-06": [
+        true,
+        false
+      ],
+      "2026-06-07": [
+        true,
+        false
+      ],
+      "2026-06-08": [
+        true,
+        false
+      ],
+      "2026-06-09": [
+        true,
+        true
+      ],
+      "2026-06-10": [
+        true,
+        false
+      ],
+      "2026-06-11": [
+        true,
+        true
+      ],
+      "2026-06-12": [
+        true,
+        false
+      ],
+      "2026-06-13": [
+        true,
+        false
+      ],
+      "2026-06-14": [
+        true,
+        false
+      ]
+    },
+    "reflectionDraft": {
+      "finished": "",
+      "blocked": "",
+      "nextWeek": "",
+      "energy": 3
+    }
   }
 }

@@ -1,0 +1,435 @@
+{
+  "week1": {
+    "days": [
+      {
+        "blockA": true,
+        "blockB": true,
+        "blockC": false,
+        "date": "2026-05-25",
+        "day": "Mon",
+        "notes": "Big O cheat sheet; SQL50 #1"
+      },
+      {
+        "blockA": true,
+        "blockB": true,
+        "blockC": false,
+        "date": "2026-05-26",
+        "day": "Tue",
+        "notes": "LC 217; Spark driver/executor"
+      },
+      {
+        "blockA": true,
+        "blockB": true,
+        "blockC": false,
+        "date": "2026-05-27",
+        "day": "Wed",
+        "notes": "LC 1; SQL50 #2\u20133"
+      },
+      {
+        "blockA": true,
+        "blockB": true,
+        "blockC": false,
+        "date": "2026-05-28",
+        "day": "Thu",
+        "notes": "LC 242; SQL50 #4"
+      },
+      {
+        "blockA": true,
+        "blockB": true,
+        "blockC": false,
+        "date": "2026-05-29",
+        "day": "Fri",
+        "notes": "LC 88"
+      },
+      {
+        "blockA": true,
+        "blockB": true,
+        "blockC": false,
+        "date": "2026-05-30",
+        "day": "Sat",
+        "notes": "LC 121 done"
+      },
+      {
+        "blockA": true,
+        "blockB": true,
+        "blockC": false,
+        "date": "2026-05-31",
+        "day": "Sun",
+        "notes": "Re-solve hardest + review"
+      }
+    ],
+    "deTopics": [
+      {
+        "done": true,
+        "id": "spark-de",
+        "path": "pyspark/week1_notes.md",
+        "title": "Driver vs Executor"
+      },
+      {
+        "done": true,
+        "id": "spark-lazy",
+        "path": "pyspark/week1_notes.md",
+        "title": "Lazy vs action (own words)"
+      },
+      {
+        "done": true,
+        "id": "bq",
+        "path": "",
+        "title": "BQ Capacitor + SELECT *"
+      }
+    ],
+    "exitChecklist": [
+      {
+        "done": true,
+        "id": "sql4",
+        "label": "4 SQL 50 problems (Select #1\u20134)"
+      },
+      {
+        "done": true,
+        "id": "bigo",
+        "label": "Explain O(1), O(n), O(n\u00b2), O(n log n)"
+      },
+      {
+        "done": true,
+        "id": "lc5",
+        "label": "5+ of 6 LeetCode problems with complexity notes in repo"
+      },
+      {
+        "done": true,
+        "id": "spark-de",
+        "label": "Spark Driver/Executor in own words"
+      },
+      {
+        "done": true,
+        "id": "spark-lazy",
+        "label": "Spark lazy vs action in own words"
+      },
+      {
+        "done": true,
+        "id": "bq-select",
+        "label": "BQ: why SELECT * is costly"
+      }
+    ],
+    "leetcode": [
+      {
+        "complexityInRepo": true,
+        "done": true,
+        "id": 217,
+        "noHints": true,
+        "pattern": "Hash set",
+        "repoFile": "leetcode/week_1/leetcode_217.py",
+        "slug": "contains-duplicate",
+        "title": "Contains Duplicate"
+      },
+      {
+        "complexityInRepo": true,
+        "done": true,
+        "id": 1,
+        "noHints": true,
+        "pattern": "Hash map",
+        "repoFile": "leetcode/week_1/leetcode_1.py",
+        "slug": "two-sum",
+        "title": "Two Sum"
+      },
+      {
+        "complexityInRepo": true,
+        "done": true,
+        "id": 242,
+        "noHints": false,
+        "pattern": "Hash / sort",
+        "repoFile": "leetcode/week_1/leetcode_242.py",
+        "slug": "valid-anagram",
+        "title": "Valid Anagram"
+      },
+      {
+        "complexityInRepo": true,
+        "done": true,
+        "id": 88,
+        "noHints": false,
+        "pattern": "Two pointers",
+        "repoFile": "leetcode/week_1/leetcode_88.py",
+        "slug": "merge-sorted-array",
+        "title": "Merge Sorted Array"
+      },
+      {
+        "complexityInRepo": true,
+        "done": true,
+        "id": 121,
+        "noHints": true,
+        "pattern": "Array / greedy",
+        "repoFile": "leetcode/week_1/leetcode_121.py",
+        "slug": "best-time-to-buy-and-sell-stock",
+        "title": "Best Time to Buy and Sell Stock"
+      }
+    ],
+    "reflection": {
+      "blocked": "Block C (Chip Huyen / theory videos) \u2014 continuing in parallel",
+      "energy": 0,
+      "finished": "Week 1 exit done: SQL 50 #1-4; LC 217,1,242,88,121 with repo notes; Big O; Spark driver/executor, lazy vs action, BQ SELECT*.",
+      "nextWeek": "Week 2: t02/t03 arrays+strings; SQL 5-8; Zoomcamp; Chip/DDIA theory parallel."
+    },
+    "sql50": [
+      {
+        "done": true,
+        "lc": 1757,
+        "num": 1,
+        "section": "Select",
+        "slug": "recyclable-and-low-fat-products",
+        "title": "Recyclable and Low Fat Products"
+      },
+      {
+        "done": true,
+        "lc": 584,
+        "num": 2,
+        "section": "Select \u00b7 NULL",
+        "slug": "find-customer-referee",
+        "title": "Find Customer Referee"
+      },
+      {
+        "done": true,
+        "lc": 595,
+        "num": 3,
+        "section": "Select",
+        "slug": "big-countries",
+        "title": "Big Countries"
+      },
+      {
+        "done": true,
+        "lc": 1148,
+        "num": 4,
+        "section": "Select \u00b7 GROUP BY",
+        "slug": "article-views-i",
+        "title": "Article Views I"
+      }
+    ]
+  },
+  "week2": {
+    "days": [
+      {
+        "blockA": true,
+        "blockB": true,
+        "blockC": false,
+        "date": "2026-06-01",
+        "day": "Mon",
+        "notes": "t02 review \u00b7 SQL #5"
+      },
+      {
+        "blockA": true,
+        "blockB": false,
+        "blockC": false,
+        "date": "2026-06-02",
+        "day": "Tue",
+        "notes": "t02, Zoomcamp"
+      },
+      {
+        "blockA": true,
+        "blockB": true,
+        "blockC": false,
+        "date": "2026-06-03",
+        "day": "Wed",
+        "notes": "t03, SQL #6-7"
+      },
+      {
+        "blockA": false,
+        "blockB": true,
+        "blockC": false,
+        "date": "2026-06-04",
+        "day": "Thu",
+        "notes": "Valid Palindrome, SQL #8"
+      },
+      {
+        "blockA": false,
+        "blockB": false,
+        "blockC": false,
+        "date": "2026-06-05",
+        "day": "Fri",
+        "notes": "t03 catch-up"
+      },
+      {
+        "blockA": false,
+        "blockB": false,
+        "blockC": false,
+        "date": "2026-06-06",
+        "day": "Sat",
+        "notes": "Spark lazy"
+      },
+      {
+        "blockA": false,
+        "blockB": false,
+        "blockC": false,
+        "date": "2026-06-07",
+        "day": "Sun",
+        "notes": "Week review"
+      }
+    ],
+    "deTopics": [
+      {
+        "done": false,
+        "id": "zoomcamp",
+        "path": "pyspark/week2_zoomcamp.md",
+        "title": "DE Zoomcamp Spark lab"
+      },
+      {
+        "done": false,
+        "id": "spark-lazy",
+        "path": "pyspark/week1_notes.md",
+        "title": "Lazy vs action (own words)"
+      },
+      {
+        "done": false,
+        "id": "chip-huyen",
+        "path": "theory/ai_engineering_notes.md",
+        "title": "Chip Huyen Ch 3-4"
+      }
+    ],
+    "exitChecklist": [
+      {
+        "done": true,
+        "id": "lc3",
+        "label": "3+ new LC in week_2 with notes"
+      },
+      {
+        "done": true,
+        "id": "sql4",
+        "label": "SQL 50 problems 5-8"
+      },
+      {
+        "done": false,
+        "id": "zoom",
+        "label": "Zoomcamp Spark lab completed"
+      },
+      {
+        "done": false,
+        "id": "spark-lazy",
+        "label": "Spark lazy vs action paragraph"
+      },
+      {
+        "done": false,
+        "id": "chip",
+        "label": "Chip Huyen Ch 3-4 summary"
+      },
+      {
+        "done": false,
+        "id": "dsa-t02",
+        "label": "DSA topic t02 Arrays done in study plan"
+      },
+      {
+        "done": false,
+        "id": "dsa-t03",
+        "label": "DSA topic t03 Strings started (2+ Easy)"
+      }
+    ],
+    "leetcode": [
+      {
+        "complexityInRepo": true,
+        "done": true,
+        "id": 485,
+        "noHints": false,
+        "pattern": "Arrays t02",
+        "repoFile": "leetcode/week_2/leetcode_485.py",
+        "slug": "max-consecutive-ones",
+        "title": "Max Consecutive Ones"
+      },
+      {
+        "complexityInRepo": true,
+        "done": true,
+        "id": 283,
+        "noHints": true,
+        "pattern": "Arrays t02",
+        "repoFile": "leetcode/week_2/leetcode_283.py",
+        "slug": "move-zeroes",
+        "title": "Move Zeroes"
+      },
+      {
+        "complexityInRepo": true,
+        "done": true,
+        "id": 26,
+        "noHints": false,
+        "pattern": "Arrays t02",
+        "repoFile": "leetcode/week_2/leetcode_26.py",
+        "slug": "remove-duplicates-from-sorted-array",
+        "title": "Remove Duplicates from Sorted Array"
+      },
+      {
+        "complexityInRepo": true,
+        "done": true,
+        "id": 66,
+        "noHints": false,
+        "pattern": "Arrays t02",
+        "repoFile": "leetcode/week_2/leetcode_66.py",
+        "slug": "plus-one",
+        "title": "Plus One"
+      },
+      {
+        "complexityInRepo": false,
+        "done": true,
+        "id": 118,
+        "noHints": false,
+        "pattern": "Arrays t02",
+        "repoFile": "leetcode/week_2/leetcode_118.py",
+        "slug": "pascals-triangle",
+        "title": "Pascal's Triangle"
+      },
+      {
+        "complexityInRepo": false,
+        "done": true,
+        "id": 125,
+        "noHints": false,
+        "pattern": "Strings t03",
+        "repoFile": "leetcode/week_2/leetcode_125.py",
+        "slug": "valid-palindrome",
+        "title": "Valid Palindrome"
+      },
+      {
+        "complexityInRepo": true,
+        "done": true,
+        "id": 242,
+        "noHints": true,
+        "pattern": "Strings t03",
+        "repoFile": "leetcode/week_1/leetcode_242.py",
+        "slug": "valid-anagram",
+        "title": "Valid Anagram (review)"
+      }
+    ],
+    "reflection": {
+      "blocked": "Block C theory \u2014 parallel with Week 2",
+      "energy": 0,
+      "finished": "In progress: t02 LC 485,283,26,66 in week_2/; SQL #5-6; Mon-Tue blocks A done.",
+      "nextWeek": "Finish t03 (125), SQL #7-8, Zoomcamp; DDIA Ch 3 from 8 Jun"
+    },
+    "sql50": [
+      {
+        "done": true,
+        "lc": 1683,
+        "num": 5,
+        "section": "Select",
+        "slug": "invalid-tweets",
+        "title": "Invalid Tweets"
+      },
+      {
+        "done": true,
+        "lc": 1378,
+        "num": 6,
+        "section": "Joins",
+        "slug": "replace-employee-id-with-the-unique-identifier",
+        "title": "Replace Employee ID"
+      },
+      {
+        "done": true,
+        "lc": 1068,
+        "num": 7,
+        "section": "Joins",
+        "slug": "product-sales-analysis-i",
+        "title": "Product Sales Analysis I"
+      },
+      {
+        "done": true,
+        "lc": 1581,
+        "num": 8,
+        "section": "Joins",
+        "slug": "customer-who-visited-but-did-not-make-any-transactions",
+        "title": "Customer Who Visited"
+      }
+    ]
+  }
+}

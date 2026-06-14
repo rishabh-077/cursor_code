@@ -361,3 +361,120 @@ h1 {
   opacity: 1;
   transform: translateY(0);
 }
+
+.week-nav {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.week-nav a {
+  font-size: 0.8rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
+  text-decoration: none;
+  color: var(--muted);
+  border: 1px solid var(--border);
+}
+
+.week-nav a:hover {
+  color: var(--text);
+  border-color: var(--accent2);
+}
+
+.week-nav a.active {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: rgba(61, 214, 198, 0.08);
+}
+
+.today-box {
+  background: linear-gradient(135deg, rgba(61, 214, 198, 0.12), rgba(107, 127, 255, 0.08));
+  border: 1px solid rgba(61, 214, 198, 0.35);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.today-status {
+  font-size: 0.75rem;
+  color: var(--muted);
+  max-width: 11rem;
+  text-align: right;
+  line-height: 1.35;
+}
+
+.today-status.out-of-sync {
+  color: #f0b86a;
+}
+
+.today-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  background: rgba(240, 184, 106, 0.12);
+  border: 1px solid rgba(240, 184, 106, 0.4);
+  border-radius: 8px;
+  padding: 0.65rem 1rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.85rem;
+}
+
+.today-banner button {
+  flex-shrink: 0;
+}
+
+.today-box h2 {
+  font-size: 1rem;
+  margin: 0 0 0.75rem;
+  color: var(--accent);
+}
+
+.today-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.75rem;
+  font-size: 0.85rem;
+}
+
+.today-grid div {
+  background: var(--surface);
+  border-radius: 8px;
+  padding: 0.75rem;
+  border: 1px solid var(--border);
+}
+
+.today-grid strong {
+  display: block;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+  margin-bottom: 0.35rem;
+}
+
+.card.today-highlight {
+  border-color: rgba(61, 214, 198, 0.5);
+  box-shadow: 0 0 0 1px rgba(61, 214, 198, 0.2);
+}
+
+.steps-list {
+  margin: 0 0 1.25rem;
+  padding-left: 1.25rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.steps-list a {
+  color: var(--accent);
+}
+
+.day-task-line {
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin-top: 0.25rem;
+}

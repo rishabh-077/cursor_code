@@ -1,11 +1,6 @@
-# Weekly trackers
+# Deprecated — use portal sync instead
 
-One file per week: **done / not done** (checkboxes, LC/SQL logs, reflection).
+**Active daily logs:** [../../trackers/portal_week_NN.md](../../trackers/) (after portal **Sync to Markdown**)  
+**Archive:** [../_archive/weekly_tracker/](../_archive/weekly_tracker/)
 
-| Week | Dates | File |
-|------|-------|------|
-| 1 | 25 May – 31 May 2026 | [tracker_week1.md](./tracker_week1.md) |
-
-**How to update:** [../TRACKER_GUIDE.md](../TRACKER_GUIDE.md)
-
-**Program-level progress:** [../learn_tracker.md](../learn_tracker.md)
+Do not use `tracker_weekN.md` here for new weeks.

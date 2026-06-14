@@ -1,7 +1,7 @@
 # SQL 50 — Week 1 log (problems 1–4)
 
 **Study plan:** https://leetcode.com/studyplan/top-sql-50/  
-**Tracker:** [tracker_week1.md](../learn_plans/weekly_tracker/tracker_week1.md)
+**Tracker:** [portal_week_01.md](../trackers/portal_week_01.md)
 
 | # | LC # | Problem | Section | Done | Pattern / notes |
 |---|------|---------|---------|:----:|-----------------|

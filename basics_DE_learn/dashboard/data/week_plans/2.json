@@ -1,0 +1,52 @@
+{
+  "week": 2,
+  "phase": 1,
+  "range": "Mon 1 Jun – Sun 7 Jun 2026",
+  "dsaTopic": "t02",
+  "dsaTitle": "Arrays (finish) + t03 Strings start",
+  "masteryGoal": "t02: Easy without hints + 1 Medium attempted before moving to t03",
+  "days": {
+    "2026-06-01": {
+      "day": "Mon",
+      "primary": "t02 review — LC #485 Max Consecutive Ones (re-solve without hints if you used hints before). Save notes in leetcode/week_2/leetcode_485.py",
+      "secondary": "none",
+      "sql": false
+    },
+    "2026-06-02": {
+      "day": "Tue",
+      "primary": "LC #283 Move Zeroes (done no hints ✅) — LC #26 Remove Duplicates: re-solve without hints. Video: NeetCode if stuck after 15 min (approach only)",
+      "secondary": "30 min SQL 50 #5 Invalid Tweets — https://leetcode.com/problems/invalid-tweets/",
+      "sql": true
+    },
+    "2026-06-03": {
+      "day": "Wed",
+      "primary": "LC #66 Plus One + #118 Pascal's Triangle — add study notes to repo. Start LC #125 Valid Palindrome (t03)",
+      "secondary": "none",
+      "sql": false
+    },
+    "2026-06-04": {
+      "day": "Thu",
+      "primary": "LC #125 Valid Palindrome — re-solve without hints. Watch NeetCode two pointers intro (8 min) if needed: https://www.youtube.com/watch?v=jM2dhDPYMQM",
+      "secondary": "30 min SQL 50 #6 Customers Who Never Order · #7 Product Sales Analysis I if time",
+      "sql": true
+    },
+    "2026-06-05": {
+      "day": "Fri",
+      "primary": "t02 Medium attempt: LC #189 Rotate Array (or #27). No solution code peeking — 25 min timer",
+      "secondary": "none",
+      "sql": false
+    },
+    "2026-06-06": {
+      "day": "Sat",
+      "primary": "Re-solve #485 and #26 without hints. Catch-up any missing repo notes",
+      "secondary": "OPTIONAL (pick one ~30 min): Chip Ch 1–2 catch-up (see ai_engineering_notes — Ch 3–4 only after 1–2 done) OR Zoomcamp module 1 — or skip if DSA behind",
+      "sql": false
+    },
+    "2026-06-07": {
+      "day": "Sun",
+      "primary": "15 min reflection in portal — ready for t03 full week?",
+      "secondary": "none",
+      "sql": false
+    }
+  }
+}

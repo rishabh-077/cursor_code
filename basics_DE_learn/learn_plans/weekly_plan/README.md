@@ -1,10 +1,6 @@
-# Weekly plans
+# Deprecated — use `weekly_plans/` instead
 
-One file per week: **what** to study each day (tasks + video/read links).
+**Active week plans:** [../../weekly_plans/](../../weekly_plans/)  
+**Archive (Block A/B/C):** [../_archive/weekly_plan/](../_archive/weekly_plan/)
 
-| Week | Dates | File |
-|------|-------|------|
-| 1 | 25 May – 31 May 2026 | [plan_week1.md](./plan_week1.md) |
-| 2+ | *Generate when prior week ~70% done* | `plan_week2.md` … |
-
-**Track completion in:** [../weekly_tracker/](../weekly_tracker/) — not in this folder.
+Do not edit `plan_weekN.md` in this folder for new weeks.

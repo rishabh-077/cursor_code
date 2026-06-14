@@ -1,0 +1,52 @@
+{
+  "week": 3,
+  "phase": 1,
+  "range": "Mon 8 Jun – Sun 14 Jun 2026",
+  "dsaTopic": "t03",
+  "dsaTitle": "Strings (primary) + t02 light maintenance",
+  "masteryGoal": "t03: 3+ Easy without hints (125 done) + 1 Medium attempted; re-solve #242 no hints",
+  "days": {
+    "2026-06-08": {
+      "day": "Mon",
+      "primary": "t03 — LC #242 Valid Anagram: re-solve WITHOUT hints. Save leetcode/week_3/leetcode_242.py (frequency map). Optional 15 min: #66 / #118 no-hint retry",
+      "secondary": "none",
+      "sql": false
+    },
+    "2026-06-09": {
+      "day": "Tue",
+      "primary": "LC #344 Reverse String + #387 First Unique Character in a String — notes in week_3/",
+      "secondary": "30 min SQL 50: catch-up #7 Product Sales Analysis I · #8 Customer Who Visited if open · #10 Average Time of Process per Machine (#9 #197 already done)",
+      "sql": true
+    },
+    "2026-06-10": {
+      "day": "Wed",
+      "primary": "LC #14 Longest Common Prefix + #13 Roman to Integer — full study notes in repo",
+      "secondary": "none",
+      "sql": false
+    },
+    "2026-06-11": {
+      "day": "Thu",
+      "primary": "LC #125 Valid Palindrome second pass (O(1) two-pointer). #38 Count and Say if time",
+      "secondary": "30 min SQL 50 #11 Employee Bonus · #12 Students and Examinations",
+      "sql": true
+    },
+    "2026-06-12": {
+      "day": "Fri",
+      "primary": "t03 Medium attempt (25 min, no code peek): #5 Longest Palindromic Substring OR #8 String to Integer (atoi)",
+      "secondary": "none",
+      "sql": false
+    },
+    "2026-06-13": {
+      "day": "Sat",
+      "primary": "t03 review — re-solve weakest string Easy without hints; tick t03 mastery in portal if gates met",
+      "secondary": "OPTIONAL (pick one ~30 min): Finish Chip Ch 1 (ai_engineering_notes) OR finish Zoomcamp module 1 (docker/terraform) OR DDIA Ch 3 if book arrived — skip if DSA behind. No Chip Ch 3–4 until Ch 1–2 done",
+      "sql": false
+    },
+    "2026-06-14": {
+      "day": "Sun",
+      "primary": "15 min reflection in portal — t03 mastery? DDIA arrived? SQL ~12/50?",
+      "secondary": "none",
+      "sql": false
+    }
+  }
+}
