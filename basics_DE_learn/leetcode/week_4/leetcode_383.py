@@ -103,21 +103,45 @@ class Solution:
 class SolutionGet:
     def canConstruct(self, ransomNote: str, magazine: str) -> bool:
         magdict = {}
-        for i in magazine:
-            if i in magdict:
-                magdict[i] += 1
-            else:
-                magdict[i] = 1
-        for j in ransomNote:
-            if j not in magdict:
+        for c in magazine:
+            magdict[c] = magdict.get(c, 0) + 1
+
+        for c in ransomNote:
+            magdict[c] = magdict.get(c, 0) - 1
+            if magdict[c] < 0:
                 return False
-            elif magdict[j] == 1:
-                del magdict[j]
-            else:
-                magdict[j] -= 1
         return True
-# Time: O(m + n) because we are iterating through the list once
-# Space: O(1) because the dictionary will only exist for the fixed 26 characters
+    # Time: O(m + n)   Space: O(1) for bounded alphabet
+
+
+# --- Approach 4: Delete key when count hits 0 ---
+class SolutionDeleteKeys:
+    def canConstruct(self, ransomNote: str, magazine: str) -> bool:
+        magdict = {}
+        for c in magazine:
+            magdict[c] = magdict.get(c, 0) + 1
+
+        for c in ransomNote:
+            if c not in magdict:
+                return False
+            if magdict[c] == 1:
+                del magdict[c]
+            else:
+                magdict[c] -= 1
+        return True
+    # Time: O(m + n)   Space: O(1)
+
+
+# --- Approach 5: Counter — count magazine, subtract for ransomNote ---
+class SolutionCounter:
+    def canConstruct(self, ransomNote: str, magazine: str) -> bool:
+        counts = Counter(magazine)
+        for c in ransomNote:
+            counts[c] -= 1
+            if counts[c] < 0:
+                return False
+        return True
+    # Time: O(m + n)   Space: O(1) for bounded alphabet
 
 
 if __name__ == "__main__":
