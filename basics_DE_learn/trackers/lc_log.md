@@ -23,5 +23,8 @@
 | 13 | [Roman to Integer](https://leetcode.com/problems/roman-to-integer/) | t03 | 0 | E | [x] | [x] |  |
 | 38 | [Count and Say](https://leetcode.com/problems/count-and-say/) | t03 | 0 | E | [x] | [ ] |  |
 | 5 | [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/) | t03 | 0 | M | [x] | [ ] |  |
+| 383 | [Ransom Note](https://leetcode.com/problems/ransom-note/) | t04 | 0 | E | [x] | [ ] |  |
+| 771 | [Jewels and Stones](https://leetcode.com/problems/jewels-and-stones/) | t04 | 0 | E | [x] | [ ] |  |
+| 205 | [Isomorphic Strings](https://leetcode.com/problems/isomorphic-strings/) | t04 | 0 | E | [x] | [ ] |  |
 
-**Count:** 19 logged · **No-hints count:** 13
+**Count:** 22 logged · **No-hints count:** 13

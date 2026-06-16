@@ -2,7 +2,7 @@
   "meta": {
     "currentWeek": 4,
     "ddiaArrives": "2026-06-08",
-    "lastUpdated": "2026-06-16T23:09:58",
+    "lastUpdated": "2026-06-17T00:16:24",
     "phase": 1,
     "program": "phased-v1",
     "startDate": "2026-05-25",
@@ -20,13 +20,13 @@
       "2026-06-09": "Today I solved all the required leetcode#344 and #387 for strings without hints, and also solve sql problem #averag etime for process per machine",
       "2026-06-10": "Was able to solve the leetcode #13 without hint but the #14 I used solution, I got the idea to solves, but was not able to think through the code",
       "2026-06-11": "Solves he SQL but need to revisit the leetcode #38 will be doing it next day i.e., tomorrow",
-      "2026-06-14": "Solved the medium leetcode #5 by watching the solution on youtube"
+      "2026-06-14": "Solved the medium leetcode #5 by watching the solution on youtube",
+      "2026-06-16": "completed  the required SQL and leetcode question from Day 1 and day 2"
     },
     "dailyLog": {
       "2026-06-03": "",
       "2026-06-06": "I resolved the leetcode #283 and #26 without hints, and started a bit from 1st module of zoomcamp currently in the 1st module i.e.,  docker-terraform module",
-      "2026-06-11": "Solves he SQL but need to revisit the leetcode #38 will be doing it next day i.e., tomorrow",
-      "2026-06-16": ""
+      "2026-06-11": "Solves he SQL but need to revisit the leetcode #38 will be doing it next day i.e., tomorrow"
     },
     "dailyTasks": {
       "2026-05-25": [
@@ -119,7 +119,7 @@
       ],
       "2026-06-16": [
         true,
-        false
+        true
       ],
       "2026-06-17": [
         false,
