@@ -199,15 +199,48 @@
       "week": 0
     },
     {
+      "date": "2026-06-14",
+      "difficulty": "Medium",
+      "done": true,
       "id": 5,
+      "noHints": false,
+      "repo": "",
       "title": "Longest Palindromic Substring",
       "topic": "t03",
+      "week": 0
+    },
+    {
+      "date": "2026-06-15",
+      "difficulty": "Easy",
+      "done": true,
+      "id": 383,
+      "noHints": false,
+      "repo": "",
+      "title": "Ransom Note",
+      "topic": "t04",
+      "week": 0
+    },
+    {
+      "id": 771,
+      "title": "Jewels and Stones",
+      "topic": "t04",
       "week": 0,
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "done": true,
       "noHints": false,
       "repo": "",
-      "date": "2026-06-14"
+      "date": "2026-06-16"
+    },
+    {
+      "id": 205,
+      "title": "Isomorphic Strings",
+      "topic": "t04",
+      "week": 0,
+      "difficulty": "Easy",
+      "done": true,
+      "noHints": false,
+      "repo": "",
+      "date": "2026-06-16"
     }
   ]
 }
