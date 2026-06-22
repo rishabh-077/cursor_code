@@ -21,10 +21,13 @@
 | 387 | [First Unique Character in a String](https://leetcode.com/problems/first-unique-character-in-a-string/) | t03 | 0 | E | [x] | [x] |  |
 | 14 | [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/) | t03 | 0 | E | [x] | [ ] |  |
 | 13 | [Roman to Integer](https://leetcode.com/problems/roman-to-integer/) | t03 | 0 | E | [x] | [x] |  |
-| 38 | [Count and Say](https://leetcode.com/problems/count-and-say/) | t03 | 0 | E | [x] | [ ] |  |
-| 5 | [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/) | t03 | 0 | M | [x] | [ ] |  |
-| 383 | [Ransom Note](https://leetcode.com/problems/ransom-note/) | t04 | 0 | E | [x] | [ ] |  |
-| 771 | [Jewels and Stones](https://leetcode.com/problems/jewels-and-stones/) | t04 | 0 | E | [x] | [ ] |  |
+| 38 | [Count and Say](https://leetcode.com/problems/count-and-say/) | t03 | 0 | E | [x] | [x] |  |
+| 5 | [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/) | t03 | 0 | M | [x] | [x] |  |
+| 383 | [Ransom Note](https://leetcode.com/problems/ransom-note/) | t04 | 0 | E | [x] | [x] |  |
+| 771 | [Jewels and Stones](https://leetcode.com/problems/jewels-and-stones/) | t04 | 0 | E | [x] | [x] |  |
 | 205 | [Isomorphic Strings](https://leetcode.com/problems/isomorphic-strings/) | t04 | 0 | E | [x] | [ ] |  |
+| 290 | [Word Pattern](https://leetcode.com/problems/word-pattern/) | t04 | 0 | E | [x] | [x] |  |
+| 49 | [Group Anagrams](https://leetcode.com/problems/group-anagrams/) | t04 | 0 | M | [x] | [ ] |  |
+| 347 | [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) | t04 | 0 | M | [x] | [ ] |  |
 
-**Count:** 22 logged · **No-hints count:** 13
+**Count:** 25 logged · **No-hints count:** 18

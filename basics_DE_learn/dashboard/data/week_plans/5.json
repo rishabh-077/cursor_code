@@ -1,0 +1,52 @@
+{
+  "week": 5,
+  "phase": 1,
+  "range": "Mon 22 Jun – Sun 28 Jun 2026",
+  "dsaTopic": "t05",
+  "dsaTitle": "Two pointers (primary) + t04 close-out",
+  "masteryGoal": "t05: theory + 3 Easy no hints (#977, #167, review #125) + 1 Medium attempted (#15 or #11); close t04: #49 re-solve no hints",
+  "days": {
+    "2026-06-22": {
+      "day": "Mon",
+      "primary": "t05 theory — two pointers (NeetCode). LC #977 Squares of a Sorted Array without hints — leetcode/week_5/leetcode_977.py. Optional 15 min: #125 two-pointer review or #205 re-solve",
+      "secondary": "none",
+      "sql": false
+    },
+    "2026-06-23": {
+      "day": "Tue",
+      "primary": "LC #167 Two Sum II (sorted two-pointer) — notes in week_5/",
+      "secondary": "30 min SQL 50 #17 Project Employees I · #18 Percentage of Users Attended a Contest",
+      "sql": true
+    },
+    "2026-06-24": {
+      "day": "Wed",
+      "primary": "t05 Medium attempt (25 min): #15 3Sum (sort + two pointers). Re-solve #49 Group Anagrams WITHOUT hints (t04 close-out)",
+      "secondary": "none",
+      "sql": false
+    },
+    "2026-06-25": {
+      "day": "Thu",
+      "primary": "LC #11 Container With Most Water — inward pointers; OR second pass #15 if stuck",
+      "secondary": "30 min SQL 50 #19 Queries Quality and Percentage · #20 Monthly Transactions I",
+      "sql": true
+    },
+    "2026-06-26": {
+      "day": "Fri",
+      "primary": "t05 consolidation — re-solve #977 or #167 no hints. #205/#49 no-hint retry if open. Tick t04 mastery in portal when #49 gate met",
+      "secondary": "none",
+      "sql": false
+    },
+    "2026-06-27": {
+      "day": "Sat",
+      "primary": "t05 review — explain pointer patterns aloud; optional #88 merge two-pointer view",
+      "secondary": "OPTIONAL (pick one ~30 min): Chip Ch 1 (ai_engineering_notes) OR StrataScratch signup + 1 easy OR Mode SQL windows intro OR DDIA Ch 5–6 skim — skip if DSA behind",
+      "sql": false
+    },
+    "2026-06-28": {
+      "day": "Sun",
+      "primary": "15 min reflection — t05 mastery? t04 closed? SQL ~20/50? theory backlog?",
+      "secondary": "none",
+      "sql": false
+    }
+  }
+}

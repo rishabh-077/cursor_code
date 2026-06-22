@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-16T00:34:44",
+  "lastUpdated": "2026-06-20T23:45:17",
   "topics": {
     "t01": {
       "complete": true,
@@ -21,7 +21,7 @@
     },
     "t04": {
       "complete": false,
-      "easyNoHints": false,
+      "easyNoHints": true,
       "mediumAttempted": false,
       "theory": true
     },

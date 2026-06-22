@@ -11,7 +11,7 @@
 | Requirement | Target | Current | Done |
 |-------------|--------|---------|:----:|
 | DSA topics t01–t16 | 16 topics mastered | 3 | [ ] |
-| LC problems logged | 35+ | 22 | [ ] |
+| LC problems logged | 35+ | 25 | [ ] |
 | SQL 50 | 30+ / 50 | 0 / 50 | [ ] |
 | Explain patterns aloud | array, hash, graph basics | — | [ ] |
 
@@ -22,7 +22,7 @@
 | Big-O | [x] | [x] | [x] | [x] |
 | Arrays | [x] | [x] | [x] | [x] |
 | Strings | [x] | [x] | [x] | [x] |
-| Hash | [x] | [ ] | [ ] | [ ] |
+| Hash | [x] | [x] | [ ] | [ ] |
 | Two pointers | [ ] | [ ] | [ ] | [ ] |
 | Sliding window | [ ] | [ ] | [ ] | [ ] |
 | Prefix sums | [ ] | [ ] | [ ] | [ ] |

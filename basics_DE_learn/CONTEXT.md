@@ -31,7 +31,8 @@ basics_DE_learn/
 │   ├── week_01.md             ← Human-readable week plan
 │   ├── week_02.md
 │   ├── week_03.md
-│   └── week_04.md
+│   ├── week_04.md
+│   └── week_05.md
 ├── trackers/                  ← Git-facing sync output
 │   ├── portal_week_01.md      ← Portal tasks + daily logs + reflection
 │   ├── portal_week_02.md
@@ -52,7 +53,8 @@ basics_DE_learn/
 │   │   │   ├── 1.json         ← Portal schedule (machine)
 │   │   │   ├── 2.json
 │   │   │   ├── 3.json
-│   │   │   └── 4.json
+│   │   │   ├── 4.json
+│   │   │   └── 5.json
 │   │   └── _archive/
 │   │       └── progress_weeks_legacy.json  ← old week1/week2 blocks
 │   └── static/
@@ -283,19 +285,19 @@ Update **in the same PR/session** when you:
 
 | Field | Value |
 |-------|--------|
-| **lastContextUpdate** | 2026-06-15 (Week 4 plan generated — hybrid from wk 3 reflection) |
-| **Calendar week** | 4 (Mon 15 Jun – Sun 21 Jun 2026) |
-| **meta.today** | 2026-06-15 (set in portal when you open wk 4) |
-| **DSA focus** | **t04 Hash maps** (primary) · t03 light re-solves (#14, #38) |
-| **Portal weeks in UI** | 1, 2, 3, 4 (`week_plans/1.json` … `4.json`) |
-| **LC logged** | 19 in `lc_log.json` · 13 no-hints |
-| **t03 mastery** | ✅ Complete — #5 medium attempted (with hints; optional re-try) |
-| **t04 mastery** | In progress — **217, 1** head start; need theory + 383/771/205 + #49 medium |
-| **SQL 50** | ~12/50 (#1–12) · wk 4 target #13–16 → **16/50** |
-| **Hint re-solve queue** | **#14**, **#38** (priority) · 88, 118 optional · #5 optional |
-| **Theory spine** | **Nothing done wk 3** — Chip Ch 1 still first · DDIA Ch 3 review (wk 4 menu) |
-| **Parallel backlog** | Chip Ch 1 · Zoomcamp mod 1 · PySpark lazy · DDIA Ch 3 — Sat optional ONE |
-| **Week 4 plan** | [weekly_plans/week_04.md](weekly_plans/week_04.md) · DE menu: BQ partitioning · RAG read |
+| **lastContextUpdate** | 2026-06-22 (Week 5 plan generated — hybrid from wk 4 reflection) |
+| **Calendar week** | 5 (Mon 22 Jun – Sun 28 Jun 2026) |
+| **meta.today** | 2026-06-22 (set in portal when you open wk 5) |
+| **DSA focus** | **t05 Two pointers** (primary) · **t04 close-out** (#49 re-solve, tick medium) |
+| **Portal weeks in UI** | 1, 2, 3, 4, 5 (`week_plans/1.json` … `5.json`) |
+| **LC logged** | 24 in `lc_log.json` · 18 no-hints |
+| **t04 mastery** | Almost — theory + Easy ✅ · **#49 Medium with hints** → re-solve wk 5 |
+| **t05 mastery** | Not started — theory + #977, #167 + Medium #15 or #11 |
+| **SQL 50** | ~16/50 (#1–16) · wk 5 target #17–20 → **20/50** (Tue/Thu 30 min only) |
+| **Hint re-solve queue** | **#49**, **#205** (priority) · #14 · 88, 118 optional |
+| **Theory spine** | **Still nothing completed** — Chip Ch 1 first · Zoomcamp mod 1 · DDIA Ch 5–6 (wk 5 menu) |
+| **Parallel backlog** | Chip Ch 1 · Zoomcamp mod 1 · PySpark lazy · StrataScratch start — Sat optional ONE |
+| **Week 5 plan** | [weekly_plans/week_05.md](weekly_plans/week_05.md) · DE menu: StrataScratch · Mode windows · DDIA Ch 5–6 |
 
 ---
 

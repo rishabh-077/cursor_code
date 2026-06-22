@@ -192,7 +192,7 @@
       "difficulty": "Easy",
       "done": true,
       "id": 38,
-      "noHints": false,
+      "noHints": true,
       "repo": "",
       "title": "Count and Say",
       "topic": "t03",
@@ -203,7 +203,7 @@
       "difficulty": "Medium",
       "done": true,
       "id": 5,
-      "noHints": false,
+      "noHints": true,
       "repo": "",
       "title": "Longest Palindromic Substring",
       "topic": "t03",
@@ -214,33 +214,66 @@
       "difficulty": "Easy",
       "done": true,
       "id": 383,
-      "noHints": false,
+      "noHints": true,
       "repo": "",
       "title": "Ransom Note",
       "topic": "t04",
       "week": 0
     },
     {
+      "date": "2026-06-16",
+      "difficulty": "Easy",
+      "done": true,
       "id": 771,
+      "noHints": true,
+      "repo": "",
       "title": "Jewels and Stones",
       "topic": "t04",
-      "week": 0,
-      "difficulty": "Easy",
-      "done": true,
-      "noHints": false,
-      "repo": "",
-      "date": "2026-06-16"
+      "week": 0
     },
     {
+      "date": "2026-06-16",
+      "difficulty": "Easy",
+      "done": true,
       "id": 205,
+      "noHints": false,
+      "repo": "",
       "title": "Isomorphic Strings",
       "topic": "t04",
-      "week": 0,
+      "week": 0
+    },
+    {
+      "date": "2026-06-19",
       "difficulty": "Easy",
+      "done": true,
+      "id": 290,
+      "noHints": true,
+      "repo": "",
+      "title": "Word Pattern",
+      "topic": "t04",
+      "week": 0
+    },
+    {
+      "date": "2026-06-19",
+      "difficulty": "Medium",
+      "done": true,
+      "id": 49,
+      "noHints": false,
+      "repo": "",
+      "title": "Group Anagrams",
+      "topic": "t04",
+      "week": 0
+    },
+    {
+      "id": 347,
+      "title": "Top K Frequent Elements",
+      "topic": "t04",
+      "week": 0,
+      "difficulty": "Medium",
       "done": true,
       "noHints": false,
       "repo": "",
-      "date": "2026-06-16"
+      "date": "2026-06-22"
     }
   ]
 }
