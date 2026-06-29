@@ -2,12 +2,12 @@
   "meta": {
     "currentWeek": 5,
     "ddiaArrives": "2026-06-08",
-    "lastUpdated": "2026-06-22T20:56:21",
+    "lastUpdated": "2026-06-29T22:21:35",
     "phase": 1,
     "program": "phased-v1",
     "startDate": "2026-05-25",
     "timezone": "Asia/Kolkata",
-    "today": "2026-06-22",
+    "today": "2026-06-27",
     "weekStartsOn": "Monday"
   },
   "portal": {
@@ -28,7 +28,9 @@
       "2026-06-06": "I resolved the leetcode #283 and #26 without hints, and started a bit from 1st module of zoomcamp currently in the 1st module i.e.,  docker-terraform module",
       "2026-06-11": "Solves he SQL but need to revisit the leetcode #38 will be doing it next day i.e., tomorrow",
       "2026-06-18": "",
-      "2026-06-19": ""
+      "2026-06-19": "",
+      "2026-06-23": "",
+      "2026-06-26": ""
     },
     "dailyTasks": {
       "2026-05-25": [
@@ -148,16 +150,16 @@
         false
       ],
       "2026-06-23": [
-        false,
-        false
+        true,
+        true
       ],
       "2026-06-24": [
-        false,
+        true,
         false
       ],
       "2026-06-25": [
-        false,
-        false
+        true,
+        true
       ],
       "2026-06-26": [
         false,

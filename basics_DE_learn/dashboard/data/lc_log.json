@@ -124,7 +124,7 @@
     {
       "date": "2026-06-03",
       "difficulty": "Easy",
-      "done": false,
+      "done": true,
       "id": 1137,
       "noHints": false,
       "repo": "",
@@ -265,15 +265,59 @@
       "week": 0
     },
     {
-      "id": 347,
-      "title": "Top K Frequent Elements",
-      "topic": "t04",
-      "week": 0,
+      "date": "2026-06-22",
       "difficulty": "Medium",
       "done": true,
+      "id": 347,
       "noHints": false,
       "repo": "",
-      "date": "2026-06-22"
+      "title": "Top K Frequent Elements",
+      "topic": "t04",
+      "week": 0
+    },
+    {
+      "date": "2026-06-23",
+      "difficulty": "Easy",
+      "done": true,
+      "id": 977,
+      "noHints": false,
+      "repo": "",
+      "title": "Squares of a Sorted Array",
+      "topic": "t05",
+      "week": 0
+    },
+    {
+      "date": "2026-06-24",
+      "difficulty": "Medium",
+      "done": true,
+      "id": 167,
+      "noHints": false,
+      "repo": "",
+      "title": "Two Sum II (sorted array)",
+      "topic": "t05",
+      "week": 0
+    },
+    {
+      "date": "2026-06-24",
+      "difficulty": "Medium",
+      "done": true,
+      "id": 15,
+      "noHints": false,
+      "repo": "",
+      "title": "3Sum",
+      "topic": "t05",
+      "week": 0
+    },
+    {
+      "date": "2026-06-27",
+      "difficulty": "Medium",
+      "done": true,
+      "id": 11,
+      "noHints": true,
+      "repo": "",
+      "title": "Container With Most Water",
+      "topic": "t05",
+      "week": 0
     }
   ]
 }
