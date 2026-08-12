@@ -61,7 +61,7 @@
 1. Portal **reflection** (finished / blocked / next week).
 2. **Sync to Markdown** → `trackers/portal_week_NN.md`.
 3. Tick phase items in [learn_tracker.md](./learn_tracker.md) if a gate cleared.
-4. Ask Cursor to generate next week per [CONTEXT.md](../CONTEXT.md) §11.
+4. Ask Cursor: **`Generate next week plan.`** ([CONTEXT.md](../CONTEXT.md) §11 — agent auto-reads reflection + trackers)
 
 ---
 

@@ -1,0 +1,52 @@
+{
+  "week": 6,
+  "phase": 1,
+  "range": "Mon 29 Jun – Sun 5 Jul 2026",
+  "dsaTopic": "t06",
+  "dsaTitle": "Sliding window",
+  "masteryGoal": "t06: theory + 2 Easy no hints (#643, #1456) + 1 Medium attempted (#3); do not start t07 until pattern is automatic",
+  "days": {
+    "2026-06-29": {
+      "day": "Mon",
+      "primary": "t06 theory — fixed vs variable window (Striver). LC #643 Maximum Average Subarray I without hints — leetcode/week_6/leetcode_643.py. Optional 15 min: #977 no-hint re-solve",
+      "secondary": "none",
+      "sql": false
+    },
+    "2026-06-30": {
+      "day": "Tue",
+      "primary": "LC #1456 Maximum Number of Vowels in a Substring — fixed window — notes in week_6/",
+      "secondary": "30 min SQL 50 #21 Immediate Food Delivery II · #22 Game Play Analysis IV",
+      "sql": true
+    },
+    "2026-07-01": {
+      "day": "Wed",
+      "primary": "t06 Medium attempt (25 min): #3 Longest Substring Without Repeating Characters (variable window + set). Optional 15 min: #167 no-hint re-solve",
+      "secondary": "none",
+      "sql": false
+    },
+    "2026-07-02": {
+      "day": "Thu",
+      "primary": "Second pass #3 OR #567 Permutation in String (sliding window + freq map)",
+      "secondary": "30 min SQL 50 #23 Number of Unique Subjects Taught by Each Teacher · #24 User Activity for the Past 30 Days I",
+      "sql": true
+    },
+    "2026-07-03": {
+      "day": "Fri",
+      "primary": "t06 consolidation — re-solve #643 or #1456 no hints; explain template aloud. Optional: #209 Minimum Size Subarray Sum if #3 done",
+      "secondary": "none",
+      "sql": false
+    },
+    "2026-07-04": {
+      "day": "Sat",
+      "primary": "t06 review — template on paper for #3/#643; optional #121 sliding-window review",
+      "secondary": "OPTIONAL (pick one ~30 min): Chip Ch 1 (ai_engineering_notes) OR DDIA Ch 5–6 replication/partition skim OR finish Zoomcamp mod 1 — skip if t06 behind",
+      "sql": false
+    },
+    "2026-07-05": {
+      "day": "Sun",
+      "primary": "15 min reflection — t06 mastery? SQL ~25/50? theory backlog?",
+      "secondary": "none",
+      "sql": false
+    }
+  }
+}

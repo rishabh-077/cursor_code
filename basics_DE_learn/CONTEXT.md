@@ -32,7 +32,8 @@ basics_DE_learn/
 │   ├── week_02.md
 │   ├── week_03.md
 │   ├── week_04.md
-│   └── week_05.md
+│   ├── week_05.md
+│   └── week_06.md
 ├── trackers/                  ← Git-facing sync output
 │   ├── portal_week_01.md      ← Portal tasks + daily logs + reflection
 │   ├── portal_week_02.md
@@ -54,7 +55,8 @@ basics_DE_learn/
 │   │   │   ├── 2.json
 │   │   │   ├── 3.json
 │   │   │   ├── 4.json
-│   │   │   └── 5.json
+│   │   │   ├── 5.json
+│   │   │   └── 6.json
 │   │   └── _archive/
 │   │       └── progress_weeks_legacy.json  ← old week1/week2 blocks
 │   └── static/
@@ -193,7 +195,26 @@ basics_DE_learn/
 
 ## 6. Adding a new calendar week (e.g. Week 3)
 
-**Trigger:** User asks (hybrid): *"Generate Week N plan"* with reflection + hint audit + mastery status.
+**Trigger:** User says **`Generate Week N plan.`** or **`Generate next week plan.`** — see §11. Agent **auto-reads** all inputs from repo files; do **not** ask the user to paste dates, SQL count, hint audit, or backlog unless a file is missing or reflection is empty.
+
+### Auto-read before writing (agent — no user paste)
+
+| Source | Gets |
+|--------|------|
+| `CONTEXT.md` §3b, §10 | Planning rules + current snapshot |
+| `MASTER_PLAN.md` | Phase / daily shape |
+| `DSA_PACING.md` | DSA topic for calendar week **N** |
+| `DE_CURRICULUM.md` | Row for calendar week **N** (DE menu) |
+| `dashboard/data/progress.json` | `meta` · `portal.reflectionDraft` · `dailyTasks` for week **N−1** |
+| `trackers/portal_week_{N-1}.md` | Prior week logs + synced reflection |
+| `lc_log.json` or `trackers/lc_log.md` | Hint audit → re-solve queue (`noHints: false`) |
+| `dsa_mastery.json` or `trackers/phase_checklist.md` | Prior topic mastered? carry-forward? |
+| `learn_plans/learn_tracker.md` | Phase 1 exit backlog (Chip, Zoomcamp, Spark lazy, …) |
+| `theory/ai_engineering_notes.md` | Next unchecked Chip chapter (Sat optional) |
+| `sql/week*_sql50_log.md` | SQL count |
+| `weekly_plans/week_{N-1}.md` | Prior plan format + carry-forward LC queue |
+
+**Infer N:** `N = meta.currentWeek + 1` unless user names **Week N**. **Dates:** Mon–Sun from `meta.startDate` + week number (`weekStartsOn: Monday`).
 
 **Agent checklist — create/update ALL of:**
 
@@ -285,60 +306,69 @@ Update **in the same PR/session** when you:
 
 | Field | Value |
 |-------|--------|
-| **lastContextUpdate** | 2026-06-22 (Week 5 plan generated — hybrid from wk 4 reflection) |
-| **Calendar week** | 5 (Mon 22 Jun – Sun 28 Jun 2026) |
-| **meta.today** | 2026-06-22 (set in portal when you open wk 5) |
-| **DSA focus** | **t05 Two pointers** (primary) · **t04 close-out** (#49 re-solve, tick medium) |
-| **Portal weeks in UI** | 1, 2, 3, 4, 5 (`week_plans/1.json` … `5.json`) |
-| **LC logged** | 24 in `lc_log.json` · 18 no-hints |
-| **t04 mastery** | Almost — theory + Easy ✅ · **#49 Medium with hints** → re-solve wk 5 |
-| **t05 mastery** | Not started — theory + #977, #167 + Medium #15 or #11 |
-| **SQL 50** | ~16/50 (#1–16) · wk 5 target #17–20 → **20/50** (Tue/Thu 30 min only) |
-| **Hint re-solve queue** | **#49**, **#205** (priority) · #14 · 88, 118 optional |
-| **Theory spine** | **Still nothing completed** — Chip Ch 1 first · Zoomcamp mod 1 · DDIA Ch 5–6 (wk 5 menu) |
-| **Parallel backlog** | Chip Ch 1 · Zoomcamp mod 1 · PySpark lazy · StrataScratch start — Sat optional ONE |
-| **Week 5 plan** | [weekly_plans/week_05.md](weekly_plans/week_05.md) · DE menu: StrataScratch · Mode windows · DDIA Ch 5–6 |
+| **lastContextUpdate** | 2026-06-29 (Week 6 plan generated — auto-read from wk 5 reflection) |
+| **Calendar week** | 6 (Mon 29 Jun – Sun 5 Jul 2026) |
+| **meta.today** | 2026-06-27 (set in portal when you open wk 6) |
+| **DSA focus** | **t06 Sliding window** (primary) · do not start t07 until pattern automatic |
+| **Portal weeks in UI** | 1–6 (`week_plans/1.json` … `6.json`) |
+| **LC logged** | 28 in `lc_log.json` · 19 no-hints · **#11** no-hints (wk 5) |
+| **t04–t05 mastery** | ✅ Complete in portal · light optional re-solve: #977, #167, #15 (used hints) |
+| **t06 mastery** | Not started — theory + #643, #1456 + Medium **#3** |
+| **SQL 50** | ~20/50 (#1–20) · wk 6 target #21–24 Tue/Thu → **24–25/50** |
+| **Hint re-solve queue** | #977, #167, #15 (optional) · #49, #205, #347 · 88, 118 optional |
+| **Theory spine** | **Still nothing checked off** — Chip Ch 1 first · Zoomcamp mod 1 · DDIA Ch 5–6 (wk 6 menu) |
+| **Parallel backlog** | Chip Ch 1 · Zoomcamp mod 1 · PySpark lazy · StrataScratch — Sat optional ONE |
+| **Week 6 plan** | [weekly_plans/week_06.md](weekly_plans/week_06.md) · DE menu: DDIA replication/partition · Chip catch-up |
 
 ---
 
-## 11. User prompt template (new week)
+## 11. User prompt (new week) — minimal
+
+### Default (copy-paste)
 
 ```text
-Generate Week N plan (hybrid). Read CONTEXT.md §3b + MASTER_PLAN.md + DE_CURRICULUM.md (week N row) first + portal_week(N-1).md + everything in trackers folder.
-
-- Calendar week N dates: …
-- Reflection from portal (finished / blocked / nextWeek): …
-- Parallel backlog from learn_tracker Phase 1 exit (Chip, Zoomcamp, Spark lazy, …): …
-- LC hint audit: …
-- Prior topic mastered? Y/N · SQL count: …
-
-Portal rules: Phase 1 wk 1–8 — DSA primary Mon–Sat except Tue/Thu +30 min SQL;
-Sat optional secondary = pick ONE from DE_CURRICULUM week menu or carry-forward backlog.
-
-Deliver: weekly_plans/week_0N.md, dashboard/data/week_plans/N.json,
-portal.html week dropdown, update CONTEXT.md §10.
+Generate next week plan.
 ```
 
+Or name the week explicitly:
+
+```text
+Generate Week 6 plan.
 ```
-##
-Sample
-Generate Week 3 plan (hybrid). Read CONTEXT.md §3b + MASTER_PLAN.md + DE_CURRICULUM.md (week 3 row) first + portal_week02.md and everything in trackers folder.
 
-- Calendar week 3 dates:2026-06-08
-- Reflection from portal (finished / blocked / nextWeek):Finished: I was able to finish all the SQL and leetcode related tasks for this week, this week was a great progress and also started with chapter 1 or AI engineering but not completed yet and also started watching half video of module 1 for zoomcamp for data engineering where the docker and kubernetes part is module 1
-Blocked: yes, just the DDIA book in not arrived yet I will update once it is received
-Next week adjust: _
-Energy (1–5): 3
-- Parallel backlog from learn_tracker Phase 1 exit (Chip, Zoomcamp, Spark lazy, …): Yes, nothing completed only started
-- LC hint audit: go through the trackers
-- Prior topic mastered? Y/N · SQL count: not mastered but yet comfortable now, slowly consistent practice will help gain confidence in future, can we adjusted parallelly with other topics
+**That is enough.** Agent follows §6 auto-read + deliverables. Behavior matches the old long “hybrid” prompt — reflection, hint audit, mastery, backlog, and DE menu all come from repo files.
 
-Portal rules: Phase 1 wk 1–8 — DSA primary Mon–Sat except Tue/Thu +30 min SQL;
-Sat optional secondary = pick ONE from DE_CURRICULUM week menu or carry-forward backlog.
+### Before you prompt (~2 min on Sunday)
 
-Deliver: weekly_plans/week_0N.md, dashboard/data/week_plans/N.json,
-portal.html week dropdown, update CONTEXT.md §10.
+1. Fill portal **reflection** (`finished` / `blocked` / `nextWeek` / `energy`).
+2. **Sync to Markdown** for the week you just finished.
+3. Paste **`Generate next week plan.`** in Cursor.
+
+If reflection is empty, agent uses `portal_week_{N-1}.md` logs + §10 — or asks **one** question: *“Anything blocked for next week?”*
+
+### Optional overrides (only when needed)
+
+Add **one short line** after the default prompt — do not repeat the old bullet list.
+
+```text
+Generate Week 6 plan. Blocked: DDIA book not arrived.
 ```
+
+```text
+Generate next week plan. Hold t05 — #15 still needs no-hint re-solve.
+```
+
+```text
+Generate Week 6 plan. Skip Sat optional — DSA catch-up only.
+```
+
+### Agent must still deliver (§6)
+
+`weekly_plans/week_0N.md` · `dashboard/data/week_plans/N.json` · `portal.html` week dropdown · `sql/weekN_sql50_log.md` (if SQL that week) · bump `CONTEXT.md` §10
+
+### Deprecated — do not use
+
+Long prompts with manual dates, SQL count, hint audit, and backlog bullets are **redundant** — agent reads §6 auto-read table instead.
 
 ---
 

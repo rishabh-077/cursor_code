@@ -318,6 +318,28 @@
       "title": "Container With Most Water",
       "topic": "t05",
       "week": 0
+    },
+    {
+      "date": "2026-07-01",
+      "difficulty": "Easy",
+      "done": true,
+      "id": 643,
+      "noHints": true,
+      "repo": "",
+      "title": "Maximum Average Subarray I (fixed window)",
+      "topic": "t06",
+      "week": 0
+    },
+    {
+      "date": "2026-07-15",
+      "difficulty": "Medium",
+      "done": true,
+      "id": 3,
+      "noHints": true,
+      "repo": "",
+      "title": "Longest Substring Without Repeating Characters",
+      "topic": "t06",
+      "week": 0
     }
   ]
 }
