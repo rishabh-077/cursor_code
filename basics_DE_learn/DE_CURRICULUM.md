@@ -5,6 +5,8 @@
 
 **Agents:** update this file when calendar weeks or book mapping changes; bump [CONTEXT.md](CONTEXT.md) §10.
 
+**Calendar note (2026-08-12):** Curriculum **week numbers** (Week 6 = t06, etc.) are unchanged. **Dates** for Week 6+ follow the rebase in [CONTEXT.md](CONTEXT.md) §1 / §10 (Week 6 = **10–16 Aug 2026**). Phase 1 table rows below are still the topic menu by week number — not the old May–Jul absolute dates.
+
 ---
 
 ## How the three layers fit

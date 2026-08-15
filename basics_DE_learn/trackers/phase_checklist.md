@@ -11,7 +11,7 @@
 | Requirement | Target | Current | Done |
 |-------------|--------|---------|:----:|
 | DSA topics t01–t16 | 16 topics mastered | 6 | [ ] |
-| LC problems logged | 35+ | 31 | [ ] |
+| LC problems logged | 35+ | 33 | [ ] |
 | SQL 50 | 30+ / 50 | 0 / 50 | [ ] |
 | Explain patterns aloud | array, hash, graph basics | — | [ ] |
 

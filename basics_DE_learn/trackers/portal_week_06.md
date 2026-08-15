@@ -1,7 +1,7 @@
-# Portal log — Week 6 (Mon 29 Jun – Sun 5 Jul 2026)
+# Portal log — Week 6 (Mon 10 Aug – Sun 16 Aug 2026)
 
 **Synced from** `dashboard/data/progress.json` → `portal.dailyTasks` + `portal.dailyLog`  
-**Plan:** [week_06.md](../weekly_plans/week_06.md) · **Last synced:** 2026-07-05T11:32:48
+**Plan:** [week_06.md](../weekly_plans/week_06.md) · **Last synced:** 2026-08-15T17:04:36
 
 ---
 
@@ -9,21 +9,22 @@
 
 | Date | Day | Primary done | Secondary | Daily log |
 |------|-----|:------------:|-----------|-----------|
-| 2026-06-29 | Mon | [x] | — | _ |
-| 2026-06-30 | Tue | [x] | [ ] 30 min SQL 50 #21 Immediate Food Delivery II · #22 Game Play Analysis IV | _ |
-| 2026-07-01 | Wed | [x] | — | _ |
-| 2026-07-02 | Thu | [ ] | [ ] 30 min SQL 50 #23 Number of Unique Subjects Taught by Each Teacher · #24 User Activity for the Past 30 Days I | _ |
-| 2026-07-03 | Fri | [x] | — | _ |
-| 2026-07-04 | Sat | [x] | [ ] OPTIONAL (pick one ~30 min): Chip Ch 1 (ai_engineering_notes) OR DDIA Ch 5–6 replication/partition skim OR finish Zoomcamp mod 1 — skip if t06 behind | _ |
-| 2026-07-05 | Sun | [ ] | — | _ |
+| 2026-08-10 | Mon | [x] | — | t06 catch-up / #643 (pre-rebase work counted) |
+| 2026-08-11 | Tue | [x] | [x] 30 min SQL 50 #21 Immediate Food Delivery II · #22 Game Play Analysis IV | #1456 done · SQL still open |
+| 2026-08-12 | Wed | [x] | — | #3 + #209 notes |
+| 2026-08-13 | Thu | [x] | [x] 30 min SQL 50 #23 Unique Subjects Taught · #24 User Activity Past 30 Days I | _ |
+| 2026-08-14 | Fri | [x] | — | I completed the sql and the resolved the array and other leetcode problems |
+| 2026-08-15 | Sat | [x] | [ ] OPTIONAL (pick one ~30 min): Chip Ch 1 (ai_engineering_notes) OR Zoomcamp mod 1 OR skip if wrapping t06 | _ |
+| 2026-08-16 | Sun | [ ] | — | _ |
 
 ---
 
 ## Reflection draft (portal)
 
-- **Finished:** _
-- **Blocked:** _
-- **Next week adjust:** _
+- **Finished:** t06 core LC done (#643, #1456, #3, #209, #567) with notes; calendar rebased Week 6 = 10-16 Aug
+Alao completed the SQL problems till #24
+- **Blocked:** Paused ~6 weeks; finishing Week 6 then resume pacing from Week 7 (17 Aug)
+- **Next week adjust:** Week 7 Mon 17 Aug = t07 Prefix sums; continue SQL Tue/Thu; light array/string/2ptr backlog only after primary
 - **Energy (1–5):** 3
 
 *Daily log: `dailyLog` + `archivedDailyLog` in JSON; sync also preserves text already in this file. "Clear daily logs" removes only **today's** live log in the portal (archived + this table stay).*

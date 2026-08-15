@@ -340,6 +340,39 @@
       "title": "Longest Substring Without Repeating Characters",
       "topic": "t06",
       "week": 0
+    },
+    {
+      "date": "2026-08-14",
+      "difficulty": "Medium",
+      "done": true,
+      "id": 567,
+      "noHints": true,
+      "repo": "",
+      "title": "Permutation in String",
+      "topic": "t06",
+      "week": 0
+    },
+    {
+      "date": "2026-08-14",
+      "difficulty": "Easy",
+      "done": true,
+      "id": 438,
+      "noHints": true,
+      "repo": "",
+      "title": "Find All Anagrams in a String \u2014 easy version first: just check if one is anagram of other",
+      "topic": "t06",
+      "week": 0
+    },
+    {
+      "date": "2026-08-15",
+      "difficulty": "Medium",
+      "done": true,
+      "id": 1004,
+      "noHints": true,
+      "repo": "",
+      "title": "Max Consecutive Ones III",
+      "topic": "t06",
+      "week": 0
     }
   ]
 }

@@ -8,15 +8,17 @@
 
 ## 1. What this repo is
 
-DE interview prep for **~3.5 YOE**, target **35–50+ LPA**, apply ~**calendar week 28** (from start **2026-05-25 Monday**).
+DE interview prep for **~3.5 YOE**, target **35–50+ LPA**, apply ~**curriculum week 28**.
 
-| Phase | Calendar weeks | Focus |
-|-------|----------------|--------|
+| Phase | Curriculum weeks | Focus |
+|-------|------------------|--------|
 | **1** | 1–16 | DSA primary · SQL Tue/Thu only (wk 1–8) |
 | **2** | 17–24 | DE depth · DSA Tue/Thu maintenance |
 | **3** | 25–30 | Mocks · apply |
 
 **Program ID:** `phased-v1` (see `progress.json` → `meta.program`).
+
+**Calendar rebase (2026-08-12):** Original program start was **2026-05-25**. After a pause, curriculum weeks were realigned so **Week 6 = Mon 10 Aug – Sun 16 Aug 2026**. Portal week math uses `meta.startDate` = **2026-07-06** (Monday of remapped Week 1). `meta.originalStartDate` keeps **2026-05-25**. Historical Weeks **1–5** keep May–Jun dates in their `week_plans/*.json` (completed work). Weeks **7+** continue from **Mon 17 Aug 2026**. Apply target shifts with the slip (~**early Jan 2027** for curriculum week 28).
 
 ---
 
@@ -148,9 +150,12 @@ basics_DE_learn/
 ```json
 {
   "meta": {
-    "startDate": "2026-05-25",
+    "startDate": "2026-07-06",
+    "originalStartDate": "2026-05-25",
+    "calendarRebase": "2026-08-12",
+    "calendarSlipWeeks": 6,
     "today": "YYYY-MM-DD",
-    "currentWeek": 2,
+    "currentWeek": 6,
     "timezone": "Asia/Kolkata",
     "phase": 1,
     "program": "phased-v1",
@@ -214,7 +219,7 @@ basics_DE_learn/
 | `sql/week*_sql50_log.md` | SQL count |
 | `weekly_plans/week_{N-1}.md` | Prior plan format + carry-forward LC queue |
 
-**Infer N:** `N = meta.currentWeek + 1` unless user names **Week N**. **Dates:** Mon–Sun from `meta.startDate` + week number (`weekStartsOn: Monday`).
+**Infer N:** `N = meta.currentWeek + 1` unless user names **Week N**. **Dates:** Mon–Sun from `meta.startDate` + week number (`weekStartsOn: Monday`). After the **2026-08-12 rebase**, `startDate` is **2026-07-06** (not the original May 25).
 
 **Agent checklist — create/update ALL of:**
 
@@ -306,19 +311,19 @@ Update **in the same PR/session** when you:
 
 | Field | Value |
 |-------|--------|
-| **lastContextUpdate** | 2026-06-29 (Week 6 plan generated — auto-read from wk 5 reflection) |
-| **Calendar week** | 6 (Mon 29 Jun – Sun 5 Jul 2026) |
-| **meta.today** | 2026-06-27 (set in portal when you open wk 6) |
-| **DSA focus** | **t06 Sliding window** (primary) · do not start t07 until pattern automatic |
-| **Portal weeks in UI** | 1–6 (`week_plans/1.json` … `6.json`) |
-| **LC logged** | 28 in `lc_log.json` · 19 no-hints · **#11** no-hints (wk 5) |
-| **t04–t05 mastery** | ✅ Complete in portal · light optional re-solve: #977, #167, #15 (used hints) |
-| **t06 mastery** | Not started — theory + #643, #1456 + Medium **#3** |
-| **SQL 50** | ~20/50 (#1–20) · wk 6 target #21–24 Tue/Thu → **24–25/50** |
-| **Hint re-solve queue** | #977, #167, #15 (optional) · #49, #205, #347 · 88, 118 optional |
-| **Theory spine** | **Still nothing checked off** — Chip Ch 1 first · Zoomcamp mod 1 · DDIA Ch 5–6 (wk 6 menu) |
-| **Parallel backlog** | Chip Ch 1 · Zoomcamp mod 1 · PySpark lazy · StrataScratch — Sat optional ONE |
-| **Week 6 plan** | [weekly_plans/week_06.md](weekly_plans/week_06.md) · DE menu: DDIA replication/partition · Chip catch-up |
+| **lastContextUpdate** | 2026-08-12 (calendar rebase — Week 6 → 10–16 Aug) |
+| **Calendar week** | **6** (Mon **10 Aug – Sun 16 Aug 2026**) |
+| **meta.startDate** | **2026-07-06** (rebasing anchor) · `originalStartDate` 2026-05-25 · slip **6** weeks |
+| **meta.today** | 2026-08-12 |
+| **DSA focus** | **t06 Sliding window** — finish this week · do not start t07 until pattern automatic |
+| **Portal weeks in UI** | 1–6 (`week_plans/1.json` … `6.json`) · Weeks 1–5 = historical May–Jun dates |
+| **t06 status** | Core LC + notes: **#643, #1456, #3, #209** · remaining: SQL #21–24, optional #567, mastery ticks, Sun reflection |
+| **Backlog (optional)** | Array / string / 2-pointer Easy re-solves after primary (see week_06.md) |
+| **SQL 50** | ~20/50 · this week Tue/Thu → **#21–24** → target **24–25/50** |
+| **Theory spine** | Still open — Chip Ch 1 first · Zoomcamp mod 1 — Sat optional ONE |
+| **Next week** | Week **7** = Mon **17 Aug – Sun 23 Aug** · **t07 Prefix sums** (generate after Sun reflection) |
+| **Apply target** | Curriculum week **~28** ≈ **11–17 Jan 2027** (shifted with rebase) |
+| **Week 6 plan** | [weekly_plans/week_06.md](weekly_plans/week_06.md) |
 
 ---
 

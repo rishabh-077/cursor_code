@@ -38,6 +38,8 @@
 | "Common prefix across strings" | Vertical scan at index `i` for all | 14 |
 | "Symbol value depends on next char" | If `curr < next` → subtract pair, skip 2 | 13 |
 | "Count consecutive runs" | `i` start of run, `j` end; output `count+digit` | 485, 38 |
+| "Subarray / window of **exactly k**" | Fixed window: add `arr[i]`, drop `arr[i - k]` | 643, 1456 |
+| "Length of current window / subarray" | Two pointers: **`r - l + 1`** (inclusive) | 3, 209, 1456 |
 
 ---
 
@@ -54,6 +56,12 @@ Two-pointer write (in-place partition)
 
 Two-pointer inward
   344 Reverse String  →  125 Valid Palindrome  →  5 Longest Palindromic Substring (expand)
+
+Fixed-size window (length k)
+  643 Max Average Subarray  →  1456 Max Vowels in Substring  — enter at `i`, leave at `i - k`
+
+Variable window (length = r - l + 1)
+  3 Longest Substring No Repeat  →  209 Min Size Subarray Sum  — expand r, shrink l
 
 Running count / scan
   485 Max Consecutive Ones  →  38 Count and Say (run-length encode)
@@ -86,6 +94,46 @@ Palindrome lane
 - Loop condition: **`left < right`**, not `<=` — odd length middle shouldn't swap twice (344).
 - **Palindrome (125):** on mismatch → return `False` immediately; move both pointers only on match.
 - **Reverse (344):** same swap loop as 125, but swap instead of compare.
+
+### Two-pointer window length — `r - l + 1`
+
+> Both `l` and `r` are **inclusive** indices. Length of the slice `arr[l : r+1]` is **`r - l + 1`**, not `r - l`.
+
+```text
+  index:  0  1  2  3  4
+  s:      a  b  c  a  b
+          l        r
+          └─ window ─┘
+
+  length = r - l + 1 = 3 - 0 + 1 = 4     # "abca"
+```
+
+- **+1** because both ends count: `l == r` is one element (`0 - 0 + 1 = 1`), not zero.
+- Use this whenever you track longest / shortest / current window (#3 max, #209 min, #1456 `if r - l + 1 > k`).
+- **Not** `l - r + 1` — that is backwards (negative once `r > l`). Right is the larger index.
+
+### Fixed-size window of k — locating the leaving element
+
+> **"Exactly k elements"** → slide with one index `i`. The item that **enters** is `arr[i]`. The item that **leaves** (the first of the previous window) is `arr[i - k]`.
+
+While you iterate `i` forward, the current window is `arr[i-k+1 : i+1]` (length k). The element that just fell off the left is at **`i - k`**.
+
+```text
+k = 4, i is the right edge (new element entering)
+
+  index:  0    1    2    3    4    5
+  nums:  [1,  12,  -5,  -6,  50,   3]
+                      └──────── window when i=4 ────────┘
+                       leave ↑              enter ↑
+                       nums[i-k] = nums[0]     nums[4]
+
+  curr += nums[i]
+  curr -= nums[i - k]     # first element of the old window of length k
+```
+
+- Loop from `i = k` to `n-1` after building the first window `arr[0:k]`.
+- **Not** `i - k + 1` for the leave index — that is still inside the new window.
+- Variable window (#3, #209) does **not** use this: shrink with `l += 1`, not `i - k`.
 
 ### "Best so far" one-pass
 
