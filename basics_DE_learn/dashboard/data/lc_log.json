@@ -124,7 +124,7 @@
     {
       "date": "2026-06-03",
       "difficulty": "Easy",
-      "done": false,
+      "done": true,
       "id": 1137,
       "noHints": false,
       "repo": "",
@@ -192,22 +192,187 @@
       "difficulty": "Easy",
       "done": true,
       "id": 38,
-      "noHints": false,
+      "noHints": true,
       "repo": "",
       "title": "Count and Say",
       "topic": "t03",
       "week": 0
     },
     {
-      "id": 5,
-      "title": "Longest Palindromic Substring",
-      "topic": "t03",
-      "week": 0,
+      "date": "2026-06-14",
       "difficulty": "Medium",
       "done": true,
+      "id": 5,
+      "noHints": true,
+      "repo": "",
+      "title": "Longest Palindromic Substring",
+      "topic": "t03",
+      "week": 0
+    },
+    {
+      "date": "2026-06-15",
+      "difficulty": "Easy",
+      "done": true,
+      "id": 383,
+      "noHints": true,
+      "repo": "",
+      "title": "Ransom Note",
+      "topic": "t04",
+      "week": 0
+    },
+    {
+      "date": "2026-06-16",
+      "difficulty": "Easy",
+      "done": true,
+      "id": 771,
+      "noHints": true,
+      "repo": "",
+      "title": "Jewels and Stones",
+      "topic": "t04",
+      "week": 0
+    },
+    {
+      "date": "2026-06-16",
+      "difficulty": "Easy",
+      "done": true,
+      "id": 205,
       "noHints": false,
       "repo": "",
-      "date": "2026-06-14"
+      "title": "Isomorphic Strings",
+      "topic": "t04",
+      "week": 0
+    },
+    {
+      "date": "2026-06-19",
+      "difficulty": "Easy",
+      "done": true,
+      "id": 290,
+      "noHints": true,
+      "repo": "",
+      "title": "Word Pattern",
+      "topic": "t04",
+      "week": 0
+    },
+    {
+      "date": "2026-06-19",
+      "difficulty": "Medium",
+      "done": true,
+      "id": 49,
+      "noHints": false,
+      "repo": "",
+      "title": "Group Anagrams",
+      "topic": "t04",
+      "week": 0
+    },
+    {
+      "date": "2026-06-22",
+      "difficulty": "Medium",
+      "done": true,
+      "id": 347,
+      "noHints": false,
+      "repo": "",
+      "title": "Top K Frequent Elements",
+      "topic": "t04",
+      "week": 0
+    },
+    {
+      "date": "2026-06-23",
+      "difficulty": "Easy",
+      "done": true,
+      "id": 977,
+      "noHints": false,
+      "repo": "",
+      "title": "Squares of a Sorted Array",
+      "topic": "t05",
+      "week": 0
+    },
+    {
+      "date": "2026-06-24",
+      "difficulty": "Medium",
+      "done": true,
+      "id": 167,
+      "noHints": false,
+      "repo": "",
+      "title": "Two Sum II (sorted array)",
+      "topic": "t05",
+      "week": 0
+    },
+    {
+      "date": "2026-06-24",
+      "difficulty": "Medium",
+      "done": true,
+      "id": 15,
+      "noHints": false,
+      "repo": "",
+      "title": "3Sum",
+      "topic": "t05",
+      "week": 0
+    },
+    {
+      "date": "2026-06-27",
+      "difficulty": "Medium",
+      "done": true,
+      "id": 11,
+      "noHints": true,
+      "repo": "",
+      "title": "Container With Most Water",
+      "topic": "t05",
+      "week": 0
+    },
+    {
+      "date": "2026-07-01",
+      "difficulty": "Easy",
+      "done": true,
+      "id": 643,
+      "noHints": true,
+      "repo": "",
+      "title": "Maximum Average Subarray I (fixed window)",
+      "topic": "t06",
+      "week": 0
+    },
+    {
+      "date": "2026-07-15",
+      "difficulty": "Medium",
+      "done": true,
+      "id": 3,
+      "noHints": true,
+      "repo": "",
+      "title": "Longest Substring Without Repeating Characters",
+      "topic": "t06",
+      "week": 0
+    },
+    {
+      "date": "2026-08-14",
+      "difficulty": "Medium",
+      "done": true,
+      "id": 567,
+      "noHints": true,
+      "repo": "",
+      "title": "Permutation in String",
+      "topic": "t06",
+      "week": 0
+    },
+    {
+      "date": "2026-08-14",
+      "difficulty": "Easy",
+      "done": true,
+      "id": 438,
+      "noHints": true,
+      "repo": "",
+      "title": "Find All Anagrams in a String \u2014 easy version first: just check if one is anagram of other",
+      "topic": "t06",
+      "week": 0
+    },
+    {
+      "date": "2026-08-15",
+      "difficulty": "Medium",
+      "done": true,
+      "id": 1004,
+      "noHints": true,
+      "repo": "",
+      "title": "Max Consecutive Ones III",
+      "topic": "t06",
+      "week": 0
     }
   ]
 }

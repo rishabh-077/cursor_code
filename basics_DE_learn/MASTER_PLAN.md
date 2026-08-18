@@ -1,6 +1,6 @@
 # Master plan — DE interview prep (single source of truth)
 
-**Profile:** [learn_plans/profile.md](learn_plans/profile.md) · **Start:** 2026-05-25 (Monday) · **Apply target:** ~Week 28 · **Daily time:** 2–3 h  
+**Profile:** [learn_plans/profile.md](learn_plans/profile.md) · **Original start:** 2026-05-25 · **Rebased week math:** `meta.startDate` **2026-07-06** (Week 6 = **10–16 Aug 2026**) · **Apply target:** ~curriculum Week 28 (~**Jan 2027** after slip) · **Daily time:** 2–3 h  
 **Agents:** read [CONTEXT.md](CONTEXT.md) first (repo map, sync rules, how to add new weeks).
 
 This file does **not** change every week. Weekly tasks live in `weekly_plans/week_NN.md`. **DE / theory / system design / data modeling by calendar week:** [DE_CURRICULUM.md](DE_CURRICULUM.md) · **Video URLs:** [learn_plans/RESOURCES.md](learn_plans/RESOURCES.md). Daily UI: Flask portal → http://127.0.0.1:5050/portal
@@ -80,15 +80,15 @@ This file does **not** change every week. Weekly tasks live in `weekly_plans/wee
 
 ---
 
-## Your progress snapshot (2026-06-15)
+## Your progress snapshot (2026-08-17)
 
 | Item | Status |
 |------|--------|
-| **Phase** | 1 · Calendar week 4 |
-| **DSA** | t01–t03 ✅ · **t04 Hash** (wk 4 primary) |
-| **LC logged** | 19 · 13 no-hints — see `lc_log.json` / CONTEXT §10 |
-| **SQL 50** | ~12/50 · wk 4 = #13–16 (Sorting & Grouping) |
-| **Theory** | **Skipped wk 3** — Chip Ch 1 · Zoomcamp · DDIA still on backlog |
-| **Hint carry** | #14, #38 re-solve this week (light) |
+| **Phase** | 1 · Curriculum **Week 7** (**17–23 Aug 2026**) |
+| **DSA** | t01–t06 ✅ · **t07 Prefix sums** (wk 7 primary) |
+| **Calendar** | Week **8** starts **Mon 24 Aug** (t08 Stacks) |
+| **SQL 50** | ~24/50 · this week **#25–28** (target ~28/50) |
+| **Theory** | Chip Ch 1 · Zoomcamp still backlog — Sat optional only |
+| **Apply** | ~curriculum week 28 ≈ **Jan 2027** (6-week slip) |
 
-*Detail:* [CONTEXT.md](CONTEXT.md) §10 · [weekly_plans/week_04.md](weekly_plans/week_04.md) · [learn_tracker.md](learn_plans/learn_tracker.md)
+*Detail:* [CONTEXT.md](CONTEXT.md) §10 · [weekly_plans/week_07.md](weekly_plans/week_07.md) · [learn_tracker.md](learn_plans/learn_tracker.md)

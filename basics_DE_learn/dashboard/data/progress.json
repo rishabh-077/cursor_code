@@ -1,13 +1,16 @@
 {
   "meta": {
-    "currentWeek": 3,
+    "calendarRebase": "2026-08-12",
+    "calendarSlipWeeks": 6,
+    "currentWeek": 7,
     "ddiaArrives": "2026-06-08",
-    "lastUpdated": "2026-06-14T17:52:07",
+    "lastUpdated": "2026-08-18T16:44:10",
+    "originalStartDate": "2026-05-25",
     "phase": 1,
     "program": "phased-v1",
-    "startDate": "2026-05-25",
+    "startDate": "2026-07-06",
     "timezone": "Asia/Kolkata",
-    "today": "2026-06-14",
+    "today": "2026-08-18",
     "weekStartsOn": "Monday"
   },
   "portal": {
@@ -20,12 +23,26 @@
       "2026-06-09": "Today I solved all the required leetcode#344 and #387 for strings without hints, and also solve sql problem #averag etime for process per machine",
       "2026-06-10": "Was able to solve the leetcode #13 without hint but the #14 I used solution, I got the idea to solves, but was not able to think through the code",
       "2026-06-11": "Solves he SQL but need to revisit the leetcode #38 will be doing it next day i.e., tomorrow",
-      "2026-06-14": "Solved the medium leetcode #5 by watching the solution on youtube"
+      "2026-06-14": "Solved the medium leetcode #5 by watching the solution on youtube",
+      "2026-06-16": "completed  the required SQL and leetcode question from Day 1 and day 2",
+      "2026-08-10": "t06 catch-up / #643 (pre-rebase work counted)",
+      "2026-08-11": "#1456 done \u00b7 SQL still open",
+      "2026-08-12": "#3 + #209 notes",
+      "2026-08-14": "I completed the sql and the resolved the array and other leetcode problems"
     },
     "dailyLog": {
       "2026-06-03": "",
       "2026-06-06": "I resolved the leetcode #283 and #26 without hints, and started a bit from 1st module of zoomcamp currently in the 1st module i.e.,  docker-terraform module",
-      "2026-06-11": "Solves he SQL but need to revisit the leetcode #38 will be doing it next day i.e., tomorrow"
+      "2026-06-11": "Solves he SQL but need to revisit the leetcode #38 will be doing it next day i.e., tomorrow",
+      "2026-06-18": "",
+      "2026-06-19": "",
+      "2026-06-23": "",
+      "2026-06-26": "",
+      "2026-06-27": "",
+      "2026-06-29": "",
+      "2026-07-01": "",
+      "2026-07-02": "",
+      "2026-08-13": ""
     },
     "dailyTasks": {
       "2026-05-25": [
@@ -110,6 +127,146 @@
       ],
       "2026-06-14": [
         true,
+        false
+      ],
+      "2026-06-15": [
+        true,
+        false
+      ],
+      "2026-06-16": [
+        true,
+        true
+      ],
+      "2026-06-17": [
+        true,
+        false
+      ],
+      "2026-06-18": [
+        true,
+        true
+      ],
+      "2026-06-19": [
+        true,
+        false
+      ],
+      "2026-06-20": [
+        true,
+        true
+      ],
+      "2026-06-21": [
+        true,
+        false
+      ],
+      "2026-06-22": [
+        true,
+        false
+      ],
+      "2026-06-23": [
+        true,
+        true
+      ],
+      "2026-06-24": [
+        true,
+        false
+      ],
+      "2026-06-25": [
+        true,
+        true
+      ],
+      "2026-06-26": [
+        true,
+        false
+      ],
+      "2026-06-27": [
+        false,
+        false
+      ],
+      "2026-06-28": [
+        true,
+        false
+      ],
+      "2026-06-29": [
+        true,
+        false
+      ],
+      "2026-06-30": [
+        true,
+        false
+      ],
+      "2026-07-01": [
+        true,
+        false
+      ],
+      "2026-07-02": [
+        false,
+        false
+      ],
+      "2026-07-03": [
+        true,
+        false
+      ],
+      "2026-07-04": [
+        true,
+        false
+      ],
+      "2026-07-05": [
+        false,
+        false
+      ],
+      "2026-08-10": [
+        true,
+        false
+      ],
+      "2026-08-11": [
+        true,
+        true
+      ],
+      "2026-08-12": [
+        true,
+        false
+      ],
+      "2026-08-13": [
+        true,
+        true
+      ],
+      "2026-08-14": [
+        true,
+        false
+      ],
+      "2026-08-15": [
+        true,
+        false
+      ],
+      "2026-08-16": [
+        true,
+        false
+      ],
+      "2026-08-17": [
+        false,
+        false
+      ],
+      "2026-08-18": [
+        false,
+        false
+      ],
+      "2026-08-19": [
+        false,
+        false
+      ],
+      "2026-08-20": [
+        false,
+        false
+      ],
+      "2026-08-21": [
+        false,
+        false
+      ],
+      "2026-08-22": [
+        false,
+        false
+      ],
+      "2026-08-23": [
+        false,
         false
       ]
     },

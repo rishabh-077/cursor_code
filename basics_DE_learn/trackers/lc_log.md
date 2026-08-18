@@ -15,13 +15,28 @@
 | 66 | [Plus One](https://leetcode.com/problems/plus-one/) | t02/arrays | 2 | E | [x] | [x] | leetcode/week_2/leetcode_66.py |
 | 118 | [Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/) | t02/arrays | 2 | E | [x] | [ ] | leetcode/week_2/leetcode_118.py |
 | 125 | [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | t03/strings | 2 | E | [x] | [x] | leetcode/week_2/leetcode_125.py |
-| 1137 | [No LeetCode yet — watch all 2 videos above first](https://leetcode.com/problems/no-leetcode-yet-—-watch-all-2-videos-above-first/) | t01 | 0 | E | [ ] | [ ] |  |
+| 1137 | [No LeetCode yet — watch all 2 videos above first](https://leetcode.com/problems/no-leetcode-yet-—-watch-all-2-videos-above-first/) | t01 | 0 | E | [x] | [ ] |  |
 | 189 | [Rotate Array](https://leetcode.com/problems/rotate-array/) | t02 | 0 | M | [x] | [x] |  |
 | 344 | [Reverse String](https://leetcode.com/problems/reverse-string/) | t03 | 0 | E | [x] | [x] |  |
 | 387 | [First Unique Character in a String](https://leetcode.com/problems/first-unique-character-in-a-string/) | t03 | 0 | E | [x] | [x] |  |
 | 14 | [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/) | t03 | 0 | E | [x] | [ ] |  |
 | 13 | [Roman to Integer](https://leetcode.com/problems/roman-to-integer/) | t03 | 0 | E | [x] | [x] |  |
-| 38 | [Count and Say](https://leetcode.com/problems/count-and-say/) | t03 | 0 | E | [x] | [ ] |  |
-| 5 | [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/) | t03 | 0 | M | [x] | [ ] |  |
+| 38 | [Count and Say](https://leetcode.com/problems/count-and-say/) | t03 | 0 | E | [x] | [x] |  |
+| 5 | [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/) | t03 | 0 | M | [x] | [x] |  |
+| 383 | [Ransom Note](https://leetcode.com/problems/ransom-note/) | t04 | 0 | E | [x] | [x] |  |
+| 771 | [Jewels and Stones](https://leetcode.com/problems/jewels-and-stones/) | t04 | 0 | E | [x] | [x] |  |
+| 205 | [Isomorphic Strings](https://leetcode.com/problems/isomorphic-strings/) | t04 | 0 | E | [x] | [ ] |  |
+| 290 | [Word Pattern](https://leetcode.com/problems/word-pattern/) | t04 | 0 | E | [x] | [x] |  |
+| 49 | [Group Anagrams](https://leetcode.com/problems/group-anagrams/) | t04 | 0 | M | [x] | [ ] |  |
+| 347 | [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) | t04 | 0 | M | [x] | [ ] |  |
+| 977 | [Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/) | t05 | 0 | E | [x] | [ ] |  |
+| 167 | [Two Sum II (sorted array)](https://leetcode.com/problems/two-sum-ii-(sorted-array)/) | t05 | 0 | M | [x] | [ ] |  |
+| 15 | [3Sum](https://leetcode.com/problems/3sum/) | t05 | 0 | M | [x] | [ ] |  |
+| 11 | [Container With Most Water](https://leetcode.com/problems/container-with-most-water/) | t05 | 0 | M | [x] | [x] |  |
+| 643 | [Maximum Average Subarray I (fixed window)](https://leetcode.com/problems/maximum-average-subarray-i-(fixed-window)/) | t06 | 0 | E | [x] | [x] |  |
+| 3 | [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | t06 | 0 | M | [x] | [x] |  |
+| 567 | [Permutation in String](https://leetcode.com/problems/permutation-in-string/) | t06 | 0 | M | [x] | [x] |  |
+| 438 | [Find All Anagrams in a String — easy version first: just check if one is anagram of other](https://leetcode.com/problems/find-all-anagrams-in-a-string-—-easy-version-first:-just-check-if-one-is-anagram-of-other/) | t06 | 0 | E | [x] | [x] |  |
+| 1004 | [Max Consecutive Ones III](https://leetcode.com/problems/max-consecutive-ones-iii/) | t06 | 0 | M | [x] | [x] |  |
 
-**Count:** 19 logged · **No-hints count:** 13
+**Count:** 34 logged · **No-hints count:** 24

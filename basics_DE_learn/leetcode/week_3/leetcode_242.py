@@ -11,7 +11,6 @@ class Solution:
                 return False
         return True
         
-
 # Time: O(n) because we are iterating through the list once,
 # Space: O(n) for the dictionary because we are using a dictionary 
 # to store the characters and their counts

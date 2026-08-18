@@ -1,7 +1,7 @@
-# Portal log — Week 4 (Mon 15 Jun – Sun 21 Jun 2026)
+# Portal log — Week 6 (Mon 10 Aug – Sun 16 Aug 2026)
 
 **Synced from** `dashboard/data/progress.json` → `portal.dailyTasks` + `portal.dailyLog`  
-**Plan:** [week_04.md](../weekly_plans/week_04.md) · **Last synced:** 2026-08-17T22:30:26
+**Plan:** [week_06.md](../weekly_plans/week_06.md) · **Last synced:** 2026-08-17T22:30:26
 
 ---
 
@@ -9,13 +9,13 @@
 
 | Date | Day | Primary done | Secondary | Daily log |
 |------|-----|:------------:|-----------|-----------|
-| 2026-06-15 | Mon | [x] | — | _ |
-| 2026-06-16 | Tue | [x] | [x] 30 min SQL 50 #13 Managers with at Least 5 Direct Reports · #14 Confirmation Rate | completed  the required SQL and leetcode question from Day 1 and day 2 |
-| 2026-06-17 | Wed | [x] | — | _ |
-| 2026-06-18 | Thu | [x] | [x] 30 min SQL 50 #15 Not Boring Movies · #16 Average Selling Price | _ |
-| 2026-06-19 | Fri | [x] | — | _ |
-| 2026-06-20 | Sat | [x] | [x] OPTIONAL (pick one ~30 min): Chip Ch 1 (ai_engineering_notes) OR Zoomcamp module 1 OR DDIA Ch 3 review OR BQ partitioning skim — skip if DSA behind | _ |
-| 2026-06-21 | Sun | [x] | — | _ |
+| 2026-08-10 | Mon | [x] | — | t06 catch-up / #643 (pre-rebase work counted) |
+| 2026-08-11 | Tue | [x] | [x] 30 min SQL 50 #21 Immediate Food Delivery II · #22 Game Play Analysis IV | #1456 done · SQL still open |
+| 2026-08-12 | Wed | [x] | — | #3 + #209 notes |
+| 2026-08-13 | Thu | [x] | [x] 30 min SQL 50 #23 Unique Subjects Taught · #24 User Activity Past 30 Days I | _ |
+| 2026-08-14 | Fri | [x] | — | I completed the sql and the resolved the array and other leetcode problems |
+| 2026-08-15 | Sat | [x] | [ ] OPTIONAL (pick one ~30 min): Chip Ch 1 (ai_engineering_notes) OR Zoomcamp mod 1 OR skip if wrapping t06 | _ |
+| 2026-08-16 | Sun | [x] | — | _ |
 
 ---
 

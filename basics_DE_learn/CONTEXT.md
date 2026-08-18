@@ -8,15 +8,17 @@
 
 ## 1. What this repo is
 
-DE interview prep for **~3.5 YOE**, target **35–50+ LPA**, apply ~**calendar week 28** (from start **2026-05-25 Monday**).
+DE interview prep for **~3.5 YOE**, target **35–50+ LPA**, apply ~**curriculum week 28**.
 
-| Phase | Calendar weeks | Focus |
-|-------|----------------|--------|
+| Phase | Curriculum weeks | Focus |
+|-------|------------------|--------|
 | **1** | 1–16 | DSA primary · SQL Tue/Thu only (wk 1–8) |
 | **2** | 17–24 | DE depth · DSA Tue/Thu maintenance |
 | **3** | 25–30 | Mocks · apply |
 
 **Program ID:** `phased-v1` (see `progress.json` → `meta.program`).
+
+**Calendar rebase (2026-08-12):** Original program start was **2026-05-25**. After a pause, curriculum weeks were realigned so **Week 6 = Mon 10 Aug – Sun 16 Aug 2026**. Portal week math uses `meta.startDate` = **2026-07-06** (Monday of remapped Week 1). `meta.originalStartDate` keeps **2026-05-25**. Historical Weeks **1–5** keep May–Jun dates in their `week_plans/*.json` (completed work). Weeks **7+** continue from **Mon 17 Aug 2026**. Apply target shifts with the slip (~**early Jan 2027** for curriculum week 28).
 
 ---
 
@@ -31,7 +33,10 @@ basics_DE_learn/
 │   ├── week_01.md             ← Human-readable week plan
 │   ├── week_02.md
 │   ├── week_03.md
-│   └── week_04.md
+│   ├── week_04.md
+│   ├── week_05.md
+│   ├── week_06.md
+│   └── week_07.md
 ├── trackers/                  ← Git-facing sync output
 │   ├── portal_week_01.md      ← Portal tasks + daily logs + reflection
 │   ├── portal_week_02.md
@@ -52,7 +57,10 @@ basics_DE_learn/
 │   │   │   ├── 1.json         ← Portal schedule (machine)
 │   │   │   ├── 2.json
 │   │   │   ├── 3.json
-│   │   │   └── 4.json
+│   │   │   ├── 4.json
+│   │   │   ├── 5.json
+│   │   │   ├── 6.json
+│   │   │   └── 7.json
 │   │   └── _archive/
 │   │       └── progress_weeks_legacy.json  ← old week1/week2 blocks
 │   └── static/
@@ -144,9 +152,12 @@ basics_DE_learn/
 ```json
 {
   "meta": {
-    "startDate": "2026-05-25",
+    "startDate": "2026-07-06",
+    "originalStartDate": "2026-05-25",
+    "calendarRebase": "2026-08-12",
+    "calendarSlipWeeks": 6,
     "today": "YYYY-MM-DD",
-    "currentWeek": 2,
+    "currentWeek": 6,
     "timezone": "Asia/Kolkata",
     "phase": 1,
     "program": "phased-v1",
@@ -191,7 +202,26 @@ basics_DE_learn/
 
 ## 6. Adding a new calendar week (e.g. Week 3)
 
-**Trigger:** User asks (hybrid): *"Generate Week N plan"* with reflection + hint audit + mastery status.
+**Trigger:** User says **`Generate Week N plan.`** or **`Generate next week plan.`** — see §11. Agent **auto-reads** all inputs from repo files; do **not** ask the user to paste dates, SQL count, hint audit, or backlog unless a file is missing or reflection is empty.
+
+### Auto-read before writing (agent — no user paste)
+
+| Source | Gets |
+|--------|------|
+| `CONTEXT.md` §3b, §10 | Planning rules + current snapshot |
+| `MASTER_PLAN.md` | Phase / daily shape |
+| `DSA_PACING.md` | DSA topic for calendar week **N** |
+| `DE_CURRICULUM.md` | Row for calendar week **N** (DE menu) |
+| `dashboard/data/progress.json` | `meta` · `portal.reflectionDraft` · `dailyTasks` for week **N−1** |
+| `trackers/portal_week_{N-1}.md` | Prior week logs + synced reflection |
+| `lc_log.json` or `trackers/lc_log.md` | Hint audit → re-solve queue (`noHints: false`) |
+| `dsa_mastery.json` or `trackers/phase_checklist.md` | Prior topic mastered? carry-forward? |
+| `learn_plans/learn_tracker.md` | Phase 1 exit backlog (Chip, Zoomcamp, Spark lazy, …) |
+| `theory/ai_engineering_notes.md` | Next unchecked Chip chapter (Sat optional) |
+| `sql/week*_sql50_log.md` | SQL count |
+| `weekly_plans/week_{N-1}.md` | Prior plan format + carry-forward LC queue |
+
+**Infer N:** `N = meta.currentWeek + 1` unless user names **Week N**. **Dates:** Mon–Sun from `meta.startDate` + week number (`weekStartsOn: Monday`). After the **2026-08-12 rebase**, `startDate` is **2026-07-06** (not the original May 25).
 
 **Agent checklist — create/update ALL of:**
 
@@ -283,60 +313,68 @@ Update **in the same PR/session** when you:
 
 | Field | Value |
 |-------|--------|
-| **lastContextUpdate** | 2026-06-15 (Week 4 plan generated — hybrid from wk 3 reflection) |
-| **Calendar week** | 4 (Mon 15 Jun – Sun 21 Jun 2026) |
-| **meta.today** | 2026-06-15 (set in portal when you open wk 4) |
-| **DSA focus** | **t04 Hash maps** (primary) · t03 light re-solves (#14, #38) |
-| **Portal weeks in UI** | 1, 2, 3, 4 (`week_plans/1.json` … `4.json`) |
-| **LC logged** | 19 in `lc_log.json` · 13 no-hints |
-| **t03 mastery** | ✅ Complete — #5 medium attempted (with hints; optional re-try) |
-| **t04 mastery** | In progress — **217, 1** head start; need theory + 383/771/205 + #49 medium |
-| **SQL 50** | ~12/50 (#1–12) · wk 4 target #13–16 → **16/50** |
-| **Hint re-solve queue** | **#14**, **#38** (priority) · 88, 118 optional · #5 optional |
-| **Theory spine** | **Nothing done wk 3** — Chip Ch 1 still first · DDIA Ch 3 review (wk 4 menu) |
-| **Parallel backlog** | Chip Ch 1 · Zoomcamp mod 1 · PySpark lazy · DDIA Ch 3 — Sat optional ONE |
-| **Week 4 plan** | [weekly_plans/week_04.md](weekly_plans/week_04.md) · DE menu: BQ partitioning · RAG read |
+| **lastContextUpdate** | 2026-08-17 (Week 7 plan generated — auto-read from wk 6 reflection) |
+| **Calendar week** | **7** (Mon **17 Aug – Sun 23 Aug 2026**) |
+| **meta.startDate** | **2026-07-06** (rebasing anchor) · `originalStartDate` 2026-05-25 · slip **6** weeks |
+| **meta.today** | 2026-08-17 |
+| **DSA focus** | **t07 Prefix sums** — theory + #1480, #724, #303 + Medium **#560** · do not start t08 until formula automatic |
+| **Portal weeks in UI** | 1–7 (`week_plans/1.json` … `7.json`) |
+| **t06 status** | ✅ Mastered — #643, #1456, #3, #209, #567, #438, #1004 + notes |
+| **SQL 50** | ~24/50 (#1–24 done) · wk 7 Tue/Thu → **#25–28** → target **28/50** (do not finish all 50 this week) |
+| **Theory spine** | Still open — Chip Ch 1 first · Zoomcamp mod 1 — Sat optional ONE |
+| **Next week** | Week **8** = Mon **24 Aug – Sun 30 Aug** · **t08 Stacks** (generate after Sun reflection) |
+| **Apply target** | Curriculum week **~28** ≈ **11–17 Jan 2027** (shifted with rebase) |
+| **Week 7 plan** | [weekly_plans/week_07.md](weekly_plans/week_07.md) |
 
 ---
 
-## 11. User prompt template (new week)
+## 11. User prompt (new week) — minimal
+
+### Default (copy-paste)
 
 ```text
-Generate Week N plan (hybrid). Read CONTEXT.md §3b + MASTER_PLAN.md + DE_CURRICULUM.md (week N row) first + portal_week(N-1).md + everything in trackers folder.
-
-- Calendar week N dates: …
-- Reflection from portal (finished / blocked / nextWeek): …
-- Parallel backlog from learn_tracker Phase 1 exit (Chip, Zoomcamp, Spark lazy, …): …
-- LC hint audit: …
-- Prior topic mastered? Y/N · SQL count: …
-
-Portal rules: Phase 1 wk 1–8 — DSA primary Mon–Sat except Tue/Thu +30 min SQL;
-Sat optional secondary = pick ONE from DE_CURRICULUM week menu or carry-forward backlog.
-
-Deliver: weekly_plans/week_0N.md, dashboard/data/week_plans/N.json,
-portal.html week dropdown, update CONTEXT.md §10.
+Generate next week plan.
 ```
 
+Or name the week explicitly:
+
+```text
+Generate Week 6 plan.
 ```
-##
-Sample
-Generate Week 3 plan (hybrid). Read CONTEXT.md §3b + MASTER_PLAN.md + DE_CURRICULUM.md (week 3 row) first + portal_week02.md and everything in trackers folder.
 
-- Calendar week 3 dates:2026-06-08
-- Reflection from portal (finished / blocked / nextWeek):Finished: I was able to finish all the SQL and leetcode related tasks for this week, this week was a great progress and also started with chapter 1 or AI engineering but not completed yet and also started watching half video of module 1 for zoomcamp for data engineering where the docker and kubernetes part is module 1
-Blocked: yes, just the DDIA book in not arrived yet I will update once it is received
-Next week adjust: _
-Energy (1–5): 3
-- Parallel backlog from learn_tracker Phase 1 exit (Chip, Zoomcamp, Spark lazy, …): Yes, nothing completed only started
-- LC hint audit: go through the trackers
-- Prior topic mastered? Y/N · SQL count: not mastered but yet comfortable now, slowly consistent practice will help gain confidence in future, can we adjusted parallelly with other topics
+**That is enough.** Agent follows §6 auto-read + deliverables. Behavior matches the old long “hybrid” prompt — reflection, hint audit, mastery, backlog, and DE menu all come from repo files.
 
-Portal rules: Phase 1 wk 1–8 — DSA primary Mon–Sat except Tue/Thu +30 min SQL;
-Sat optional secondary = pick ONE from DE_CURRICULUM week menu or carry-forward backlog.
+### Before you prompt (~2 min on Sunday)
 
-Deliver: weekly_plans/week_0N.md, dashboard/data/week_plans/N.json,
-portal.html week dropdown, update CONTEXT.md §10.
+1. Fill portal **reflection** (`finished` / `blocked` / `nextWeek` / `energy`).
+2. **Sync to Markdown** for the week you just finished.
+3. Paste **`Generate next week plan.`** in Cursor.
+
+If reflection is empty, agent uses `portal_week_{N-1}.md` logs + §10 — or asks **one** question: *“Anything blocked for next week?”*
+
+### Optional overrides (only when needed)
+
+Add **one short line** after the default prompt — do not repeat the old bullet list.
+
+```text
+Generate Week 6 plan. Blocked: DDIA book not arrived.
 ```
+
+```text
+Generate next week plan. Hold t05 — #15 still needs no-hint re-solve.
+```
+
+```text
+Generate Week 6 plan. Skip Sat optional — DSA catch-up only.
+```
+
+### Agent must still deliver (§6)
+
+`weekly_plans/week_0N.md` · `dashboard/data/week_plans/N.json` · `portal.html` week dropdown · `sql/weekN_sql50_log.md` (if SQL that week) · bump `CONTEXT.md` §10
+
+### Deprecated — do not use
+
+Long prompts with manual dates, SQL count, hint audit, and backlog bullets are **redundant** — agent reads §6 auto-read table instead.
 
 ---
 

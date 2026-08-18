@@ -1,9 +1,10 @@
 # Program tracker (consolidated)
 
-**Start date:** 2026-05-25 (**Monday**) · Weeks **Mon → Sun** · **Target apply:** ~Week 28 (realistic DSA) · **Program end:** ~Week 30  
+**Original start:** 2026-05-25 · **Rebased week math:** `meta.startDate` **2026-07-06** · Weeks **Mon → Sun** · **Target apply:** ~Week 28 (~**Jan 2027**) · **Program end:** ~Week 30  
 **Master plan:** [MASTER_PLAN.md](../MASTER_PLAN.md) · **Profile:** [profile.md](./profile.md) · **Portal sync:** [TRACKER_GUIDE.md](./TRACKER_GUIDE.md)
 
-> **Daily / weekly detail** lives in [trackers/portal_week_NN.md](../trackers/) — not here. This file = phases, milestones, interviews, STAR.
+> **Daily / weekly detail** lives in [trackers/portal_week_NN.md](../trackers/) — not here. This file = phases, milestones, interviews, STAR.  
+> **Calendar rebase 2026-08-12:** Week 6 = **10–16 Aug**; Weeks 7+ from **17 Aug**. Weeks 1–5 keep historical May–Jun dates.
 
 ---
 
@@ -11,15 +12,14 @@
 
 | | |
 |---|---|
-| **Week** | **2** (update `meta.today` in portal) |
-| **Dates** | Mon 1 – Sun 7 Jun 2026 |
-| **Plan** | [weekly_plans/week_02.md](../weekly_plans/week_02.md) |
-| **Daily tracker** | [portal_week_01](../trackers/portal_week_01.md) · [portal_week_02](../trackers/portal_week_02.md) |
-| **DSA (Block A)** | [dsa-study-plan.html](./dsa-study-plan.html) · [DSA_PACING.md](./DSA_PACING.md) |
+| **Week** | **7** |
+| **Dates** | Mon **17** – Sun **23 Aug 2026** |
+| **Plan** | [weekly_plans/week_07.md](../weekly_plans/week_07.md) |
+| **Daily tracker** | [portal_week_07](../trackers/portal_week_07.md) |
+| **DSA** | **t07 Prefix sums** — #1480, #724, #303 + Medium **#560** |
 
-**Week 1:** **Done** (A+B + exit checklist) · **Block C (theory)** still open — you’re continuing Chip Huyen / videos in parallel  
-**Week 2 in progress:** LC **485, 283, 26, 66** in `week_2/` · SQL **#5–6** done · **#7–8** · t03 / 125 next  
-**Pacing:** Phase 1 DSA exit ~**week 16**, apply ~**week 28** (realistic)
+**Weeks 1–6:** Done. **This week:** t07 + SQL #25–28. **Next:** Week 8 = **24–30 Aug** · t08 Stacks.  
+**Pacing:** Phase 1 DSA exit ~**week 16** (~late Oct 2026), apply ~**week 28** (~Jan 2027)
 
 ---
 
@@ -39,18 +39,19 @@ Full detail: [profile.md](./profile.md)
 
 ---
 
-## Calendar (from start 2026-05-25)
+## Calendar (milestones after rebase)
 
 | Week | Dates | Phase | Plan | Tracker |
 |------|-------|-------|------|---------|
-| 1 | Mon 25 May – Sun 31 May 2026 | 1 | [week_01](../weekly_plans/week_01.md) | [portal_week_01](../trackers/portal_week_01.md) |
-| 2 | Mon 1 – Sun 7 Jun 2026 | 1 | [week_02](../weekly_plans/week_02.md) | [portal_week_02](../trackers/portal_week_02.md) |
-| 16 | 7 – 13 Sep 2026 | 1 exit | — | Phase 1 checklist below |
-| 24 | 2 – 8 Nov 2026 | 2 exit | — | Phase 2 checklist below |
-| **28** | **30 Nov – 6 Dec 2026** | **3** | **Start applications** | Interview pipeline |
-| 30 | 14 – 20 Dec 2026 | 3 | Negotiate | — |
+| 1–5 | May–Jun 2026 (historical) | 1 | week_01…05 | portal_week_01…05 |
+| **6** | **10–16 Aug 2026** | 1 | [week_06](../weekly_plans/week_06.md) | [portal_week_06](../trackers/portal_week_06.md) |
+| **7** | **17–23 Aug 2026** | 1 | [week_07](../weekly_plans/week_07.md) | [portal_week_07](../trackers/portal_week_07.md) |
+| 16 | 19–25 Oct 2026 | 1 exit | — | Phase 1 checklist below |
+| 24 | 14–20 Dec 2026 | 2 exit | — | Phase 2 checklist below |
+| **28** | **11–17 Jan 2027** | **3** | **Start applications** | Interview pipeline |
+| 30 | 25–31 Jan 2027 | 3 | Negotiate | — |
 
-*Shift rows if you slip — update on Sunday.*
+*Slip again → update `meta.startDate` / this table on Sunday.*
 
 ---
 
@@ -58,9 +59,9 @@ Full detail: [profile.md](./profile.md)
 
 | Phase | Weeks | Status | Target end |
 |-------|-------|--------|------------|
-| 1 — DSA foundation | 1–16 | 🟡 In progress | ~mid Sep 2026 |
-| 2 — DE depth + DSA maintenance | 17–24 | ⬜ | ~early Nov 2026 |
-| 3 — Interviews | 25–30 | ⬜ | ~mid Dec 2026 |
+| 1 — DSA foundation | 1–16 | 🟡 In progress (wk 7) | ~late Oct 2026 |
+| 2 — DE depth + DSA maintenance | 17–24 | ⬜ | ~mid Dec 2026 |
+| 3 — Interviews | 25–30 | ⬜ | ~late Jan 2027 |
 
 ---
 
@@ -70,24 +71,24 @@ Full detail: [profile.md](./profile.md)
 
 | Wk | Dates (approx) | Theme | Done |
 |----|----------------|-------|:----:|
-| 1 | 25–31 May | Big O, hash, SQL50×4, Spark, BQ | ✅ Done (theory Block C parallel) |
-| 2 | 1–7 Jun | t02/t03 arrays+strings, SQL50×4 | 🟡 In progress |
-| 3 | 8–14 Jun | **t03** Strings · SQL #9–12 · DDIA Ch 3 | ⬜ |
-| 4 | 15–21 Jun | **t04** Hash · SQL #13–16 | ⬜ |
-| 5 | 22–28 Jun | **t05** Two pointers · SQL #17–20 | ⬜ |
-| 6 | 29 Jun – 5 Jul | **t06** Sliding window · SQL #21–25 | ⬜ |
-| 7 | 6–12 Jul | **t07** Prefix sums · **finish SQL 50** | ⬜ |
-| 8 | 13–19 Jul | **t08** Stacks · StrataScratch | ⬜ |
-| 9 | 20–26 Jul | **t09** Queues · STAR draft | ⬜ |
-| 10 | 27 Jul – 2 Aug | **t10** Linked lists | ⬜ |
-| 11 | 3–9 Aug | **t11** Recursion | ⬜ |
-| 12 | 10–16 Aug | **t12** Tree traversals | ⬜ |
-| 13 | 17–23 Aug | **t13** BST | ⬜ |
-| 14 | 24–30 Aug | **t14** Graphs BFS | ⬜ |
-| 15 | 31 Aug – 6 Sep | **t15** DFS | ⬜ |
-| 16 | 7–13 Sep | **t16** Topo · Phase 1 DSA review | ⬜ |
+| 1 | 25–31 May (hist.) | Big O, hash, SQL50×4, Spark, BQ | ✅ |
+| 2 | 1–7 Jun (hist.) | t02/t03 arrays+strings, SQL50×4 | ✅ |
+| 3 | 8–14 Jun (hist.) | **t03** Strings · SQL #9–12 | ✅ |
+| 4 | 15–21 Jun (hist.) | **t04** Hash · SQL #13–16 | ✅ |
+| 5 | 22–28 Jun (hist.) | **t05** Two pointers · SQL #17–20 | ✅ |
+| **6** | **10–16 Aug** | **t06** Sliding window · SQL #21–25 | ✅ |
+| **7** | **17–23 Aug** | **t07** Prefix sums · SQL #25–28 | 🟡 |
+| 8 | 24–30 Aug | **t08** Stacks · StrataScratch | ⬜ |
+| 9 | 31 Aug – 6 Sep | **t09** Queues · STAR draft | ⬜ |
+| 10 | 7–13 Sep | **t10** Linked lists | ⬜ |
+| 11 | 14–20 Sep | **t11** Recursion | ⬜ |
+| 12 | 21–27 Sep | **t12** Tree traversals | ⬜ |
+| 13 | 28 Sep – 4 Oct | **t13** BST | ⬜ |
+| 14 | 5–11 Oct | **t14** Graphs BFS | ⬜ |
+| 15 | 12–18 Oct | **t15** DFS | ⬜ |
+| 16 | 19–25 Oct | **t16** Topo · Phase 1 DSA review | ⬜ |
 
-**Phase 1 exit:** [ ] 35+ LC *(see lc_log)* · [ ] SQL 50 *(8/50)* · [ ] StrataScratch ≥8 · [ ] Zoomcamp · [ ] Chip Ch 1–4 notes · [ ] DDIA Ch 3 started · [x] Spark Driver/Executor · [ ] PySpark lazy vs action
+**Phase 1 exit:** [ ] 35+ LC *(see lc_log)* · [ ] SQL 50 *(~24/50)* · [ ] StrataScratch ≥8 · [ ] Zoomcamp · [ ] Chip Ch 1–4 notes · [ ] DDIA Ch 3 started · [x] Spark Driver/Executor · [ ] PySpark lazy vs action
 
 ### Phase 2
 

@@ -1,0 +1,52 @@
+{
+  "week": 6,
+  "phase": 1,
+  "range": "Mon 10 Aug – Sun 16 Aug 2026",
+  "dsaTopic": "t06",
+  "dsaTitle": "Sliding window",
+  "masteryGoal": "t06: theory + 2 Easy no hints (#643, #1456) + Medium attempted (#3/#209); do not start t07 until pattern is automatic. Optional: light array/string/2ptr backlog.",
+  "days": {
+    "2026-08-10": {
+      "day": "Mon",
+      "primary": "t06 catch-up — confirm fixed-window: #643 notes + re-solve once no hints if rusty. Optional 15 min backlog: #977 or #88 (arrays).",
+      "secondary": "none",
+      "sql": false
+    },
+    "2026-08-11": {
+      "day": "Tue",
+      "primary": "t06 fixed window — #1456 confirm no-hints; skim notes in week_6/. Optional 15 min: #118 or #66 (arrays).",
+      "secondary": "30 min SQL 50 #21 Immediate Food Delivery II · #22 Game Play Analysis IV",
+      "sql": true
+    },
+    "2026-08-12": {
+      "day": "Wed",
+      "primary": "t06 variable window — #3 + #209 notes solid; explain expand/shrink aloud. Optional 15 min backlog: #125 or #344 (strings) OR #167/#11 (2 pointers).",
+      "secondary": "none",
+      "sql": false
+    },
+    "2026-08-13": {
+      "day": "Thu",
+      "primary": "t06 stretch OR consolidate — #567 Permutation in String (window + freq) OR second pass #3/#209 no hints.",
+      "secondary": "30 min SQL 50 #23 Unique Subjects Taught · #24 User Activity Past 30 Days I",
+      "sql": true
+    },
+    "2026-08-14": {
+      "day": "Fri",
+      "primary": "t06 mastery gate — tick theory + easyNoHints + mediumAttempted in portal. Optional backlog 30–45 min: pick ONE from #15 / #49 / #205 / #347 (hint re-solve) OR #283/#26 arrays.",
+      "secondary": "none",
+      "sql": false
+    },
+    "2026-08-15": {
+      "day": "Sat",
+      "primary": "t06 paper template (#643 fixed vs #3/#209 variable). Light backlog only if energy: 1 Easy array/string/2ptr no hints.",
+      "secondary": "OPTIONAL (pick one ~30 min): Chip Ch 1 (ai_engineering_notes) OR Zoomcamp mod 1 OR skip if wrapping t06",
+      "sql": false
+    },
+    "2026-08-16": {
+      "day": "Sun",
+      "primary": "15 min reflection — t06 mastery Y/N? SQL ~24–25/50? backlog done this week? Ready for t07 Week 7 (Mon 17 Aug)?",
+      "secondary": "none",
+      "sql": false
+    }
+  }
+}
