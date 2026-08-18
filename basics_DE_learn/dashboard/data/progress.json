@@ -2,15 +2,15 @@
   "meta": {
     "calendarRebase": "2026-08-12",
     "calendarSlipWeeks": 6,
-    "currentWeek": 6,
+    "currentWeek": 7,
     "ddiaArrives": "2026-06-08",
-    "lastUpdated": "2026-08-15T22:55:43",
+    "lastUpdated": "2026-08-18T16:44:10",
     "originalStartDate": "2026-05-25",
     "phase": 1,
     "program": "phased-v1",
     "startDate": "2026-07-06",
     "timezone": "Asia/Kolkata",
-    "today": "2026-08-15",
+    "today": "2026-08-18",
     "weekStartsOn": "Monday"
   },
   "portal": {
@@ -42,8 +42,7 @@
       "2026-06-29": "",
       "2026-07-01": "",
       "2026-07-02": "",
-      "2026-08-13": "",
-      "2026-08-15": ""
+      "2026-08-13": ""
     },
     "dailyTasks": {
       "2026-05-25": [
@@ -239,14 +238,42 @@
         false
       ],
       "2026-08-16": [
+        true,
+        false
+      ],
+      "2026-08-17": [
+        false,
+        false
+      ],
+      "2026-08-18": [
+        false,
+        false
+      ],
+      "2026-08-19": [
+        false,
+        false
+      ],
+      "2026-08-20": [
+        false,
+        false
+      ],
+      "2026-08-21": [
+        false,
+        false
+      ],
+      "2026-08-22": [
+        false,
+        false
+      ],
+      "2026-08-23": [
         false,
         false
       ]
     },
     "reflectionDraft": {
-      "finished": "t06 core LC done (#643, #1456, #3, #209, #567, #438, #1004) with notes; calendar rebased Week 6 = 10-16 Aug\nAlao completed the SQL problems till #24",
-      "blocked": "Paused ~6 weeks; finishing Week 6 then resume pacing from Week 7 (17 Aug)",
-      "nextWeek": "Week 7 Mon 17 Aug = t07 Prefix sums; continue SQL Tue/Thu; light array/string/2ptr backlog only after primary",
+      "finished": "",
+      "blocked": "",
+      "nextWeek": "",
       "energy": 3
     }
   }

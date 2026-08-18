@@ -1,7 +1,7 @@
 # Portal log — Week 6 (Mon 10 Aug – Sun 16 Aug 2026)
 
 **Synced from** `dashboard/data/progress.json` → `portal.dailyTasks` + `portal.dailyLog`  
-**Plan:** [week_06.md](../weekly_plans/week_06.md) · **Last synced:** 2026-08-15T17:04:36
+**Plan:** [week_06.md](../weekly_plans/week_06.md) · **Last synced:** 2026-08-17T22:30:26
 
 ---
 
@@ -15,13 +15,13 @@
 | 2026-08-13 | Thu | [x] | [x] 30 min SQL 50 #23 Unique Subjects Taught · #24 User Activity Past 30 Days I | _ |
 | 2026-08-14 | Fri | [x] | — | I completed the sql and the resolved the array and other leetcode problems |
 | 2026-08-15 | Sat | [x] | [ ] OPTIONAL (pick one ~30 min): Chip Ch 1 (ai_engineering_notes) OR Zoomcamp mod 1 OR skip if wrapping t06 | _ |
-| 2026-08-16 | Sun | [ ] | — | _ |
+| 2026-08-16 | Sun | [x] | — | _ |
 
 ---
 
 ## Reflection draft (portal)
 
-- **Finished:** t06 core LC done (#643, #1456, #3, #209, #567) with notes; calendar rebased Week 6 = 10-16 Aug
+- **Finished:** t06 core LC done (#643, #1456, #3, #209, #567, #438, #1004) with notes; calendar rebased Week 6 = 10-16 Aug
 Alao completed the SQL problems till #24
 - **Blocked:** Paused ~6 weeks; finishing Week 6 then resume pacing from Week 7 (17 Aug)
 - **Next week adjust:** Week 7 Mon 17 Aug = t07 Prefix sums; continue SQL Tue/Thu; light array/string/2ptr backlog only after primary

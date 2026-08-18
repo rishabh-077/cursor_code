@@ -35,7 +35,8 @@ basics_DE_learn/
 │   ├── week_03.md
 │   ├── week_04.md
 │   ├── week_05.md
-│   └── week_06.md
+│   ├── week_06.md
+│   └── week_07.md
 ├── trackers/                  ← Git-facing sync output
 │   ├── portal_week_01.md      ← Portal tasks + daily logs + reflection
 │   ├── portal_week_02.md
@@ -58,7 +59,8 @@ basics_DE_learn/
 │   │   │   ├── 3.json
 │   │   │   ├── 4.json
 │   │   │   ├── 5.json
-│   │   │   └── 6.json
+│   │   │   ├── 6.json
+│   │   │   └── 7.json
 │   │   └── _archive/
 │   │       └── progress_weeks_legacy.json  ← old week1/week2 blocks
 │   └── static/
@@ -311,19 +313,18 @@ Update **in the same PR/session** when you:
 
 | Field | Value |
 |-------|--------|
-| **lastContextUpdate** | 2026-08-12 (calendar rebase — Week 6 → 10–16 Aug) |
-| **Calendar week** | **6** (Mon **10 Aug – Sun 16 Aug 2026**) |
+| **lastContextUpdate** | 2026-08-17 (Week 7 plan generated — auto-read from wk 6 reflection) |
+| **Calendar week** | **7** (Mon **17 Aug – Sun 23 Aug 2026**) |
 | **meta.startDate** | **2026-07-06** (rebasing anchor) · `originalStartDate` 2026-05-25 · slip **6** weeks |
-| **meta.today** | 2026-08-12 |
-| **DSA focus** | **t06 Sliding window** — finish this week · do not start t07 until pattern automatic |
-| **Portal weeks in UI** | 1–6 (`week_plans/1.json` … `6.json`) · Weeks 1–5 = historical May–Jun dates |
-| **t06 status** | Core LC + notes: **#643, #1456, #3, #209** · remaining: SQL #21–24, optional #567, mastery ticks, Sun reflection |
-| **Backlog (optional)** | Array / string / 2-pointer Easy re-solves after primary (see week_06.md) |
-| **SQL 50** | ~20/50 · this week Tue/Thu → **#21–24** → target **24–25/50** |
+| **meta.today** | 2026-08-17 |
+| **DSA focus** | **t07 Prefix sums** — theory + #1480, #724, #303 + Medium **#560** · do not start t08 until formula automatic |
+| **Portal weeks in UI** | 1–7 (`week_plans/1.json` … `7.json`) |
+| **t06 status** | ✅ Mastered — #643, #1456, #3, #209, #567, #438, #1004 + notes |
+| **SQL 50** | ~24/50 (#1–24 done) · wk 7 Tue/Thu → **#25–28** → target **28/50** (do not finish all 50 this week) |
 | **Theory spine** | Still open — Chip Ch 1 first · Zoomcamp mod 1 — Sat optional ONE |
-| **Next week** | Week **7** = Mon **17 Aug – Sun 23 Aug** · **t07 Prefix sums** (generate after Sun reflection) |
+| **Next week** | Week **8** = Mon **24 Aug – Sun 30 Aug** · **t08 Stacks** (generate after Sun reflection) |
 | **Apply target** | Curriculum week **~28** ≈ **11–17 Jan 2027** (shifted with rebase) |
-| **Week 6 plan** | [weekly_plans/week_06.md](weekly_plans/week_06.md) |
+| **Week 7 plan** | [weekly_plans/week_07.md](weekly_plans/week_07.md) |
 
 ---
 

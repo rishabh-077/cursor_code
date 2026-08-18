@@ -1,0 +1,52 @@
+{
+  "week": 7,
+  "phase": 1,
+  "range": "Mon 17 Aug – Sun 23 Aug 2026",
+  "dsaTopic": "t07",
+  "dsaTitle": "Prefix sums",
+  "masteryGoal": "t07: theory + 2–3 Easy no hints (#1480, #724, #303) + Medium attempted (#560); do not start t08 until prefix range formula is automatic",
+  "days": {
+    "2026-08-17": {
+      "day": "Mon",
+      "primary": "t07 theory — prefix array + O(1) range sum. LC #1480 Running Sum of 1d Array without hints — leetcode/week_7/leetcode_1480.py",
+      "secondary": "none",
+      "sql": false
+    },
+    "2026-08-18": {
+      "day": "Tue",
+      "primary": "LC #724 Find Pivot Index (left sum vs total) — notes in week_7/",
+      "secondary": "30 min SQL 50 #25 Product Sales Analysis III · #26 Classes More Than 5 Students",
+      "sql": true
+    },
+    "2026-08-19": {
+      "day": "Wed",
+      "primary": "LC #303 Range Sum Query Immutable — NumArray + sumRange. Optional 15 min: re-solve #1480 or #724 no hints",
+      "secondary": "none",
+      "sql": false
+    },
+    "2026-08-20": {
+      "day": "Thu",
+      "primary": "t07 Medium attempt (25 min): #560 Subarray Sum Equals K (prefix + hashmap). Notes either way",
+      "secondary": "30 min SQL 50 #27 Find Followers Count · #28 Biggest Single Number",
+      "sql": true
+    },
+    "2026-08-21": {
+      "day": "Fri",
+      "primary": "Second pass #560 OR #238 Product of Array Except Self (prefix/suffix). Tick t07 Easy gates. Optional #525 if #560 done",
+      "secondary": "none",
+      "sql": false
+    },
+    "2026-08-22": {
+      "day": "Sat",
+      "primary": "t07 review — paper: running sum, pivot, range query, #560 hashmap. Mastery gate?",
+      "secondary": "OPTIONAL (pick one ~30 min): Chip Ch 1 (ai_engineering_notes) OR Zoomcamp mod 1 — skip if t07 behind",
+      "sql": false
+    },
+    "2026-08-23": {
+      "day": "Sun",
+      "primary": "15 min reflection — t07 mastery? SQL ~28/50? Chip still Ch 1? Ready for t08 Week 8 (Mon 24 Aug)?",
+      "secondary": "none",
+      "sql": false
+    }
+  }
+}

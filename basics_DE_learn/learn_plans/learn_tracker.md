@@ -12,13 +12,13 @@
 
 | | |
 |---|---|
-| **Week** | **6** |
-| **Dates** | Mon **10** – Sun **16 Aug 2026** |
-| **Plan** | [weekly_plans/week_06.md](../weekly_plans/week_06.md) |
-| **Daily tracker** | [portal_week_06](../trackers/portal_week_06.md) |
-| **DSA** | **t06 Sliding window** — finish gates · optional array/string/2ptr backlog |
+| **Week** | **7** |
+| **Dates** | Mon **17** – Sun **23 Aug 2026** |
+| **Plan** | [weekly_plans/week_07.md](../weekly_plans/week_07.md) |
+| **Daily tracker** | [portal_week_07](../trackers/portal_week_07.md) |
+| **DSA** | **t07 Prefix sums** — #1480, #724, #303 + Medium **#560** |
 
-**Weeks 1–5:** Done (historical May–Jun). **This week:** finish t06 + SQL #21–24. **Next:** Week 7 = **17–23 Aug** · t07 Prefix sums.  
+**Weeks 1–6:** Done. **This week:** t07 + SQL #25–28. **Next:** Week 8 = **24–30 Aug** · t08 Stacks.  
 **Pacing:** Phase 1 DSA exit ~**week 16** (~late Oct 2026), apply ~**week 28** (~Jan 2027)
 
 ---
@@ -45,7 +45,7 @@ Full detail: [profile.md](./profile.md)
 |------|-------|-------|------|---------|
 | 1–5 | May–Jun 2026 (historical) | 1 | week_01…05 | portal_week_01…05 |
 | **6** | **10–16 Aug 2026** | 1 | [week_06](../weekly_plans/week_06.md) | [portal_week_06](../trackers/portal_week_06.md) |
-| 7 | 17–23 Aug 2026 | 1 | (generate Sun) | — |
+| **7** | **17–23 Aug 2026** | 1 | [week_07](../weekly_plans/week_07.md) | [portal_week_07](../trackers/portal_week_07.md) |
 | 16 | 19–25 Oct 2026 | 1 exit | — | Phase 1 checklist below |
 | 24 | 14–20 Dec 2026 | 2 exit | — | Phase 2 checklist below |
 | **28** | **11–17 Jan 2027** | **3** | **Start applications** | Interview pipeline |
@@ -59,7 +59,7 @@ Full detail: [profile.md](./profile.md)
 
 | Phase | Weeks | Status | Target end |
 |-------|-------|--------|------------|
-| 1 — DSA foundation | 1–16 | 🟡 In progress (wk 6) | ~late Oct 2026 |
+| 1 — DSA foundation | 1–16 | 🟡 In progress (wk 7) | ~late Oct 2026 |
 | 2 — DE depth + DSA maintenance | 17–24 | ⬜ | ~mid Dec 2026 |
 | 3 — Interviews | 25–30 | ⬜ | ~late Jan 2027 |
 
@@ -76,8 +76,8 @@ Full detail: [profile.md](./profile.md)
 | 3 | 8–14 Jun (hist.) | **t03** Strings · SQL #9–12 | ✅ |
 | 4 | 15–21 Jun (hist.) | **t04** Hash · SQL #13–16 | ✅ |
 | 5 | 22–28 Jun (hist.) | **t05** Two pointers · SQL #17–20 | ✅ |
-| **6** | **10–16 Aug** | **t06** Sliding window · SQL #21–25 | 🟡 |
-| 7 | 17–23 Aug | **t07** Prefix sums | ⬜ |
+| **6** | **10–16 Aug** | **t06** Sliding window · SQL #21–25 | ✅ |
+| **7** | **17–23 Aug** | **t07** Prefix sums · SQL #25–28 | 🟡 |
 | 8 | 24–30 Aug | **t08** Stacks · StrataScratch | ⬜ |
 | 9 | 31 Aug – 6 Sep | **t09** Queues · STAR draft | ⬜ |
 | 10 | 7–13 Sep | **t10** Linked lists | ⬜ |
@@ -88,7 +88,7 @@ Full detail: [profile.md](./profile.md)
 | 15 | 12–18 Oct | **t15** DFS | ⬜ |
 | 16 | 19–25 Oct | **t16** Topo · Phase 1 DSA review | ⬜ |
 
-**Phase 1 exit:** [ ] 35+ LC *(see lc_log)* · [ ] SQL 50 *(~20/50)* · [ ] StrataScratch ≥8 · [ ] Zoomcamp · [ ] Chip Ch 1–4 notes · [ ] DDIA Ch 3 started · [x] Spark Driver/Executor · [ ] PySpark lazy vs action
+**Phase 1 exit:** [ ] 35+ LC *(see lc_log)* · [ ] SQL 50 *(~24/50)* · [ ] StrataScratch ≥8 · [ ] Zoomcamp · [ ] Chip Ch 1–4 notes · [ ] DDIA Ch 3 started · [x] Spark Driver/Executor · [ ] PySpark lazy vs action
 
 ### Phase 2
 

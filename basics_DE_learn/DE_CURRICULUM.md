@@ -5,7 +5,7 @@
 
 **Agents:** update this file when calendar weeks or book mapping changes; bump [CONTEXT.md](CONTEXT.md) §10.
 
-**Calendar note (2026-08-12):** Curriculum **week numbers** (Week 6 = t06, etc.) are unchanged. **Dates** for Week 6+ follow the rebase in [CONTEXT.md](CONTEXT.md) §1 / §10 (Week 6 = **10–16 Aug 2026**). Phase 1 table rows below are still the topic menu by week number — not the old May–Jul absolute dates.
+**Calendar note (2026-08-17):** Curriculum **week numbers** unchanged. Dates for Week 6+ follow the rebase (Week **6** = 10–16 Aug · Week **7** = **17–23 Aug 2026**). Phase 1 table rows below are the topic **menu** by week number — not the old May–Jul absolute dates. Week 7 SQL “finish SQL 50” is a Phase 1 bucket, not one week of Tue/Thu.
 
 ---
 

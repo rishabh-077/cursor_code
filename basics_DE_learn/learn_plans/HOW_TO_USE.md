@@ -3,14 +3,14 @@
 **Maintainers / Cursor:** [CONTEXT.md](../CONTEXT.md) — full repo map and rules for new weeks.
 
 **Start date (original):** 2026-05-25 · **Week math after rebase:** `meta.startDate` **2026-07-06** — each study week is **Mon → Sun**  
-**This week:** [week_06.md](../weekly_plans/week_06.md) (**10–16 Aug 2026**)
+**This week:** [week_07.md](../weekly_plans/week_07.md) (**17–23 Aug 2026**)
 
 ---
 
 ## One sentence (phased plan — rebased Aug 2026)
 
 **Daily:** [http://127.0.0.1:5050/portal](../dashboard/README.md) — today’s PRIMARY/SECONDARY tasks, LC log, DSA mastery → **Sync to Markdown** → git.  
-**Rules:** [MASTER_PLAN.md](../MASTER_PLAN.md) · **DE/theory menu:** [DE_CURRICULUM.md](../DE_CURRICULUM.md) · **This week:** [weekly_plans/week_06.md](../weekly_plans/week_06.md).  
+**Rules:** [MASTER_PLAN.md](../MASTER_PLAN.md) · **DE/theory menu:** [DE_CURRICULUM.md](../DE_CURRICULUM.md) · **This week:** [weekly_plans/week_07.md](../weekly_plans/week_07.md).  
 **DSA curriculum:** [dsa-study-plan.html](./dsa-study-plan.html) (one topic/week per [DSA_PACING.md](./DSA_PACING.md)).
 
 `/week` redirects to `/portal` (no separate tracker UI).
@@ -22,7 +22,7 @@
 | Question | Where to look |
 |----------|----------------|
 | **Which calendar week am I in?** | Portal status bar · `progress.json` → `meta.currentWeek` (from `startDate` **2026-07-06**) |
-| **What DSA topic this week?** | [DSA_PACING.md](./DSA_PACING.md) — one focus (Week 6 = t06 Sliding window) |
+| **What DSA topic this week?** | [DSA_PACING.md](./DSA_PACING.md) — one focus (Week 7 = t07 Prefix sums) |
 | **What do I do today?** | **Portal** — PRIMARY + SECONDARY for today · [weekly_plans/week_0N.md](../weekly_plans/) |
 | **Chip / Zoomcamp / DDIA (optional)?** | [DE_CURRICULUM.md](../DE_CURRICULUM.md) week menu · [ai_engineering_notes.md](../theory/ai_engineering_notes.md) for Chip `[x]` |
 | **DSA patterns / LC list** | [dsa-study-plan.html](./dsa-study-plan.html) or **/dsa** |

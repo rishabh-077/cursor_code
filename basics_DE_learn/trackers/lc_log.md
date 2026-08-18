@@ -35,7 +35,8 @@
 | 11 | [Container With Most Water](https://leetcode.com/problems/container-with-most-water/) | t05 | 0 | M | [x] | [x] |  |
 | 643 | [Maximum Average Subarray I (fixed window)](https://leetcode.com/problems/maximum-average-subarray-i-(fixed-window)/) | t06 | 0 | E | [x] | [x] |  |
 | 3 | [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | t06 | 0 | M | [x] | [x] |  |
-| 567 | [Permutation in String](https://leetcode.com/problems/permutation-in-string/) | t06 | 0 | M | [x] | [ ] |  |
-| 438 | [Find All Anagrams in a String — easy version first: just check if one is anagram of other](https://leetcode.com/problems/find-all-anagrams-in-a-string-—-easy-version-first:-just-check-if-one-is-anagram-of-other/) | t06 | 0 | E | [x] | [ ] |  |
+| 567 | [Permutation in String](https://leetcode.com/problems/permutation-in-string/) | t06 | 0 | M | [x] | [x] |  |
+| 438 | [Find All Anagrams in a String — easy version first: just check if one is anagram of other](https://leetcode.com/problems/find-all-anagrams-in-a-string-—-easy-version-first:-just-check-if-one-is-anagram-of-other/) | t06 | 0 | E | [x] | [x] |  |
+| 1004 | [Max Consecutive Ones III](https://leetcode.com/problems/max-consecutive-ones-iii/) | t06 | 0 | M | [x] | [x] |  |
 
-**Count:** 33 logged · **No-hints count:** 21
+**Count:** 34 logged · **No-hints count:** 24

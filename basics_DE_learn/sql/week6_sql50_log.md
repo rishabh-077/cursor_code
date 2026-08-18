@@ -6,12 +6,12 @@
 
 | # | LC # | Problem | Section | Done | Notes |
 |---|------|---------|---------|:----:|-------|
-| 21 | 1174 | [Immediate Food Delivery II](https://leetcode.com/problems/immediate-food-delivery-ii/) | Sorting and Grouping | [ ] | Conditional aggregate · first order per customer |
-| 22 | 550 | [Game Play Analysis IV](https://leetcode.com/problems/game-play-analysis-iv/) | Sorting and Grouping | [ ] | Window / self-join · day-1 retention style |
-| 23 | 2356 | [Number of Unique Subjects Taught by Each Teacher](https://leetcode.com/problems/number-of-unique-subjects-taught-by-each-teacher/) | Sorting and Grouping | [ ] | GROUP BY · COUNT DISTINCT |
-| 24 | 1141 | [User Activity for the Past 30 Days I](https://leetcode.com/problems/user-activity-for-the-past-30-days-i/) | Sorting and Grouping | [ ] | DATE filter · GROUP BY · conditional COUNT |
-| 25 | 1070 | [Product Sales Analysis III](https://leetcode.com/problems/product-sales-analysis-iii/) | Sorting and Grouping | [ ] | First year only · MIN(year) subquery or window |
+| 21 | 1174 | [Immediate Food Delivery II](https://leetcode.com/problems/immediate-food-delivery-ii/) | Sorting and Grouping | [x] | Conditional aggregate · first order per customer |
+| 22 | 550 | [Game Play Analysis IV](https://leetcode.com/problems/game-play-analysis-iv/) | Sorting and Grouping | [x] | Window / self-join · day-1 retention style |
+| 23 | 2356 | [Number of Unique Subjects Taught by Each Teacher](https://leetcode.com/problems/number-of-unique-subjects-taught-by-each-teacher/) | Sorting and Grouping | [x] | GROUP BY · COUNT DISTINCT |
+| 24 | 1141 | [User Activity for the Past 30 Days I](https://leetcode.com/problems/user-activity-for-the-past-30-days-i/) | Sorting and Grouping | [x] | DATE filter · GROUP BY · conditional COUNT |
+| 25 | 1070 | [Product Sales Analysis III](https://leetcode.com/problems/product-sales-analysis-iii/) | Sorting and Grouping | [ ] | Carried to **week 7** |
 
-**Week 7 starts at #26** (Classes With at Least 5 Students) — calendar **17–23 Aug**.
+**Week 7 starts at #25** (carry) then #26–28 — [week7_sql50_log.md](./week7_sql50_log.md).
 
-**Running total (approx):** ~20/50 after wk 5 (#1–20) · target **24–25/50** after wk 6 (Tue/Thu #21–24; #25 optional or carry to wk 7).
+**Running total (approx):** ~**24/50** after wk 6 (#1–24).
