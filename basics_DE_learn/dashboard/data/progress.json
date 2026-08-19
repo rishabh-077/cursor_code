@@ -4,13 +4,13 @@
     "calendarSlipWeeks": 6,
     "currentWeek": 7,
     "ddiaArrives": "2026-06-08",
-    "lastUpdated": "2026-08-18T16:44:10",
+    "lastUpdated": "2026-08-19T18:06:55",
     "originalStartDate": "2026-05-25",
     "phase": 1,
     "program": "phased-v1",
     "startDate": "2026-07-06",
     "timezone": "Asia/Kolkata",
-    "today": "2026-08-18",
+    "today": "2026-08-19",
     "weekStartsOn": "Monday"
   },
   "portal": {
@@ -42,7 +42,9 @@
       "2026-06-29": "",
       "2026-07-01": "",
       "2026-07-02": "",
-      "2026-08-13": ""
+      "2026-08-13": "",
+      "2026-08-17": "",
+      "2026-08-19": ""
     },
     "dailyTasks": {
       "2026-05-25": [
@@ -242,20 +244,20 @@
         false
       ],
       "2026-08-17": [
-        false,
+        true,
         false
       ],
       "2026-08-18": [
-        false,
-        false
+        true,
+        true
       ],
       "2026-08-19": [
-        false,
+        true,
         false
       ],
       "2026-08-20": [
         false,
-        false
+        true
       ],
       "2026-08-21": [
         false,
@@ -271,10 +273,10 @@
       ]
     },
     "reflectionDraft": {
-      "finished": "",
       "blocked": "",
-      "nextWeek": "",
-      "energy": 3
+      "energy": 3,
+      "finished": "",
+      "nextWeek": ""
     }
   }
 }

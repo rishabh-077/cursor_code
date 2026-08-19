@@ -373,6 +373,39 @@
       "title": "Max Consecutive Ones III",
       "topic": "t06",
       "week": 0
+    },
+    {
+      "date": "2026-08-18",
+      "difficulty": "Easy",
+      "done": true,
+      "id": 1480,
+      "noHints": true,
+      "repo": "",
+      "title": "Running Sum of 1d Array",
+      "topic": "t07",
+      "week": 0
+    },
+    {
+      "date": "2026-08-18",
+      "difficulty": "Easy",
+      "done": true,
+      "id": 724,
+      "noHints": true,
+      "repo": "",
+      "title": "Find Pivot Index",
+      "topic": "t07",
+      "week": 0
+    },
+    {
+      "id": 303,
+      "title": "Range Sum Query \u2014 Immutable",
+      "topic": "t07",
+      "week": 0,
+      "difficulty": "Easy",
+      "done": true,
+      "noHints": false,
+      "repo": "",
+      "date": "2026-08-19"
     }
   ]
 }

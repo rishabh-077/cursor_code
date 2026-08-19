@@ -1,7 +1,7 @@
 # Portal log — Week 6 (Mon 10 Aug – Sun 16 Aug 2026)
 
 **Synced from** `dashboard/data/progress.json` → `portal.dailyTasks` + `portal.dailyLog`  
-**Plan:** [week_06.md](../weekly_plans/week_06.md) · **Last synced:** 2026-08-17T22:30:26
+**Plan:** [week_06.md](../weekly_plans/week_06.md) · **Last synced:** 2026-08-19T18:06:31
 
 ---
 
@@ -21,10 +21,9 @@
 
 ## Reflection draft (portal)
 
-- **Finished:** t06 core LC done (#643, #1456, #3, #209, #567, #438, #1004) with notes; calendar rebased Week 6 = 10-16 Aug
-Alao completed the SQL problems till #24
-- **Blocked:** Paused ~6 weeks; finishing Week 6 then resume pacing from Week 7 (17 Aug)
-- **Next week adjust:** Week 7 Mon 17 Aug = t07 Prefix sums; continue SQL Tue/Thu; light array/string/2ptr backlog only after primary
+- **Finished:** _
+- **Blocked:** _
+- **Next week adjust:** _
 - **Energy (1–5):** 3
 
 *Daily log: `dailyLog` + `archivedDailyLog` in JSON; sync also preserves text already in this file. "Clear daily logs" removes only **today's** live log in the portal (archived + this table stay).*

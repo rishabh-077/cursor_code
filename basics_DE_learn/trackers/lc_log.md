@@ -38,5 +38,8 @@
 | 567 | [Permutation in String](https://leetcode.com/problems/permutation-in-string/) | t06 | 0 | M | [x] | [x] |  |
 | 438 | [Find All Anagrams in a String — easy version first: just check if one is anagram of other](https://leetcode.com/problems/find-all-anagrams-in-a-string-—-easy-version-first:-just-check-if-one-is-anagram-of-other/) | t06 | 0 | E | [x] | [x] |  |
 | 1004 | [Max Consecutive Ones III](https://leetcode.com/problems/max-consecutive-ones-iii/) | t06 | 0 | M | [x] | [x] |  |
+| 1480 | [Running Sum of 1d Array](https://leetcode.com/problems/running-sum-of-1d-array/) | t07 | 0 | E | [x] | [x] |  |
+| 724 | [Find Pivot Index](https://leetcode.com/problems/find-pivot-index/) | t07 | 0 | E | [x] | [x] |  |
+| 303 | [Range Sum Query — Immutable](https://leetcode.com/problems/range-sum-query-—-immutable/) | t07 | 0 | E | [x] | [ ] |  |
 
-**Count:** 34 logged · **No-hints count:** 24
+**Count:** 37 logged · **No-hints count:** 26
