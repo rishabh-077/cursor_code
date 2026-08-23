@@ -11,7 +11,7 @@ Only:
 ```json
 {
   "meta": { "today", "currentWeek", "startDate", ... },
-  "portal": { "dailyTasks", "dailyLog", "reflectionDraft" }
+  "portal": { "dailyTasks", "dailyLog", "archivedDailyLog", "reflections", "reflectionDraft" }
 }
 ```
 
@@ -21,7 +21,7 @@ Legacy `week1` / `week2` blocks removed → archived in `data/_archive/progress_
 
 | Output | Source |
 |--------|--------|
-| `trackers/portal_week_01.md`, `portal_week_02.md` | Portal tasks + logs |
+| `trackers/portal_week_01.md`, `portal_week_02.md` | Portal tasks + logs + **per-week** reflection |
 | `trackers/lc_log.md` | `lc_log.json` |
 | `trackers/phase_checklist.md` | `dsa_mastery.json` |
 

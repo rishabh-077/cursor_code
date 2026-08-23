@@ -41,5 +41,8 @@
 | 1480 | [Running Sum of 1d Array](https://leetcode.com/problems/running-sum-of-1d-array/) | t07 | 0 | E | [x] | [x] |  |
 | 724 | [Find Pivot Index](https://leetcode.com/problems/find-pivot-index/) | t07 | 0 | E | [x] | [x] |  |
 | 303 | [Range Sum Query — Immutable](https://leetcode.com/problems/range-sum-query-—-immutable/) | t07 | 0 | E | [x] | [ ] |  |
+| 560 | [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/) | t07 | 0 | M | [x] | [ ] |  |
+| 238 | [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/) | t07 | 0 | M | [x] | [ ] |  |
+| 525 | [Contiguous Array](https://leetcode.com/problems/contiguous-array/) | t07 | 0 | M | [x] | [ ] |  |
 
-**Count:** 37 logged · **No-hints count:** 26
+**Count:** 40 logged · **No-hints count:** 26

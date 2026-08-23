@@ -1,7 +1,7 @@
 # Portal log — Week 4 (Mon 15 Jun – Sun 21 Jun 2026)
 
-**Synced from** `dashboard/data/progress.json` → `portal.dailyTasks` + `portal.dailyLog`  
-**Plan:** [week_04.md](../weekly_plans/week_04.md) · **Last synced:** 2026-08-19T18:06:31
+**Synced from** `dashboard/data/progress.json` → `portal.dailyTasks` + `portal.dailyLog` + `portal.reflections`  
+**Plan:** [week_04.md](../weekly_plans/week_04.md) · **Last synced:** 2026-08-23T14:47:58
 
 ---
 
@@ -19,11 +19,12 @@
 
 ---
 
-## Reflection draft (portal)
+## Week 4 reflection
 
 - **Finished:** _
 - **Blocked:** _
 - **Next week adjust:** _
-- **Energy (1–5):** 3
+- **Energy (1–5):** _
 
-*Daily log: `dailyLog` + `archivedDailyLog` in JSON; sync also preserves text already in this file. "Clear daily logs" removes only **today's** live log in the portal (archived + this table stay).*
+*Daily log: `dailyLog` + `archivedDailyLog` in JSON; sync also preserves text already in this file. "Clear daily logs" removes only **today's** live log in the portal (archived + this table stay).*  
+*Reflection: per-week in `portal.reflections["4"]` (draft mirrors current week only).*

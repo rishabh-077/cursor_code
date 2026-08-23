@@ -1,0 +1,52 @@
+{
+  "week": 8,
+  "phase": 1,
+  "range": "Mon 24 Aug – Sun 30 Aug 2026",
+  "dsaTopic": "t08",
+  "dsaTitle": "Stacks",
+  "masteryGoal": "t08: theory + 3–4 Easy no hints (#20, #682, #844) + Medium attempted (#155 Min Stack or #739 Daily Temperatures); do not start t09 until valid parens is automatic",
+  "days": {
+    "2026-08-24": {
+      "day": "Mon",
+      "primary": "t08 theory — stack LIFO (push/pop). LC #20 Valid Parentheses without hints — leetcode/week_8/leetcode_20.py",
+      "secondary": "none",
+      "sql": false
+    },
+    "2026-08-25": {
+      "day": "Tue",
+      "primary": "LC #682 Baseball Game (stack simulation) — notes in week_8/",
+      "secondary": "30 min SQL 50 #29 Customers Who Bought All Products · #30 The Number of Employees Which Report to Each Employee",
+      "sql": true
+    },
+    "2026-08-26": {
+      "day": "Wed",
+      "primary": "LC #844 Backspace String Compare (stack). Optional 15 min: #1047 or re-solve #20 no hints",
+      "secondary": "none",
+      "sql": false
+    },
+    "2026-08-27": {
+      "day": "Thu",
+      "primary": "t08 Medium attempt (25 min): #155 Min Stack (O(1) min). Notes either way. Skim #739 if time",
+      "secondary": "30 min SQL 50 #31 Primary Department for Each Employee · #32 Triangle Judgement",
+      "sql": true
+    },
+    "2026-08-28": {
+      "day": "Fri",
+      "primary": "Second pass #155 OR #739 Daily Temperatures (monotonic stack). Tick t08 Easy gates. Optional #496",
+      "secondary": "none",
+      "sql": false
+    },
+    "2026-08-29": {
+      "day": "Sat",
+      "primary": "t08 review — valid parens, min stack, monotonic walk-through. Mastery gate?",
+      "secondary": "OPTIONAL (pick one ~30 min): StrataScratch signup + 1 easy OR Chip Ch 1 (ai_engineering_notes) OR LangChain chunking video — skip if t08 behind",
+      "sql": false
+    },
+    "2026-08-30": {
+      "day": "Sun",
+      "primary": "15 min reflection — t08 mastery? SQL ~32/50? Chip / StrataScratch backlog? Ready for t09 Week 9 (Mon 31 Aug)?",
+      "secondary": "none",
+      "sql": false
+    }
+  }
+}

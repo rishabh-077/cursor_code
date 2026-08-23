@@ -388,6 +388,57 @@ def preserve_portal_logs_from_markdown(progress: dict[str, Any], week_num: int) 
     return added
 
 
+def _reflection_has_content(refl: dict[str, Any] | None) -> bool:
+    if not refl:
+        return False
+    return any(str(refl.get(k, "")).strip() for k in ("finished", "blocked", "nextWeek"))
+
+
+def _normalize_reflection(refl: dict[str, Any] | None) -> dict[str, Any]:
+    refl = refl or {}
+    energy = refl.get("energy", 0) or 3
+    try:
+        energy = int(energy)
+    except (TypeError, ValueError):
+        energy = 3
+    return {
+        "finished": str(refl.get("finished", "") or ""),
+        "blocked": str(refl.get("blocked", "") or ""),
+        "nextWeek": str(refl.get("nextWeek", "") or ""),
+        "energy": energy,
+    }
+
+
+def reflection_for_week(portal: dict[str, Any], week_num: int) -> dict[str, Any]:
+    """Per-week reflection from portal.reflections (not the shared draft)."""
+    reflections = portal.get("reflections") or {}
+    raw = reflections.get(str(week_num)) or reflections.get(week_num)
+    if _reflection_has_content(raw if isinstance(raw, dict) else None):
+        return _normalize_reflection(raw if isinstance(raw, dict) else {})
+    return {"finished": "", "blocked": "", "nextWeek": "", "energy": 0}
+
+
+def ensure_portal_reflections(progress: dict[str, Any]) -> None:
+    """Migrate shared reflectionDraft → portal.reflections[currentWeek]; keep draft mirrored."""
+    portal = progress.setdefault("portal", {})
+    reflections = portal.setdefault("reflections", {})
+    # Normalize any existing keys to strings
+    for key in list(reflections.keys()):
+        sk = str(key)
+        if sk != key:
+            reflections.setdefault(sk, reflections.pop(key))
+
+    current = progress.get("meta", {}).get("currentWeek")
+    draft = portal.get("reflectionDraft") or {}
+    if current is not None and _reflection_has_content(draft):
+        key = str(current)
+        if not _reflection_has_content(reflections.get(key)):
+            reflections[key] = _normalize_reflection(draft)
+
+    if current is not None and _reflection_has_content(reflections.get(str(current))):
+        portal["reflectionDraft"] = _normalize_reflection(reflections[str(current)])
+
+
 def render_portal_week(
     week_num: int,
     progress: dict[str, Any],
@@ -397,7 +448,7 @@ def render_portal_week(
     portal = progress.get("portal", {})
     days = plan.get("days", {})
     dates = sorted(days.keys())
-    refl = portal.get("reflectionDraft", {})
+    refl = reflection_for_week(portal, week_num)
 
     rows = []
     for date in dates:
@@ -418,10 +469,12 @@ def render_portal_week(
     energy = refl.get("energy") or "_"
     if isinstance(energy, int) and energy > 0:
         energy = str(energy)
+    else:
+        energy = "_"
 
     return f"""# Portal log — Week {week_num} ({plan.get('range', '')})
 
-**Synced from** `dashboard/data/progress.json` → `portal.dailyTasks` + `portal.dailyLog`  
+**Synced from** `dashboard/data/progress.json` → `portal.dailyTasks` + `portal.dailyLog` + `portal.reflections`  
 **Plan:** [week_{week_num:02d}.md](../weekly_plans/week_{week_num:02d}.md) · **Last synced:** {last_updated}
 
 ---
@@ -434,14 +487,15 @@ def render_portal_week(
 
 ---
 
-## Reflection draft (portal)
+## Week {week_num} reflection
 
 - **Finished:** {refl.get('finished') or '_'}
 - **Blocked:** {refl.get('blocked') or '_'}
 - **Next week adjust:** {refl.get('nextWeek') or '_'}
 - **Energy (1–5):** {energy}
 
-*Daily log: `dailyLog` + `archivedDailyLog` in JSON; sync also preserves text already in this file. "Clear daily logs" removes only **today's** live log in the portal (archived + this table stay).*
+*Daily log: `dailyLog` + `archivedDailyLog` in JSON; sync also preserves text already in this file. "Clear daily logs" removes only **today's** live log in the portal (archived + this table stay).*  
+*Reflection: per-week in `portal.reflections["{week_num}"]` (draft mirrors current week only).*
 """
 
 
@@ -449,6 +503,7 @@ def sync_portal_week(progress: dict[str, Any], week_num: int) -> Path | None:
     plan_path = WEEK_PLANS_DIR / f"{week_num}.json"
     if not plan_path.is_file():
         return None
+    ensure_portal_reflections(progress)
     preserve_portal_logs_from_markdown(progress, week_num)
     plan = _load_json(plan_path)
     updated = progress.get("meta", {}).get("lastUpdated", datetime.now().isoformat(timespec="seconds"))
@@ -459,20 +514,16 @@ def sync_portal_week(progress: dict[str, Any], week_num: int) -> Path | None:
 
 
 def apply_portal_reflection_to_week(progress: dict[str, Any], week_num: int) -> bool:
-    """Copy portal.reflectionDraft into weekN.reflection for legacy tracker sync."""
+    """Copy portal.reflections[week] into weekN.reflection for legacy tracker sync."""
+    ensure_portal_reflections(progress)
     portal = progress.get("portal", {})
-    draft = portal.get("reflectionDraft", {})
+    draft = reflection_for_week(portal, week_num)
     week_key = f"week{week_num}"
     if week_key not in progress:
         return False
-    if not any(str(draft.get(k, "")).strip() for k in ("finished", "blocked", "nextWeek")):
+    if not _reflection_has_content(draft):
         return False
-    progress[week_key]["reflection"] = {
-        "finished": draft.get("finished", ""),
-        "blocked": draft.get("blocked", ""),
-        "nextWeek": draft.get("nextWeek", ""),
-        "energy": draft.get("energy", 0) or 3,
-    }
+    progress[week_key]["reflection"] = _normalize_reflection(draft)
     return True
 
 

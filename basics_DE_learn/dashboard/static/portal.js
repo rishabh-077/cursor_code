@@ -42,8 +42,51 @@ function debounceSave(fn, ms = 400) {
 }
 
 function portalState() {
-  if (!progress.portal) progress.portal = { dailyTasks: {}, dailyLog: {}, reflectionDraft: {} };
+  if (!progress.portal) progress.portal = { dailyTasks: {}, dailyLog: {}, reflectionDraft: {}, reflections: {} };
+  if (!progress.portal.reflections) progress.portal.reflections = {};
   return progress.portal;
+}
+
+function reflectionHasContent(d) {
+  return !!(d && (String(d.finished || "").trim() || String(d.blocked || "").trim() || String(d.nextWeek || "").trim()));
+}
+
+function getReflection(week) {
+  const ps = portalState();
+  const key = String(week);
+  const stored = ps.reflections?.[key];
+  if (reflectionHasContent(stored)) {
+    return {
+      finished: stored.finished || "",
+      blocked: stored.blocked || "",
+      nextWeek: stored.nextWeek || "",
+      energy: stored.energy || 3,
+    };
+  }
+  const current = Number(progress.meta?.currentWeek);
+  if (week === current && reflectionHasContent(ps.reflectionDraft)) {
+    return {
+      finished: ps.reflectionDraft.finished || "",
+      blocked: ps.reflectionDraft.blocked || "",
+      nextWeek: ps.reflectionDraft.nextWeek || "",
+      energy: ps.reflectionDraft.energy || 3,
+    };
+  }
+  return { finished: "", blocked: "", nextWeek: "", energy: 3 };
+}
+
+function setReflection(week, data) {
+  const ps = portalState();
+  const payload = {
+    finished: data.finished || "",
+    blocked: data.blocked || "",
+    nextWeek: data.nextWeek || "",
+    energy: Number(data.energy) || 3,
+  };
+  ps.reflections[String(week)] = payload;
+  if (week === Number(progress.meta?.currentWeek)) {
+    ps.reflectionDraft = { ...payload };
+  }
 }
 
 function todayKey() {
@@ -233,21 +276,29 @@ function renderMastery() {
 }
 
 function renderReflection() {
-  const d = portalState().reflectionDraft || {};
+  const d = getReflection(viewingWeek);
   document.getElementById("refl-finished").value = d.finished || "";
   document.getElementById("refl-blocked").value = d.blocked || "";
   document.getElementById("refl-next").value = d.nextWeek || "";
   document.getElementById("refl-energy").value = d.energy || 3;
+  const label = document.getElementById("refl-week-label");
+  if (label) {
+    const current = Number(progress.meta?.currentWeek);
+    label.textContent =
+      viewingWeek === current
+        ? `Week ${viewingWeek} (current)`
+        : `Week ${viewingWeek} (archive)`;
+  }
 }
 
 function bindReflection() {
   const saveRefl = () => {
-    portalState().reflectionDraft = {
+    setReflection(viewingWeek, {
       finished: document.getElementById("refl-finished").value,
       blocked: document.getElementById("refl-blocked").value,
       nextWeek: document.getElementById("refl-next").value,
       energy: Number(document.getElementById("refl-energy").value) || 3,
-    };
+    });
     debounceSave(saveProgress);
   };
   ["refl-finished", "refl-blocked", "refl-next", "refl-energy"].forEach((id) => {
@@ -296,6 +347,7 @@ document.getElementById("btn-set-today").addEventListener("click", async () => {
   await loadWeekPlan(r.currentWeek);
   history.replaceState({}, "", `/portal?w=${r.currentWeek}`);
   renderWeekPlan();
+  renderReflection();
   renderStatus(await api("/api/today"));
   toast(`Today set to ${r.today} · Week ${r.currentWeek}`);
 });
@@ -305,6 +357,7 @@ document.getElementById("week-select").addEventListener("change", async (e) => {
   await loadWeekPlan(wk);
   history.replaceState({}, "", `/portal?w=${wk}`);
   renderWeekPlan();
+  renderReflection();
 });
 
 document.getElementById("btn-sync").addEventListener("click", async () => {
@@ -322,13 +375,14 @@ document.getElementById("btn-sync").addEventListener("click", async () => {
     const arch = ps.archivedDailyLog || {};
     document.getElementById("daily-log").value = ps.dailyLog?.[key] || arch[key] || "";
   }
+  renderReflection();
   document.getElementById("sync-msg").textContent = msg;
   toast("Markdown synced — ready to git commit");
 });
 
 document.getElementById("btn-copy-refl").addEventListener("click", () => {
-  const d = portalState().reflectionDraft || {};
-  const md = `## Week reflection\n\n- **Finished:** ${d.finished || "_"}\n- **Blocked:** ${d.blocked || "_"}\n- **Next week adjust:** ${d.nextWeek || "_"}\n- **Energy (1–5):** ${d.energy || "_"}\n`;
+  const d = getReflection(viewingWeek);
+  const md = `## Week ${viewingWeek} reflection\n\n- **Finished:** ${d.finished || "_"}\n- **Blocked:** ${d.blocked || "_"}\n- **Next week adjust:** ${d.nextWeek || "_"}\n- **Energy (1–5):** ${d.energy || "_"}\n`;
   navigator.clipboard.writeText(md);
   toast("Reflection copied");
 });

@@ -15,4 +15,6 @@
 
 **Do not try to finish all 50 this week.** DE_CURRICULUM “finish SQL 50” is the Phase 1 *menu*, not two 30-min sessions.
 
-**Running total (approx):** ~24/50 after wk 6 (#1–24) · target **28/50** after wk 7.
+**Running total (approx):** ~24/50 after wk 6 (#1–24) · **28/50** after wk 7 (#25–28 done per portal reflection).
+
+**Week 8:** [week8_sql50_log.md](./week8_sql50_log.md) starts at **#29**.
