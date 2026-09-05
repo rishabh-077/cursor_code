@@ -1,9 +1,11 @@
-# Week 8 — Mon 24 Aug – Sun 30 Aug 2026
+# Week 8 — Mon 31 Aug – Sun 6 Sep 2026
 
 **Phase:** 1 · **DSA topic:** t08 Stacks (primary)  
 **Mastery goal:** t08 — **theory** + **3–4 Easy no hints** (#20, #682, #844) + **1 Medium attempted** (#155 Min Stack or #739 Daily Temperatures)  
 **Master plan:** [MASTER_PLAN.md](../MASTER_PLAN.md) · **Portal:** http://127.0.0.1:5050/portal?w=8  
 **DE menu:** [DE_CURRICULUM.md](../DE_CURRICULUM.md) week 8 row · **SQL log:** [sql/week8_sql50_log.md](../sql/week8_sql50_log.md)
+
+> **Calendar slip (2026-08-31):** Original Week 8 was **24–30 Aug**. Plan remapped to **31 Aug – 6 Sep** (1-week gap). Partial work during gap: **#442**, **#128**, some SQL #29–32 — counts as catch-up, not t08 primary.
 
 ---
 
@@ -12,6 +14,7 @@
 | Input | Value |
 |-------|--------|
 | **Finished (wk 7)** | t07 LC + notes: **#1480, #724, #303, #560, #238, #525**. SQL through **#28**. Portal **t07 mastery ticked**. |
+| **Gap week (24–30 Aug)** | Off-plan LC: **#442**, **#128**. SQL #29–32 partially started — carry Tue/Thu checkboxes into this week. |
 | **Blocked** | Nothing on t08. Chip Ch 1 / Zoomcamp still backlog — Sat optional only. |
 | **Next week** | Keep moving; light practice of past patterns (prefix / window) only after primary. |
 | **Energy** | 3 |
@@ -33,7 +36,7 @@
 
 ---
 
-## Mon 24 Aug
+## Mon 31 Aug
 
 **PRIMARY (2 hrs):** **t08 theory** — stack LIFO; draw push/pop on paper. Watch Abdul Bari stack intro (15 min) or NeetCode stack overview. **#20** [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) — no hints; `leetcode/week_8/leetcode_20.py`. Say aloud: “open → push, close → match top or fail.”
 
@@ -41,7 +44,7 @@
 
 ---
 
-## Tue 25 Aug
+## Tue 1 Sep
 
 **PRIMARY (2 hrs):** **#682** [Baseball Game](https://leetcode.com/problems/baseball-game/) — stack simulation (Google Easy). Notes in `week_8/`.
 
@@ -49,7 +52,7 @@
 
 ---
 
-## Wed 26 Aug
+## Wed 2 Sep
 
 **PRIMARY (2 hrs):** **#844** [Backspace String Compare](https://leetcode.com/problems/backspace-string-compare/) — stack (or two-pointer variant after stack pass). Optional 15 min: **#1047** Remove All Adjacent Duplicates In String. Re-solve **#20** no hints if rusty.
 
@@ -57,7 +60,7 @@
 
 ---
 
-## Thu 27 Aug
+## Thu 3 Sep
 
 **PRIMARY (2 hrs):** t08 **Medium attempt** (25 min timer): **#155** [Min Stack](https://leetcode.com/problems/min-stack/) — design class with O(1) min. Notes either way. If clean early, skim **#739** Daily Temperatures (monotonic stack — do not brute O(n²)).
 
@@ -65,7 +68,7 @@
 
 ---
 
-## Fri 28 Aug
+## Fri 4 Sep
 
 **PRIMARY (2 hrs):** Second pass **#155** if stuck **OR** **#739** [Daily Temperatures](https://leetcode.com/problems/daily-temperatures/) — monotonic decreasing stack. Tick t08 theory + easyNoHints if Easy set is clean. Optional: **#496** Next Greater Element I if #739 done.
 
@@ -73,7 +76,7 @@
 
 ---
 
-## Sat 29 Aug
+## Sat 5 Sep
 
 **PRIMARY (2 hrs):** t08 review — paper: valid parens trace, min stack invariant, one monotonic-stack walk-through on `[73,74,75,71,69,72,76,73]`. Confirm mastery gate (3 Easy no hints + Medium attempted).
 
@@ -81,9 +84,9 @@
 
 ---
 
-## Sun 30 Aug (15 min)
+## Sun 6 Sep (15 min)
 
-- Fill **reflection** in portal for Week 9 generation (**t09 Queues**, starts Mon 31 Aug)
+- Fill **reflection** in portal for Week 9 generation (**t09 Queues**, starts Mon 7 Sep)
 - t08 mastery met? **Y/N** (theory + 3 Easy no hints + #155 or #739 attempted)
 - SQL on track? Target **~32/50**
 - Theory: Chip Ch 1 still open, or did Sat optional land?

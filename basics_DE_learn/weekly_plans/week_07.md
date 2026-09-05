@@ -83,7 +83,7 @@
 
 ## Sun 23 Aug (15 min)
 
-- Fill **reflection** in portal for Week 8 generation (**t08 Stacks**, starts Mon 24 Aug)
+- Fill **reflection** in portal for Week 8 generation (**t08 Stacks**, starts Mon 31 Aug)
 - t07 mastery met? **Y/N** (theory + 2–3 Easy no hints + #560 attempted)
 - SQL on track? Target **~28/50** (not all 50)
 - Theory: one Sat optional, or still Chip Ch 1 backlog?

@@ -98,13 +98,22 @@ def today_in_tz(data: dict | None = None) -> date:
 
 
 def calendar_week_for(data: dict, on: date | None = None) -> int:
-    """Week number from meta.startDate (Week 1 = Mon start day through +6 days, Sun)."""
-    start_s = data.get("meta", {}).get("startDate")
+    """Week number from meta.startDate (Week 1 = Mon start day through +6 days, Sun).
+
+    Optional meta.week8SlipFrom (ISO date): from that Monday onward, subtract one
+    calendar week so Week 8 can start later (e.g. slip gap Aug 24–30, Week 8 Mon 31 Aug).
+    """
+    meta = data.get("meta", {})
+    start_s = meta.get("startDate")
     if not start_s:
-        return int(data.get("meta", {}).get("currentWeek", 1))
+        return int(meta.get("currentWeek", 1))
     start = date.fromisoformat(start_s)
     d = on or today_in_tz(data)
-    return max(1, (d - start).days // 7 + 1)
+    raw = max(1, (d - start).days // 7 + 1)
+    slip_from = meta.get("week8SlipFrom")
+    if slip_from and d >= date.fromisoformat(slip_from):
+        raw = max(1, raw - 1)
+    return raw
 
 
 @app.route("/")

@@ -1,16 +1,17 @@
 {
   "meta": {
     "calendarRebase": "2026-08-12",
-    "calendarSlipWeeks": 6,
-    "currentWeek": 7,
+    "calendarSlipWeeks": 7,
+    "currentWeek": 8,
     "ddiaArrives": "2026-06-08",
-    "lastUpdated": "2026-08-23T14:48:05",
+    "lastUpdated": "2026-09-05T16:13:18",
     "originalStartDate": "2026-05-25",
     "phase": 1,
     "program": "phased-v1",
     "startDate": "2026-07-06",
     "timezone": "Asia/Kolkata",
-    "today": "2026-08-23",
+    "today": "2026-09-05",
+    "week8SlipFrom": "2026-08-24",
     "weekStartsOn": "Monday"
   },
   "portal": {
@@ -46,7 +47,8 @@
       "2026-08-17": "",
       "2026-08-19": "",
       "2026-08-20": "",
-      "2026-08-22": ""
+      "2026-08-22": "",
+      "2026-08-26": ""
     },
     "dailyTasks": {
       "2026-05-25": [
@@ -272,20 +274,54 @@
       "2026-08-23": [
         true,
         false
+      ],
+      "2026-08-31": [
+        true,
+        false
+      ],
+      "2026-09-01": [
+        true,
+        true
+      ],
+      "2026-09-02": [
+        true,
+        false
+      ],
+      "2026-09-03": [
+        false,
+        true
+      ],
+      "2026-09-04": [
+        false,
+        false
+      ],
+      "2026-09-05": [
+        false,
+        false
+      ],
+      "2026-09-06": [
+        false,
+        false
       ]
     },
     "reflectionDraft": {
-      "finished": "Solved leetcode problems (#238, #303, #525, #560, #724, #1480) and sql till #28, and were not able to read the optional theory part for chip hyugen",
-      "blocked": "nothing blocked",
-      "nextWeek": "All good we can keep moving ahead with keeping practice of past learned things",
-      "energy": 3
+      "blocked": "",
+      "energy": 3,
+      "finished": "",
+      "nextWeek": ""
     },
     "reflections": {
       "7": {
-        "finished": "Solved leetcode problems (#238, #303, #525, #560, #724, #1480) and sql till #28, and were not able to read the optional theory part for chip hyugen",
         "blocked": "nothing blocked",
-        "nextWeek": "All good we can keep moving ahead with keeping practice of past learned things",
-        "energy": 3
+        "energy": 3,
+        "finished": "Solved leetcode problems (#238, #303, #525, #560, #724, #1480) and sql till #28, and were not able to read the optional theory part for chip hyugen",
+        "nextWeek": "All good we can keep moving ahead with keeping practice of past learned things"
+      },
+      "8": {
+        "blocked": "",
+        "energy": 3,
+        "finished": "",
+        "nextWeek": ""
       }
     }
   }

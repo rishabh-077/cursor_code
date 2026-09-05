@@ -5,7 +5,7 @@
 **Master plan:** [MASTER_PLAN.md](../MASTER_PLAN.md) · **Portal:** http://127.0.0.1:5050/portal?w=6  
 **DE menu:** [DE_CURRICULUM.md](../DE_CURRICULUM.md) week 6 row · **SQL log:** [sql/week6_sql50_log.md](../sql/week6_sql50_log.md)
 
-> **Calendar rebase (2026-08-12):** Study paused after the original Week 6 dates (29 Jun – 5 Jul). Curriculum Week **6** is remapped to **10–16 Aug 2026**. Weeks **7+** continue from **Mon 17 Aug**. Historical Weeks 1–5 stay on May–Jun dates in their JSON (done work). Portal `meta.startDate` = **2026-07-06** so “Set today” lands on Week 6.
+> **Calendar rebase (2026-08-12):** Study paused after the original Week 6 dates (29 Jun – 5 Jul). Curriculum Week **6** is remapped to **10–16 Aug 2026**. Week **7** = **17–23 Aug**. Week **8** slipped to **31 Aug – 6 Sep** (gap 24–30 Aug). Historical Weeks 1–5 stay on May–Jun dates in their JSON (done work). Portal `meta.startDate` = **2026-07-06**; `week8SlipFrom` = **2026-08-24** for “Set today” week math.
 
 ---
 

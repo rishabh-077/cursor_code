@@ -155,9 +155,10 @@ basics_DE_learn/
     "startDate": "2026-07-06",
     "originalStartDate": "2026-05-25",
     "calendarRebase": "2026-08-12",
-    "calendarSlipWeeks": 6,
+    "calendarSlipWeeks": 7,
+    "week8SlipFrom": "2026-08-24",
     "today": "YYYY-MM-DD",
-    "currentWeek": 6,
+    "currentWeek": 8,
     "timezone": "Asia/Kolkata",
     "phase": 1,
     "program": "phased-v1",
@@ -326,16 +327,17 @@ Update **in the same PR/session** when you:
 
 | Field | Value |
 |-------|--------|
-| **lastContextUpdate** | 2026-08-23 (Week 8 plan generated — auto-read from wk 7 reflection) |
-| **Calendar week** | **8** (Mon **24 Aug – Sun 30 Aug 2026**) |
-| **meta.startDate** | **2026-07-06** (rebasing anchor) · `originalStartDate` 2026-05-25 · slip **6** weeks |
-| **meta.today** | 2026-08-23 (Week 7 Sun — click **Set today** Mon 24 to land on Week 8) |
+| **lastContextUpdate** | 2026-08-31 (Week 8 shifted — starts Mon 31 Aug after 1-week slip) |
+| **Calendar week** | **8** (Mon **31 Aug – Sun 6 Sep 2026**) |
+| **meta.startDate** | **2026-07-06** (rebasing anchor) · `originalStartDate` 2026-05-25 · slip **7** weeks · `week8SlipFrom` **2026-08-24** |
+| **meta.today** | 2026-08-31 (Week 8 Mon — t08 Stacks primary) |
 | **DSA focus** | **t08 Stacks** — theory + #20, #682, #844 + Medium **#155** or **#739** · do not start t09 until valid parens automatic |
 | **Portal weeks in UI** | 1–8 (`week_plans/1.json` … `8.json`) |
 | **t07 status** | ✅ Mastered — #1480, #724, #303, #560, #238, #525 + notes |
+| **Gap week** | **24–30 Aug** off-plan — #442, #128, partial SQL #29–32 (catch-up, not t08 primary) |
 | **SQL 50** | ~28/50 (#1–28 done) · wk 8 Tue/Thu → **#29–32** → target **32/50** |
 | **Theory spine** | Still open — Chip Ch 1 first · StrataScratch / LangChain chunking (DE wk 8 Sat optional ONE) |
-| **Next week** | Week **9** = Mon **31 Aug – Sun 6 Sep** · **t09 Queues** (generate after Sun reflection) |
+| **Next week** | Week **9** = Mon **7 Sep – Sun 13 Sep** · **t09 Queues** (generate after Sun reflection) |
 | **Apply target** | Curriculum week **~28** ≈ **11–17 Jan 2027** (shifted with rebase) |
 | **Week 8 plan** | [weekly_plans/week_08.md](weekly_plans/week_08.md) |
 

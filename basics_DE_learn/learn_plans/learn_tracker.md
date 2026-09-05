@@ -4,7 +4,7 @@
 **Master plan:** [MASTER_PLAN.md](../MASTER_PLAN.md) · **Profile:** [profile.md](./profile.md) · **Portal sync:** [TRACKER_GUIDE.md](./TRACKER_GUIDE.md)
 
 > **Daily / weekly detail** lives in [trackers/portal_week_NN.md](../trackers/) — not here. This file = phases, milestones, interviews, STAR.  
-> **Calendar rebase 2026-08-12:** Week 6 = **10–16 Aug**; Weeks 7+ from **17 Aug**. Weeks 1–5 keep historical May–Jun dates.
+> **Calendar rebase 2026-08-12:** Week 6 = **10–16 Aug**; Week 7 = **17–23 Aug**. **Week 8 slipped** to **31 Aug – 6 Sep** (gap **24–30 Aug**). Weeks 1–5 keep historical May–Jun dates.
 
 ---
 
@@ -12,13 +12,13 @@
 
 | | |
 |---|---|
-| **Week** | **7** |
-| **Dates** | Mon **17** – Sun **23 Aug 2026** |
-| **Plan** | [weekly_plans/week_07.md](../weekly_plans/week_07.md) |
-| **Daily tracker** | [portal_week_07](../trackers/portal_week_07.md) |
-| **DSA** | **t07 Prefix sums** — #1480, #724, #303 + Medium **#560** |
+| **Week** | **8** |
+| **Dates** | Mon **31 Aug – Sun 6 Sep 2026** |
+| **Plan** | [weekly_plans/week_08.md](../weekly_plans/week_08.md) |
+| **Daily tracker** | [portal_week_08](../trackers/portal_week_08.md) |
+| **DSA** | **t08 Stacks** — #20, #682, #844 + Medium **#155** / **#739** |
 
-**Weeks 1–6:** Done. **This week:** t07 + SQL #25–28. **Next:** Week 8 = **24–30 Aug** · t08 Stacks.  
+**Weeks 1–7:** Done. **This week:** t08 + SQL #29–32. **Next:** Week 9 = **7–13 Sep** · t09 Queues.  
 **Pacing:** Phase 1 DSA exit ~**week 16** (~late Oct 2026), apply ~**week 28** (~Jan 2027)
 
 ---
@@ -59,7 +59,7 @@ Full detail: [profile.md](./profile.md)
 
 | Phase | Weeks | Status | Target end |
 |-------|-------|--------|------------|
-| 1 — DSA foundation | 1–16 | 🟡 In progress (wk 7) | ~late Oct 2026 |
+| 1 — DSA foundation | 1–16 | 🟡 In progress (wk 8) | ~early Nov 2026 |
 | 2 — DE depth + DSA maintenance | 17–24 | ⬜ | ~mid Dec 2026 |
 | 3 — Interviews | 25–30 | ⬜ | ~late Jan 2027 |
 
@@ -77,16 +77,16 @@ Full detail: [profile.md](./profile.md)
 | 4 | 15–21 Jun (hist.) | **t04** Hash · SQL #13–16 | ✅ |
 | 5 | 22–28 Jun (hist.) | **t05** Two pointers · SQL #17–20 | ✅ |
 | **6** | **10–16 Aug** | **t06** Sliding window · SQL #21–25 | ✅ |
-| **7** | **17–23 Aug** | **t07** Prefix sums · SQL #25–28 | 🟡 |
-| 8 | 24–30 Aug | **t08** Stacks · StrataScratch | ⬜ |
-| 9 | 31 Aug – 6 Sep | **t09** Queues · STAR draft | ⬜ |
-| 10 | 7–13 Sep | **t10** Linked lists | ⬜ |
-| 11 | 14–20 Sep | **t11** Recursion | ⬜ |
-| 12 | 21–27 Sep | **t12** Tree traversals | ⬜ |
-| 13 | 28 Sep – 4 Oct | **t13** BST | ⬜ |
-| 14 | 5–11 Oct | **t14** Graphs BFS | ⬜ |
-| 15 | 12–18 Oct | **t15** DFS | ⬜ |
-| 16 | 19–25 Oct | **t16** Topo · Phase 1 DSA review | ⬜ |
+| **7** | **17–23 Aug** | **t07** Prefix sums · SQL #25–28 | ✅ |
+| **8** | **31 Aug – 6 Sep** | **t08** Stacks · StrataScratch | 🟡 |
+| 9 | 7–13 Sep | **t09** Queues · STAR draft | ⬜ |
+| 10 | 14–20 Sep | **t10** Linked lists | ⬜ |
+| 11 | 21–27 Sep | **t11** Recursion | ⬜ |
+| 12 | 28 Sep – 4 Oct | **t12** Tree traversals | ⬜ |
+| 13 | 5–11 Oct | **t13** BST | ⬜ |
+| 14 | 12–18 Oct | **t14** Graphs BFS | ⬜ |
+| 15 | 19–25 Oct | **t15** DFS | ⬜ |
+| 16 | 26 Oct – 1 Nov | **t16** Topo · Phase 1 DSA review | ⬜ |
 
 **Phase 1 exit:** [ ] 35+ LC *(see lc_log)* · [ ] SQL 50 *(~24/50)* · [ ] StrataScratch ≥8 · [ ] Zoomcamp · [ ] Chip Ch 1–4 notes · [ ] DDIA Ch 3 started · [x] Spark Driver/Executor · [ ] PySpark lazy vs action
 

@@ -430,15 +430,81 @@
       "week": 0
     },
     {
+      "date": "2026-08-22",
+      "difficulty": "Medium",
+      "done": true,
       "id": 525,
+      "noHints": false,
+      "repo": "",
       "title": "Contiguous Array",
       "topic": "t07",
-      "week": 0,
+      "week": 0
+    },
+    {
+      "date": "2026-08-25",
       "difficulty": "Medium",
+      "done": true,
+      "id": 442,
+      "noHints": false,
+      "repo": "",
+      "title": "Find All Duplicates in an Array",
+      "topic": "t02",
+      "week": 0
+    },
+    {
+      "date": "2026-08-28",
+      "difficulty": "Medium",
+      "done": true,
+      "id": 128,
+      "noHints": false,
+      "repo": "",
+      "title": "Longest Consecutive Sequence",
+      "topic": "t04",
+      "week": 0
+    },
+    {
+      "date": "2026-09-05",
+      "difficulty": "Easy",
+      "done": true,
+      "id": 20,
+      "noHints": false,
+      "repo": "",
+      "title": "Valid Parentheses",
+      "topic": "t08",
+      "week": 0
+    },
+    {
+      "date": "2026-09-05",
+      "difficulty": "Easy",
+      "done": true,
+      "id": 682,
+      "noHints": false,
+      "repo": "",
+      "title": "Baseball Game",
+      "topic": "t08",
+      "week": 0
+    },
+    {
+      "id": 225,
+      "title": "Implement Stack using Queues",
+      "topic": "t08",
+      "week": 0,
+      "difficulty": "Easy",
       "done": true,
       "noHints": false,
       "repo": "",
-      "date": "2026-08-22"
+      "date": "2026-09-05"
+    },
+    {
+      "id": 1047,
+      "title": "Remove All Adjacent Duplicates In String",
+      "topic": "t08",
+      "week": 0,
+      "difficulty": "Easy",
+      "done": true,
+      "noHints": false,
+      "repo": "",
+      "date": "2026-09-05"
     }
   ]
 }

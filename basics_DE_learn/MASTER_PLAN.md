@@ -80,15 +80,15 @@ This file does **not** change every week. Weekly tasks live in `weekly_plans/wee
 
 ---
 
-## Your progress snapshot (2026-08-17)
+## Your progress snapshot (2026-08-31)
 
 | Item | Status |
 |------|--------|
-| **Phase** | 1 · Curriculum **Week 7** (**17–23 Aug 2026**) |
-| **DSA** | t01–t06 ✅ · **t07 Prefix sums** (wk 7 primary) |
-| **Calendar** | Week **8** starts **Mon 24 Aug** (t08 Stacks) |
-| **SQL 50** | ~24/50 · this week **#25–28** (target ~28/50) |
-| **Theory** | Chip Ch 1 · Zoomcamp still backlog — Sat optional only |
-| **Apply** | ~curriculum week 28 ≈ **Jan 2027** (6-week slip) |
+| **Phase** | 1 · Curriculum **Week 8** (**31 Aug – 6 Sep 2026**) |
+| **DSA** | t01–t07 ✅ · **t08 Stacks** (wk 8 primary) |
+| **Calendar** | Week **8** starts **Mon 31 Aug** (1-week slip; gap **24–30 Aug**) |
+| **SQL 50** | ~28/50 · this week **#29–32** (target ~32/50) |
+| **Theory** | Chip Ch 1 · StrataScratch / LangChain — Sat optional only |
+| **Apply** | ~curriculum week 28 ≈ **Jan 2027** (7-week slip) |
 
-*Detail:* [CONTEXT.md](CONTEXT.md) §10 · [weekly_plans/week_07.md](weekly_plans/week_07.md) · [learn_tracker.md](learn_plans/learn_tracker.md)
+*Detail:* [CONTEXT.md](CONTEXT.md) §10 · [weekly_plans/week_08.md](weekly_plans/week_08.md) · [learn_tracker.md](learn_plans/learn_tracker.md)

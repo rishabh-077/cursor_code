@@ -44,5 +44,11 @@
 | 560 | [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/) | t07 | 0 | M | [x] | [ ] |  |
 | 238 | [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/) | t07 | 0 | M | [x] | [ ] |  |
 | 525 | [Contiguous Array](https://leetcode.com/problems/contiguous-array/) | t07 | 0 | M | [x] | [ ] |  |
+| 442 | [Find All Duplicates in an Array](https://leetcode.com/problems/find-all-duplicates-in-an-array/) | t02 | 0 | M | [x] | [ ] |  |
+| 128 | [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/) | t04 | 0 | M | [x] | [ ] |  |
+| 20 | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | t08 | 0 | E | [x] | [ ] |  |
+| 682 | [Baseball Game](https://leetcode.com/problems/baseball-game/) | t08 | 0 | E | [x] | [ ] |  |
+| 225 | [Implement Stack using Queues](https://leetcode.com/problems/implement-stack-using-queues/) | t08 | 0 | E | [x] | [ ] |  |
+| 1047 | [Remove All Adjacent Duplicates In String](https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/) | t08 | 0 | E | [x] | [ ] |  |
 
-**Count:** 40 logged · **No-hints count:** 26
+**Count:** 46 logged · **No-hints count:** 26

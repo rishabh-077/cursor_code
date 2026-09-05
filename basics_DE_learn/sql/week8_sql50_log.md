@@ -2,7 +2,7 @@
 
 **Study plan:** https://leetcode.com/studyplan/top-sql-50/  
 **Tracker:** [portal_week_08.md](../trackers/portal_week_08.md) (after sync) · Prior: [week7_sql50_log.md](./week7_sql50_log.md)  
-**Week dates:** Mon **24 Aug – Sun 30 Aug 2026** · Tue/Thu = #29–32
+**Week dates:** Mon **31 Aug – Sun 6 Sep 2026** · Tue/Thu = #29–32
 
 | # | LC # | Problem | Section | Done | Notes |
 |---|------|---------|---------|:----:|-------|
@@ -14,5 +14,7 @@
 **Week 9 starts at #33** (Consecutive Numbers) if you stay on SQL 50 Tue/Thu rhythm.
 
 **DE_CURRICULUM week 8:** Sat optional = **StrataScratch** (not extra SQL nights). SQL stays Tue/Thu only.
+
+**Calendar slip:** Plan shifted from **24–30 Aug** → **31 Aug – 6 Sep**. Partial SQL work during gap week carries into Tue 1 Sep / Thu 3 Sep.
 
 **Running total (approx):** ~28/50 after wk 7 (#1–28) · target **32/50** after wk 8.
